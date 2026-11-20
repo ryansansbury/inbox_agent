@@ -18,6 +18,7 @@
   --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
   --top-h: 60px; --sum-h: 54px; --drawer-w: 560px;
  --k-blocked: #fff7f7; --k-blocked-line: #f5c2c2; --k-claim: #86efac; --k-conn: #f7f6f2; --k-faint: #8b9096; --k-hit: #fdecc0; --k-hover: #f8f7f4; --k-line2: #e7e5df; --k-line3: #cfcbc2; --k-lit: #eef2ff; --k-lit2: #e0e7ff; --k-rail: #f3f2ee; --k-sel: #fff7e0; --k-tool: #f3f4f6; --k-tooltext: #1f2937; --k-white: #fff;
+  --k-redtext: #7f1d1d; --k-ambertext: #78350f; --k-aitext: #3730a3; --k-slatetext: #475569;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
@@ -169,7 +170,7 @@ body.mode-work main { flex: 1; min-height: 0; display: flex; flex-direction: col
 .mark { display: inline-grid; place-items: center; min-width: 17px; height: 17px; border-radius: 50%; background: var(--amber-line); color: var(--ink); font: 700 10px Inter, sans-serif; margin-right: 4px; vertical-align: 1px; padding: 0 3px; }
 .mark.red { background: var(--red-line); color: #fff; }
 .flags { list-style: none; margin-top: 8px; display: flex; flex-direction: column; gap: 6px; }
-.flags li { font-size: 12.5px; background: var(--red-bg); color: #7f1d1d; border-radius: 8px; padding: 7px 10px; }
+.flags li { font-size: 12.5px; background: var(--red-bg); color: var(--k-redtext); border-radius: 8px; padding: 7px 10px; }
 .flags li .ok { color: var(--green); font-weight: 600; }
 .whatif { font-size: 12.5px; background: var(--k-white); border: 1px dashed var(--red-line); border-radius: 8px; padding: 7px 10px; margin-top: 6px; color: var(--ink2); }
 .trace { list-style: none; display: flex; flex-direction: column; gap: 3px; }
@@ -218,8 +219,8 @@ body.mode-work main { flex: 1; min-height: 0; display: flex; flex-direction: col
 .reply u.lit { background: var(--k-lit); }
 .verdict-line { font-size: 12.5px; margin-top: 8px; display: flex; gap: 6px; align-items: flex-start; color: var(--ink2); }
 .findings { list-style: none; margin-top: 6px; display: flex; flex-direction: column; gap: 4px; }
-.findings li { font-size: 12px; color: #7f1d1d; background: var(--red-bg); border-radius: 6px; padding: 5px 8px; }
-.findings li.premature { color: #78350f; background: var(--amber-bg); }
+.findings li { font-size: 12px; color: var(--k-redtext); background: var(--red-bg); border-radius: 6px; padding: 5px 8px; }
+.findings li.premature { color: var(--k-ambertext); background: var(--amber-bg); }
 .findings q { font-family: var(--mono); font-size: 11.5px; quotes: none; font-weight: 600; }
 .edit-row, .sample-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; align-items: center; }
 .sample-row { margin-top: 8px; }
@@ -314,7 +315,7 @@ table.grid tbody th { font-weight: 600; }
 table.grid td { font-variant-numeric: tabular-nums; }
 /* Who does what's pills. The rule stays inside How it works, since a card's name and the waiting list use .who too. */
 .how-view .who { font-size: 12px; font-weight: 600; border-radius: 999px; padding: 2px 9px; white-space: nowrap; display: inline-block; }
-.how-view .who.ai { background: var(--k-lit2); color: #3730a3; }
+.how-view .who.ai { background: var(--k-lit2); color: var(--k-aitext); }
 .how-view .who.code { background: var(--slate-bg); color: var(--k-tooltext); }
 .how-view .who.person { background: var(--amber-bg); color: var(--amber); }
 .ok { color: var(--green); font-weight: 600; }
@@ -560,7 +561,7 @@ body.mode-how .mail, body.mode-how .conn { display: none; }
 .lab .dot { width: 7px; height: 7px; border-radius: 50%; }
 .lab.l-needs_you { background: var(--amber-bg); color: var(--amber); }
 .lab.l-handled { background: var(--green-bg); color: var(--green); }
-.lab.l-customer { background: var(--slate-bg); color: #475569; }
+.lab.l-customer { background: var(--slate-bg); color: var(--k-slatetext); }
 .lab.l-stopped { background: var(--red-bg); color: var(--red); }
 .lab.tag-draft, .lab.tag-sent, .lab.tag-gone { background: var(--k-white); color: var(--ink2); border: 1px solid var(--line); font-weight: 600; }
 .lab.tag-sent { color: var(--green); }
@@ -661,7 +662,15 @@ body.mode-how .mail, body.mode-how .conn { display: none; }
 
 /* phones: the list, the email and the panel are three screens side by side, the way the board's are */
 @media (max-width: 900px) {
-  .conn { padding: 6px 12px; font-size: 12px; }
+  /* The strip is one line that scrolls sideways. It snaps to an item, its right edge fades so the cut reads as more
+     to come, and the spacer at its end lets the last item scroll clear of the fade. */
+  .conn { padding: 6px 0 6px 12px; font-size: 12px; flex-wrap: nowrap; }
+  .conn ul { flex: 1; min-width: 0; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); }
+  .conn ul::-webkit-scrollbar { display: none; }
+  .conn ul::after { content: ''; flex: 0 0 18px; }
+  .conn li { white-space: nowrap; scroll-snap-align: start; }
   .conn .demo, .conn b { display: none; }
   .mail { display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; }
   .mail > .mlist, .mail > .read, .mail > .apanel { flex: 0 0 100%; scroll-snap-align: start; scroll-snap-stop: always; }
@@ -673,13 +682,18 @@ body.mode-how .mail, body.mode-how .conn { display: none; }
   .panel-body { padding: 4px 14px 24px; }
   .ptabs button { height: 40px; }
   .msearch input { font-size: 16px; }
-  .folders-phone { display: flex; }
+  .mhead .folders-phone { display: flex; }
   .lab, .tags .why { font-size: 11.5px; }
   .draft-foot .hint { flex-basis: 100%; margin-left: 0; }
   .draft-foot .btn, .btn-send { min-height: 40px; }
 }
-.folders-phone { display: none; gap: 6px; overflow-x: auto; margin-top: 8px; padding-bottom: 2px; }
-.folders-phone button { flex: none; height: 32px; padding: 0 11px; border-radius: 16px; border: 1px solid var(--line); background: var(--k-white);
+/* The chips scroll sideways the same way the strip does: snapping, with a faded right edge and room to clear it. */
+.folders-phone { display: none; gap: 6px; overflow-x: auto; margin-top: 8px; padding-bottom: 2px; scroll-snap-type: x proximity;
+  scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); }
+.folders-phone::-webkit-scrollbar { display: none; }
+.folders-phone::after { content: ''; flex: 0 0 26px; }
+.folders-phone button { scroll-snap-align: start; flex: none; height: 32px; padding: 0 11px; border-radius: 16px; border: 1px solid var(--line); background: var(--k-white);
   font-size: 12.5px; font-weight: 600; color: var(--ink2); white-space: nowrap; }
 .folders-phone button.on { background: var(--top); color: #fff; border-color: var(--top); }
 
@@ -702,10 +716,13 @@ body.mode-how .mail, body.mode-how .conn { display: none; }
 /* ------------------------------------------------------------------ dark mode (11/19)
    The button at the end of the top bar. Light is the default and nothing is stored. Every surface, line and tint
    above reads a variable, and these are their dark values. The top bar, the code and the raw calls are dark in both. */
-body.dark { --bg: #111317; --lane: rgba(255, 255, 255, .03); --line: #2c3138; --card: #1a1d22; --soft: #16191d; --ink: #e8eaed; --ink2: #c4c8ce; --muted: #9aa0a8; --amber: #fbbf24; --amber-bg: #3a2a07; --amber-soft: #241c08; --amber-edge: #6b4e0e; --green: #4ade80; --green-bg: #0f2e1a; --red: #f87171; --red-bg: #3a1414; --slate: #a8b3c4; --slate-bg: #262b33; --k-white: #1a1d22; --k-line2: #262a30; --k-line3: #343a42; --k-hit: #4a3608; --k-faint: #858b93; --k-lit: #1e2540; --k-tooltext: #e5e7eb; --k-tool: #262a30; --k-blocked: #2a1515; --k-blocked-line: #5a2626; --k-claim: #22c55e; --k-lit2: #26304f; --k-conn: #15181c; --k-rail: #14171b; --k-hover: #20242a; --k-sel: #2e2610; color-scheme: dark; }
+body.dark { --bg: #111317; --lane: rgba(255, 255, 255, .03); --line: #2c3138; --card: #1a1d22; --soft: #16191d; --ink: #e8eaed; --ink2: #c4c8ce; --muted: #9aa0a8; --amber: #fbbf24; --amber-bg: #3a2a07; --amber-soft: #241c08; --amber-edge: #6b4e0e; --green: #4ade80; --green-bg: #0f2e1a; --red: #f87171; --red-bg: #3a1414; --slate: #a8b3c4; --slate-bg: #262b33; --k-white: #1a1d22; --k-line2: #262a30; --k-line3: #343a42; --k-hit: #4a3608; --k-faint: #858b93; --k-lit: #1e2540; --k-tooltext: #e5e7eb; --k-tool: #262a30; --k-blocked: #2a1515; --k-blocked-line: #5a2626; --k-claim: #22c55e; --k-lit2: #26304f; --k-conn: #15181c; --k-rail: #14171b; --k-hover: #20242a; --k-sel: #2e2610; color-scheme: dark; --k-redtext: #fecaca; --k-ambertext: #fde68a; --k-aitext: #c7d2fe; --k-slatetext: #cbd5e1; }
 body.dark .rail .fold:hover { background: rgba(255, 255, 255, .05); }
 body.dark .layouts button[aria-pressed="true"], body.dark .btn-send { box-shadow: inset 0 0 0 1px var(--top-line); }
 body.dark .mrow:hover { background: var(--k-hover); }
 body.dark .incoming { background: rgba(255, 255, 255, .03); }
+/* White on the light green of dark mode fails, so the approve button keeps its deep green there. */
+body.dark .btn-ok { background: #15803d; }
+body.dark .btn-ok:hover { background: #166534; }
 body.dark .av { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .08); }
 body.dark img, body.dark .shot img { opacity: .92; }

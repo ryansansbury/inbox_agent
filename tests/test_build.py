@@ -30,7 +30,7 @@ class Build(unittest.TestCase):
         self.assertNotRegex(html, r"<script>(?!</script>)|<script[^>]*>[^<]+</script>")
         self.assertNotRegex(html, r"src=['\"](https?:)?//")
         self.assertEqual(set(re.findall(r"href=['\"](https?://[^/'\"]+)", html)),
-                         {"https://ryansansbury.com", "https://www.ryansansbury.com", "https://github.com"})
+                         {"https://www.ryansansbury.com", "https://github.com"})
         # The link preview names the live page and its image on the site, and loads nothing.
         self.assertIn("<link rel='canonical' href='https://www.ryansansbury.com/inbox-agent/'>", html)
         self.assertRegex(html, r"<meta property='og:image' content='https://www\.ryansansbury\.com/images/share/"

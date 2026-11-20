@@ -193,3 +193,45 @@ class DarkMode(unittest.TestCase):
         t = dict(re.findall(r"(--[\w-]+):\s*(#[0-9a-fA-F]{6})", block))
         low = [f"{a} on {b} is {contrast(t[a], t[b]):.2f}" for a, b in self.PAIRS if contrast(t[a], t[b]) < 4.5]
         self.assertEqual(low, [])
+
+    def test_no_light_only_text_color_is_left_in_the_stylesheet(self):
+        """A text color written as a literal has to read on the dark card, unless its rule also sets its own literal
+        background (the top bar, the code, the raw calls). Dark mode shipped once with five that didn't (11/19)."""
+        css = Path(__file__).resolve().parent.parent.joinpath("site", "app.css").read_text(encoding="utf-8")
+        card = re.search(r"body\.dark \{[^}]*--card:\s*(#[0-9a-fA-F]{6})", css).group(1)
+        low = []
+        for sel, body in re.findall(r"([^{}]+)\{([^{}]*)\}", css):
+            sel = sel.strip().splitlines()[-1]
+            if sel.startswith(("@", ":root", "body.dark")):
+                continue
+            own = re.search(r"background(?:-color)?:\s*#[0-9a-fA-F]{3,6}", body) or "var(--top" in body
+            for hexa in re.findall(r"(?<![-\w])color:\s*(#[0-9a-fA-F]{6})\b", body):
+                if not own and contrast(hexa, card) < 4.5:
+                    low.append(f"{sel} {hexa}")
+        self.assertEqual(low, [])
+
+    def test_the_new_text_variables_read_in_both_themes(self):
+        css = Path(__file__).resolve().parent.parent.joinpath("site", "app.css").read_text(encoding="utf-8")
+        light = dict(re.findall(r"(--[\w-]+):\s*(#[0-9a-fA-F]{6})", css[css.index(":root"):css.index("}", css.index(":root"))]))
+        dark = dict(light, **dict(re.findall(r"(--[\w-]+):\s*(#[0-9a-fA-F]{6})", re.search(r"body\.dark \{([^}]*)\}", css).group(1))))
+        pairs = (("--k-redtext", "--red-bg"), ("--k-ambertext", "--amber-bg"), ("--k-aitext", "--k-lit2"), ("--k-slatetext", "--slate-bg"))
+        low = [f"{name} {a} on {b}" for name, t in (("light", light), ("dark", dark)) for a, b in pairs if contrast(t[a], t[b]) < 4.5]
+        self.assertEqual(low, [])
+        self.assertGreaterEqual(contrast("#ffffff", "#15803d"), 4.5)
+
+    def test_the_phone_folder_chips_outrank_the_rule_that_hides_them(self):
+        css = Path(__file__).resolve().parent.parent.joinpath("site", "app.css").read_text(encoding="utf-8")
+        self.assertIn(".mhead .folders-phone { display: flex; }", css)
+        self.assertNotRegex(css, r"\n  \.folders-phone \{ display: flex")
+
+    def test_the_phone_scrollers_snap_and_fade(self):
+        """A line that scrolls sideways on purpose snaps, which is how Chrome's check tells it from text spilling out
+        of its box, and fades at its right edge so the cut reads as more to come."""
+        css = Path(__file__).resolve().parent.parent.joinpath("site", "app.css").read_text(encoding="utf-8")
+        for selector in ("  .conn ul {", "\n.folders-phone {"):
+            rule = css[css.index(selector):]
+            rule = rule[:rule.index("}")]
+            self.assertIn("overflow-x: auto", rule)
+            self.assertIn("scroll-snap-type: x proximity", rule)
+            self.assertIn("mask-image: linear-gradient(to right", rule)
+        self.assertNotRegex(css, r"\.conn \{[^}]*overflow-x")

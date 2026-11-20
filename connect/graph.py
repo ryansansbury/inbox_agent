@@ -47,11 +47,11 @@ class GraphMailbox(Mailbox):
 
     def label(self, message_id: str, lane: str) -> None:
         mine = lane_label(lane)
-        path = f"/messages/{quote(message_id)}"
+        path = f"/messages/{quote(message_id, safe='')}"
         now = self._call("GET", path + "?$select=categories").get("categories") or []
         kept = [c for c in now if c not in LABELS.values()]
         self._call("PATCH", path, {"categories": kept + [mine]})
 
     def draft_reply(self, message_id: str, text: str) -> str:
-        draft = self._call("POST", f"/messages/{quote(message_id)}/createReply", {"comment": text})
+        draft = self._call("POST", f"/messages/{quote(message_id, safe='')}/createReply", {"comment": text})
         return draft["id"]

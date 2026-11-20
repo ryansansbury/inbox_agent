@@ -95,6 +95,10 @@ class Graph(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.box.label("AAMk1", "archived")
 
+    def test_an_id_with_a_slash_is_escaped_whole(self):
+        fake = Fake({("POST", self.ROOT + "/messages/AA%2FB%2B%3D/createReply"): (201, {"id": "d"})})
+        self.assertEqual(GraphMailbox(fake, BOX).draft_reply("AA/B+=", "Hi"), "d")
+
 
 class Gmail(unittest.TestCase):
     ROOT = "https://gmail.googleapis.com/gmail/v1/users/me"
@@ -136,6 +140,17 @@ class Gmail(unittest.TestCase):
         self.assertEqual([m.id for m in msgs], ["18c1"])
         self.assertEqual(msgs[0].sender_name, "Clara Voss")
         self.assertEqual(msgs[0].text, "Can we get 60 bundles by Friday?")
+        self.assertEqual(cursor, "9001")
+
+    def test_the_first_read_takes_the_history_id_before_it_lists(self):
+        self.box.new_messages()
+        order = [u.split("/users/me")[1].split("?")[0] for _, u, _, _ in self.fake.calls[:2]]
+        self.assertEqual(order, ["/profile", "/messages"])
+
+    def test_a_history_id_too_old_falls_back_to_a_full_read(self):
+        self.fake.answers[("GET", self.ROOT + "/history")] = (404, {"error": {"message": "Requested entity was not found."}})
+        msgs, cursor = self.box.new_messages("1")
+        self.assertEqual([m.id for m in msgs], ["18c1"])
         self.assertEqual(cursor, "9001")
 
     def test_later_reads_follow_the_history_across_pages(self):

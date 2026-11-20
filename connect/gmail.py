@@ -11,7 +11,7 @@ from email.message import EmailMessage
 from typing import Dict, List, Optional, Tuple
 from urllib.parse import quote, urlencode
 
-from connect.base import LABELS, Mailbox, Message, Transport, checked, lane_label
+from connect.base import LABELS, Mailbox, MailError, Message, Transport, checked, lane_label
 
 BASE = "https://gmail.googleapis.com/gmail/v1/users"
 
@@ -43,16 +43,21 @@ class GmailMailbox(Mailbox):
     def new_messages(self, cursor: Optional[str] = None) -> Tuple[List[Message], Optional[str]]:
         ids: List[str] = []
         if cursor is None:
+            nxt = str(self._call("GET", "/profile").get("historyId", ""))
             listed = self._call("GET", "/messages", query={"labelIds": "INBOX", "maxResults": self.page})
             ids = [m["id"] for m in listed.get("messages", [])]
-            nxt = str(self._call("GET", "/profile").get("historyId", ""))
         else:
             token, nxt = None, cursor
             while True:
                 query = {"startHistoryId": cursor, "historyTypes": "messageAdded", "labelId": "INBOX"}
                 if token:
                     query["pageToken"] = token
-                data = self._call("GET", "/history", query=query)
+                try:
+                    data = self._call("GET", "/history", query=query)
+                except MailError as e:
+                    if " 404" not in str(e):
+                        raise
+                    return self.new_messages(None)  # the history id is too old, so read the inbox afresh
                 for h in data.get("history", []):
                     ids += [a["message"]["id"] for a in h.get("messagesAdded", []) if a["message"]["id"] not in ids]
                 nxt = str(data.get("historyId", nxt))
@@ -62,7 +67,7 @@ class GmailMailbox(Mailbox):
         return [self._get(i) for i in ids], nxt
 
     def _get(self, message_id: str) -> Message:
-        m = self._call("GET", f"/messages/{quote(message_id)}", query={"format": "full"})
+        m = self._call("GET", f"/messages/{quote(message_id, safe='')}", query={"format": "full"})
         head = {h["name"].lower(): h["value"] for h in (m.get("payload") or {}).get("headers", [])}
         sender = head.get("from", "")
         name, _, address = sender.rpartition("<")
@@ -83,7 +88,7 @@ class GmailMailbox(Mailbox):
     def label(self, message_id: str, lane: str) -> None:
         mine = self._label_id(lane_label(lane))
         others = [self.label_ids[n] for n in LABELS.values() if n in self.label_ids and self.label_ids[n] != mine]
-        self._call("POST", f"/messages/{quote(message_id)}/modify", {"addLabelIds": [mine], "removeLabelIds": others})
+        self._call("POST", f"/messages/{quote(message_id, safe='')}/modify", {"addLabelIds": [mine], "removeLabelIds": others})
 
     def draft_reply(self, message_id: str, text: str) -> str:
         m = self._get(message_id)

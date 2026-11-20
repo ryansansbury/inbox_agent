@@ -25,7 +25,7 @@ PLAY = ('<svg width="10" height="12" viewBox="0 0 10 12" aria-hidden="true"><pat
         'fill="currentColor"/></svg>')
 LANES = ("needs_you", "handled", "customer", "stopped")
 REPO = "https://github.com/ryansansbury/inbox_agent"
-SITE = "https://ryansansbury.com/"
+SITE = "https://www.ryansansbury.com/"
 LIVE = "https://www.ryansansbury.com/inbox-agent/"
 # The link preview's image is the top 838 rows of the homepage card, which is 1.91 to 1 and needs no crop on LinkedIn.
 SHARE = "https://www.ryansansbury.com/images/share/inbox-agent.png?v=1"
