@@ -1,0 +1,264 @@
+{
+ "email_id": "t02",
+ "split": "test",
+ "seq": 25,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "38371e598478d8cc",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20813"
+   },
+   "result": {
+    "order_id": "SO-20813",
+    "customer_id": "C-1001",
+    "po": "PF-88219",
+    "placed": "2026-10-21 13:15",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L2",
+     "label": "Building 4",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 30,
+      "picked": 30,
+      "shipped": 30,
+      "price": 58.0,
+      "amount": 1740.0,
+      "damaged_on_delivery": 12
+     }
+    ],
+    "fees": [],
+    "total": 1740.0,
+    "invoice_id": "INV-30944"
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "SO-20813",
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "qty": 12
+     }
+    ],
+    "reason": "Pallet tipped on delivery; 12 of 30 rolls of SF-18-80 crushed and unusable (damaged_on_delivery 12)",
+    "sentence": 3
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-176",
+    "waiting_on": "order_desk",
+    "rule": "reship_cap",
+    "note": "Reships worth over $500 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "value": 696.0,
+    "amount": 696.0,
+    "limit": 500
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Omar,\n\nWe're sorry about the tipped pallet on SO-20813. We have logged the 12 crushed rolls of 18 inch stretch film (SF-18-80) for replacement. The replacement is worth $696.00, which is above our limit for automatic reships, so it is pending approval from a member of our order desk team. We will let you know as soon as it is approved.\n\nThe Wendlow order desk",
+  "note": "Reship of 12 x SF-18-80 on SO-20813 ($696.00) exceeds the $500 reship cap and is waiting for approval under AP-176. The customer reported 12 crushed rolls at Building 4; the order record already shows 12 damaged on delivery. Check the delivery claim before approving.",
+  "intents": [
+   "damaged_delivery",
+   "reship_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01WZHwq4MS5VeqZHbAhS9pqZ",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    },
+    {
+     "id": "toolu_016ocw4grCHLq6S4rk7WF2Kx",
+     "name": "get_order",
+     "input": {
+      "order_id": "20813"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 254,
+     "output": 119,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 984,
+    "cost": 0.000134
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01EBpNhXvB6MPFgWqLNnVeaN",
+     "name": "reship",
+     "input": {
+      "order_id": "SO-20813",
+      "lines": [
+       {
+        "sku": "SF-18-80",
+        "qty": 12
+       }
+      ],
+      "reason": "Pallet tipped on delivery; 12 of 30 rolls of SF-18-80 crushed and unusable (damaged_on_delivery 12)",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1084,
+     "output": 338,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1689,
+    "cost": 0.000326
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01YaMzcvJXWbikkVxRuY2p12",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Omar,\n\nWe're sorry about the tipped pallet on SO-20813. We have logged the 12 crushed rolls of 18 inch stretch film (SF-18-80) for replacement. The replacement is worth $696.00, which is above our limit for automatic reships, so it is pending approval from a member of our order desk team. We will let you know as soon as it is approved.\n\nThe Wendlow order desk",
+      "note": "Reship of 12 x SF-18-80 on SO-20813 ($696.00) exceeds the $500 reship cap and is waiting for approval under AP-176. The customer reported 12 crushed rolls at Building 4; the order record already shows 12 damaged on delivery. Check the delivery claim before approving.",
+      "intents": [
+       "damaged_delivery",
+       "reship_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1386,
+     "output": 365,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1905,
+    "cost": 0.00037
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 4.6,
+  "input_tokens": 2724,
+  "output_tokens": 822,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.00083
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:37:33",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

@@ -1,0 +1,761 @@
+{
+ "BX-060606-32": {
+  "North": {
+   "on_hand": 358,
+   "held": 28,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 253,
+   "held": 12,
+   "inbound": []
+  }
+ },
+ "BX-060606-44": {
+  "North": {
+   "on_hand": 314,
+   "held": 26,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 87,
+   "held": 14,
+   "inbound": []
+  }
+ },
+ "BX-080808-32": {
+  "North": {
+   "on_hand": 92,
+   "held": 16,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 371,
+   "held": 27,
+   "inbound": []
+  }
+ },
+ "BX-080808-44": {
+  "North": {
+   "on_hand": 386,
+   "held": 21,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 168,
+   "held": 15,
+   "inbound": []
+  }
+ },
+ "BX-100806-32": {
+  "North": {
+   "on_hand": 388,
+   "held": 15,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 150,
+   "held": 4,
+   "inbound": []
+  }
+ },
+ "BX-100806-44": {
+  "North": {
+   "on_hand": 222,
+   "held": 21,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 251,
+   "held": 4,
+   "inbound": []
+  }
+ },
+ "BX-100806-32E": {
+  "North": {
+   "on_hand": 81,
+   "held": 22,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 229,
+   "held": 6,
+   "inbound": []
+  }
+ },
+ "BX-120904-32": {
+  "North": {
+   "on_hand": 168,
+   "held": 9,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 127,
+   "held": 24,
+   "inbound": []
+  }
+ },
+ "BX-120904-44": {
+  "North": {
+   "on_hand": 247,
+   "held": 9,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 279,
+   "held": 13,
+   "inbound": []
+  }
+ },
+ "BX-121006-32": {
+  "North": {
+   "on_hand": 52,
+   "held": 12,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 30,
+   "held": 4,
+   "inbound": []
+  }
+ },
+ "BX-121006-44": {
+  "North": {
+   "on_hand": 376,
+   "held": 13,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 131,
+   "held": 15,
+   "inbound": []
+  }
+ },
+ "BX-121212-32": {
+  "North": {
+   "on_hand": 361,
+   "held": 9,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 325,
+   "held": 16,
+   "inbound": []
+  }
+ },
+ "BX-121212-44": {
+  "North": {
+   "on_hand": 70,
+   "held": 10,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 18,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "BX-121212-32E": {
+  "North": {
+   "on_hand": 361,
+   "held": 19,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 255,
+   "held": 11,
+   "inbound": []
+  }
+ },
+ "BX-141006-32": {
+  "North": {
+   "on_hand": 230,
+   "held": 28,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 303,
+   "held": 5,
+   "inbound": []
+  }
+ },
+ "BX-141006-44": {
+  "North": {
+   "on_hand": 393,
+   "held": 7,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 169,
+   "held": 14,
+   "inbound": []
+  }
+ },
+ "BX-141414-32": {
+  "North": {
+   "on_hand": 0,
+   "held": 0,
+   "inbound": [
+    {
+     "qty": 60,
+     "date": "2026-11-10"
+    }
+   ]
+  },
+  "Valley": {
+   "on_hand": 6,
+   "held": 6,
+   "inbound": []
+  }
+ },
+ "BX-141414-44": {
+  "North": {
+   "on_hand": 274,
+   "held": 15,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 369,
+   "held": 28,
+   "inbound": []
+  }
+ },
+ "BX-141414-32E": {
+  "North": {
+   "on_hand": 52,
+   "held": 7,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 0,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "BX-161210-32": {
+  "North": {
+   "on_hand": 0,
+   "held": 0,
+   "inbound": [
+    {
+     "qty": 120,
+     "date": "2026-11-06"
+    }
+   ]
+  },
+  "Valley": {
+   "on_hand": 0,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "BX-161210-44": {
+  "North": {
+   "on_hand": 205,
+   "held": 13,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 288,
+   "held": 23,
+   "inbound": []
+  }
+ },
+ "BX-161210-32E": {
+  "North": {
+   "on_hand": 80,
+   "held": 0,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 25,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "BX-181212-32": {
+  "North": {
+   "on_hand": 127,
+   "held": 8,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 299,
+   "held": 25,
+   "inbound": []
+  }
+ },
+ "BX-181212-44": {
+  "North": {
+   "on_hand": 261,
+   "held": 20,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 127,
+   "held": 10,
+   "inbound": []
+  }
+ },
+ "BX-181818-32": {
+  "North": {
+   "on_hand": 209,
+   "held": 13,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 358,
+   "held": 27,
+   "inbound": []
+  }
+ },
+ "BX-181818-44": {
+  "North": {
+   "on_hand": 66,
+   "held": 13,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 328,
+   "held": 16,
+   "inbound": []
+  }
+ },
+ "BX-241812-32": {
+  "North": {
+   "on_hand": 340,
+   "held": 2,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 194,
+   "held": 20,
+   "inbound": []
+  }
+ },
+ "BX-241812-44": {
+  "North": {
+   "on_hand": 339,
+   "held": 5,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 105,
+   "held": 21,
+   "inbound": []
+  }
+ },
+ "MB-090603": {
+  "North": {
+   "on_hand": 203,
+   "held": 21,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 386,
+   "held": 29,
+   "inbound": []
+  }
+ },
+ "MB-110804": {
+  "North": {
+   "on_hand": 161,
+   "held": 5,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 248,
+   "held": 7,
+   "inbound": []
+  }
+ },
+ "MB-120903": {
+  "North": {
+   "on_hand": 155,
+   "held": 10,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 230,
+   "held": 1,
+   "inbound": []
+  }
+ },
+ "PM-1013": {
+  "North": {
+   "on_hand": 188,
+   "held": 9,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 372,
+   "held": 24,
+   "inbound": []
+  }
+ },
+ "PM-1419": {
+  "North": {
+   "on_hand": 311,
+   "held": 27,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 314,
+   "held": 26,
+   "inbound": []
+  }
+ },
+ "PD-0812": {
+  "North": {
+   "on_hand": 173,
+   "held": 24,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 306,
+   "held": 6,
+   "inbound": []
+  }
+ },
+ "PD-1016": {
+  "North": {
+   "on_hand": 306,
+   "held": 1,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 341,
+   "held": 23,
+   "inbound": []
+  }
+ },
+ "RM-0911": {
+  "North": {
+   "on_hand": 0,
+   "held": 0,
+   "inbound": [
+    {
+     "qty": 40,
+     "date": "2026-11-05"
+    }
+   ]
+  },
+  "Valley": {
+   "on_hand": 0,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "TP-2C-110": {
+  "North": {
+   "on_hand": 259,
+   "held": 9,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 214,
+   "held": 5,
+   "inbound": []
+  }
+ },
+ "TP-3C-110": {
+  "North": {
+   "on_hand": 386,
+   "held": 3,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 210,
+   "held": 3,
+   "inbound": []
+  }
+ },
+ "TP-2H-110": {
+  "North": {
+   "on_hand": 177,
+   "held": 15,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 271,
+   "held": 12,
+   "inbound": []
+  }
+ },
+ "TP-WAT-3": {
+  "North": {
+   "on_hand": 201,
+   "held": 5,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 389,
+   "held": 10,
+   "inbound": []
+  }
+ },
+ "TP-FRG-2": {
+  "North": {
+   "on_hand": 368,
+   "held": 12,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 323,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "TP-GUN": {
+  "North": {
+   "on_hand": 71,
+   "held": 9,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 189,
+   "held": 12,
+   "inbound": []
+  }
+ },
+ "SF-18-80": {
+  "North": {
+   "on_hand": 70,
+   "held": 17,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 114,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "SF-18-63": {
+  "North": {
+   "on_hand": 254,
+   "held": 19,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 75,
+   "held": 0,
+   "inbound": []
+  }
+ },
+ "SF-20-80M": {
+  "North": {
+   "on_hand": 288,
+   "held": 11,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 156,
+   "held": 21,
+   "inbound": []
+  }
+ },
+ "SF-05-BND": {
+  "North": {
+   "on_hand": 120,
+   "held": 29,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 358,
+   "held": 5,
+   "inbound": []
+  }
+ },
+ "SF-16-PRE": {
+  "North": {
+   "on_hand": 88,
+   "held": 15,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 113,
+   "held": 13,
+   "inbound": []
+  }
+ },
+ "SF-DISP": {
+  "North": {
+   "on_hand": 263,
+   "held": 5,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 99,
+   "held": 24,
+   "inbound": []
+  }
+ },
+ "VF-AIR-84": {
+  "North": {
+   "on_hand": 210,
+   "held": 0,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 293,
+   "held": 13,
+   "inbound": []
+  }
+ },
+ "VF-KP-30": {
+  "North": {
+   "on_hand": 72,
+   "held": 12,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 141,
+   "held": 4,
+   "inbound": []
+  }
+ },
+ "VF-PEA-14": {
+  "North": {
+   "on_hand": 266,
+   "held": 15,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 255,
+   "held": 12,
+   "inbound": []
+  }
+ },
+ "VF-CRK-10": {
+  "North": {
+   "on_hand": 255,
+   "held": 17,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 102,
+   "held": 10,
+   "inbound": []
+  }
+ },
+ "VF-HNY-15": {
+  "North": {
+   "on_hand": 147,
+   "held": 16,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 357,
+   "held": 5,
+   "inbound": []
+  }
+ },
+ "VF-FOAM-12": {
+  "North": {
+   "on_hand": 239,
+   "held": 28,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 194,
+   "held": 28,
+   "inbound": []
+  }
+ },
+ "LB-46-TH": {
+  "North": {
+   "on_hand": 218,
+   "held": 26,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 238,
+   "held": 23,
+   "inbound": []
+  }
+ },
+ "LB-PLE-75": {
+  "North": {
+   "on_hand": 271,
+   "held": 5,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 361,
+   "held": 17,
+   "inbound": []
+  }
+ },
+ "LB-FRG": {
+  "North": {
+   "on_hand": 286,
+   "held": 28,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 331,
+   "held": 1,
+   "inbound": []
+  }
+ },
+ "LB-21-TH": {
+  "North": {
+   "on_hand": 128,
+   "held": 14,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 93,
+   "held": 21,
+   "inbound": []
+  }
+ },
+ "PL-4840-N": {
+  "North": {
+   "on_hand": 107,
+   "held": 5,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 98,
+   "held": 1,
+   "inbound": []
+  }
+ },
+ "PL-4840-R": {
+  "North": {
+   "on_hand": 254,
+   "held": 27,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 350,
+   "held": 8,
+   "inbound": []
+  }
+ },
+ "ST-PP-12": {
+  "North": {
+   "on_hand": 241,
+   "held": 1,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 224,
+   "held": 17,
+   "inbound": []
+  }
+ },
+ "EP-2236": {
+  "North": {
+   "on_hand": 225,
+   "held": 14,
+   "inbound": []
+  },
+  "Valley": {
+   "on_hand": 265,
+   "held": 8,
+   "inbound": []
+  }
+ }
+}

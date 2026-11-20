@@ -1,0 +1,4480 @@
+[
+ {
+  "id": "SO-20500",
+  "customer_id": "C-1001",
+  "po": "01-3365",
+  "placed": "2026-04-01T11:35",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-FRG-2",
+    "qty": 4,
+    "price": 69.0,
+    "picked": 4,
+    "shipped": 4
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 6,
+    "price": 58.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30600"
+ },
+ {
+  "id": "SO-20501",
+  "customer_id": "C-1003",
+  "po": "03-3118",
+  "placed": "2026-04-03T16:26",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 30,
+    "price": 21.25,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 40,
+    "price": 35.4,
+    "picked": 40,
+    "shipped": 40
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30601"
+ },
+ {
+  "id": "SO-20502",
+  "customer_id": "C-1004",
+  "po": "04-7305",
+  "placed": "2026-04-03T15:39",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 5,
+    "price": 44.0,
+    "picked": 5,
+    "shipped": 5
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 45,
+    "price": 49.9,
+    "picked": 45,
+    "shipped": 45
+   },
+   {
+    "sku": "BX-141006-32",
+    "qty": 40,
+    "price": 24.3,
+    "picked": 40,
+    "shipped": 40
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30602"
+ },
+ {
+  "id": "SO-20503",
+  "customer_id": "C-1008",
+  "po": "08-2172",
+  "placed": "2026-04-04T12:48",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181818-44",
+    "qty": 35,
+    "price": 59.7,
+    "picked": 35,
+    "shipped": 35
+   },
+   {
+    "sku": "BX-161210-32",
+    "qty": 20,
+    "price": 22.4,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "BX-141006-44",
+    "qty": 35,
+    "price": 31.6,
+    "picked": 35,
+    "shipped": 35
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30603"
+ },
+ {
+  "id": "SO-20504",
+  "customer_id": "C-1001",
+  "po": "01-5938",
+  "placed": "2026-04-06T15:48",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 10,
+    "price": 31.6,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30604"
+ },
+ {
+  "id": "SO-20505",
+  "customer_id": "C-1007",
+  "po": "07-1411",
+  "placed": "2026-04-08T09:33",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181212-44",
+    "qty": 40,
+    "price": 50.8,
+    "picked": 40,
+    "shipped": 40
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30605"
+ },
+ {
+  "id": "SO-20506",
+  "customer_id": "C-1007",
+  "po": "07-7021",
+  "placed": "2026-04-09T12:14",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 9,
+    "price": 38.0,
+    "picked": 9,
+    "shipped": 9
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30606"
+ },
+ {
+  "id": "SO-20507",
+  "customer_id": "C-1001",
+  "po": "01-7503",
+  "placed": "2026-04-10T12:39",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 5,
+    "price": 38.0,
+    "picked": 5,
+    "shipped": 5
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30607"
+ },
+ {
+  "id": "SO-20508",
+  "customer_id": "C-1004",
+  "po": "04-1708",
+  "placed": "2026-04-12T11:55",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-KP-30",
+    "qty": 2,
+    "price": 40.0,
+    "picked": 2,
+    "shipped": 2
+   },
+   {
+    "sku": "LB-PLE-75",
+    "qty": 5,
+    "price": 42.0,
+    "picked": 5,
+    "shipped": 5
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 7,
+    "price": 64.0,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30608"
+ },
+ {
+  "id": "SO-20509",
+  "customer_id": "C-1005",
+  "po": "05-4079",
+  "placed": "2026-04-12T09:38",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-2H-110",
+    "qty": 3,
+    "price": 64.0,
+    "picked": 3,
+    "shipped": 3
+   },
+   {
+    "sku": "VF-KP-30",
+    "qty": 8,
+    "price": 40.0,
+    "picked": 8,
+    "shipped": 8
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 3,
+    "price": 64.0,
+    "picked": 3,
+    "shipped": 3
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30609"
+ },
+ {
+  "id": "SO-20510",
+  "customer_id": "C-1006",
+  "po": "06-4288",
+  "placed": "2026-04-12T16:49",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 4,
+    "price": 42.0,
+    "picked": 4,
+    "shipped": 4
+   },
+   {
+    "sku": "BX-181212-32",
+    "qty": 55,
+    "price": 39.2,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30610"
+ },
+ {
+  "id": "SO-20511",
+  "customer_id": "C-1009",
+  "po": "09-3829",
+  "placed": "2026-04-12T10:25",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-DISP",
+    "qty": 4,
+    "price": 24.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30611"
+ },
+ {
+  "id": "SO-20512",
+  "customer_id": "C-1001",
+  "po": "01-4075",
+  "placed": "2026-04-14T11:25",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 15,
+    "price": 27.75,
+    "picked": 15,
+    "shipped": 15
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 15,
+    "price": 50.8,
+    "picked": 15,
+    "shipped": 15
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 3,
+    "price": 69.0,
+    "picked": 3,
+    "shipped": 3
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30612"
+ },
+ {
+  "id": "SO-20513",
+  "customer_id": "C-1006",
+  "po": "06-1422",
+  "placed": "2026-04-15T13:48",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181818-44",
+    "qty": 25,
+    "price": 59.7,
+    "picked": 25,
+    "shipped": 25
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 6,
+    "price": 69.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 10,
+    "price": 64.0,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30613"
+ },
+ {
+  "id": "SO-20514",
+  "customer_id": "C-1008",
+  "po": "08-2161",
+  "placed": "2026-04-15T14:53",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 45,
+    "price": 21.25,
+    "picked": 45,
+    "shipped": 45
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30614"
+ },
+ {
+  "id": "SO-20515",
+  "customer_id": "C-1002",
+  "po": "02-5497",
+  "placed": "2026-04-16T08:19",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 7,
+    "price": 89.0,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30615"
+ },
+ {
+  "id": "SO-20516",
+  "customer_id": "C-1007",
+  "po": "07-7188",
+  "placed": "2026-04-16T13:38",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141414-44",
+    "qty": 30,
+    "price": 49.9,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 7,
+    "price": 64.0,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30616"
+ },
+ {
+  "id": "SO-20517",
+  "customer_id": "C-1009",
+  "po": "09-1454",
+  "placed": "2026-04-17T11:29",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 25,
+    "price": 27.75,
+    "picked": 25,
+    "shipped": 25
+   },
+   {
+    "sku": "LB-PLE-75",
+    "qty": 4,
+    "price": 42.0,
+    "picked": 4,
+    "shipped": 4
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 20,
+    "price": 31.8,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30617"
+ },
+ {
+  "id": "SO-20518",
+  "customer_id": "C-1002",
+  "po": "02-2077",
+  "placed": "2026-04-20T15:55",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 40,
+    "price": 18.4,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "LB-FRG",
+    "qty": 10,
+    "price": 9.5,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30618"
+ },
+ {
+  "id": "SO-20519",
+  "customer_id": "C-1001",
+  "po": "01-7538",
+  "placed": "2026-04-22T10:34",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 9,
+    "price": 72.0,
+    "picked": 9,
+    "shipped": 9
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 10,
+    "price": 49.9,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 6,
+    "price": 56.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30619"
+ },
+ {
+  "id": "SO-20520",
+  "customer_id": "C-1009",
+  "po": "09-6798",
+  "placed": "2026-04-22T15:28",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-2H-110",
+    "qty": 6,
+    "price": 64.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "BX-120904-44",
+    "qty": 10,
+    "price": 24.2,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 30,
+    "price": 31.8,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30620"
+ },
+ {
+  "id": "SO-20521",
+  "customer_id": "C-1002",
+  "po": "02-9938",
+  "placed": "2026-04-23T16:47",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-44",
+    "qty": 25,
+    "price": 67.8,
+    "picked": 25,
+    "shipped": 25
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 15,
+    "price": 27.75,
+    "picked": 15,
+    "shipped": 15
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30621"
+ },
+ {
+  "id": "SO-20522",
+  "customer_id": "C-1007",
+  "po": "07-9862",
+  "placed": "2026-04-23T14:12",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 15,
+    "price": 26.1,
+    "picked": 15,
+    "shipped": 15
+   },
+   {
+    "sku": "BX-241812-32",
+    "qty": 55,
+    "price": 52.4,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30622"
+ },
+ {
+  "id": "SO-20523",
+  "customer_id": "C-1002",
+  "po": "02-1777",
+  "placed": "2026-04-25T15:05",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-161210-44",
+    "qty": 50,
+    "price": 35.4,
+    "picked": 50,
+    "shipped": 50
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 9,
+    "price": 38.0,
+    "picked": 9,
+    "shipped": 9
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30623"
+ },
+ {
+  "id": "SO-20524",
+  "customer_id": "C-1006",
+  "po": "06-9009",
+  "placed": "2026-04-25T15:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-18-63",
+    "qty": 7,
+    "price": 56.0,
+    "picked": 7,
+    "shipped": 7
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 60,
+    "price": 49.9,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "VF-AIR-84",
+    "qty": 7,
+    "price": 46.0,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30624"
+ },
+ {
+  "id": "SO-20525",
+  "customer_id": "C-1004",
+  "po": "04-3945",
+  "placed": "2026-04-27T16:59",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-21-TH",
+    "qty": 6,
+    "price": 36.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "BX-181818-32",
+    "qty": 25,
+    "price": 46.2,
+    "picked": 25,
+    "shipped": 25
+   },
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 12,
+    "price": 44.0,
+    "picked": 12,
+    "shipped": 12
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30625"
+ },
+ {
+  "id": "SO-20526",
+  "customer_id": "C-1005",
+  "po": "05-3116",
+  "placed": "2026-04-27T08:42",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 3,
+    "price": 72.0,
+    "picked": 3,
+    "shipped": 3
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 55,
+    "price": 27.75,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30626"
+ },
+ {
+  "id": "SO-20527",
+  "customer_id": "C-1001",
+  "po": "01-3397",
+  "placed": "2026-04-30T08:44",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181212-44",
+    "qty": 40,
+    "price": 50.8,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 35,
+    "price": 18.75,
+    "picked": 35,
+    "shipped": 35
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30627"
+ },
+ {
+  "id": "SO-20528",
+  "customer_id": "C-1007",
+  "po": "07-8275",
+  "placed": "2026-04-30T08:36",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121212-32",
+    "qty": 45,
+    "price": 31.8,
+    "picked": 45,
+    "shipped": 45
+   },
+   {
+    "sku": "BX-241812-44",
+    "qty": 40,
+    "price": 67.8,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-181212-32",
+    "qty": 55,
+    "price": 39.2,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30628"
+ },
+ {
+  "id": "SO-20529",
+  "customer_id": "C-1006",
+  "po": "06-8830",
+  "placed": "2026-05-02T12:01",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 4,
+    "price": 44.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30629"
+ },
+ {
+  "id": "SO-20530",
+  "customer_id": "C-1005",
+  "po": "05-3427",
+  "placed": "2026-05-04T15:06",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 60,
+    "price": 21.25,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "BX-060606-44",
+    "qty": 50,
+    "price": 24.5,
+    "picked": 50,
+    "shipped": 50
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30630"
+ },
+ {
+  "id": "SO-20531",
+  "customer_id": "C-1008",
+  "po": "08-2869",
+  "placed": "2026-05-04T11:35",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 50,
+    "price": 19.9,
+    "picked": 50,
+    "shipped": 50
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 55,
+    "price": 41.2,
+    "picked": 55,
+    "shipped": 55
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 60,
+    "price": 18.75,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30631"
+ },
+ {
+  "id": "SO-20532",
+  "customer_id": "C-1006",
+  "po": "06-8217",
+  "placed": "2026-05-08T16:11",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 60,
+    "price": 27.75,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30632"
+ },
+ {
+  "id": "SO-20533",
+  "customer_id": "C-1009",
+  "po": "09-1581",
+  "placed": "2026-05-08T10:31",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-DISP",
+    "qty": 10,
+    "price": 24.0,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 60,
+    "price": 50.8,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30633"
+ },
+ {
+  "id": "SO-20534",
+  "customer_id": "C-1008",
+  "po": "08-5790",
+  "placed": "2026-05-09T08:47",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-KP-30",
+    "qty": 3,
+    "price": 40.0,
+    "picked": 3,
+    "shipped": 3
+   },
+   {
+    "sku": "SF-18-63",
+    "qty": 4,
+    "price": 56.0,
+    "picked": 4,
+    "shipped": 4
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 11,
+    "price": 64.0,
+    "picked": 11,
+    "shipped": 11
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30634"
+ },
+ {
+  "id": "SO-20535",
+  "customer_id": "C-1004",
+  "po": "04-9454",
+  "placed": "2026-05-10T11:27",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 50,
+    "price": 27.75,
+    "picked": 50,
+    "shipped": 50
+   },
+   {
+    "sku": "BX-120904-44",
+    "qty": 10,
+    "price": 24.2,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30635"
+ },
+ {
+  "id": "SO-20536",
+  "customer_id": "C-1004",
+  "po": "04-6170",
+  "placed": "2026-05-10T14:06",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 60,
+    "price": 26.1,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 40,
+    "price": 27.75,
+    "picked": 40,
+    "shipped": 40
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30636"
+ },
+ {
+  "id": "SO-20537",
+  "customer_id": "C-1005",
+  "po": "05-9605",
+  "placed": "2026-05-10T13:19",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 6,
+    "price": 42.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30637"
+ },
+ {
+  "id": "SO-20538",
+  "customer_id": "C-1005",
+  "po": "05-9439",
+  "placed": "2026-05-12T15:22",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 5,
+    "price": 72.0,
+    "picked": 5,
+    "shipped": 5
+   },
+   {
+    "sku": "BX-100806-44",
+    "qty": 35,
+    "price": 26.1,
+    "picked": 35,
+    "shipped": 35
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30638"
+ },
+ {
+  "id": "SO-20539",
+  "customer_id": "C-1010",
+  "po": "10-5845",
+  "placed": "2026-05-13T08:29",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 60,
+    "price": 46.2,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30639"
+ },
+ {
+  "id": "SO-20540",
+  "customer_id": "C-1010",
+  "po": "10-1724",
+  "placed": "2026-05-14T10:27",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 15,
+    "price": 46.2,
+    "picked": 15,
+    "shipped": 15
+   },
+   {
+    "sku": "BX-120904-44",
+    "qty": 60,
+    "price": 24.2,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30640"
+ },
+ {
+  "id": "SO-20541",
+  "customer_id": "C-1009",
+  "po": "09-1558",
+  "placed": "2026-05-16T10:08",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121212-44",
+    "qty": 30,
+    "price": 41.2,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "SF-20-80M",
+    "qty": 7,
+    "price": 89.0,
+    "picked": 7,
+    "shipped": 7
+   },
+   {
+    "sku": "LB-21-TH",
+    "qty": 5,
+    "price": 36.0,
+    "picked": 5,
+    "shipped": 5
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30641"
+ },
+ {
+  "id": "SO-20542",
+  "customer_id": "C-1010",
+  "po": "10-7635",
+  "placed": "2026-05-16T16:02",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 10,
+    "price": 64.0,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 3,
+    "price": 69.0,
+    "picked": 3,
+    "shipped": 3
+   },
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 11,
+    "price": 44.0,
+    "picked": 11,
+    "shipped": 11
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30642"
+ },
+ {
+  "id": "SO-20543",
+  "customer_id": "C-1009",
+  "po": "09-4140",
+  "placed": "2026-05-17T10:54",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-44",
+    "qty": 60,
+    "price": 67.8,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 30,
+    "price": 22.6,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30643"
+ },
+ {
+  "id": "SO-20544",
+  "customer_id": "C-1010",
+  "po": "10-6188",
+  "placed": "2026-05-19T15:02",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-16-PRE",
+    "qty": 11,
+    "price": 59.0,
+    "picked": 11,
+    "shipped": 11
+   },
+   {
+    "sku": "BX-241812-44",
+    "qty": 30,
+    "price": 67.8,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30644"
+ },
+ {
+  "id": "SO-20545",
+  "customer_id": "C-1003",
+  "po": "03-2674",
+  "placed": "2026-05-22T16:22",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-120904-44",
+    "qty": 30,
+    "price": 24.2,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 60,
+    "price": 21.4,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 4,
+    "price": 54.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30645"
+ },
+ {
+  "id": "SO-20546",
+  "customer_id": "C-1010",
+  "po": "10-5454",
+  "placed": "2026-05-23T14:59",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-GUN",
+    "qty": 6,
+    "price": 54.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 50,
+    "price": 27.75,
+    "picked": 50,
+    "shipped": 50
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 20,
+    "price": 38.6,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30646"
+ },
+ {
+  "id": "SO-20547",
+  "customer_id": "C-1001",
+  "po": "01-7795",
+  "placed": "2026-05-27T13:07",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 6,
+    "price": 44.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 10,
+    "price": 69.0,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30647"
+ },
+ {
+  "id": "SO-20548",
+  "customer_id": "C-1006",
+  "po": "06-8757",
+  "placed": "2026-06-01T10:55",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 45,
+    "price": 24.3,
+    "picked": 45,
+    "shipped": 45
+   },
+   {
+    "sku": "BX-080808-32",
+    "qty": 25,
+    "price": 21.25,
+    "picked": 25,
+    "shipped": 25
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 25,
+    "price": 35.4,
+    "picked": 25,
+    "shipped": 25
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30648"
+ },
+ {
+  "id": "SO-20549",
+  "customer_id": "C-1002",
+  "po": "02-4175",
+  "placed": "2026-06-04T09:28",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 40,
+    "price": 27.06,
+    "picked": 40,
+    "shipped": 40
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30649"
+ },
+ {
+  "id": "SO-20550",
+  "customer_id": "C-1008",
+  "po": "08-8963",
+  "placed": "2026-06-06T14:48",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 55,
+    "price": 27.75,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30650"
+ },
+ {
+  "id": "SO-20551",
+  "customer_id": "C-1007",
+  "po": "07-7887",
+  "placed": "2026-06-07T08:13",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 7,
+    "price": 72.0,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30651"
+ },
+ {
+  "id": "SO-20552",
+  "customer_id": "C-1002",
+  "po": "02-8771",
+  "placed": "2026-06-10T13:53",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181212-44",
+    "qty": 40,
+    "price": 50.8,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 35,
+    "price": 38.6,
+    "picked": 35,
+    "shipped": 35
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30652"
+ },
+ {
+  "id": "SO-20553",
+  "customer_id": "C-1002",
+  "po": "02-9425",
+  "placed": "2026-06-11T08:11",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 3,
+    "price": 42.0,
+    "picked": 3,
+    "shipped": 3
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30653"
+ },
+ {
+  "id": "SO-20554",
+  "customer_id": "C-1004",
+  "po": "04-7723",
+  "placed": "2026-06-13T16:51",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 9,
+    "price": 44.0,
+    "picked": 9,
+    "shipped": 9
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30654"
+ },
+ {
+  "id": "SO-20555",
+  "customer_id": "C-1004",
+  "po": "04-9176",
+  "placed": "2026-06-15T13:53",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 55,
+    "price": 18.4,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30655"
+ },
+ {
+  "id": "SO-20556",
+  "customer_id": "C-1003",
+  "po": "03-5907",
+  "placed": "2026-06-18T08:54",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 20,
+    "price": 21.25,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 45,
+    "price": 27.75,
+    "picked": 45,
+    "shipped": 45
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30656"
+ },
+ {
+  "id": "SO-20557",
+  "customer_id": "C-1008",
+  "po": "08-1439",
+  "placed": "2026-06-20T15:25",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 30,
+    "price": 19.9,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 12,
+    "price": 54.0,
+    "picked": 12,
+    "shipped": 12
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 50,
+    "price": 41.2,
+    "picked": 50,
+    "shipped": 50
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30657"
+ },
+ {
+  "id": "SO-20558",
+  "customer_id": "C-1005",
+  "po": "05-7262",
+  "placed": "2026-06-21T08:48",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-161210-44",
+    "qty": 20,
+    "price": 35.4,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 20,
+    "price": 18.4,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30658"
+ },
+ {
+  "id": "SO-20559",
+  "customer_id": "C-1010",
+  "po": "10-7755",
+  "placed": "2026-06-24T12:22",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 20,
+    "price": 27.06,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 15,
+    "price": 50.8,
+    "picked": 15,
+    "shipped": 15
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30659"
+ },
+ {
+  "id": "SO-20560",
+  "customer_id": "C-1008",
+  "po": "08-6529",
+  "placed": "2026-06-26T08:10",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-3C-110",
+    "qty": 7,
+    "price": 54.0,
+    "picked": 7,
+    "shipped": 7
+   },
+   {
+    "sku": "BX-181212-32",
+    "qty": 60,
+    "price": 39.2,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "LB-FRG",
+    "qty": 7,
+    "price": 9.5,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30660"
+ },
+ {
+  "id": "SO-20561",
+  "customer_id": "C-1002",
+  "po": "02-3781",
+  "placed": "2026-07-02T14:35",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 25,
+    "price": 46.2,
+    "picked": 25,
+    "shipped": 25
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30661"
+ },
+ {
+  "id": "SO-20562",
+  "customer_id": "C-1010",
+  "po": "10-6561",
+  "placed": "2026-07-02T16:07",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 60,
+    "price": 31.6,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 30,
+    "price": 18.4,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30662"
+ },
+ {
+  "id": "SO-20563",
+  "customer_id": "C-1003",
+  "po": "03-7524",
+  "placed": "2026-07-05T10:49",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 2,
+    "price": 89.0,
+    "picked": 2,
+    "shipped": 2
+   },
+   {
+    "sku": "VF-PEA-14",
+    "qty": 6,
+    "price": 26.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30663"
+ },
+ {
+  "id": "SO-20564",
+  "customer_id": "C-1002",
+  "po": "02-4812",
+  "placed": "2026-07-06T10:14",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 45,
+    "price": 24.3,
+    "picked": 45,
+    "shipped": 45
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 10,
+    "price": 31.8,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "BX-060606-44",
+    "qty": 30,
+    "price": 24.5,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30664"
+ },
+ {
+  "id": "SO-20565",
+  "customer_id": "C-1005",
+  "po": "05-7188",
+  "placed": "2026-07-06T16:19",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 15,
+    "price": 52.4,
+    "picked": 15,
+    "shipped": 15
+   },
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 12,
+    "price": 44.0,
+    "picked": 12,
+    "shipped": 12
+   },
+   {
+    "sku": "SF-18-63",
+    "qty": 5,
+    "price": 56.0,
+    "picked": 5,
+    "shipped": 5
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30665"
+ },
+ {
+  "id": "SO-20566",
+  "customer_id": "C-1005",
+  "po": "05-4873",
+  "placed": "2026-07-09T11:26",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 9,
+    "price": 89.0,
+    "picked": 9,
+    "shipped": 9
+   },
+   {
+    "sku": "SF-16-PRE",
+    "qty": 11,
+    "price": 59.0,
+    "picked": 11,
+    "shipped": 11
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30666"
+ },
+ {
+  "id": "SO-20567",
+  "customer_id": "C-1003",
+  "po": "03-6620",
+  "placed": "2026-07-10T13:34",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-PEA-14",
+    "qty": 11,
+    "price": 26.0,
+    "picked": 11,
+    "shipped": 11
+   },
+   {
+    "sku": "LB-FRG",
+    "qty": 8,
+    "price": 9.5,
+    "picked": 8,
+    "shipped": 8
+   },
+   {
+    "sku": "LB-PLE-75",
+    "qty": 11,
+    "price": 42.0,
+    "picked": 11,
+    "shipped": 11
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30667"
+ },
+ {
+  "id": "SO-20568",
+  "customer_id": "C-1010",
+  "po": "10-2128",
+  "placed": "2026-07-11T16:16",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-120904-44",
+    "qty": 40,
+    "price": 24.2,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 10,
+    "price": 31.8,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 50,
+    "price": 35.4,
+    "picked": 50,
+    "shipped": 50
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30668"
+ },
+ {
+  "id": "SO-20569",
+  "customer_id": "C-1008",
+  "po": "08-9011",
+  "placed": "2026-07-13T08:50",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-GUN",
+    "qty": 9,
+    "price": 54.0,
+    "picked": 9,
+    "shipped": 9
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30669"
+ },
+ {
+  "id": "SO-20570",
+  "customer_id": "C-1003",
+  "po": "03-8887",
+  "placed": "2026-07-14T14:44",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 40,
+    "price": 26.1,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 30,
+    "price": 18.4,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 9,
+    "price": 72.0,
+    "picked": 9,
+    "shipped": 9
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30670"
+ },
+ {
+  "id": "SO-20571",
+  "customer_id": "C-1009",
+  "po": "09-2020",
+  "placed": "2026-07-14T09:08",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-GUN",
+    "qty": 6,
+    "price": 54.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 10,
+    "price": 18.75,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30671"
+ },
+ {
+  "id": "SO-20572",
+  "customer_id": "C-1001",
+  "po": "01-1722",
+  "placed": "2026-07-15T16:06",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-FRG",
+    "qty": 3,
+    "price": 9.5,
+    "picked": 3,
+    "shipped": 3
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 40,
+    "price": 38.6,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 30,
+    "price": 18.75,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30672"
+ },
+ {
+  "id": "SO-20573",
+  "customer_id": "C-1007",
+  "po": "07-1835",
+  "placed": "2026-07-16T13:56",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 20,
+    "price": 22.6,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30673"
+ },
+ {
+  "id": "SO-20574",
+  "customer_id": "C-1010",
+  "po": "10-2049",
+  "placed": "2026-07-16T12:26",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 55,
+    "price": 31.6,
+    "picked": 55,
+    "shipped": 55
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 55,
+    "price": 49.9,
+    "picked": 55,
+    "shipped": 55
+   },
+   {
+    "sku": "BX-100806-32",
+    "qty": 20,
+    "price": 19.9,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30674"
+ },
+ {
+  "id": "SO-20575",
+  "customer_id": "C-1008",
+  "po": "08-9082",
+  "placed": "2026-07-19T13:47",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 50,
+    "price": 22.4,
+    "picked": 50,
+    "shipped": 50
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 40,
+    "price": 41.2,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-241812-44",
+    "qty": 55,
+    "price": 67.8,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30675"
+ },
+ {
+  "id": "SO-20576",
+  "customer_id": "C-1003",
+  "po": "03-9824",
+  "placed": "2026-07-23T08:30",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121006-44",
+    "qty": 45,
+    "price": 29.4,
+    "picked": 45,
+    "shipped": 45
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30676"
+ },
+ {
+  "id": "SO-20577",
+  "customer_id": "C-1005",
+  "po": "05-7887",
+  "placed": "2026-07-24T12:30",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 20,
+    "price": 22.6,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30677"
+ },
+ {
+  "id": "SO-20578",
+  "customer_id": "C-1005",
+  "po": "05-8514",
+  "placed": "2026-07-25T08:07",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 40,
+    "price": 39.2,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 35,
+    "price": 18.4,
+    "picked": 35,
+    "shipped": 35
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 11,
+    "price": 54.0,
+    "picked": 11,
+    "shipped": 11
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30678"
+ },
+ {
+  "id": "SO-20579",
+  "customer_id": "C-1010",
+  "po": "10-7500",
+  "placed": "2026-07-25T14:51",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141414-32",
+    "qty": 10,
+    "price": 38.6,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30679"
+ },
+ {
+  "id": "SO-20580",
+  "customer_id": "C-1008",
+  "po": "08-5607",
+  "placed": "2026-07-26T10:58",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 40,
+    "price": 22.6,
+    "picked": 40,
+    "shipped": 40
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30680"
+ },
+ {
+  "id": "SO-20581",
+  "customer_id": "C-1005",
+  "po": "05-8595",
+  "placed": "2026-07-27T14:57",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-16-PRE",
+    "qty": 5,
+    "price": 59.0,
+    "picked": 5,
+    "shipped": 5
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30681"
+ },
+ {
+  "id": "SO-20582",
+  "customer_id": "C-1003",
+  "po": "03-7688",
+  "placed": "2026-07-28T14:14",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 6,
+    "price": 38.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30682"
+ },
+ {
+  "id": "SO-20583",
+  "customer_id": "C-1007",
+  "po": "07-4526",
+  "placed": "2026-07-30T09:20",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 60,
+    "price": 24.3,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 4,
+    "price": 64.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30683"
+ },
+ {
+  "id": "SO-20584",
+  "customer_id": "C-1008",
+  "po": "08-1821",
+  "placed": "2026-07-30T13:54",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-44",
+    "qty": 15,
+    "price": 67.8,
+    "picked": 15,
+    "shipped": 15
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30684"
+ },
+ {
+  "id": "SO-20585",
+  "customer_id": "C-1006",
+  "po": "06-9938",
+  "placed": "2026-07-31T08:09",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-KP-30",
+    "qty": 8,
+    "price": 40.0,
+    "picked": 8,
+    "shipped": 8
+   },
+   {
+    "sku": "BX-161210-32",
+    "qty": 60,
+    "price": 27.06,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30685"
+ },
+ {
+  "id": "SO-20586",
+  "customer_id": "C-1006",
+  "po": "06-3817",
+  "placed": "2026-07-31T08:19",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 35,
+    "price": 19.9,
+    "picked": 35,
+    "shipped": 35
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30686"
+ },
+ {
+  "id": "SO-20587",
+  "customer_id": "C-1002",
+  "po": "02-7291",
+  "placed": "2026-08-02T15:58",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-3C-110",
+    "qty": 10,
+    "price": 54.0,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30687"
+ },
+ {
+  "id": "SO-20588",
+  "customer_id": "C-1007",
+  "po": "07-6924",
+  "placed": "2026-08-02T13:50",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-FRG",
+    "qty": 10,
+    "price": 9.5,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30688"
+ },
+ {
+  "id": "SO-20589",
+  "customer_id": "C-1003",
+  "po": "03-2372",
+  "placed": "2026-08-03T08:02",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 60,
+    "price": 21.25,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30689"
+ },
+ {
+  "id": "SO-20590",
+  "customer_id": "C-1001",
+  "po": "01-9350",
+  "placed": "2026-08-04T09:16",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121006-44",
+    "qty": 35,
+    "price": 29.4,
+    "picked": 35,
+    "shipped": 35
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30690"
+ },
+ {
+  "id": "SO-20591",
+  "customer_id": "C-1001",
+  "po": "01-5621",
+  "placed": "2026-08-09T12:29",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 2,
+    "price": 42.0,
+    "picked": 2,
+    "shipped": 2
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30691"
+ },
+ {
+  "id": "SO-20592",
+  "customer_id": "C-1009",
+  "po": "09-4444",
+  "placed": "2026-08-09T15:56",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 45,
+    "price": 27.06,
+    "picked": 45,
+    "shipped": 45
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 55,
+    "price": 50.8,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30692"
+ },
+ {
+  "id": "SO-20593",
+  "customer_id": "C-1001",
+  "po": "01-5393",
+  "placed": "2026-08-10T11:23",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 6,
+    "price": 89.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 2,
+    "price": 69.0,
+    "picked": 2,
+    "shipped": 2
+   },
+   {
+    "sku": "TP-WAT-3",
+    "qty": 7,
+    "price": 72.0,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30693"
+ },
+ {
+  "id": "SO-20594",
+  "customer_id": "C-1010",
+  "po": "10-8851",
+  "placed": "2026-08-10T15:38",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 4,
+    "price": 42.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30694"
+ },
+ {
+  "id": "SO-20595",
+  "customer_id": "C-1008",
+  "po": "08-5759",
+  "placed": "2026-08-11T12:17",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141414-32",
+    "qty": 55,
+    "price": 38.6,
+    "picked": 55,
+    "shipped": 55
+   },
+   {
+    "sku": "VF-HNY-15",
+    "qty": 2,
+    "price": 52.0,
+    "picked": 2,
+    "shipped": 2
+   },
+   {
+    "sku": "BX-141006-44",
+    "qty": 20,
+    "price": 31.6,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30695"
+ },
+ {
+  "id": "SO-20596",
+  "customer_id": "C-1004",
+  "po": "04-9976",
+  "placed": "2026-08-12T13:07",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 20,
+    "price": 26.1,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "SF-16-PRE",
+    "qty": 6,
+    "price": 59.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 30,
+    "price": 35.4,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30696"
+ },
+ {
+  "id": "SO-20597",
+  "customer_id": "C-1002",
+  "po": "02-5079",
+  "placed": "2026-08-13T10:49",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 30,
+    "price": 31.6,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30697"
+ },
+ {
+  "id": "SO-20598",
+  "customer_id": "C-1001",
+  "po": "01-1610",
+  "placed": "2026-08-14T13:32",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141414-32",
+    "qty": 60,
+    "price": 38.6,
+    "picked": 60,
+    "shipped": 60
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30698"
+ },
+ {
+  "id": "SO-20599",
+  "customer_id": "C-1003",
+  "po": "03-6657",
+  "placed": "2026-08-14T13:06",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 25,
+    "price": 52.4,
+    "picked": 25,
+    "shipped": 25
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30699"
+ },
+ {
+  "id": "SO-20600",
+  "customer_id": "C-1007",
+  "po": "07-4027",
+  "placed": "2026-08-16T08:08",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 25,
+    "price": 31.6,
+    "picked": 25,
+    "shipped": 25
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30700"
+ },
+ {
+  "id": "SO-20601",
+  "customer_id": "C-1001",
+  "po": "01-7334",
+  "placed": "2026-08-17T09:36",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-HNY-15",
+    "qty": 5,
+    "price": 52.0,
+    "picked": 5,
+    "shipped": 5
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 8,
+    "price": 56.0,
+    "picked": 8,
+    "shipped": 8
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30701"
+ },
+ {
+  "id": "SO-20602",
+  "customer_id": "C-1004",
+  "po": "04-6521",
+  "placed": "2026-08-17T13:22",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 20,
+    "price": 18.4,
+    "picked": 20,
+    "shipped": 20
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30702"
+ },
+ {
+  "id": "SO-20603",
+  "customer_id": "C-1006",
+  "po": "06-4359",
+  "placed": "2026-08-18T10:19",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-120904-44",
+    "qty": 15,
+    "price": 24.2,
+    "picked": 15,
+    "shipped": 15
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 55,
+    "price": 41.2,
+    "picked": 55,
+    "shipped": 55
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30703"
+ },
+ {
+  "id": "SO-20604",
+  "customer_id": "C-1009",
+  "po": "09-7173",
+  "placed": "2026-08-19T13:29",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-05-BND",
+    "qty": 2,
+    "price": 38.0,
+    "picked": 2,
+    "shipped": 2
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 10,
+    "price": 38.6,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 10,
+    "price": 56.0,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30704"
+ },
+ {
+  "id": "SO-20605",
+  "customer_id": "C-1008",
+  "po": "08-8868",
+  "placed": "2026-08-21T16:25",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 45,
+    "price": 26.1,
+    "picked": 45,
+    "shipped": 45
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 15,
+    "price": 22.6,
+    "picked": 15,
+    "shipped": 15
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 7,
+    "price": 54.0,
+    "picked": 7,
+    "shipped": 7
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30705"
+ },
+ {
+  "id": "SO-20606",
+  "customer_id": "C-1001",
+  "po": "01-6804",
+  "placed": "2026-08-24T13:27",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 9,
+    "price": 58.0,
+    "picked": 9,
+    "shipped": 9
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30706"
+ },
+ {
+  "id": "SO-20607",
+  "customer_id": "C-1003",
+  "po": "03-6127",
+  "placed": "2026-08-25T15:53",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-AIR-84",
+    "qty": 6,
+    "price": 46.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "SF-20-80M",
+    "qty": 10,
+    "price": 89.0,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "BX-181818-32",
+    "qty": 30,
+    "price": 46.2,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30707"
+ },
+ {
+  "id": "SO-20608",
+  "customer_id": "C-1003",
+  "po": "03-1900",
+  "placed": "2026-08-25T10:24",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 3,
+    "price": 64.0,
+    "picked": 3,
+    "shipped": 3
+   },
+   {
+    "sku": "LB-21-TH",
+    "qty": 8,
+    "price": 36.0,
+    "picked": 8,
+    "shipped": 8
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 50,
+    "price": 49.9,
+    "picked": 50,
+    "shipped": 50
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30708"
+ },
+ {
+  "id": "SO-20609",
+  "customer_id": "C-1002",
+  "po": "02-8972",
+  "placed": "2026-08-27T13:37",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 10,
+    "price": 31.6,
+    "picked": 10,
+    "shipped": 10
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 30,
+    "price": 22.6,
+    "picked": 30,
+    "shipped": 30
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30709"
+ },
+ {
+  "id": "SO-20610",
+  "customer_id": "C-1006",
+  "po": "06-8576",
+  "placed": "2026-08-27T16:44",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 20,
+    "price": 19.9,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 3,
+    "price": 54.0,
+    "picked": 3,
+    "shipped": 3
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30710"
+ },
+ {
+  "id": "SO-20611",
+  "customer_id": "C-1009",
+  "po": "09-8824",
+  "placed": "2026-08-27T12:46",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 4,
+    "price": 38.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30711"
+ },
+ {
+  "id": "SO-20612",
+  "customer_id": "C-1009",
+  "po": "09-5936",
+  "placed": "2026-09-25T09:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 68,
+    "price": 39.2,
+    "picked": 68,
+    "shipped": 68
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 19.4
+   }
+  ],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30883"
+ },
+ {
+  "id": "SO-20613",
+  "customer_id": "C-1009",
+  "po": "09-1053",
+  "placed": "2026-10-19T09:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 53,
+    "price": 39.2,
+    "picked": 53,
+    "shipped": 53
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 22.4
+   }
+  ],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30925"
+ },
+ {
+  "id": "SO-20614",
+  "customer_id": "C-1010",
+  "po": "10-7842",
+  "placed": "2026-09-30T09:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 27,
+    "price": 53.2,
+    "picked": 27,
+    "shipped": 27
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 17.6
+   }
+  ],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30890"
+ },
+ {
+  "id": "SO-20615",
+  "customer_id": "C-1010",
+  "po": "10-3168",
+  "placed": "2026-10-12T09:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 53,
+    "price": 53.2,
+    "picked": 53,
+    "shipped": 53
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 40.4
+   }
+  ],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30911"
+ },
+ {
+  "id": "SO-20616",
+  "customer_id": "C-1010",
+  "po": "10-9492",
+  "placed": "2026-10-20T09:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 18,
+    "price": 53.2,
+    "picked": 18,
+    "shipped": 18
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 16.4
+   }
+  ],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30929"
+ },
+ {
+  "id": "SO-20771",
+  "customer_id": "C-1007",
+  "po": "LC-0903",
+  "placed": "2026-09-03T10:20",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-FRG-2",
+    "qty": 6,
+    "price": 69.0,
+    "picked": 6,
+    "shipped": 6
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 4,
+    "price": 38.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30871"
+ },
+ {
+  "id": "SO-20788",
+  "customer_id": "C-1001",
+  "po": "PF-87940",
+  "placed": "2026-10-08T11:10",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 16,
+    "price": 58.0,
+    "picked": 16,
+    "shipped": 16
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 10,
+    "price": 56.0,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30909"
+ },
+ {
+  "id": "SO-20790",
+  "customer_id": "C-1008",
+  "po": "BE-77310",
+  "placed": "2026-10-12T14:05",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 40,
+    "price": 27.06,
+    "picked": 40,
+    "shipped": 40
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 20,
+    "price": 29.0,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 5,
+    "price": 66.0,
+    "picked": 5,
+    "shipped": 5
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30921"
+ },
+ {
+  "id": "SO-20791",
+  "customer_id": "C-1002",
+  "po": "SW-4351",
+  "placed": "2026-10-12T08:20",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 120,
+    "price": 52.4,
+    "picked": 120,
+    "shipped": 120
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30917"
+ },
+ {
+  "id": "SO-20793",
+  "customer_id": "C-1010",
+  "po": "TW-5498",
+  "placed": "2026-10-10T10:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L2",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 20,
+    "price": 58.0,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 3,
+    "price": 56.0,
+    "picked": 3,
+    "shipped": 3
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30919"
+ },
+ {
+  "id": "SO-20798",
+  "customer_id": "C-1010",
+  "po": "TW-5512",
+  "placed": "2026-10-09T08:45",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-3C-110",
+    "qty": 8,
+    "price": 54.0,
+    "picked": 8,
+    "shipped": 8
+   },
+   {
+    "sku": "PD-1016",
+    "qty": 4,
+    "price": 53.2,
+    "picked": 4,
+    "shipped": 4
+   },
+   {
+    "sku": "VF-HNY-15",
+    "qty": 6,
+    "price": 52.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30914"
+ },
+ {
+  "id": "SO-20802",
+  "customer_id": "C-1003",
+  "po": "TT-1013",
+  "placed": "2026-10-13T16:30",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 50,
+    "price": 21.4,
+    "picked": 50,
+    "shipped": 50
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 5,
+    "price": 38.0,
+    "picked": 5,
+    "shipped": 5
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 10,
+    "price": 56.0,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30922"
+ },
+ {
+  "id": "SO-20804",
+  "customer_id": "C-1005",
+  "po": "KB-2210",
+  "placed": "2026-10-14T13:40",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 30,
+    "price": 21.25,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "PM-1013",
+    "qty": 4,
+    "price": 48.0,
+    "picked": 4,
+    "shipped": 4
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 2,
+    "price": 72.0,
+    "picked": 2,
+    "shipped": 2
+   }
+  ],
+  "fees": [
+   {
+    "type": "liftgate",
+    "amount": 45.0
+   }
+  ],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30927"
+ },
+ {
+  "id": "SO-20805",
+  "customer_id": "C-1002",
+  "po": "SW-4380",
+  "placed": "2026-10-14T09:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 60,
+    "price": 49.8,
+    "picked": 60,
+    "shipped": 60
+   },
+   {
+    "sku": "VF-AIR-84",
+    "qty": 39,
+    "price": 46.0,
+    "picked": 39,
+    "shipped": 39
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30931"
+ },
+ {
+  "id": "SO-20807",
+  "customer_id": "C-1008",
+  "po": "BE-77402",
+  "placed": "2026-10-16T10:30",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121212-32",
+    "qty": 25,
+    "price": 29.0,
+    "picked": 25,
+    "shipped": 25
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 6,
+    "price": 56.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30934"
+ },
+ {
+  "id": "SO-20808",
+  "customer_id": "C-1001",
+  "po": "PF-88130",
+  "placed": "2026-10-16T15:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L2",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 20,
+    "price": 58.0,
+    "picked": 18,
+    "shipped": 18
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30936"
+ },
+ {
+  "id": "SO-20809",
+  "customer_id": "C-1001",
+  "po": "PF-88213",
+  "placed": "2026-10-21T09:30",
+  "requested": "2026-10-26",
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-2C-110",
+    "qty": 24,
+    "price": 56.0,
+    "picked": 24,
+    "shipped": 24,
+    "damaged": 3
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 10,
+    "price": 58.0,
+    "picked": 10,
+    "shipped": 10
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30941"
+ },
+ {
+  "id": "SO-20810",
+  "customer_id": "C-1005",
+  "po": "KB-2240",
+  "placed": "2026-10-19T09:10",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 20,
+    "price": 18.4,
+    "picked": 20,
+    "shipped": 20
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 3,
+    "price": 72.0,
+    "picked": 3,
+    "shipped": 3
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30938"
+ },
+ {
+  "id": "SO-20811",
+  "customer_id": "C-1008",
+  "po": "BE-77455",
+  "placed": "2026-10-21T11:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-121212-32",
+    "qty": 30,
+    "price": 29.0,
+    "picked": 30,
+    "shipped": 30,
+    "damaged": 2
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 6,
+    "price": 56.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30940"
+ },
+ {
+  "id": "SO-20812",
+  "customer_id": "C-1007",
+  "po": "4471",
+  "placed": "2026-10-20T10:15",
+  "requested": "2026-10-26",
+  "status": "shipped",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 30,
+    "price": 21.25,
+    "picked": 30,
+    "shipped": 30
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 4,
+    "price": 56.0,
+    "picked": 4,
+    "shipped": 4
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30942"
+ },
+ {
+  "id": "SO-20813",
+  "customer_id": "C-1001",
+  "po": "PF-88219",
+  "placed": "2026-10-21T13:15",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L2",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 30,
+    "price": 58.0,
+    "picked": 30,
+    "shipped": 30,
+    "damaged": 12
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30944"
+ },
+ {
+  "id": "SO-20814",
+  "customer_id": "C-1006",
+  "po": "JV-1021",
+  "placed": "2026-10-21T15:20",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "PD-0812",
+    "qty": 10,
+    "price": 44.0,
+    "picked": 10,
+    "shipped": 10,
+    "damaged": 2
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 3,
+    "price": 38.0,
+    "picked": 3,
+    "shipped": 3
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30946"
+ },
+ {
+  "id": "SO-20815",
+  "customer_id": "C-1002",
+  "po": "SW-4410",
+  "placed": "2026-10-20T10:05",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 40,
+    "price": 46.2,
+    "picked": 38,
+    "shipped": 38
+   },
+   {
+    "sku": "VF-AIR-84",
+    "qty": 6,
+    "price": 46.0,
+    "picked": 6,
+    "shipped": 6
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": "Short 2 bundles, bin empty",
+  "invoice_id": "INV-30943"
+ },
+ {
+  "id": "SO-20816",
+  "customer_id": "C-1009",
+  "po": "KC-0412",
+  "placed": "2026-10-21T14:00",
+  "requested": null,
+  "status": "delivered",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-PEA-14",
+    "qty": 12,
+    "price": 26.0,
+    "picked": 9,
+    "shipped": 9
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 2,
+    "price": 56.0,
+    "picked": 2,
+    "shipped": 2
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30945"
+ },
+ {
+  "id": "SO-20817",
+  "customer_id": "C-1006",
+  "po": "JV-1026",
+  "placed": "2026-10-26T16:40",
+  "requested": "2026-10-29",
+  "status": "picked",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 12,
+    "price": 24.3,
+    "picked": 12,
+    "shipped": 0
+   },
+   {
+    "sku": "PD-0812",
+    "qty": 3,
+    "price": 44.0,
+    "picked": 3,
+    "shipped": 0
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 4,
+    "price": 38.0,
+    "picked": 4,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": "2026-10-27T06:40",
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20818",
+  "customer_id": "C-1002",
+  "po": "SW-4422",
+  "placed": "2026-10-21T16:10",
+  "requested": "2026-10-26",
+  "status": "shipped",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 25,
+    "price": 39.2,
+    "picked": 25,
+    "shipped": 25
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 8,
+    "price": 64.0,
+    "picked": 8,
+    "shipped": 8
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30947"
+ },
+ {
+  "id": "SO-20820",
+  "customer_id": "C-1004",
+  "po": "FT-0090",
+  "placed": "2026-10-22T10:40",
+  "requested": null,
+  "status": "shipped",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "MB-090603",
+    "qty": 8,
+    "price": 34.5,
+    "picked": 8,
+    "shipped": 8
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 2,
+    "price": 72.0,
+    "picked": 2,
+    "shipped": 2
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30950"
+ },
+ {
+  "id": "SO-20822",
+  "customer_id": "C-1006",
+  "po": "JV-1023",
+  "placed": "2026-10-23T09:25",
+  "requested": null,
+  "status": "shipped",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 16,
+    "price": 24.3,
+    "picked": 16,
+    "shipped": 16
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 2,
+    "price": 69.0,
+    "picked": 2,
+    "shipped": 2
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": "INV-30951"
+ },
+ {
+  "id": "SO-20825",
+  "customer_id": "C-1003",
+  "po": "TT-1026",
+  "placed": "2026-10-26T08:15",
+  "requested": null,
+  "status": "picked",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-060606-32",
+    "qty": 12,
+    "price": 18.75,
+    "picked": 12,
+    "shipped": 0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 2,
+    "price": 56.0,
+    "picked": 2,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": "2026-10-27T06:55",
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20826",
+  "customer_id": "C-1009",
+  "po": "KC-0420",
+  "placed": "2026-10-26T11:30",
+  "requested": null,
+  "status": "open",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-PEA-14",
+    "qty": 6,
+    "price": 26.0,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "LB-FRG",
+    "qty": 6,
+    "price": 9.5,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20827",
+  "customer_id": "C-1010",
+  "po": "TW-5530",
+  "placed": "2026-10-26T13:50",
+  "requested": null,
+  "status": "open",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 6,
+    "price": 53.2,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 2,
+    "price": 54.0,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20828",
+  "customer_id": "C-1001",
+  "po": "PF-88301",
+  "placed": "2026-10-26T08:05",
+  "requested": null,
+  "status": "open",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "TP-2C-110",
+    "qty": 20,
+    "price": 56.0,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 4,
+    "price": 72.0,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20829",
+  "customer_id": "C-1002",
+  "po": "SW-4431",
+  "placed": "2026-10-26T09:45",
+  "requested": null,
+  "status": "open",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 20,
+    "price": 46.2,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20830",
+  "customer_id": "C-1001",
+  "po": "PF-88302",
+  "placed": "2026-10-26T14:20",
+  "requested": null,
+  "status": "open",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 12,
+    "price": 58.0,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "PL-4840-N",
+    "qty": 20,
+    "price": 21.0,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20831",
+  "customer_id": "C-1002",
+  "po": "SW-4432",
+  "placed": "2026-10-26T15:30",
+  "requested": null,
+  "status": "open",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "VF-AIR-84",
+    "qty": 10,
+    "price": 46.0,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 6,
+    "price": 56.0,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20832",
+  "customer_id": "C-1004",
+  "po": "FT-0102",
+  "placed": "2026-10-26T09:12",
+  "requested": null,
+  "status": "open",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "MB-110804",
+    "qty": 6,
+    "price": 41.0,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "PM-1013",
+    "qty": 2,
+    "price": 48.0,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20835",
+  "customer_id": "C-1004",
+  "po": "FT-0103",
+  "placed": "2026-10-27T06:51",
+  "requested": null,
+  "status": "open",
+  "warehouse": "Valley",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "MB-120903",
+    "qty": 4,
+    "price": 39.5,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 1,
+    "price": 56.0,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ },
+ {
+  "id": "SO-20836",
+  "customer_id": "C-1002",
+  "po": "SW-4440",
+  "placed": "2026-10-27T06:30",
+  "requested": null,
+  "status": "open",
+  "warehouse": "North",
+  "ship_to": "L1",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 30,
+    "price": 49.8,
+    "picked": 0,
+    "shipped": 0
+   },
+   {
+    "sku": "SF-18-63",
+    "qty": 6,
+    "price": 56.0,
+    "picked": 0,
+    "shipped": 0
+   }
+  ],
+  "fees": [],
+  "picked": null,
+  "pick_note": null,
+  "invoice_id": null
+ }
+]

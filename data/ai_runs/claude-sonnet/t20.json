@@ -1,0 +1,240 @@
+{
+ "email_id": "t20",
+ "split": "test",
+ "seq": 43,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "67b031c7615ddd12",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "mateo@tarnwell.example"
+   },
+   "result": {
+    "customer_id": "C-1010",
+    "name": "Tarnwell Leather Goods",
+    "terms": "Net 30",
+    "credit_limit": 9000.0,
+    "open_balance": 7572.8,
+    "open_orders": 427.2,
+    "available_credit": 1000.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mateo Reyes",
+      "role": "operations manager",
+      "email": "mateo@tarnwell.example"
+     },
+     {
+      "name": "Silas Pruitt",
+      "role": "accounts payable",
+      "email": "silas@tarnwell.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Englewood, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Showroom",
+      "city": "Denver, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "PD-1016",
+      "price": 53.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20827"
+   },
+   "result": {
+    "order_id": "SO-20827",
+    "customer_id": "C-1010",
+    "po": "TW-5530",
+    "placed": "2026-10-26 13:50",
+    "requested": null,
+    "status": "open",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Workshop",
+     "city": "Englewood, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-1016",
+      "name": "Padded kraft mailer 10.5x16",
+      "qty": 6,
+      "picked": 0,
+      "shipped": 0,
+      "price": 53.2,
+      "amount": 319.2
+     },
+     {
+      "sku": "TP-3C-110",
+      "name": "Carton sealing tape 3 in x 110 yd, clear",
+      "qty": 2,
+      "picked": 0,
+      "shipped": 0,
+      "price": 54.0,
+      "amount": 108.0
+     }
+    ],
+    "fees": [],
+    "total": 427.2,
+    "invoice_id": null
+   },
+   "valid": true
+  },
+  {
+   "tool": "update_ship_to",
+   "args": {
+    "order_id": "20827",
+    "location_id": "L2",
+    "sentence": 1
+   },
+   "result": {
+    "order_id": "SO-20827",
+    "ship_to": "Showroom, Denver, CO",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Mateo,\n\nOrder SO-20827 now ships to your Showroom in Denver, CO instead of the Workshop. The order hasn't been picked yet, so the change went through. Nothing else on the order changed.\n\nThe Wendlow order desk",
+  "note": "Changed ship-to on SO-20827 from Workshop (L1) to Showroom (L2); order was open and unpicked. Done.",
+  "intents": [
+   "ship_to_change"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01QR3VN3wvDed5zDSkH1xP7C",
+     "name": "get_customer",
+     "input": {
+      "email": "mateo@tarnwell.example"
+     }
+    },
+    {
+     "id": "toolu_014cunxoafvRFToieeZup7oe",
+     "name": "get_order",
+     "input": {
+      "order_id": "20827"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 200,
+     "output": 105,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1329,
+    "cost": 0.002431
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01PheD5NuPZF98jvftzc3YXY",
+     "name": "update_ship_to",
+     "input": {
+      "order_id": "20827",
+      "location_id": "L2",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 991,
+     "output": 100,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1127,
+    "cost": 0.003963
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01UACgKHqtzRV3zBJoPGh3j8",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Mateo,\n\nOrder SO-20827 now ships to your Showroom in Denver, CO instead of the Workshop. The order hasn't been picked yet, so the change went through. Nothing else on the order changed.\n\nThe Wendlow order desk",
+      "note": "Changed ship-to on SO-20827 from Workshop (L1) to Showroom (L2); order was open and unpicked. Done.",
+      "intents": [
+       "ship_to_change"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1135,
+     "output": 249,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1824,
+    "cost": 0.005741
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 4.3,
+  "input_tokens": 2326,
+  "output_tokens": 454,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.012135
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:45",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

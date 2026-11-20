@@ -1,0 +1,244 @@
+{
+ "email_id": "t24",
+ "split": "test",
+ "seq": 47,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "f23f39929ecdda96",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "caleb@sablewood.example"
+   },
+   "result": {
+    "customer_id": "C-1002",
+    "name": "Sablewood Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 20000.0,
+    "open_balance": 9904.0,
+    "open_orders": 3550.0,
+    "available_credit": 6546.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Caleb Kowalski",
+      "role": "purchasing",
+      "email": "caleb@sablewood.example"
+     },
+     {
+      "name": "Leela Varadan",
+      "role": "accounts payable",
+      "email": "leela@sablewood.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Main warehouse",
+      "city": "Commerce City, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Overflow building",
+      "city": "Commerce City, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-241812-32",
+      "price": 49.8
+     },
+     {
+      "sku": "VF-AIR-84",
+      "price": 46.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20836"
+   },
+   "result": {
+    "order_id": "SO-20836",
+    "customer_id": "C-1002",
+    "po": "SW-4440",
+    "placed": "2026-10-27 06:30",
+    "requested": null,
+    "status": "open",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Main warehouse",
+     "city": "Commerce City, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-241812-32",
+      "name": "Shipping box 24x18x12, 32 ECT",
+      "qty": 30,
+      "picked": 0,
+      "shipped": 0,
+      "price": 49.8,
+      "amount": 1494.0
+     },
+     {
+      "sku": "SF-18-63",
+      "name": "Stretch film 18 in x 1500 ft, 63 gauge",
+      "qty": 6,
+      "picked": 0,
+      "shipped": 0,
+      "price": 56.0,
+      "amount": 336.0
+     }
+    ],
+    "fees": [],
+    "total": 1830.0,
+    "invoice_id": null
+   },
+   "valid": true
+  },
+  {
+   "tool": "hold_order",
+   "args": {
+    "order_id": "SO-20836",
+    "sentence": 1,
+    "until": "2026-11-02"
+   },
+   "result": {
+    "order_id": "SO-20836",
+    "held_until": "2026-11-02",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Caleb,\n\nOrder SO-20836 (PO SW-4440) is on hold until Monday, November 2. It had not been picked yet, so nothing has shipped.\n\nThe hold will keep it from going out before your dock reopens.\n\nThe Wendlow order desk",
+  "note": "Held open, unpicked order SO-20836 until Monday, 2026-11-02 as requested. The hold went through.",
+  "intents": [
+   "hold_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01D9yGTUKcRnPJMKBfh4Cb3b",
+     "name": "get_customer",
+     "input": {
+      "email": "caleb@sablewood.example"
+     }
+    },
+    {
+     "id": "toolu_01AKYkYCCxeptTrxKaUzgxav",
+     "name": "get_order",
+     "input": {
+      "order_id": "20836"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 202,
+     "output": 104,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1263,
+    "cost": 0.002425
+   }
+  },
+  {
+   "text": "Monday is November 2.",
+   "calls": [
+    {
+     "id": "toolu_01S4TSGs7RbnMcBXtbJysMkZ",
+     "name": "hold_order",
+     "input": {
+      "order_id": "SO-20836",
+      "sentence": 1,
+      "until": "2026-11-02"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1033,
+     "output": 112,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1124,
+    "cost": 0.004167
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Mt2EVDvQZk45yvRP8E4EFu",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Caleb,\n\nOrder SO-20836 (PO SW-4440) is on hold until Monday, November 2. It had not been picked yet, so nothing has shipped.\n\nThe hold will keep it from going out before your dock reopens.\n\nThe Wendlow order desk",
+      "note": "Held open, unpicked order SO-20836 until Monday, 2026-11-02 as requested. The hold went through.",
+      "intents": [
+       "hold_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1183,
+     "output": 246,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2143,
+    "cost": 0.005807
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 4.5,
+  "input_tokens": 2418,
+  "output_tokens": 462,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.012399
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:36:09",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

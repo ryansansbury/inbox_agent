@@ -1,0 +1,184 @@
+{
+ "email_id": "t17",
+ "split": "test",
+ "seq": 40,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "207cea4c33691e2d",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "mara@fernhollowtea.example"
+   },
+   "result": {
+    "customer_id": "C-1004",
+    "name": "Fernhollow Tea",
+    "terms": "Net 30",
+    "credit_limit": 4000.0,
+    "open_balance": 420.0,
+    "open_orders": 556.0,
+    "available_credit": 3024.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 9,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mara Lindqvist",
+      "role": "owner",
+      "email": "mara@fernhollowtea.example"
+     },
+     {
+      "name": "Penny Brooks",
+      "role": "operations",
+      "email": "penny@fernhollowtea.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Packing room",
+      "city": "Fort Collins, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Pop-up shop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "credit",
+    "summary": "Mara Lindqvist (owner, Fernhollow Tea, C-1004) asks to move from Net 30 to Net 60 terms through the holidays due to tight November cash. Account is in good standing: 9 of 9 invoices paid on time, no past due, no hold, $3,024.00 available credit.",
+    "sentence": 1
+   },
+   "result": {
+    "routed_to": "credit",
+    "mailbox": "credit@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Mara,\n\nThanks for asking. Changes to payment terms are decided by our credit team, so I have sent your request for Net 60 through the holidays to them. I can't confirm the change myself, and nothing has changed on your account yet. Your terms stay at Net 30 for now. Someone from credit will follow up with you.\n\nThe Wendlow order desk",
+  "note": "Routed Net 60 terms request to credit. The account looks good: 9 of 9 invoices paid on time, nothing past due, no hold, $3,024.00 available credit. No terms change was made.",
+  "intents": [
+   "terms_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 2,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_012QnutGLT8tmFVnq85oQdEv",
+     "name": "get_customer",
+     "input": {
+      "email": "mara@fernhollowtea.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 223,
+     "output": 59,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 965,
+    "cost": 0.002017
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Bs78GRicQYXiPodKmyLiNg",
+     "name": "route_to_person",
+     "input": {
+      "team": "credit",
+      "summary": "Mara Lindqvist (owner, Fernhollow Tea, C-1004) asks to move from Net 30 to Net 60 terms through the holidays due to tight November cash. Account is in good standing: 9 of 9 invoices paid on time, no past due, no hold, $3,024.00 available credit.",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 604,
+     "output": 195,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1636,
+    "cost": 0.004139
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Dh4uLQT7LraouX4t3zzmeM",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Mara,\n\nThanks for asking. Changes to payment terms are decided by our credit team, so I have sent your request for Net 60 through the holidays to them. I can't confirm the change myself, and nothing has changed on your account yet. Your terms stay at Net 30 for now. Someone from credit will follow up with you.\n\nThe Wendlow order desk",
+      "note": "Routed Net 60 terms request to credit. The account looks good: 9 of 9 invoices paid on time, nothing past due, no hold, $3,024.00 available credit. No terms change was made.",
+      "intents": [
+       "terms_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 839,
+     "output": 302,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2664,
+    "cost": 0.005679
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.3,
+  "input_tokens": 1666,
+  "output_tokens": 556,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.011835
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:30",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

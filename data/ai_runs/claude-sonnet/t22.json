@@ -1,0 +1,179 @@
+{
+ "email_id": "t22",
+ "split": "test",
+ "seq": 45,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "2c8ab2c867fc28f1",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "theo@kettleby.example"
+   },
+   "result": {
+    "customer_id": "C-1005",
+    "name": "Kettleby Pet Supply",
+    "terms": "Net 30",
+    "credit_limit": 8000.0,
+    "open_balance": 1602.5,
+    "open_orders": 0.0,
+    "available_credit": 6397.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Theo Ramsey",
+      "role": "operations lead",
+      "email": "theo@kettleby.example"
+     },
+     {
+      "name": "Audrey Tsai",
+      "role": "accounts payable",
+      "email": "audrey@kettleby.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Warehouse",
+      "city": "Lakewood, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "sales",
+    "summary": "Theo Ramsey (Kettleby Pet Supply, C-1005) asks to lower price on 12x9x4 boxes to $16 per bundle going forward, citing higher volume. No contract prices on account currently.",
+    "sentence": 1
+   },
+   "result": {
+    "routed_to": "sales",
+    "mailbox": "sales@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Theo,\n\nThanks for your note. Price changes are handled by our sales team, so I have passed your request for $16 a bundle on the 12x9x4 boxes to them, along with the news that your volume is growing. They will follow up with you. Your current pricing stays the same until they confirm a change.\n\nThe Wendlow order desk",
+  "note": "Price change request on 12x9x4 boxes ($16/bundle) routed to sales. No price change made or promised.",
+  "intents": [
+   "price_change"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 2,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01FHerw3BSw77eLVc6hRM543",
+     "name": "get_customer",
+     "input": {
+      "email": "theo@kettleby.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 214,
+     "output": 56,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1492,
+    "cost": 0.001969
+   }
+  },
+  {
+   "text": "Price changes go to sales.",
+   "calls": [
+    {
+     "id": "toolu_01UhwT2vg4GWqRnzhvtksChn",
+     "name": "route_to_person",
+     "input": {
+      "team": "sales",
+      "summary": "Theo Ramsey (Kettleby Pet Supply, C-1005) asks to lower price on 12x9x4 boxes to $16 per bundle going forward, citing higher volume. No contract prices on account currently.",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 559,
+     "output": 176,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1844,
+    "cost": 0.003859
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01TkxzZrdw8zyqGmzDfNsCr9",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Theo,\n\nThanks for your note. Price changes are handled by our sales team, so I have passed your request for $16 a bundle on the 12x9x4 boxes to them, along with the news that your volume is growing. They will follow up with you. Your current pricing stays the same until they confirm a change.\n\nThe Wendlow order desk",
+      "note": "Price change request on 12x9x4 boxes ($16/bundle) routed to sales. No price change made or promised.",
+      "intents": [
+       "price_change"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 775,
+     "output": 265,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2096,
+    "cost": 0.005181
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.4,
+  "input_tokens": 1548,
+  "output_tokens": 497,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.011009
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:57",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

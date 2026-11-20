@@ -1,0 +1,44 @@
+{
+  "_comment": "Every company and person in the Inbox Agent's data comes from this list. Each name was checked for real companies, trademarks, look-alikes and well-known people before it went in, and each company was checked in the field written beside it, so the data keeps that field. Every name is made up. The tests hold this list to the never list, the other demos' names and the Call Companion's first names.",
+  "distributor": {
+    "name": "Wendlow Packaging Supply",
+    "field": "a regional packaging supply distributor"
+  },
+  "customers": [
+    {"name": "Pellbrook Fulfillment", "kind": "fulfillment warehouse", "field": "a fulfillment warehouse for online brands"},
+    {"name": "Sablewood Fulfillment", "kind": "fulfillment warehouse", "field": "a fulfillment warehouse for online brands"},
+    {"name": "Tallow & Teak", "kind": "online brand", "field": "soap and bath products, sold online"},
+    {"name": "Fernhollow Tea", "kind": "online brand", "field": "loose-leaf tea, sold online"},
+    {"name": "Kettleby Pet Supply", "kind": "online brand", "field": "pet supplies, sold online"},
+    {"name": "Juniper & Vale", "kind": "online brand", "field": "home goods, sold online"},
+    {"name": "Lanternfold Candle Co.", "kind": "online brand", "field": "candles, sold online"},
+    {"name": "Brecken Electronics", "kind": "small manufacturer", "field": "circuit boards"},
+    {"name": "Kilnmoor Ceramics", "kind": "small manufacturer", "field": "ceramics"},
+    {"name": "Tarnwell Leather Goods", "kind": "small manufacturer", "field": "leather goods"}
+  ],
+  "people": [
+    "Dana Okafor",
+    "Mara Lindqvist",
+    "Penny Brooks",
+    "Theo Ramsey",
+    "Anya Fischer",
+    "Lucy Tran",
+    "Hazel Garrity",
+    "Rhys Whitlock",
+    "Ezra Moreno",
+    "Caleb Kowalski",
+    "Elena Brandt",
+    "Felix Dunmore",
+    "Bea Lockhart",
+    "Mateo Reyes",
+    "Clara Voss",
+    "Wes Harlan",
+    "Omar Haddad",
+    "Gwen Talbot",
+    "Silas Pruitt",
+    "Sora Baek",
+    "Audrey Tsai",
+    "Ayumi Nakaya",
+    "Leela Varadan"
+  ]
+}

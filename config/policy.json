@@ -1,0 +1,22 @@
+{
+  "_comment": "The limits a person sets. engine/policy.py decides every action the agent proposes from these values, and site/policy.js (Phase 2) is its port. Done means the action goes through, waiting means a person decides, and blocked means the rules never allow it. Amounts are in dollars.",
+  "limits": {
+    "credit_cap": {"value": 250, "min": 0, "max": 1000, "step": 10, "unit": "usd"},
+    "reship_cap": {"value": 500, "min": 0, "max": 2000, "step": 25, "unit": "usd"},
+    "fee_waiver_cap": {"value": 75, "min": 0, "max": 300, "step": 5, "unit": "usd"},
+    "order_cap": {"value": 2500, "min": 0, "max": 10000, "step": 100, "unit": "usd"},
+    "return_days": {"value": 30, "min": 0, "max": 90, "step": 1, "unit": "days"},
+    "restocking_pct": {"value": 15, "min": 0, "max": 50, "step": 1, "unit": "percent"}
+  },
+  "switches": {
+    "orders_within_credit": {"value": true},
+    "ship_to_before_pick": {"value": true}
+  },
+  "never": ["price_change", "terms_change", "bank_details"],
+  "routes": {
+    "order_desk": "orders@wendlow.example",
+    "sales": "sales@wendlow.example",
+    "credit": "credit@wendlow.example",
+    "security": "security@wendlow.example"
+  }
+}

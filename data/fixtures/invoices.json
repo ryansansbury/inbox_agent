@@ -1,0 +1,3181 @@
+[
+ {
+  "id": "INV-30600",
+  "order_id": "SO-20500",
+  "customer_id": "C-1001",
+  "date": "2026-04-04",
+  "due": "2026-05-04",
+  "lines": [
+   {
+    "sku": "TP-FRG-2",
+    "qty": 4,
+    "price": 69.0,
+    "amount": 276.0
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 6,
+    "price": 58.0,
+    "amount": 348.0
+   }
+  ],
+  "fees": [],
+  "total": 624.0
+ },
+ {
+  "id": "INV-30601",
+  "order_id": "SO-20501",
+  "customer_id": "C-1003",
+  "date": "2026-04-06",
+  "due": "2026-05-06",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 30,
+    "price": 21.25,
+    "amount": 637.5
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 40,
+    "price": 35.4,
+    "amount": 1416.0
+   }
+  ],
+  "fees": [],
+  "total": 2053.5
+ },
+ {
+  "id": "INV-30602",
+  "order_id": "SO-20502",
+  "customer_id": "C-1004",
+  "date": "2026-04-07",
+  "due": "2026-05-07",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 5,
+    "price": 44.0,
+    "amount": 220.0
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 45,
+    "price": 49.9,
+    "amount": 2245.5
+   },
+   {
+    "sku": "BX-141006-32",
+    "qty": 40,
+    "price": 24.3,
+    "amount": 972.0
+   }
+  ],
+  "fees": [],
+  "total": 3437.5
+ },
+ {
+  "id": "INV-30603",
+  "order_id": "SO-20503",
+  "customer_id": "C-1008",
+  "date": "2026-04-07",
+  "due": "2026-05-07",
+  "lines": [
+   {
+    "sku": "BX-181818-44",
+    "qty": 35,
+    "price": 59.7,
+    "amount": 2089.5
+   },
+   {
+    "sku": "BX-161210-32",
+    "qty": 20,
+    "price": 22.4,
+    "amount": 448.0
+   },
+   {
+    "sku": "BX-141006-44",
+    "qty": 35,
+    "price": 31.6,
+    "amount": 1106.0
+   }
+  ],
+  "fees": [],
+  "total": 3643.5
+ },
+ {
+  "id": "INV-30604",
+  "order_id": "SO-20504",
+  "customer_id": "C-1001",
+  "date": "2026-04-08",
+  "due": "2026-05-08",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 10,
+    "price": 31.6,
+    "amount": 316.0
+   }
+  ],
+  "fees": [],
+  "total": 316.0
+ },
+ {
+  "id": "INV-30605",
+  "order_id": "SO-20505",
+  "customer_id": "C-1007",
+  "date": "2026-04-12",
+  "due": "2026-05-12",
+  "lines": [
+   {
+    "sku": "BX-181212-44",
+    "qty": 40,
+    "price": 50.8,
+    "amount": 2032.0
+   }
+  ],
+  "fees": [],
+  "total": 2032.0
+ },
+ {
+  "id": "INV-30606",
+  "order_id": "SO-20506",
+  "customer_id": "C-1007",
+  "date": "2026-04-13",
+  "due": "2026-05-13",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 9,
+    "price": 38.0,
+    "amount": 342.0
+   }
+  ],
+  "fees": [],
+  "total": 342.0
+ },
+ {
+  "id": "INV-30607",
+  "order_id": "SO-20507",
+  "customer_id": "C-1001",
+  "date": "2026-04-12",
+  "due": "2026-05-12",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 5,
+    "price": 38.0,
+    "amount": 190.0
+   }
+  ],
+  "fees": [],
+  "total": 190.0
+ },
+ {
+  "id": "INV-30608",
+  "order_id": "SO-20508",
+  "customer_id": "C-1004",
+  "date": "2026-04-16",
+  "due": "2026-05-16",
+  "lines": [
+   {
+    "sku": "VF-KP-30",
+    "qty": 2,
+    "price": 40.0,
+    "amount": 80.0
+   },
+   {
+    "sku": "LB-PLE-75",
+    "qty": 5,
+    "price": 42.0,
+    "amount": 210.0
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 7,
+    "price": 64.0,
+    "amount": 448.0
+   }
+  ],
+  "fees": [],
+  "total": 738.0
+ },
+ {
+  "id": "INV-30609",
+  "order_id": "SO-20509",
+  "customer_id": "C-1005",
+  "date": "2026-04-14",
+  "due": "2026-05-14",
+  "lines": [
+   {
+    "sku": "TP-2H-110",
+    "qty": 3,
+    "price": 64.0,
+    "amount": 192.0
+   },
+   {
+    "sku": "VF-KP-30",
+    "qty": 8,
+    "price": 40.0,
+    "amount": 320.0
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 3,
+    "price": 64.0,
+    "amount": 192.0
+   }
+  ],
+  "fees": [],
+  "total": 704.0
+ },
+ {
+  "id": "INV-30610",
+  "order_id": "SO-20510",
+  "customer_id": "C-1006",
+  "date": "2026-04-15",
+  "due": "2026-05-15",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 4,
+    "price": 42.0,
+    "amount": 168.0
+   },
+   {
+    "sku": "BX-181212-32",
+    "qty": 55,
+    "price": 39.2,
+    "amount": 2156.0
+   }
+  ],
+  "fees": [],
+  "total": 2324.0
+ },
+ {
+  "id": "INV-30611",
+  "order_id": "SO-20511",
+  "customer_id": "C-1009",
+  "date": "2026-04-14",
+  "due": "2026-05-14",
+  "lines": [
+   {
+    "sku": "SF-DISP",
+    "qty": 4,
+    "price": 24.0,
+    "amount": 96.0
+   }
+  ],
+  "fees": [],
+  "total": 96.0
+ },
+ {
+  "id": "INV-30612",
+  "order_id": "SO-20512",
+  "customer_id": "C-1001",
+  "date": "2026-04-16",
+  "due": "2026-05-16",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 15,
+    "price": 27.75,
+    "amount": 416.25
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 15,
+    "price": 50.8,
+    "amount": 762.0
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 3,
+    "price": 69.0,
+    "amount": 207.0
+   }
+  ],
+  "fees": [],
+  "total": 1385.25
+ },
+ {
+  "id": "INV-30613",
+  "order_id": "SO-20513",
+  "customer_id": "C-1006",
+  "date": "2026-04-17",
+  "due": "2026-05-17",
+  "lines": [
+   {
+    "sku": "BX-181818-44",
+    "qty": 25,
+    "price": 59.7,
+    "amount": 1492.5
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 6,
+    "price": 69.0,
+    "amount": 414.0
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 10,
+    "price": 64.0,
+    "amount": 640.0
+   }
+  ],
+  "fees": [],
+  "total": 2546.5
+ },
+ {
+  "id": "INV-30614",
+  "order_id": "SO-20514",
+  "customer_id": "C-1008",
+  "date": "2026-04-17",
+  "due": "2026-05-17",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 45,
+    "price": 21.25,
+    "amount": 956.25
+   }
+  ],
+  "fees": [],
+  "total": 956.25
+ },
+ {
+  "id": "INV-30615",
+  "order_id": "SO-20515",
+  "customer_id": "C-1002",
+  "date": "2026-04-19",
+  "due": "2026-05-19",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 7,
+    "price": 89.0,
+    "amount": 623.0
+   }
+  ],
+  "fees": [],
+  "total": 623.0
+ },
+ {
+  "id": "INV-30616",
+  "order_id": "SO-20516",
+  "customer_id": "C-1007",
+  "date": "2026-04-19",
+  "due": "2026-05-19",
+  "lines": [
+   {
+    "sku": "BX-141414-44",
+    "qty": 30,
+    "price": 49.9,
+    "amount": 1497.0
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 7,
+    "price": 64.0,
+    "amount": 448.0
+   }
+  ],
+  "fees": [],
+  "total": 1945.0
+ },
+ {
+  "id": "INV-30617",
+  "order_id": "SO-20517",
+  "customer_id": "C-1009",
+  "date": "2026-04-20",
+  "due": "2026-05-20",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 25,
+    "price": 27.75,
+    "amount": 693.75
+   },
+   {
+    "sku": "LB-PLE-75",
+    "qty": 4,
+    "price": 42.0,
+    "amount": 168.0
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 20,
+    "price": 31.8,
+    "amount": 636.0
+   }
+  ],
+  "fees": [],
+  "total": 1497.75
+ },
+ {
+  "id": "INV-30618",
+  "order_id": "SO-20518",
+  "customer_id": "C-1002",
+  "date": "2026-04-23",
+  "due": "2026-05-23",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 40,
+    "price": 18.4,
+    "amount": 736.0
+   },
+   {
+    "sku": "LB-FRG",
+    "qty": 10,
+    "price": 9.5,
+    "amount": 95.0
+   }
+  ],
+  "fees": [],
+  "total": 831.0
+ },
+ {
+  "id": "INV-30619",
+  "order_id": "SO-20519",
+  "customer_id": "C-1001",
+  "date": "2026-04-24",
+  "due": "2026-05-24",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 9,
+    "price": 72.0,
+    "amount": 648.0
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 10,
+    "price": 49.9,
+    "amount": 499.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 6,
+    "price": 56.0,
+    "amount": 336.0
+   }
+  ],
+  "fees": [],
+  "total": 1483.0
+ },
+ {
+  "id": "INV-30620",
+  "order_id": "SO-20520",
+  "customer_id": "C-1009",
+  "date": "2026-04-24",
+  "due": "2026-05-24",
+  "lines": [
+   {
+    "sku": "TP-2H-110",
+    "qty": 6,
+    "price": 64.0,
+    "amount": 384.0
+   },
+   {
+    "sku": "BX-120904-44",
+    "qty": 10,
+    "price": 24.2,
+    "amount": 242.0
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 30,
+    "price": 31.8,
+    "amount": 954.0
+   }
+  ],
+  "fees": [],
+  "total": 1580.0
+ },
+ {
+  "id": "INV-30621",
+  "order_id": "SO-20521",
+  "customer_id": "C-1002",
+  "date": "2026-04-25",
+  "due": "2026-05-25",
+  "lines": [
+   {
+    "sku": "BX-241812-44",
+    "qty": 25,
+    "price": 67.8,
+    "amount": 1695.0
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 15,
+    "price": 27.75,
+    "amount": 416.25
+   }
+  ],
+  "fees": [],
+  "total": 2111.25
+ },
+ {
+  "id": "INV-30622",
+  "order_id": "SO-20522",
+  "customer_id": "C-1007",
+  "date": "2026-04-25",
+  "due": "2026-05-25",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 15,
+    "price": 26.1,
+    "amount": 391.5
+   },
+   {
+    "sku": "BX-241812-32",
+    "qty": 55,
+    "price": 52.4,
+    "amount": 2882.0
+   }
+  ],
+  "fees": [],
+  "total": 3273.5
+ },
+ {
+  "id": "INV-30623",
+  "order_id": "SO-20523",
+  "customer_id": "C-1002",
+  "date": "2026-04-28",
+  "due": "2026-05-28",
+  "lines": [
+   {
+    "sku": "BX-161210-44",
+    "qty": 50,
+    "price": 35.4,
+    "amount": 1770.0
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 9,
+    "price": 38.0,
+    "amount": 342.0
+   }
+  ],
+  "fees": [],
+  "total": 2112.0
+ },
+ {
+  "id": "INV-30624",
+  "order_id": "SO-20524",
+  "customer_id": "C-1006",
+  "date": "2026-04-29",
+  "due": "2026-05-29",
+  "lines": [
+   {
+    "sku": "SF-18-63",
+    "qty": 7,
+    "price": 56.0,
+    "amount": 392.0
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 60,
+    "price": 49.9,
+    "amount": 2994.0
+   },
+   {
+    "sku": "VF-AIR-84",
+    "qty": 7,
+    "price": 46.0,
+    "amount": 322.0
+   }
+  ],
+  "fees": [],
+  "total": 3708.0
+ },
+ {
+  "id": "INV-30625",
+  "order_id": "SO-20525",
+  "customer_id": "C-1004",
+  "date": "2026-04-30",
+  "due": "2026-05-30",
+  "lines": [
+   {
+    "sku": "LB-21-TH",
+    "qty": 6,
+    "price": 36.0,
+    "amount": 216.0
+   },
+   {
+    "sku": "BX-181818-32",
+    "qty": 25,
+    "price": 46.2,
+    "amount": 1155.0
+   },
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 12,
+    "price": 44.0,
+    "amount": 528.0
+   }
+  ],
+  "fees": [],
+  "total": 1899.0
+ },
+ {
+  "id": "INV-30626",
+  "order_id": "SO-20526",
+  "customer_id": "C-1005",
+  "date": "2026-04-29",
+  "due": "2026-05-29",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 3,
+    "price": 72.0,
+    "amount": 216.0
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 55,
+    "price": 27.75,
+    "amount": 1526.25
+   }
+  ],
+  "fees": [],
+  "total": 1742.25
+ },
+ {
+  "id": "INV-30627",
+  "order_id": "SO-20527",
+  "customer_id": "C-1001",
+  "date": "2026-05-02",
+  "due": "2026-06-01",
+  "lines": [
+   {
+    "sku": "BX-181212-44",
+    "qty": 40,
+    "price": 50.8,
+    "amount": 2032.0
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 35,
+    "price": 18.75,
+    "amount": 656.25
+   }
+  ],
+  "fees": [],
+  "total": 2688.25
+ },
+ {
+  "id": "INV-30628",
+  "order_id": "SO-20528",
+  "customer_id": "C-1007",
+  "date": "2026-05-03",
+  "due": "2026-06-02",
+  "lines": [
+   {
+    "sku": "BX-121212-32",
+    "qty": 45,
+    "price": 31.8,
+    "amount": 1431.0
+   },
+   {
+    "sku": "BX-241812-44",
+    "qty": 40,
+    "price": 67.8,
+    "amount": 2712.0
+   },
+   {
+    "sku": "BX-181212-32",
+    "qty": 55,
+    "price": 39.2,
+    "amount": 2156.0
+   }
+  ],
+  "fees": [],
+  "total": 6299.0
+ },
+ {
+  "id": "INV-30629",
+  "order_id": "SO-20529",
+  "customer_id": "C-1006",
+  "date": "2026-05-06",
+  "due": "2026-06-05",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 4,
+    "price": 44.0,
+    "amount": 176.0
+   }
+  ],
+  "fees": [],
+  "total": 176.0
+ },
+ {
+  "id": "INV-30630",
+  "order_id": "SO-20530",
+  "customer_id": "C-1005",
+  "date": "2026-05-06",
+  "due": "2026-06-05",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 60,
+    "price": 21.25,
+    "amount": 1275.0
+   },
+   {
+    "sku": "BX-060606-44",
+    "qty": 50,
+    "price": 24.5,
+    "amount": 1225.0
+   }
+  ],
+  "fees": [],
+  "total": 2500.0
+ },
+ {
+  "id": "INV-30631",
+  "order_id": "SO-20531",
+  "customer_id": "C-1008",
+  "date": "2026-05-08",
+  "due": "2026-06-07",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 50,
+    "price": 19.9,
+    "amount": 995.0
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 55,
+    "price": 41.2,
+    "amount": 2266.0
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 60,
+    "price": 18.75,
+    "amount": 1125.0
+   }
+  ],
+  "fees": [],
+  "total": 4386.0
+ },
+ {
+  "id": "INV-30632",
+  "order_id": "SO-20532",
+  "customer_id": "C-1006",
+  "date": "2026-05-12",
+  "due": "2026-06-11",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 60,
+    "price": 27.75,
+    "amount": 1665.0
+   }
+  ],
+  "fees": [],
+  "total": 1665.0
+ },
+ {
+  "id": "INV-30633",
+  "order_id": "SO-20533",
+  "customer_id": "C-1009",
+  "date": "2026-05-10",
+  "due": "2026-06-09",
+  "lines": [
+   {
+    "sku": "SF-DISP",
+    "qty": 10,
+    "price": 24.0,
+    "amount": 240.0
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 60,
+    "price": 50.8,
+    "amount": 3048.0
+   }
+  ],
+  "fees": [],
+  "total": 3288.0
+ },
+ {
+  "id": "INV-30634",
+  "order_id": "SO-20534",
+  "customer_id": "C-1008",
+  "date": "2026-05-12",
+  "due": "2026-06-11",
+  "lines": [
+   {
+    "sku": "VF-KP-30",
+    "qty": 3,
+    "price": 40.0,
+    "amount": 120.0
+   },
+   {
+    "sku": "SF-18-63",
+    "qty": 4,
+    "price": 56.0,
+    "amount": 224.0
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 11,
+    "price": 64.0,
+    "amount": 704.0
+   }
+  ],
+  "fees": [],
+  "total": 1048.0
+ },
+ {
+  "id": "INV-30635",
+  "order_id": "SO-20535",
+  "customer_id": "C-1004",
+  "date": "2026-05-13",
+  "due": "2026-06-12",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 50,
+    "price": 27.75,
+    "amount": 1387.5
+   },
+   {
+    "sku": "BX-120904-44",
+    "qty": 10,
+    "price": 24.2,
+    "amount": 242.0
+   }
+  ],
+  "fees": [],
+  "total": 1629.5
+ },
+ {
+  "id": "INV-30636",
+  "order_id": "SO-20536",
+  "customer_id": "C-1004",
+  "date": "2026-05-14",
+  "due": "2026-06-13",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 60,
+    "price": 26.1,
+    "amount": 1566.0
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 40,
+    "price": 27.75,
+    "amount": 1110.0
+   }
+  ],
+  "fees": [],
+  "total": 2676.0
+ },
+ {
+  "id": "INV-30637",
+  "order_id": "SO-20537",
+  "customer_id": "C-1005",
+  "date": "2026-05-14",
+  "due": "2026-06-13",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 6,
+    "price": 42.0,
+    "amount": 252.0
+   }
+  ],
+  "fees": [],
+  "total": 252.0
+ },
+ {
+  "id": "INV-30638",
+  "order_id": "SO-20538",
+  "customer_id": "C-1005",
+  "date": "2026-05-15",
+  "due": "2026-06-14",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 5,
+    "price": 72.0,
+    "amount": 360.0
+   },
+   {
+    "sku": "BX-100806-44",
+    "qty": 35,
+    "price": 26.1,
+    "amount": 913.5
+   }
+  ],
+  "fees": [],
+  "total": 1273.5
+ },
+ {
+  "id": "INV-30639",
+  "order_id": "SO-20539",
+  "customer_id": "C-1010",
+  "date": "2026-05-16",
+  "due": "2026-06-15",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 60,
+    "price": 46.2,
+    "amount": 2772.0
+   }
+  ],
+  "fees": [],
+  "total": 2772.0
+ },
+ {
+  "id": "INV-30640",
+  "order_id": "SO-20540",
+  "customer_id": "C-1010",
+  "date": "2026-05-18",
+  "due": "2026-06-17",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 15,
+    "price": 46.2,
+    "amount": 693.0
+   },
+   {
+    "sku": "BX-120904-44",
+    "qty": 60,
+    "price": 24.2,
+    "amount": 1452.0
+   }
+  ],
+  "fees": [],
+  "total": 2145.0
+ },
+ {
+  "id": "INV-30641",
+  "order_id": "SO-20541",
+  "customer_id": "C-1009",
+  "date": "2026-05-19",
+  "due": "2026-06-18",
+  "lines": [
+   {
+    "sku": "BX-121212-44",
+    "qty": 30,
+    "price": 41.2,
+    "amount": 1236.0
+   },
+   {
+    "sku": "SF-20-80M",
+    "qty": 7,
+    "price": 89.0,
+    "amount": 623.0
+   },
+   {
+    "sku": "LB-21-TH",
+    "qty": 5,
+    "price": 36.0,
+    "amount": 180.0
+   }
+  ],
+  "fees": [],
+  "total": 2039.0
+ },
+ {
+  "id": "INV-30642",
+  "order_id": "SO-20542",
+  "customer_id": "C-1010",
+  "date": "2026-05-19",
+  "due": "2026-06-18",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 10,
+    "price": 64.0,
+    "amount": 640.0
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 3,
+    "price": 69.0,
+    "amount": 207.0
+   },
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 11,
+    "price": 44.0,
+    "amount": 484.0
+   }
+  ],
+  "fees": [],
+  "total": 1331.0
+ },
+ {
+  "id": "INV-30643",
+  "order_id": "SO-20543",
+  "customer_id": "C-1009",
+  "date": "2026-05-19",
+  "due": "2026-06-18",
+  "lines": [
+   {
+    "sku": "BX-241812-44",
+    "qty": 60,
+    "price": 67.8,
+    "amount": 4068.0
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 30,
+    "price": 22.6,
+    "amount": 678.0
+   }
+  ],
+  "fees": [],
+  "total": 4746.0
+ },
+ {
+  "id": "INV-30644",
+  "order_id": "SO-20544",
+  "customer_id": "C-1010",
+  "date": "2026-05-21",
+  "due": "2026-06-20",
+  "lines": [
+   {
+    "sku": "SF-16-PRE",
+    "qty": 11,
+    "price": 59.0,
+    "amount": 649.0
+   },
+   {
+    "sku": "BX-241812-44",
+    "qty": 30,
+    "price": 67.8,
+    "amount": 2034.0
+   }
+  ],
+  "fees": [],
+  "total": 2683.0
+ },
+ {
+  "id": "INV-30645",
+  "order_id": "SO-20545",
+  "customer_id": "C-1003",
+  "date": "2026-05-26",
+  "due": "2026-06-25",
+  "lines": [
+   {
+    "sku": "BX-120904-44",
+    "qty": 30,
+    "price": 24.2,
+    "amount": 726.0
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 60,
+    "price": 21.4,
+    "amount": 1284.0
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 4,
+    "price": 54.0,
+    "amount": 216.0
+   }
+  ],
+  "fees": [],
+  "total": 2226.0
+ },
+ {
+  "id": "INV-30646",
+  "order_id": "SO-20546",
+  "customer_id": "C-1010",
+  "date": "2026-05-25",
+  "due": "2026-06-24",
+  "lines": [
+   {
+    "sku": "TP-GUN",
+    "qty": 6,
+    "price": 54.0,
+    "amount": 324.0
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 50,
+    "price": 27.75,
+    "amount": 1387.5
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 20,
+    "price": 38.6,
+    "amount": 772.0
+   }
+  ],
+  "fees": [],
+  "total": 2483.5
+ },
+ {
+  "id": "INV-30647",
+  "order_id": "SO-20547",
+  "customer_id": "C-1001",
+  "date": "2026-05-30",
+  "due": "2026-06-29",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 6,
+    "price": 44.0,
+    "amount": 264.0
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 10,
+    "price": 69.0,
+    "amount": 690.0
+   }
+  ],
+  "fees": [],
+  "total": 954.0
+ },
+ {
+  "id": "INV-30648",
+  "order_id": "SO-20548",
+  "customer_id": "C-1006",
+  "date": "2026-06-04",
+  "due": "2026-07-04",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 45,
+    "price": 24.3,
+    "amount": 1093.5
+   },
+   {
+    "sku": "BX-080808-32",
+    "qty": 25,
+    "price": 21.25,
+    "amount": 531.25
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 25,
+    "price": 35.4,
+    "amount": 885.0
+   }
+  ],
+  "fees": [],
+  "total": 2509.75
+ },
+ {
+  "id": "INV-30649",
+  "order_id": "SO-20549",
+  "customer_id": "C-1002",
+  "date": "2026-06-06",
+  "due": "2026-07-06",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 40,
+    "price": 27.06,
+    "amount": 1082.4
+   }
+  ],
+  "fees": [],
+  "total": 1082.4
+ },
+ {
+  "id": "INV-30650",
+  "order_id": "SO-20550",
+  "customer_id": "C-1008",
+  "date": "2026-06-09",
+  "due": "2026-07-09",
+  "lines": [
+   {
+    "sku": "BX-080808-44",
+    "qty": 55,
+    "price": 27.75,
+    "amount": 1526.25
+   }
+  ],
+  "fees": [],
+  "total": 1526.25
+ },
+ {
+  "id": "INV-30651",
+  "order_id": "SO-20551",
+  "customer_id": "C-1007",
+  "date": "2026-06-10",
+  "due": "2026-07-10",
+  "lines": [
+   {
+    "sku": "TP-WAT-3",
+    "qty": 7,
+    "price": 72.0,
+    "amount": 504.0
+   }
+  ],
+  "fees": [],
+  "total": 504.0
+ },
+ {
+  "id": "INV-30652",
+  "order_id": "SO-20552",
+  "customer_id": "C-1002",
+  "date": "2026-06-12",
+  "due": "2026-07-12",
+  "lines": [
+   {
+    "sku": "BX-181212-44",
+    "qty": 40,
+    "price": 50.8,
+    "amount": 2032.0
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 35,
+    "price": 38.6,
+    "amount": 1351.0
+   }
+  ],
+  "fees": [],
+  "total": 3383.0
+ },
+ {
+  "id": "INV-30653",
+  "order_id": "SO-20553",
+  "customer_id": "C-1002",
+  "date": "2026-06-14",
+  "due": "2026-07-14",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 3,
+    "price": 42.0,
+    "amount": 126.0
+   }
+  ],
+  "fees": [],
+  "total": 126.0
+ },
+ {
+  "id": "INV-30654",
+  "order_id": "SO-20554",
+  "customer_id": "C-1004",
+  "date": "2026-06-17",
+  "due": "2026-07-17",
+  "lines": [
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 9,
+    "price": 44.0,
+    "amount": 396.0
+   }
+  ],
+  "fees": [],
+  "total": 396.0
+ },
+ {
+  "id": "INV-30655",
+  "order_id": "SO-20555",
+  "customer_id": "C-1004",
+  "date": "2026-06-17",
+  "due": "2026-07-17",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 55,
+    "price": 18.4,
+    "amount": 1012.0
+   }
+  ],
+  "fees": [],
+  "total": 1012.0
+ },
+ {
+  "id": "INV-30656",
+  "order_id": "SO-20556",
+  "customer_id": "C-1003",
+  "date": "2026-06-21",
+  "due": "2026-07-21",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 20,
+    "price": 21.25,
+    "amount": 425.0
+   },
+   {
+    "sku": "BX-080808-44",
+    "qty": 45,
+    "price": 27.75,
+    "amount": 1248.75
+   }
+  ],
+  "fees": [],
+  "total": 1673.75
+ },
+ {
+  "id": "INV-30657",
+  "order_id": "SO-20557",
+  "customer_id": "C-1008",
+  "date": "2026-06-22",
+  "due": "2026-07-22",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 30,
+    "price": 19.9,
+    "amount": 597.0
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 12,
+    "price": 54.0,
+    "amount": 648.0
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 50,
+    "price": 41.2,
+    "amount": 2060.0
+   }
+  ],
+  "fees": [],
+  "total": 3305.0
+ },
+ {
+  "id": "INV-30658",
+  "order_id": "SO-20558",
+  "customer_id": "C-1005",
+  "date": "2026-06-24",
+  "due": "2026-07-24",
+  "lines": [
+   {
+    "sku": "BX-161210-44",
+    "qty": 20,
+    "price": 35.4,
+    "amount": 708.0
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 20,
+    "price": 18.4,
+    "amount": 368.0
+   }
+  ],
+  "fees": [],
+  "total": 1076.0
+ },
+ {
+  "id": "INV-30659",
+  "order_id": "SO-20559",
+  "customer_id": "C-1010",
+  "date": "2026-06-28",
+  "due": "2026-07-28",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 20,
+    "price": 27.06,
+    "amount": 541.2
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 15,
+    "price": 50.8,
+    "amount": 762.0
+   }
+  ],
+  "fees": [],
+  "total": 1303.2
+ },
+ {
+  "id": "INV-30660",
+  "order_id": "SO-20560",
+  "customer_id": "C-1008",
+  "date": "2026-06-30",
+  "due": "2026-07-30",
+  "lines": [
+   {
+    "sku": "TP-3C-110",
+    "qty": 7,
+    "price": 54.0,
+    "amount": 378.0
+   },
+   {
+    "sku": "BX-181212-32",
+    "qty": 60,
+    "price": 39.2,
+    "amount": 2352.0
+   },
+   {
+    "sku": "LB-FRG",
+    "qty": 7,
+    "price": 9.5,
+    "amount": 66.5
+   }
+  ],
+  "fees": [],
+  "total": 2796.5
+ },
+ {
+  "id": "INV-30661",
+  "order_id": "SO-20561",
+  "customer_id": "C-1002",
+  "date": "2026-07-05",
+  "due": "2026-08-04",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 25,
+    "price": 46.2,
+    "amount": 1155.0
+   }
+  ],
+  "fees": [],
+  "total": 1155.0
+ },
+ {
+  "id": "INV-30662",
+  "order_id": "SO-20562",
+  "customer_id": "C-1010",
+  "date": "2026-07-04",
+  "due": "2026-08-03",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 60,
+    "price": 31.6,
+    "amount": 1896.0
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 30,
+    "price": 18.4,
+    "amount": 552.0
+   }
+  ],
+  "fees": [],
+  "total": 2448.0
+ },
+ {
+  "id": "INV-30663",
+  "order_id": "SO-20563",
+  "customer_id": "C-1003",
+  "date": "2026-07-08",
+  "due": "2026-08-07",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 2,
+    "price": 89.0,
+    "amount": 178.0
+   },
+   {
+    "sku": "VF-PEA-14",
+    "qty": 6,
+    "price": 26.0,
+    "amount": 156.0
+   }
+  ],
+  "fees": [],
+  "total": 334.0
+ },
+ {
+  "id": "INV-30664",
+  "order_id": "SO-20564",
+  "customer_id": "C-1002",
+  "date": "2026-07-10",
+  "due": "2026-08-09",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 45,
+    "price": 24.3,
+    "amount": 1093.5
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 10,
+    "price": 31.8,
+    "amount": 318.0
+   },
+   {
+    "sku": "BX-060606-44",
+    "qty": 30,
+    "price": 24.5,
+    "amount": 735.0
+   }
+  ],
+  "fees": [],
+  "total": 2146.5
+ },
+ {
+  "id": "INV-30665",
+  "order_id": "SO-20565",
+  "customer_id": "C-1005",
+  "date": "2026-07-08",
+  "due": "2026-08-07",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 15,
+    "price": 52.4,
+    "amount": 786.0
+   },
+   {
+    "sku": "VF-FOAM-12",
+    "qty": 12,
+    "price": 44.0,
+    "amount": 528.0
+   },
+   {
+    "sku": "SF-18-63",
+    "qty": 5,
+    "price": 56.0,
+    "amount": 280.0
+   }
+  ],
+  "fees": [],
+  "total": 1594.0
+ },
+ {
+  "id": "INV-30666",
+  "order_id": "SO-20566",
+  "customer_id": "C-1005",
+  "date": "2026-07-11",
+  "due": "2026-08-10",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 9,
+    "price": 89.0,
+    "amount": 801.0
+   },
+   {
+    "sku": "SF-16-PRE",
+    "qty": 11,
+    "price": 59.0,
+    "amount": 649.0
+   }
+  ],
+  "fees": [],
+  "total": 1450.0
+ },
+ {
+  "id": "INV-30667",
+  "order_id": "SO-20567",
+  "customer_id": "C-1003",
+  "date": "2026-07-13",
+  "due": "2026-08-12",
+  "lines": [
+   {
+    "sku": "VF-PEA-14",
+    "qty": 11,
+    "price": 26.0,
+    "amount": 286.0
+   },
+   {
+    "sku": "LB-FRG",
+    "qty": 8,
+    "price": 9.5,
+    "amount": 76.0
+   },
+   {
+    "sku": "LB-PLE-75",
+    "qty": 11,
+    "price": 42.0,
+    "amount": 462.0
+   }
+  ],
+  "fees": [],
+  "total": 824.0
+ },
+ {
+  "id": "INV-30668",
+  "order_id": "SO-20568",
+  "customer_id": "C-1010",
+  "date": "2026-07-15",
+  "due": "2026-08-14",
+  "lines": [
+   {
+    "sku": "BX-120904-44",
+    "qty": 40,
+    "price": 24.2,
+    "amount": 968.0
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 10,
+    "price": 31.8,
+    "amount": 318.0
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 50,
+    "price": 35.4,
+    "amount": 1770.0
+   }
+  ],
+  "fees": [],
+  "total": 3056.0
+ },
+ {
+  "id": "INV-30669",
+  "order_id": "SO-20569",
+  "customer_id": "C-1008",
+  "date": "2026-07-16",
+  "due": "2026-08-15",
+  "lines": [
+   {
+    "sku": "TP-GUN",
+    "qty": 9,
+    "price": 54.0,
+    "amount": 486.0
+   }
+  ],
+  "fees": [],
+  "total": 486.0
+ },
+ {
+  "id": "INV-30670",
+  "order_id": "SO-20570",
+  "customer_id": "C-1003",
+  "date": "2026-07-18",
+  "due": "2026-08-17",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 40,
+    "price": 26.1,
+    "amount": 1044.0
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 30,
+    "price": 18.4,
+    "amount": 552.0
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 9,
+    "price": 72.0,
+    "amount": 648.0
+   }
+  ],
+  "fees": [],
+  "total": 2244.0
+ },
+ {
+  "id": "INV-30671",
+  "order_id": "SO-20571",
+  "customer_id": "C-1009",
+  "date": "2026-07-17",
+  "due": "2026-08-16",
+  "lines": [
+   {
+    "sku": "TP-GUN",
+    "qty": 6,
+    "price": 54.0,
+    "amount": 324.0
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 10,
+    "price": 18.75,
+    "amount": 187.5
+   }
+  ],
+  "fees": [],
+  "total": 511.5
+ },
+ {
+  "id": "INV-30672",
+  "order_id": "SO-20572",
+  "customer_id": "C-1001",
+  "date": "2026-07-18",
+  "due": "2026-08-17",
+  "lines": [
+   {
+    "sku": "LB-FRG",
+    "qty": 3,
+    "price": 9.5,
+    "amount": 28.5
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 40,
+    "price": 38.6,
+    "amount": 1544.0
+   },
+   {
+    "sku": "BX-060606-32",
+    "qty": 30,
+    "price": 18.75,
+    "amount": 562.5
+   }
+  ],
+  "fees": [],
+  "total": 2135.0
+ },
+ {
+  "id": "INV-30673",
+  "order_id": "SO-20573",
+  "customer_id": "C-1007",
+  "date": "2026-07-20",
+  "due": "2026-08-19",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 20,
+    "price": 22.6,
+    "amount": 452.0
+   }
+  ],
+  "fees": [],
+  "total": 452.0
+ },
+ {
+  "id": "INV-30674",
+  "order_id": "SO-20574",
+  "customer_id": "C-1010",
+  "date": "2026-07-19",
+  "due": "2026-08-18",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 55,
+    "price": 31.6,
+    "amount": 1738.0
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 55,
+    "price": 49.9,
+    "amount": 2744.5
+   },
+   {
+    "sku": "BX-100806-32",
+    "qty": 20,
+    "price": 19.9,
+    "amount": 398.0
+   }
+  ],
+  "fees": [],
+  "total": 4880.5
+ },
+ {
+  "id": "INV-30675",
+  "order_id": "SO-20575",
+  "customer_id": "C-1008",
+  "date": "2026-07-23",
+  "due": "2026-08-22",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 50,
+    "price": 22.4,
+    "amount": 1120.0
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 40,
+    "price": 41.2,
+    "amount": 1648.0
+   },
+   {
+    "sku": "BX-241812-44",
+    "qty": 55,
+    "price": 67.8,
+    "amount": 3729.0
+   }
+  ],
+  "fees": [],
+  "total": 6497.0
+ },
+ {
+  "id": "INV-30676",
+  "order_id": "SO-20576",
+  "customer_id": "C-1003",
+  "date": "2026-07-27",
+  "due": "2026-08-26",
+  "lines": [
+   {
+    "sku": "BX-121006-44",
+    "qty": 45,
+    "price": 29.4,
+    "amount": 1323.0
+   }
+  ],
+  "fees": [],
+  "total": 1323.0
+ },
+ {
+  "id": "INV-30677",
+  "order_id": "SO-20577",
+  "customer_id": "C-1005",
+  "date": "2026-07-27",
+  "due": "2026-08-26",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 20,
+    "price": 22.6,
+    "amount": 452.0
+   }
+  ],
+  "fees": [],
+  "total": 452.0
+ },
+ {
+  "id": "INV-30678",
+  "order_id": "SO-20578",
+  "customer_id": "C-1005",
+  "date": "2026-07-27",
+  "due": "2026-08-26",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 40,
+    "price": 39.2,
+    "amount": 1568.0
+   },
+   {
+    "sku": "BX-120904-32",
+    "qty": 35,
+    "price": 18.4,
+    "amount": 644.0
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 11,
+    "price": 54.0,
+    "amount": 594.0
+   }
+  ],
+  "fees": [],
+  "total": 2806.0
+ },
+ {
+  "id": "INV-30679",
+  "order_id": "SO-20579",
+  "customer_id": "C-1010",
+  "date": "2026-07-29",
+  "due": "2026-08-28",
+  "lines": [
+   {
+    "sku": "BX-141414-32",
+    "qty": 10,
+    "price": 38.6,
+    "amount": 386.0
+   }
+  ],
+  "fees": [],
+  "total": 386.0
+ },
+ {
+  "id": "INV-30680",
+  "order_id": "SO-20580",
+  "customer_id": "C-1008",
+  "date": "2026-07-30",
+  "due": "2026-08-29",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 40,
+    "price": 22.6,
+    "amount": 904.0
+   }
+  ],
+  "fees": [],
+  "total": 904.0
+ },
+ {
+  "id": "INV-30681",
+  "order_id": "SO-20581",
+  "customer_id": "C-1005",
+  "date": "2026-07-31",
+  "due": "2026-08-30",
+  "lines": [
+   {
+    "sku": "SF-16-PRE",
+    "qty": 5,
+    "price": 59.0,
+    "amount": 295.0
+   }
+  ],
+  "fees": [],
+  "total": 295.0
+ },
+ {
+  "id": "INV-30682",
+  "order_id": "SO-20582",
+  "customer_id": "C-1003",
+  "date": "2026-07-30",
+  "due": "2026-08-29",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 6,
+    "price": 38.0,
+    "amount": 228.0
+   }
+  ],
+  "fees": [],
+  "total": 228.0
+ },
+ {
+  "id": "INV-30683",
+  "order_id": "SO-20583",
+  "customer_id": "C-1007",
+  "date": "2026-08-03",
+  "due": "2026-09-02",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 60,
+    "price": 24.3,
+    "amount": 1458.0
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 4,
+    "price": 64.0,
+    "amount": 256.0
+   }
+  ],
+  "fees": [],
+  "total": 1714.0
+ },
+ {
+  "id": "INV-30684",
+  "order_id": "SO-20584",
+  "customer_id": "C-1008",
+  "date": "2026-08-01",
+  "due": "2026-08-31",
+  "lines": [
+   {
+    "sku": "BX-241812-44",
+    "qty": 15,
+    "price": 67.8,
+    "amount": 1017.0
+   }
+  ],
+  "fees": [],
+  "total": 1017.0
+ },
+ {
+  "id": "INV-30685",
+  "order_id": "SO-20585",
+  "customer_id": "C-1006",
+  "date": "2026-08-02",
+  "due": "2026-09-01",
+  "lines": [
+   {
+    "sku": "VF-KP-30",
+    "qty": 8,
+    "price": 40.0,
+    "amount": 320.0
+   },
+   {
+    "sku": "BX-161210-32",
+    "qty": 60,
+    "price": 27.06,
+    "amount": 1623.6
+   }
+  ],
+  "fees": [],
+  "total": 1943.6
+ },
+ {
+  "id": "INV-30686",
+  "order_id": "SO-20586",
+  "customer_id": "C-1006",
+  "date": "2026-08-03",
+  "due": "2026-09-02",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 35,
+    "price": 19.9,
+    "amount": 696.5
+   }
+  ],
+  "fees": [],
+  "total": 696.5
+ },
+ {
+  "id": "INV-30687",
+  "order_id": "SO-20587",
+  "customer_id": "C-1002",
+  "date": "2026-08-04",
+  "due": "2026-09-03",
+  "lines": [
+   {
+    "sku": "TP-3C-110",
+    "qty": 10,
+    "price": 54.0,
+    "amount": 540.0
+   }
+  ],
+  "fees": [],
+  "total": 540.0
+ },
+ {
+  "id": "INV-30688",
+  "order_id": "SO-20588",
+  "customer_id": "C-1007",
+  "date": "2026-08-04",
+  "due": "2026-09-03",
+  "lines": [
+   {
+    "sku": "LB-FRG",
+    "qty": 10,
+    "price": 9.5,
+    "amount": 95.0
+   }
+  ],
+  "fees": [],
+  "total": 95.0
+ },
+ {
+  "id": "INV-30689",
+  "order_id": "SO-20589",
+  "customer_id": "C-1003",
+  "date": "2026-08-05",
+  "due": "2026-09-04",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 60,
+    "price": 21.25,
+    "amount": 1275.0
+   }
+  ],
+  "fees": [],
+  "total": 1275.0
+ },
+ {
+  "id": "INV-30690",
+  "order_id": "SO-20590",
+  "customer_id": "C-1001",
+  "date": "2026-08-08",
+  "due": "2026-09-07",
+  "lines": [
+   {
+    "sku": "BX-121006-44",
+    "qty": 35,
+    "price": 29.4,
+    "amount": 1029.0
+   }
+  ],
+  "fees": [],
+  "total": 1029.0
+ },
+ {
+  "id": "INV-30691",
+  "order_id": "SO-20591",
+  "customer_id": "C-1001",
+  "date": "2026-08-11",
+  "due": "2026-09-10",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 2,
+    "price": 42.0,
+    "amount": 84.0
+   }
+  ],
+  "fees": [],
+  "total": 84.0
+ },
+ {
+  "id": "INV-30692",
+  "order_id": "SO-20592",
+  "customer_id": "C-1009",
+  "date": "2026-08-11",
+  "due": "2026-09-10",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 45,
+    "price": 27.06,
+    "amount": 1217.7
+   },
+   {
+    "sku": "BX-181212-44",
+    "qty": 55,
+    "price": 50.8,
+    "amount": 2794.0
+   }
+  ],
+  "fees": [],
+  "total": 4011.7
+ },
+ {
+  "id": "INV-30693",
+  "order_id": "SO-20593",
+  "customer_id": "C-1001",
+  "date": "2026-08-12",
+  "due": "2026-09-11",
+  "lines": [
+   {
+    "sku": "SF-20-80M",
+    "qty": 6,
+    "price": 89.0,
+    "amount": 534.0
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 2,
+    "price": 69.0,
+    "amount": 138.0
+   },
+   {
+    "sku": "TP-WAT-3",
+    "qty": 7,
+    "price": 72.0,
+    "amount": 504.0
+   }
+  ],
+  "fees": [],
+  "total": 1176.0
+ },
+ {
+  "id": "INV-30694",
+  "order_id": "SO-20594",
+  "customer_id": "C-1010",
+  "date": "2026-08-12",
+  "due": "2026-09-11",
+  "lines": [
+   {
+    "sku": "LB-PLE-75",
+    "qty": 4,
+    "price": 42.0,
+    "amount": 168.0
+   }
+  ],
+  "fees": [],
+  "total": 168.0
+ },
+ {
+  "id": "INV-30695",
+  "order_id": "SO-20595",
+  "customer_id": "C-1008",
+  "date": "2026-08-15",
+  "due": "2026-09-14",
+  "lines": [
+   {
+    "sku": "BX-141414-32",
+    "qty": 55,
+    "price": 38.6,
+    "amount": 2123.0
+   },
+   {
+    "sku": "VF-HNY-15",
+    "qty": 2,
+    "price": 52.0,
+    "amount": 104.0
+   },
+   {
+    "sku": "BX-141006-44",
+    "qty": 20,
+    "price": 31.6,
+    "amount": 632.0
+   }
+  ],
+  "fees": [],
+  "total": 2859.0
+ },
+ {
+  "id": "INV-30696",
+  "order_id": "SO-20596",
+  "customer_id": "C-1004",
+  "date": "2026-08-15",
+  "due": "2026-09-14",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 20,
+    "price": 26.1,
+    "amount": 522.0
+   },
+   {
+    "sku": "SF-16-PRE",
+    "qty": 6,
+    "price": 59.0,
+    "amount": 354.0
+   },
+   {
+    "sku": "BX-161210-44",
+    "qty": 30,
+    "price": 35.4,
+    "amount": 1062.0
+   }
+  ],
+  "fees": [],
+  "total": 1938.0
+ },
+ {
+  "id": "INV-30697",
+  "order_id": "SO-20597",
+  "customer_id": "C-1002",
+  "date": "2026-08-15",
+  "due": "2026-09-14",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 30,
+    "price": 31.6,
+    "amount": 948.0
+   }
+  ],
+  "fees": [],
+  "total": 948.0
+ },
+ {
+  "id": "INV-30698",
+  "order_id": "SO-20598",
+  "customer_id": "C-1001",
+  "date": "2026-08-17",
+  "due": "2026-09-16",
+  "lines": [
+   {
+    "sku": "BX-141414-32",
+    "qty": 60,
+    "price": 38.6,
+    "amount": 2316.0
+   }
+  ],
+  "fees": [],
+  "total": 2316.0
+ },
+ {
+  "id": "INV-30699",
+  "order_id": "SO-20599",
+  "customer_id": "C-1003",
+  "date": "2026-08-17",
+  "due": "2026-09-16",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 25,
+    "price": 52.4,
+    "amount": 1310.0
+   }
+  ],
+  "fees": [],
+  "total": 1310.0
+ },
+ {
+  "id": "INV-30700",
+  "order_id": "SO-20600",
+  "customer_id": "C-1007",
+  "date": "2026-08-19",
+  "due": "2026-09-18",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 25,
+    "price": 31.6,
+    "amount": 790.0
+   }
+  ],
+  "fees": [],
+  "total": 790.0
+ },
+ {
+  "id": "INV-30701",
+  "order_id": "SO-20601",
+  "customer_id": "C-1001",
+  "date": "2026-08-19",
+  "due": "2026-09-18",
+  "lines": [
+   {
+    "sku": "VF-HNY-15",
+    "qty": 5,
+    "price": 52.0,
+    "amount": 260.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 8,
+    "price": 56.0,
+    "amount": 448.0
+   }
+  ],
+  "fees": [],
+  "total": 708.0
+ },
+ {
+  "id": "INV-30702",
+  "order_id": "SO-20602",
+  "customer_id": "C-1004",
+  "date": "2026-08-19",
+  "due": "2026-09-18",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 20,
+    "price": 18.4,
+    "amount": 368.0
+   }
+  ],
+  "fees": [],
+  "total": 368.0
+ },
+ {
+  "id": "INV-30703",
+  "order_id": "SO-20603",
+  "customer_id": "C-1006",
+  "date": "2026-08-21",
+  "due": "2026-09-20",
+  "lines": [
+   {
+    "sku": "BX-120904-44",
+    "qty": 15,
+    "price": 24.2,
+    "amount": 363.0
+   },
+   {
+    "sku": "BX-121212-44",
+    "qty": 55,
+    "price": 41.2,
+    "amount": 2266.0
+   }
+  ],
+  "fees": [],
+  "total": 2629.0
+ },
+ {
+  "id": "INV-30704",
+  "order_id": "SO-20604",
+  "customer_id": "C-1009",
+  "date": "2026-08-21",
+  "due": "2026-09-20",
+  "lines": [
+   {
+    "sku": "SF-05-BND",
+    "qty": 2,
+    "price": 38.0,
+    "amount": 76.0
+   },
+   {
+    "sku": "BX-141414-32",
+    "qty": 10,
+    "price": 38.6,
+    "amount": 386.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 10,
+    "price": 56.0,
+    "amount": 560.0
+   }
+  ],
+  "fees": [],
+  "total": 1022.0
+ },
+ {
+  "id": "INV-30705",
+  "order_id": "SO-20605",
+  "customer_id": "C-1008",
+  "date": "2026-08-24",
+  "due": "2026-09-23",
+  "lines": [
+   {
+    "sku": "BX-100806-44",
+    "qty": 45,
+    "price": 26.1,
+    "amount": 1174.5
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 15,
+    "price": 22.6,
+    "amount": 339.0
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 7,
+    "price": 54.0,
+    "amount": 378.0
+   }
+  ],
+  "fees": [],
+  "total": 1891.5
+ },
+ {
+  "id": "INV-30706",
+  "order_id": "SO-20606",
+  "customer_id": "C-1001",
+  "date": "2026-08-28",
+  "due": "2026-09-27",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 9,
+    "price": 58.0,
+    "amount": 522.0
+   }
+  ],
+  "fees": [],
+  "total": 522.0
+ },
+ {
+  "id": "INV-30707",
+  "order_id": "SO-20607",
+  "customer_id": "C-1003",
+  "date": "2026-08-28",
+  "due": "2026-09-27",
+  "lines": [
+   {
+    "sku": "VF-AIR-84",
+    "qty": 6,
+    "price": 46.0,
+    "amount": 276.0
+   },
+   {
+    "sku": "SF-20-80M",
+    "qty": 10,
+    "price": 89.0,
+    "amount": 890.0
+   },
+   {
+    "sku": "BX-181818-32",
+    "qty": 30,
+    "price": 46.2,
+    "amount": 1386.0
+   }
+  ],
+  "fees": [],
+  "total": 2552.0
+ },
+ {
+  "id": "INV-30708",
+  "order_id": "SO-20608",
+  "customer_id": "C-1003",
+  "date": "2026-08-29",
+  "due": "2026-09-28",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 3,
+    "price": 64.0,
+    "amount": 192.0
+   },
+   {
+    "sku": "LB-21-TH",
+    "qty": 8,
+    "price": 36.0,
+    "amount": 288.0
+   },
+   {
+    "sku": "BX-141414-44",
+    "qty": 50,
+    "price": 49.9,
+    "amount": 2495.0
+   }
+  ],
+  "fees": [],
+  "total": 2975.0
+ },
+ {
+  "id": "INV-30709",
+  "order_id": "SO-20609",
+  "customer_id": "C-1002",
+  "date": "2026-08-30",
+  "due": "2026-09-29",
+  "lines": [
+   {
+    "sku": "BX-141006-44",
+    "qty": 10,
+    "price": 31.6,
+    "amount": 316.0
+   },
+   {
+    "sku": "BX-121006-32",
+    "qty": 30,
+    "price": 22.6,
+    "amount": 678.0
+   }
+  ],
+  "fees": [],
+  "total": 994.0
+ },
+ {
+  "id": "INV-30710",
+  "order_id": "SO-20610",
+  "customer_id": "C-1006",
+  "date": "2026-08-30",
+  "due": "2026-09-29",
+  "lines": [
+   {
+    "sku": "BX-100806-32",
+    "qty": 20,
+    "price": 19.9,
+    "amount": 398.0
+   },
+   {
+    "sku": "TP-3C-110",
+    "qty": 3,
+    "price": 54.0,
+    "amount": 162.0
+   }
+  ],
+  "fees": [],
+  "total": 560.0
+ },
+ {
+  "id": "INV-30711",
+  "order_id": "SO-20611",
+  "customer_id": "C-1009",
+  "date": "2026-08-30",
+  "due": "2026-09-29",
+  "lines": [
+   {
+    "sku": "VF-CRK-10",
+    "qty": 4,
+    "price": 38.0,
+    "amount": 152.0
+   }
+  ],
+  "fees": [],
+  "total": 152.0
+ },
+ {
+  "id": "INV-30871",
+  "order_id": "SO-20771",
+  "customer_id": "C-1007",
+  "date": "2026-09-08",
+  "due": "2026-10-08",
+  "lines": [
+   {
+    "sku": "TP-FRG-2",
+    "qty": 6,
+    "price": 69.0,
+    "amount": 414.0
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 4,
+    "price": 38.0,
+    "amount": 152.0
+   }
+  ],
+  "fees": [],
+  "total": 566.0
+ },
+ {
+  "id": "INV-30883",
+  "order_id": "SO-20612",
+  "customer_id": "C-1009",
+  "date": "2026-09-25",
+  "due": "2026-10-25",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 68,
+    "price": 39.2,
+    "amount": 2665.6
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 19.4
+   }
+  ],
+  "total": 2685.0
+ },
+ {
+  "id": "INV-30890",
+  "order_id": "SO-20614",
+  "customer_id": "C-1010",
+  "date": "2026-09-30",
+  "due": "2026-10-30",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 27,
+    "price": 53.2,
+    "amount": 1436.4
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 17.6
+   }
+  ],
+  "total": 1454.0
+ },
+ {
+  "id": "INV-30909",
+  "order_id": "SO-20788",
+  "customer_id": "C-1001",
+  "date": "2026-10-12",
+  "due": "2026-11-11",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 16,
+    "price": 58.0,
+    "amount": 928.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 10,
+    "price": 56.0,
+    "amount": 560.0
+   }
+  ],
+  "fees": [],
+  "total": 1488.0
+ },
+ {
+  "id": "INV-30911",
+  "order_id": "SO-20615",
+  "customer_id": "C-1010",
+  "date": "2026-10-12",
+  "due": "2026-11-11",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 53,
+    "price": 53.2,
+    "amount": 2819.6
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 40.4
+   }
+  ],
+  "total": 2860.0
+ },
+ {
+  "id": "INV-30914",
+  "order_id": "SO-20798",
+  "customer_id": "C-1010",
+  "date": "2026-10-13",
+  "due": "2026-11-12",
+  "lines": [
+   {
+    "sku": "TP-3C-110",
+    "qty": 8,
+    "price": 54.0,
+    "amount": 432.0
+   },
+   {
+    "sku": "PD-1016",
+    "qty": 4,
+    "price": 53.2,
+    "amount": 212.8
+   },
+   {
+    "sku": "VF-HNY-15",
+    "qty": 6,
+    "price": 52.0,
+    "amount": 312.0
+   }
+  ],
+  "fees": [],
+  "total": 956.8
+ },
+ {
+  "id": "INV-30917",
+  "order_id": "SO-20791",
+  "customer_id": "C-1002",
+  "date": "2026-10-15",
+  "due": "2026-11-14",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 120,
+    "price": 52.4,
+    "amount": 6288.0
+   }
+  ],
+  "fees": [],
+  "total": 6288.0
+ },
+ {
+  "id": "INV-30919",
+  "order_id": "SO-20793",
+  "customer_id": "C-1010",
+  "date": "2026-10-14",
+  "due": "2026-11-13",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 20,
+    "price": 58.0,
+    "amount": 1160.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 3,
+    "price": 56.0,
+    "amount": 168.0
+   }
+  ],
+  "fees": [],
+  "total": 1328.0
+ },
+ {
+  "id": "INV-30921",
+  "order_id": "SO-20790",
+  "customer_id": "C-1008",
+  "date": "2026-10-16",
+  "due": "2026-11-15",
+  "lines": [
+   {
+    "sku": "BX-161210-32",
+    "qty": 40,
+    "price": 27.06,
+    "amount": 1082.4
+   },
+   {
+    "sku": "BX-121212-32",
+    "qty": 20,
+    "price": 29.0,
+    "amount": 580.0
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 5,
+    "price": 66.0,
+    "amount": 330.0
+   }
+  ],
+  "fees": [],
+  "total": 1992.4
+ },
+ {
+  "id": "INV-30922",
+  "order_id": "SO-20802",
+  "customer_id": "C-1003",
+  "date": "2026-10-16",
+  "due": "2026-11-15",
+  "lines": [
+   {
+    "sku": "BX-121006-32",
+    "qty": 50,
+    "price": 21.4,
+    "amount": 1070.0
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 5,
+    "price": 38.0,
+    "amount": 190.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 10,
+    "price": 56.0,
+    "amount": 560.0
+   }
+  ],
+  "fees": [],
+  "total": 1820.0
+ },
+ {
+  "id": "INV-30925",
+  "order_id": "SO-20613",
+  "customer_id": "C-1009",
+  "date": "2026-10-19",
+  "due": "2026-11-18",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 53,
+    "price": 39.2,
+    "amount": 2077.6
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 22.4
+   }
+  ],
+  "total": 2100.0
+ },
+ {
+  "id": "INV-30927",
+  "order_id": "SO-20804",
+  "customer_id": "C-1005",
+  "date": "2026-10-19",
+  "due": "2026-11-18",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 30,
+    "price": 21.25,
+    "amount": 637.5
+   },
+   {
+    "sku": "PM-1013",
+    "qty": 4,
+    "price": 48.0,
+    "amount": 192.0
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 2,
+    "price": 72.0,
+    "amount": 144.0
+   }
+  ],
+  "fees": [
+   {
+    "type": "liftgate",
+    "amount": 45.0
+   }
+  ],
+  "total": 1018.5
+ },
+ {
+  "id": "INV-30929",
+  "order_id": "SO-20616",
+  "customer_id": "C-1010",
+  "date": "2026-10-20",
+  "due": "2026-11-19",
+  "lines": [
+   {
+    "sku": "PD-1016",
+    "qty": 18,
+    "price": 53.2,
+    "amount": 957.6
+   }
+  ],
+  "fees": [
+   {
+    "type": "freight",
+    "amount": 16.4
+   }
+  ],
+  "total": 974.0
+ },
+ {
+  "id": "INV-30931",
+  "order_id": "SO-20805",
+  "customer_id": "C-1002",
+  "date": "2026-10-19",
+  "due": "2026-11-18",
+  "lines": [
+   {
+    "sku": "BX-241812-32",
+    "qty": 60,
+    "price": 49.8,
+    "amount": 2988.0
+   },
+   {
+    "sku": "VF-AIR-84",
+    "qty": 39,
+    "price": 46.0,
+    "amount": 1794.0
+   }
+  ],
+  "fees": [],
+  "total": 4782.0
+ },
+ {
+  "id": "INV-30934",
+  "order_id": "SO-20807",
+  "customer_id": "C-1008",
+  "date": "2026-10-21",
+  "due": "2026-11-20",
+  "lines": [
+   {
+    "sku": "BX-121212-32",
+    "qty": 25,
+    "price": 29.0,
+    "amount": 725.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 6,
+    "price": 56.0,
+    "amount": 336.0
+   }
+  ],
+  "fees": [],
+  "total": 1061.0
+ },
+ {
+  "id": "INV-30936",
+  "order_id": "SO-20808",
+  "customer_id": "C-1001",
+  "date": "2026-10-22",
+  "due": "2026-11-21",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 20,
+    "price": 58.0,
+    "amount": 1160.0
+   }
+  ],
+  "fees": [],
+  "total": 1160.0
+ },
+ {
+  "id": "INV-30938",
+  "order_id": "SO-20810",
+  "customer_id": "C-1005",
+  "date": "2026-10-22",
+  "due": "2026-11-21",
+  "lines": [
+   {
+    "sku": "BX-120904-32",
+    "qty": 20,
+    "price": 18.4,
+    "amount": 368.0
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 3,
+    "price": 72.0,
+    "amount": 216.0
+   }
+  ],
+  "fees": [],
+  "total": 584.0
+ },
+ {
+  "id": "INV-30940",
+  "order_id": "SO-20811",
+  "customer_id": "C-1008",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "BX-121212-32",
+    "qty": 30,
+    "price": 29.0,
+    "amount": 870.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 6,
+    "price": 56.0,
+    "amount": 336.0
+   }
+  ],
+  "fees": [],
+  "total": 1206.0
+ },
+ {
+  "id": "INV-30941",
+  "order_id": "SO-20809",
+  "customer_id": "C-1001",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "TP-2C-110",
+    "qty": 24,
+    "price": 56.0,
+    "amount": 1344.0
+   },
+   {
+    "sku": "SF-18-80",
+    "qty": 10,
+    "price": 58.0,
+    "amount": 580.0
+   }
+  ],
+  "fees": [],
+  "total": 1924.0
+ },
+ {
+  "id": "INV-30942",
+  "order_id": "SO-20812",
+  "customer_id": "C-1007",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "BX-080808-32",
+    "qty": 30,
+    "price": 21.25,
+    "amount": 637.5
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 4,
+    "price": 56.0,
+    "amount": 224.0
+   }
+  ],
+  "fees": [],
+  "total": 861.5
+ },
+ {
+  "id": "INV-30943",
+  "order_id": "SO-20815",
+  "customer_id": "C-1002",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "BX-181818-32",
+    "qty": 40,
+    "price": 46.2,
+    "amount": 1848.0
+   },
+   {
+    "sku": "VF-AIR-84",
+    "qty": 6,
+    "price": 46.0,
+    "amount": 276.0
+   }
+  ],
+  "fees": [],
+  "total": 2124.0
+ },
+ {
+  "id": "INV-30944",
+  "order_id": "SO-20813",
+  "customer_id": "C-1001",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "SF-18-80",
+    "qty": 30,
+    "price": 58.0,
+    "amount": 1740.0
+   }
+  ],
+  "fees": [],
+  "total": 1740.0
+ },
+ {
+  "id": "INV-30945",
+  "order_id": "SO-20816",
+  "customer_id": "C-1009",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "VF-PEA-14",
+    "qty": 12,
+    "price": 26.0,
+    "amount": 312.0
+   },
+   {
+    "sku": "TP-2C-110",
+    "qty": 2,
+    "price": 56.0,
+    "amount": 112.0
+   }
+  ],
+  "fees": [],
+  "total": 424.0
+ },
+ {
+  "id": "INV-30946",
+  "order_id": "SO-20814",
+  "customer_id": "C-1006",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "PD-0812",
+    "qty": 10,
+    "price": 44.0,
+    "amount": 440.0
+   },
+   {
+    "sku": "VF-CRK-10",
+    "qty": 3,
+    "price": 38.0,
+    "amount": 114.0
+   }
+  ],
+  "fees": [],
+  "total": 554.0
+ },
+ {
+  "id": "INV-30947",
+  "order_id": "SO-20818",
+  "customer_id": "C-1002",
+  "date": "2026-10-23",
+  "due": "2026-11-22",
+  "lines": [
+   {
+    "sku": "BX-181212-32",
+    "qty": 25,
+    "price": 39.2,
+    "amount": 980.0
+   },
+   {
+    "sku": "TP-2H-110",
+    "qty": 8,
+    "price": 64.0,
+    "amount": 512.0
+   }
+  ],
+  "fees": [],
+  "total": 1492.0
+ },
+ {
+  "id": "INV-30950",
+  "order_id": "SO-20820",
+  "customer_id": "C-1004",
+  "date": "2026-10-26",
+  "due": "2026-11-25",
+  "lines": [
+   {
+    "sku": "MB-090603",
+    "qty": 8,
+    "price": 34.5,
+    "amount": 276.0
+   },
+   {
+    "sku": "LB-46-TH",
+    "qty": 2,
+    "price": 72.0,
+    "amount": 144.0
+   }
+  ],
+  "fees": [],
+  "total": 420.0
+ },
+ {
+  "id": "INV-30951",
+  "order_id": "SO-20822",
+  "customer_id": "C-1006",
+  "date": "2026-10-26",
+  "due": "2026-11-25",
+  "lines": [
+   {
+    "sku": "BX-141006-32",
+    "qty": 16,
+    "price": 24.3,
+    "amount": 388.8
+   },
+   {
+    "sku": "TP-FRG-2",
+    "qty": 2,
+    "price": 69.0,
+    "amount": 138.0
+   }
+  ],
+  "fees": [],
+  "total": 526.8
+ }
+]

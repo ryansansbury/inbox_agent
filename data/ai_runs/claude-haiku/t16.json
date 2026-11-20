@@ -1,0 +1,162 @@
+{
+ "email_id": "t16",
+ "split": "test",
+ "seq": 39,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "3edf177d8429acc6",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "ayumi@lanternfold.example"
+   },
+   "result": {
+    "customer_id": "C-1007",
+    "name": "Lanternfold Candle Co.",
+    "terms": "Net 30",
+    "credit_limit": 7500.0,
+    "open_balance": 861.5,
+    "open_orders": 0.0,
+    "available_credit": 6638.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ayumi Nakaya",
+      "role": "founder",
+      "email": "ayumi@lanternfold.example"
+     },
+     {
+      "name": "Gwen Talbot",
+      "role": "operations",
+      "email": "gwen@lanternfold.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "sales",
+    "summary": "Customer Ayumi Nakaya (C-1007, Lanternfold Candle Co.) asks for a quote on printed mailer boxes with their logo, 2,000 units of the 9x6x3 size, for next year.",
+    "sentence": 2
+   },
+   "result": {
+    "routed_to": "sales",
+    "mailbox": "sales@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Ayumi,\n\nThanks for getting in touch. We've passed your request for a printed mailer quote on 2,000 of the 9x6x3 boxes with your logo to our sales team. They'll follow up with you directly.\n\nThe Wendlow order desk",
+  "note": "Sender is verified (C-1007). The custom print quote for 2,000 printed 9x6x3 mailers was routed to sales. No order or price was created.",
+  "intents": [
+   "custom_quote"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 2,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Si9ESBptzEV7xiekPue57z",
+     "name": "get_customer",
+     "input": {
+      "email": "ayumi@lanternfold.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 225,
+     "output": 93,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 906,
+    "cost": 0.000118
+   }
+  },
+  {
+   "text": "Custom printed mailers are a custom print quote, so it goes to sales.",
+   "calls": [
+    {
+     "id": "toolu_01HobVEkzFZt3mnXuAWoUNux",
+     "name": "route_to_person",
+     "input": {
+      "team": "sales",
+      "summary": "Customer Ayumi Nakaya (C-1007, Lanternfold Candle Co.) asks for a quote on printed mailer boxes with their logo, 2,000 units of the 9x6x3 size, for next year.",
+      "sentence": 2
+     }
+    },
+    {
+     "id": "toolu_014MvzGfsSuykprXq14KwYrV",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Ayumi,\n\nThanks for getting in touch. We've passed your request for a printed mailer quote on 2,000 of the 9x6x3 boxes with your logo to our sales team. They'll follow up with you directly.\n\nThe Wendlow order desk",
+      "note": "Sender is verified (C-1007). The custom print quote for 2,000 printed 9x6x3 mailers was routed to sales. No order or price was created.",
+      "intents": [
+       "custom_quote"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 572,
+     "output": 447,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2227,
+    "cost": 0.00033
+   }
+  }
+ ],
+ "usage": {
+  "turns": 2,
+  "seconds": 3.1,
+  "input_tokens": 797,
+  "output_tokens": 540,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 9806,
+  "cost": 0.000448
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:38:56",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

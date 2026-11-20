@@ -1,0 +1,248 @@
+{
+ "email_id": "t01",
+ "split": "test",
+ "seq": 24,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "141d36561321d747",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "caleb@sablewood.example"
+   },
+   "result": {
+    "customer_id": "C-1002",
+    "name": "Sablewood Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 20000.0,
+    "open_balance": 9904.0,
+    "open_orders": 3550.0,
+    "available_credit": 6546.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Caleb Kowalski",
+      "role": "purchasing",
+      "email": "caleb@sablewood.example"
+     },
+     {
+      "name": "Leela Varadan",
+      "role": "accounts payable",
+      "email": "leela@sablewood.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Main warehouse",
+      "city": "Commerce City, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Overflow building",
+      "city": "Commerce City, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-241812-32",
+      "price": 49.8
+     },
+     {
+      "sku": "VF-AIR-84",
+      "price": 46.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20818"
+   },
+   "result": {
+    "order_id": "SO-20818",
+    "customer_id": "C-1002",
+    "po": "SW-4422",
+    "placed": "2026-10-21 16:10",
+    "requested": "2026-10-26",
+    "status": "shipped",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Main warehouse",
+     "city": "Commerce City, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-181212-32",
+      "name": "Shipping box 18x12x12, 32 ECT",
+      "qty": 25,
+      "picked": 25,
+      "shipped": 25,
+      "price": 39.2,
+      "amount": 980.0
+     },
+     {
+      "sku": "TP-2H-110",
+      "name": "Hot melt tape 2 in x 110 yd, heavy duty",
+      "qty": 8,
+      "picked": 8,
+      "shipped": 8,
+      "price": 64.0,
+      "amount": 512.0
+     }
+    ],
+    "fees": [],
+    "total": 1492.0,
+    "invoice_id": "INV-30947"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20818"
+   },
+   "result": {
+    "order_id": "SO-20818",
+    "tracking": "PRO 5521-8839",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-23",
+    "status": "delayed",
+    "eta": "2026-10-29 17:00",
+    "delivered": null,
+    "signed_by": null,
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-23 15:30",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-24 06:10",
+      "text": "Departed origin terminal"
+     },
+     {
+      "at": "2026-10-25 22:40",
+      "text": "Delayed: weather at connecting terminal"
+     },
+     {
+      "at": "2026-10-26 09:00",
+      "text": "Delayed: weather at connecting terminal, new estimated delivery 10/29"
+     }
+    ]
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Caleb,\n\nSorry about the delay. SO-20818 (PO SW-4422) shipped on Friday, October 23 by LTL freight. The tracking number is PRO 5521-8839.\n\nThe carrier reported a weather delay at a connecting terminal. The new estimated delivery is Thursday, October 29, by 5:00 PM. It is going to your Main warehouse.\n\nWe'll tell you if the carrier changes that estimate.\n\nThe Wendlow order desk",
+  "note": "Order status inquiry. SO-20818 is delayed by weather, with a new ETA of Oct 29. No actions were needed.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01GWZJnBHic3D17QCoqxyoMJ",
+     "name": "get_customer",
+     "input": {
+      "email": "caleb@sablewood.example"
+     }
+    },
+    {
+     "id": "toolu_01ABBcQbG6dVJ9BbdJEpRHs9",
+     "name": "get_order",
+     "input": {
+      "order_id": "20818"
+     }
+    },
+    {
+     "id": "toolu_01U4pqCKeeBrX6RfPa47pZMp",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20818"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 201,
+     "output": 153,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1887,
+    "cost": 0.002913
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01HP8MGHgxCzK8Xs1gU7iR77",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Caleb,\n\nSorry about the delay. SO-20818 (PO SW-4422) shipped on Friday, October 23 by LTL freight. The tracking number is PRO 5521-8839.\n\nThe carrier reported a weather delay at a connecting terminal. The new estimated delivery is Thursday, October 29, by 5:00 PM. It is going to your Main warehouse.\n\nWe'll tell you if the carrier changes that estimate.\n\nThe Wendlow order desk",
+      "note": "Order status inquiry. SO-20818 is delayed by weather, with a new ETA of Oct 29. No actions were needed.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1384,
+     "output": 320,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2670,
+    "cost": 0.006949
+   }
+  }
+ ],
+ "usage": {
+  "turns": 2,
+  "seconds": 4.6,
+  "input_tokens": 1585,
+  "output_tokens": 473,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 9806,
+  "cost": 0.009862
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:33:45",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

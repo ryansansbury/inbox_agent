@@ -1,0 +1,89 @@
+{
+ "id": "m06",
+ "at": "2026-10-27T08:02",
+ "from": {
+  "name": "Theo Ramsey",
+  "email": "theo@kettleby.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Out of 14x14x14 boxes?",
+ "body": [
+  [
+   "Hi, I tried to add the 14x14x14 boxes to an order on the portal and it says they're out of stock.",
+   "We need 30 bundles this week for our holiday bundles.",
+   "Is there anything else that would work?"
+  ]
+ ],
+ "sig": [
+  "Theo Ramsey",
+  "Operations Lead",
+  "Kettleby Pet Supply"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "out_of_stock",
+   "new_order"
+  ],
+  "handling": "The 14x14x14 is out until November 10, and the recycled kraft box has the same size and the same 32 ECT strength with 45 bundles at North. Offer it at $39.80 and ask before placing anything.",
+  "expected": [
+   {
+    "tool": "ask_customer",
+    "args": {
+     "about": [
+      "BX-141414-32E"
+     ]
+    },
+    "sentence": 3
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [
+   {
+    "tool": "create_order",
+    "args": {},
+    "why": "A substitute is ordered before the customer says yes."
+   }
+  ],
+  "facts": [
+   {
+    "kind": "sku",
+    "value": "BX-141414-32E",
+    "source": "equivalent:BX-141414-32"
+   },
+   {
+    "kind": "date",
+    "value": "2026-11-10",
+    "source": "stock:BX-141414-32.inbound_date"
+   },
+   {
+    "kind": "amount",
+    "value": 39.8,
+    "source": "price:C-1005:BX-141414-32E"
+   }
+  ],
+  "lane": "customer",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, I tried to add the 14x14x14 boxes to an order on the portal and it says they're out of stock.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "We need 30 bundles this week for our holiday bundles.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Is there anything else that would work?",
+   "part": "body"
+  }
+ ]
+}

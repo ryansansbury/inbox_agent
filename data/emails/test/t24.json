@@ -1,0 +1,63 @@
+{
+ "id": "t24",
+ "at": "2026-10-27T17:49",
+ "from": {
+  "name": "Caleb Kowalski",
+  "email": "caleb@sablewood.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "hold SO-20836",
+ "body": [
+  [
+   "Please hold SO-20836 until Monday.",
+   "Our dock is closed Thursday and Friday."
+  ]
+ ],
+ "sig": [
+  "Caleb"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "hold_order"
+  ],
+  "handling": "SO-20836 hasn't been picked, so it's held until Monday, November 2.",
+  "expected": [
+   {
+    "tool": "hold_order",
+    "args": {
+     "order_id": "SO-20836",
+     "until": "2026-11-02"
+    },
+    "sentence": 1
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "date",
+    "value": "2026-11-02",
+    "source": "literal"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Please hold SO-20836 until Monday.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Our dock is closed Thursday and Friday.",
+   "part": "body"
+  }
+ ]
+}

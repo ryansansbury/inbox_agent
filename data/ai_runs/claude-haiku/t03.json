@@ -1,0 +1,261 @@
+{
+ "email_id": "t03",
+ "split": "test",
+ "seq": 26,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "40c67bca7f2f63cb",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "sora@kilnmoor.example"
+   },
+   "result": {
+    "customer_id": "C-1009",
+    "name": "Kilnmoor Ceramics",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 5209.0,
+    "open_orders": 213.0,
+    "available_credit": 578.0,
+    "on_hold": false,
+    "past_due": [
+     {
+      "invoice_id": "INV-30883",
+      "due": "2026-10-25",
+      "open": 2685.0
+     }
+    ],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 7
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ezra Moreno",
+      "role": "owner",
+      "email": "ezra@kilnmoor.example"
+     },
+     {
+      "name": "Sora Baek",
+      "role": "shipping lead",
+      "email": "sora@kilnmoor.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Pueblo, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Gallery",
+      "city": "Colorado Springs, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20816"
+   },
+   "result": {
+    "order_id": "SO-20816",
+    "customer_id": "C-1009",
+    "po": "KC-0412",
+    "placed": "2026-10-21 14:00",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Pueblo, CO"
+    },
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "name": "Packing peanuts, 14 cu ft bag",
+      "qty": 12,
+      "picked": 9,
+      "shipped": 9,
+      "price": 26.0,
+      "amount": 312.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 2,
+      "picked": 2,
+      "shipped": 2,
+      "price": 56.0,
+      "amount": 112.0
+     }
+    ],
+    "fees": [],
+    "total": 424.0,
+    "invoice_id": "INV-30945"
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "SO-20816",
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 3
+     }
+    ],
+    "reason": "Short shipment: 9 of 12 bags of packing peanuts shipped on SO-20816",
+    "sentence": 2
+   },
+   "result": {
+    "replacement_order": "SO-20918",
+    "replaces": "SO-20816",
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 3
+     }
+    ],
+    "value": 78.0,
+    "charge": 0.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Sora,\n\nYou're right. Order SO-20816 shipped 9 of the 12 bags of packing peanuts (VF-PEA-14). We've sent the other 3 bags at no charge on replacement order SO-20918.\n\nThe Wendlow order desk",
+  "note": "SO-20816 (PO KC-0412) shipped 9 of 12 VF-PEA-14 bags. Reshipped the 3 missing bags at no charge as SO-20918 ($78.00 value, within the reship limit). Did not check the carrier tracking for the replacement.",
+  "intents": [
+   "short_shipment"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_0179gbaY1wjNN3MZMhZBekVC",
+     "name": "get_customer",
+     "input": {
+      "email": "sora@kilnmoor.example"
+     }
+    },
+    {
+     "id": "toolu_01Etvmi4aTzSuboDR95BJRDc",
+     "name": "get_order",
+     "input": {
+      "order_id": "20816"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 207,
+     "output": 118,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 973,
+    "cost": 0.000129
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01UbZzJeqwwzvzbF6hzwSB8x",
+     "name": "reship",
+     "input": {
+      "order_id": "SO-20816",
+      "lines": [
+       {
+        "sku": "VF-PEA-14",
+        "qty": 3
+       }
+      ],
+      "reason": "Short shipment: 9 of 12 bags of packing peanuts shipped on SO-20816",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1028,
+     "output": 363,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1906,
+    "cost": 0.000333
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_011EM8sRCTEpxXJBxTq2mxPg",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Sora,\n\nYou're right. Order SO-20816 shipped 9 of the 12 bags of packing peanuts (VF-PEA-14). We've sent the other 3 bags at no charge on replacement order SO-20918.\n\nThe Wendlow order desk",
+      "note": "SO-20816 (PO KC-0412) shipped 9 of 12 VF-PEA-14 bags. Reshipped the 3 missing bags at no charge as SO-20918 ($78.00 value, within the reship limit). Did not check the carrier tracking for the replacement.",
+      "intents": [
+       "short_shipment"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1284,
+     "output": 302,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1609,
+    "cost": 0.000328
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 4.5,
+  "input_tokens": 2519,
+  "output_tokens": 783,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.00079
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:37:38",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

@@ -1,0 +1,312 @@
+{
+ "email_id": "m03",
+ "split": "morning",
+ "seq": 2,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "2df65ae87f728028",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "caleb@sablewood.example"
+   },
+   "result": {
+    "customer_id": "C-1002",
+    "name": "Sablewood Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 20000.0,
+    "open_balance": 9904.0,
+    "open_orders": 3550.0,
+    "available_credit": 6546.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Caleb Kowalski",
+      "role": "purchasing",
+      "email": "caleb@sablewood.example"
+     },
+     {
+      "name": "Leela Varadan",
+      "role": "accounts payable",
+      "email": "leela@sablewood.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Main warehouse",
+      "city": "Commerce City, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Overflow building",
+      "city": "Commerce City, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-241812-32",
+      "price": 49.8
+     },
+     {
+      "sku": "VF-AIR-84",
+      "price": 46.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20815"
+   },
+   "result": {
+    "order_id": "SO-20815",
+    "customer_id": "C-1002",
+    "po": "SW-4410",
+    "placed": "2026-10-20 10:05",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Main warehouse",
+     "city": "Commerce City, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-181818-32",
+      "name": "Shipping box 18x18x18, 32 ECT",
+      "qty": 40,
+      "picked": 38,
+      "shipped": 38,
+      "price": 46.2,
+      "amount": 1848.0
+     },
+     {
+      "sku": "VF-AIR-84",
+      "name": "Air pillow film 8x4, 1500 ft roll",
+      "qty": 6,
+      "picked": 6,
+      "shipped": 6,
+      "price": 46.0,
+      "amount": 276.0
+     }
+    ],
+    "fees": [],
+    "total": 2124.0,
+    "invoice_id": "INV-30943",
+    "pick_note": "Short 2 bundles, bin empty"
+   },
+   "valid": true
+  },
+  {
+   "tool": "check_stock",
+   "args": {
+    "sku": "BX-181818-32"
+   },
+   "result": {
+    "sku": "BX-181818-32",
+    "name": "Shipping box 18x18x18, 32 ECT",
+    "unit": "bundle of 15",
+    "warehouses": {
+     "North": {
+      "available": 196,
+      "inbound": []
+     },
+     "Valley": {
+      "available": 331,
+      "inbound": []
+     }
+    },
+    "available_total": 527
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "SO-20815",
+    "lines": [
+     {
+      "sku": "BX-181818-32",
+      "qty": 2
+     }
+    ],
+    "reason": "Short shipped 2 bundles of BX-181818-32 on SO-20815 (picked 38 of 40, bin empty)",
+    "sentence": 3
+   },
+   "result": {
+    "replacement_order": "SO-20846",
+    "replaces": "SO-20815",
+    "lines": [
+     {
+      "sku": "BX-181818-32",
+      "qty": 2
+     }
+    ],
+    "value": 92.4,
+    "charge": 0.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Caleb,\n\nYou're right. Order SO-20815 shipped 38 of the 40 bundles of 18x18x18 boxes, because the bin was empty when we picked it. We have sent the 2 missing bundles at no charge on replacement order SO-20846. Please check that they arrive.\n\nThe Wendlow order desk",
+  "note": "Short-shipped 2 bundles of BX-181818-32 on SO-20815 (picked 38 of 40, bin empty). Reshipped the 2 bundles at no charge as replacement order SO-20846 ($92.40 value, within the reship limit). Check that the replacement ships from stock.",
+  "intents": [
+   "short_shipment"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01UiLYo2DTFCss28E91mLygR",
+     "name": "get_customer",
+     "input": {
+      "email": "caleb@sablewood.example"
+     }
+    },
+    {
+     "id": "toolu_01QtGsLSShmNQuEYDXWMLetq",
+     "name": "get_order",
+     "input": {
+      "order_id": "20815"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 279,
+     "output": 104,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 905,
+    "cost": 0.000129
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_011nbfgwryAdBP57L9WgKpsS",
+     "name": "check_stock",
+     "input": {
+      "sku": "BX-181818-32"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1137,
+     "output": 216,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1536,
+    "cost": 0.000271
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_014mzZnnKzrPmiBGR9eZ69UH",
+     "name": "reship",
+     "input": {
+      "order_id": "SO-20815",
+      "lines": [
+       {
+        "sku": "BX-181818-32",
+        "qty": 2
+       }
+      ],
+      "reason": "Short shipped 2 bundles of BX-181818-32 on SO-20815 (picked 38 of 40, bin empty)",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1300,
+     "output": 462,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2457,
+    "cost": 0.00041
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01DmBmA46np3qKGWvV79afAC",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Caleb,\n\nYou're right. Order SO-20815 shipped 38 of the 40 bundles of 18x18x18 boxes, because the bin was empty when we picked it. We have sent the 2 missing bundles at no charge on replacement order SO-20846. Please check that they arrive.\n\nThe Wendlow order desk",
+      "note": "Short-shipped 2 bundles of BX-181818-32 on SO-20815 (picked 38 of 40, bin empty). Reshipped the 2 bundles at no charge as replacement order SO-20846 ($92.40 value, within the reship limit). Check that the replacement ships from stock.",
+      "intents": [
+       "short_shipment"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1565,
+     "output": 328,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1883,
+    "cost": 0.00037
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 6.8,
+  "input_tokens": 4281,
+  "output_tokens": 1110,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 19612,
+  "cost": 0.00118
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:36:25",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

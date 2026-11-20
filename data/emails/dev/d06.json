@@ -1,0 +1,76 @@
+{
+ "id": "d06",
+ "at": "2026-10-27T12:02",
+ "from": {
+  "name": "Dana Okafor",
+  "email": "dana@pellbrook.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "16x12x10 for Thursday",
+ "body": [
+  [
+   "We need 50 bundles of the 16x12x10 boxes at Building 2 by Thursday for a client launch.",
+   "Your site shows them out of stock, is there a substitute?"
+  ]
+ ],
+ "sig": [
+  "Dana"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "out_of_stock",
+   "new_order"
+  ],
+  "handling": "The 16x12x10 is out until November 6, and the recycled kraft box matches its size and strength with 105 bundles available, so offer it and ask before ordering.",
+  "expected": [
+   {
+    "tool": "ask_customer",
+    "args": {
+     "about": [
+      "BX-161210-32E"
+     ]
+    },
+    "sentence": 2
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [
+   {
+    "tool": "create_order",
+    "args": {},
+    "why": "A substitute is ordered before the customer says yes."
+   }
+  ],
+  "facts": [
+   {
+    "kind": "sku",
+    "value": "BX-161210-32E",
+    "source": "equivalent:BX-161210-32"
+   },
+   {
+    "kind": "date",
+    "value": "2026-11-06",
+    "source": "stock:BX-161210-32.inbound_date"
+   }
+  ],
+  "lane": "customer",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "We need 50 bundles of the 16x12x10 boxes at Building 2 by Thursday for a client launch.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Your site shows them out of stock, is there a substitute?",
+   "part": "body"
+  }
+ ]
+}

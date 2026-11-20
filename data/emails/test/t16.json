@@ -1,0 +1,56 @@
+{
+ "id": "t16",
+ "at": "2026-10-27T15:51",
+ "from": {
+  "name": "Ayumi Nakaya",
+  "email": "ayumi@lanternfold.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "printed mailers quote",
+ "body": [
+  [
+   "Hi! We'd love to do printed mailer boxes with our logo for next year.",
+   "Could we get a quote on 2,000 of the 9x6x3 size?"
+  ]
+ ],
+ "sig": [
+  "Ayumi"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "custom_quote"
+  ],
+  "handling": "Custom print is quoted by sales, so it's routed there, and the reply says someone from sales will follow up.",
+  "expected": [
+   {
+    "tool": "route_to_person",
+    "args": {
+     "team": "sales"
+    },
+    "sentence": 2
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [],
+  "lane": "stopped",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi! We'd love to do printed mailer boxes with our logo for next year.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Could we get a quote on 2,000 of the 9x6x3 size?",
+   "part": "body"
+  }
+ ]
+}

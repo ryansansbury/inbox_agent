@@ -1,0 +1,239 @@
+{
+ "email_id": "t18",
+ "split": "test",
+ "seq": 41,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "a5b4cd45bc36077e",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "felix@brecken.example"
+   },
+   "result": {
+    "customer_id": "C-1008",
+    "name": "Brecken Electronics",
+    "terms": "Net 30",
+    "credit_limit": 15000.0,
+    "open_balance": 4259.4,
+    "open_orders": 0.0,
+    "available_credit": 10740.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 13
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Felix Dunmore",
+      "role": "purchasing manager",
+      "email": "felix@brecken.example"
+     },
+     {
+      "name": "Anya Fischer",
+      "role": "accounts payable",
+      "email": "anya@brecken.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Plant",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-121212-32",
+      "price": 29.0
+     },
+     {
+      "sku": "BX-161210-32",
+      "price": 22.4
+     },
+     {
+      "sku": "LB-46-TH",
+      "price": 66.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20807"
+   },
+   "result": {
+    "order_id": "SO-20807",
+    "customer_id": "C-1008",
+    "po": "BE-77402",
+    "placed": "2026-10-16 10:30",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Plant",
+     "city": "Longmont, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-121212-32",
+      "name": "Shipping box 12x12x12, 32 ECT",
+      "qty": 25,
+      "picked": 25,
+      "shipped": 25,
+      "price": 29.0,
+      "amount": 725.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 6,
+      "picked": 6,
+      "shipped": 6,
+      "price": 56.0,
+      "amount": 336.0
+     }
+    ],
+    "fees": [],
+    "total": 1061.0,
+    "invoice_id": "INV-30934"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20807"
+   },
+   "result": {
+    "order_id": "SO-20807",
+    "tracking": "PRO 5267-9859",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-21",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-23 10:10",
+    "signed_by": "RECEIVING",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-21 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-23 10:10",
+      "text": "Delivered, signed by RECEIVING"
+     }
+    ]
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Felix,\n\nOrder SO-20807 (your PO BE-77402) was delivered. The carrier shipped it on Wednesday, October 21 on LTL freight, tracking number PRO 5267-9859. It was delivered to your Plant location in Longmont, CO on Friday, October 23 at 10:10 AM, and the delivery was signed by RECEIVING.\n\nCould you check with your receiving team for the PRO number, since the delivery was signed for at your site? If the delivery is not in your receiving log, please let us know and we can look into it further with the carrier.\n\nThe Wendlow order desk",
+  "note": "Read-only inquiry. SO-20807 shows delivered on 2026-10-23, signed by RECEIVING at the Plant location, tracking PRO 5267-9859. No actions taken. The customer's receiving log discrepancy may need follow-up if they come back with a dispute.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01JDPYqBGF43QDP9ugr1M8z2",
+     "name": "get_customer",
+     "input": {
+      "email": "felix@brecken.example"
+     }
+    },
+    {
+     "id": "toolu_01NtuLg2spXhgCD5yUhrK31B",
+     "name": "get_order",
+     "input": {
+      "order_id": "20807"
+     }
+    },
+    {
+     "id": "toolu_01DWTa4w4Tuf3BfNT68fZjbJ",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20807"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 201,
+     "output": 151,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 984,
+    "cost": 0.000145
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01U7mKg3WFjitSbwth6gWxaX",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Felix,\n\nOrder SO-20807 (your PO BE-77402) was delivered. The carrier shipped it on Wednesday, October 21 on LTL freight, tracking number PRO 5267-9859. It was delivered to your Plant location in Longmont, CO on Friday, October 23 at 10:10 AM, and the delivery was signed by RECEIVING.\n\nCould you check with your receiving team for the PRO number, since the delivery was signed for at your site? If the delivery is not in your receiving log, please let us know and we can look into it further with the carrier.\n\nThe Wendlow order desk",
+      "note": "Read-only inquiry. SO-20807 shows delivered on 2026-10-23, signed by RECEIVING at the Plant location, tracking PRO 5267-9859. No actions taken. The customer's receiving log discrepancy may need follow-up if they come back with a dispute.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1273,
+     "output": 523,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2879,
+    "cost": 0.000438
+   }
+  }
+ ],
+ "usage": {
+  "turns": 2,
+  "seconds": 3.9,
+  "input_tokens": 1474,
+  "output_tokens": 674,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 9806,
+  "cost": 0.000583
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:39:04",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

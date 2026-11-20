@@ -1,0 +1,305 @@
+{
+ "email_id": "m02",
+ "split": "morning",
+ "seq": 1,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "e560525b8ea4f472",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20809"
+   },
+   "result": {
+    "order_id": "SO-20809",
+    "customer_id": "C-1001",
+    "po": "PF-88213",
+    "placed": "2026-10-21 09:30",
+    "requested": "2026-10-26",
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Building 2",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 24,
+      "picked": 24,
+      "shipped": 24,
+      "price": 56.0,
+      "amount": 1344.0,
+      "damaged_on_delivery": 3
+     },
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 58.0,
+      "amount": 580.0
+     }
+    ],
+    "fees": [],
+    "total": 1924.0,
+    "invoice_id": "INV-30941"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "order_id": "20809"
+   },
+   "result": {
+    "invoice_id": "INV-30941",
+    "order_id": "SO-20809",
+    "customer_id": "C-1001",
+    "date": "2026-10-23",
+    "due": "2026-11-22",
+    "lines": [
+     {
+      "sku": "TP-2C-110",
+      "qty": 24,
+      "price": 56.0,
+      "amount": 1344.0,
+      "name": "Carton sealing tape 2 in x 110 yd, clear"
+     },
+     {
+      "sku": "SF-18-80",
+      "qty": 10,
+      "price": 58.0,
+      "amount": 580.0,
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge"
+     }
+    ],
+    "fees": [],
+    "total": 1924.0,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 1924.0
+   },
+   "valid": true
+  },
+  {
+   "tool": "issue_credit",
+   "args": {
+    "customer_id": "C-1001",
+    "invoice_id": "INV-30941",
+    "amount": 168.0,
+    "reason": "3 cases TP-2C-110 crushed on delivery, noted on delivery receipt; no reship wanted",
+    "sentence": 4
+   },
+   "result": {
+    "credit_memo": "CM-2234",
+    "invoice_id": "INV-30941",
+    "amount": 168.0,
+    "invoice_open_after": 1756.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Omar,\n\nThank you for letting us know about the crushed cases on SO-20809. We are sorry about that.\n\nWe issued credit memo CM-2234 for $168.00 against invoice INV-30941. That covers 3 cases of the 2 inch clear tape at $56.00 each. The open balance on that invoice is now $1,756.00.\n\nWe have not resent anything, as you asked.\n\nThe Wendlow order desk",
+  "note": "Issued CM-2234 for $168.00 (3 x $56.00 TP-2C-110) on INV-30941, within the $250 auto limit. No reship, per customer. Damage was recorded on the order line.",
+  "intents": [
+   "damaged_delivery",
+   "credit_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01U8NzCanwHLEqhbJACqHw2w",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    },
+    {
+     "id": "toolu_011CLo79unzPfaYzr1Hp7GzS",
+     "name": "get_order",
+     "input": {
+      "order_id": "20809"
+     }
+    },
+    {
+     "id": "toolu_01F77fTBaTWQDm58mbXtP9oC",
+     "name": "get_invoice",
+     "input": {
+      "order_id": "20809"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 313,
+     "output": 153,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1943,
+    "cost": 0.003137
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_014dyNuKFDK7FVVZXqKZnz84",
+     "name": "issue_credit",
+     "input": {
+      "customer_id": "C-1001",
+      "invoice_id": "INV-30941",
+      "amount": 168.0,
+      "reason": "3 cases TP-2C-110 crushed on delivery, noted on delivery receipt; no reship wanted",
+      "sentence": 4
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1550,
+     "output": 211,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2118,
+    "cost": 0.006191
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01KgULNX45QbMxpH6icFoFmF",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Omar,\n\nThank you for letting us know about the crushed cases on SO-20809. We are sorry about that.\n\nWe issued credit memo CM-2234 for $168.00 against invoice INV-30941. That covers 3 cases of the 2 inch clear tape at $56.00 each. The open balance on that invoice is now $1,756.00.\n\nWe have not resent anything, as you asked.\n\nThe Wendlow order desk",
+      "note": "Issued CM-2234 for $168.00 (3 x $56.00 TP-2C-110) on INV-30941, within the $250 auto limit. No reship, per customer. Damage was recorded on the order line.",
+      "intents": [
+       "damaged_delivery",
+       "credit_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1803,
+     "output": 338,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3000,
+    "cost": 0.007967
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 7.1,
+  "input_tokens": 3666,
+  "output_tokens": 702,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.017295
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:32:32",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

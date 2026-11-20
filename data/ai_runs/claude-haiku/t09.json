@@ -1,0 +1,257 @@
+{
+ "email_id": "t09",
+ "split": "test",
+ "seq": 32,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "33dfde12e686aacf",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "dana@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "heavy 24x18x12 boxes"
+   },
+   "result": {
+    "query": "heavy 24x18x12 boxes",
+    "matches": [
+     {
+      "sku": "BX-241812-44",
+      "name": "Shipping box 24x18x12, 44 ECT",
+      "unit": "bundle of 15",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 67.8,
+      "available": 418
+     },
+     {
+      "sku": "BX-241812-32",
+      "name": "Shipping box 24x18x12, 32 ECT",
+      "unit": "bundle of 15",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 52.4,
+      "available": 512
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1001",
+    "lines": [
+     {
+      "sku": "BX-241812-44",
+      "qty": 40
+     }
+    ],
+    "location_id": "L2",
+    "sentence": 1
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-197",
+    "waiting_on": "order_desk",
+    "rule": "order_cap",
+    "note": "New orders over $2,500 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "order_id": "SO-20936",
+    "total": 2712.0,
+    "amount": 2712.0,
+    "limit": 2500
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Dana,\n\nWe received your request for 40 bundles of the heavy 24x18x12 boxes (BX-241812-44, 44 ECT, bundles of 15) to Building 4. The order is SO-20936 for $2,712.00. Because the total is over our automatic approval limit, it is pending approval by our order desk team. We will confirm once it is approved. We cannot promise a ship date yet, so please check back once it is approved.\n\nThe Wendlow order desk",
+  "note": "Order SO-20936 for 40 bundles of BX-241812-44 to Building 4 (L2) at the contract price, total $2,712.00. It is over the $2,500 new-order cap, so it is waiting under approval AP-197. The email's \"next week\" timing was not set as a requested date, and the reply does not promise a date.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_0164Mn3Cw4SK8FCqLvXgzp2X",
+     "name": "get_customer",
+     "input": {
+      "email": "dana@pellbrook.example"
+     }
+    },
+    {
+     "id": "toolu_01GsPUrDAYPUiZnGALWmii53",
+     "name": "search_items",
+     "input": {
+      "query": "heavy 24x18x12 boxes"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 231,
+     "output": 126,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 889,
+    "cost": 0.000135
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01CwJK3cMtJFwMgkCzPhCCgs",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1001",
+      "lines": [
+       {
+        "sku": "BX-241812-44",
+        "qty": 40
+       }
+      ],
+      "location_id": "L2",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1019,
+     "output": 399,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2251,
+    "cost": 0.00035
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01AujeLxVEsgGvwyzdZFBa2C",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Dana,\n\nWe received your request for 40 bundles of the heavy 24x18x12 boxes (BX-241812-44, 44 ECT, bundles of 15) to Building 4. The order is SO-20936 for $2,712.00. Because the total is over our automatic approval limit, it is pending approval by our order desk team. We will confirm once it is approved. We cannot promise a ship date yet, so please check back once it is approved.\n\nThe Wendlow order desk",
+      "note": "Order SO-20936 for 40 bundles of BX-241812-44 to Building 4 (L2) at the contract price, total $2,712.00. It is over the $2,500 new-order cap, so it is waiting under approval AP-197. The email's \"next week\" timing was not set as a requested date, and the reply does not promise a date.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1290,
+     "output": 509,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2780,
+    "cost": 0.000433
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.9,
+  "input_tokens": 2540,
+  "output_tokens": 1034,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000918
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:38:14",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

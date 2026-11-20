@@ -1,0 +1,95 @@
+{
+ "id": "m12",
+ "at": "2026-10-27T09:18",
+ "from": {
+  "name": "Mara Lindqvist",
+  "email": "mara@fernhollowtea.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Add 10 mailers to our order",
+ "body": [
+  [
+   "Hi!"
+  ],
+  [
+   "Could you add 10 bundles of the 9x6x3 mailer boxes to our order this week?"
+  ]
+ ],
+ "sig": [
+  "Thank you!!",
+  "Mara",
+  "Fernhollow Tea"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "ambiguous_order",
+   "new_order"
+  ],
+  "handling": "Fernhollow has two open orders placed this week, SO-20832 and SO-20835, so ask which one before adding anything.",
+  "expected": [
+   {
+    "tool": "ask_customer",
+    "args": {
+     "about": [
+      "SO-20832",
+      "SO-20835"
+     ]
+    },
+    "sentence": 2,
+    "ambiguous": {
+     "customer_id": "C-1004",
+     "placed_from": "2026-10-26",
+     "placed_to": "2026-10-27",
+     "statuses": [
+      "open",
+      "picked"
+     ]
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [
+   {
+    "tool": "create_order",
+    "args": {},
+    "why": "Adding to one order is a guess until the customer says which."
+   },
+   {
+    "tool": "hold_order",
+    "args": {},
+    "why": "Neither order was named."
+   }
+  ],
+  "facts": [
+   {
+    "kind": "order",
+    "value": "SO-20832",
+    "source": "order:SO-20832.id"
+   },
+   {
+    "kind": "order",
+    "value": "SO-20835",
+    "source": "order:SO-20835.id"
+   }
+  ],
+  "lane": "customer",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi!",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Could you add 10 bundles of the 9x6x3 mailer boxes to our order this week?",
+   "part": "body"
+  }
+ ]
+}

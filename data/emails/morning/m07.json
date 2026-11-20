@@ -1,0 +1,91 @@
+{
+ "id": "m07",
+ "at": "2026-10-27T08:15",
+ "from": {
+  "name": "Anya Fischer",
+  "email": "anya@brecken.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Invoice 30921 price is wrong",
+ "body": [
+  [
+   "Hello,"
+  ],
+  [
+   "Invoice 30921 bills the 16x12x10 boxes at $27.06 a bundle, but our contract price is $22.40.",
+   "Please send a credit for the difference on the 40 bundles."
+  ]
+ ],
+ "sig": [
+  "Thank you,",
+  "Anya Fischer",
+  "Accounts Payable",
+  "Brecken Electronics"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "price_dispute",
+   "credit_request"
+  ],
+  "handling": "The contract price is $22.40 and the invoice billed $27.06, so credit $4.66 on each of the 40 bundles. $186.40 is under the $250 cap.",
+  "expected": [
+   {
+    "tool": "issue_credit",
+    "args": {
+     "customer_id": "C-1008",
+     "invoice_id": "INV-30921",
+     "amount": 186.4
+    },
+    "sentence": 3,
+    "basis": {
+     "kind": "price_difference",
+     "invoice": "INV-30921",
+     "sku": "BX-161210-32"
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 186.4,
+    "source": "action:1.amount"
+   },
+   {
+    "kind": "amount",
+    "value": 22.4,
+    "source": "price:C-1008:BX-161210-32"
+   },
+   {
+    "kind": "invoice",
+    "value": "INV-30921",
+    "source": "invoice:INV-30921.id"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hello,",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Invoice 30921 bills the 16x12x10 boxes at $27.06 a bundle, but our contract price is $22.40.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Please send a credit for the difference on the 40 bundles.",
+   "part": "body"
+  }
+ ]
+}

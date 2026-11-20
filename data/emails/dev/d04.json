@@ -1,0 +1,65 @@
+{
+ "id": "d04",
+ "at": "2026-10-27T11:05",
+ "from": {
+  "name": "Sora Baek",
+  "email": "sora@kilnmoor.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "ship SO-20826 to the gallery",
+ "body": [
+  [
+   "hi, please send SO-20826 to our gallery in Colorado Springs instead of the studio.",
+   "The gallery is already on our account."
+  ]
+ ],
+ "sig": [
+  "thanks",
+  "Sora Baek",
+  "Shipping Lead, Kilnmoor Ceramics"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "ship_to_change"
+  ],
+  "handling": "SO-20826 hasn't been picked, so the ship-to changes to the gallery right away.",
+  "expected": [
+   {
+    "tool": "update_ship_to",
+    "args": {
+     "order_id": "SO-20826",
+     "location_id": "L2"
+    },
+    "sentence": 1
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "order",
+    "value": "SO-20826",
+    "source": "order:SO-20826.id"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "hi, please send SO-20826 to our gallery in Colorado Springs instead of the studio.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "The gallery is already on our account.",
+   "part": "body"
+  }
+ ]
+}

@@ -1,0 +1,239 @@
+{
+ "email_id": "t18",
+ "split": "test",
+ "seq": 41,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "a5b4cd45bc36077e",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "felix@brecken.example"
+   },
+   "result": {
+    "customer_id": "C-1008",
+    "name": "Brecken Electronics",
+    "terms": "Net 30",
+    "credit_limit": 15000.0,
+    "open_balance": 4259.4,
+    "open_orders": 0.0,
+    "available_credit": 10740.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 13
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Felix Dunmore",
+      "role": "purchasing manager",
+      "email": "felix@brecken.example"
+     },
+     {
+      "name": "Anya Fischer",
+      "role": "accounts payable",
+      "email": "anya@brecken.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Plant",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-121212-32",
+      "price": 29.0
+     },
+     {
+      "sku": "BX-161210-32",
+      "price": 22.4
+     },
+     {
+      "sku": "LB-46-TH",
+      "price": 66.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20807"
+   },
+   "result": {
+    "order_id": "SO-20807",
+    "customer_id": "C-1008",
+    "po": "BE-77402",
+    "placed": "2026-10-16 10:30",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Plant",
+     "city": "Longmont, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-121212-32",
+      "name": "Shipping box 12x12x12, 32 ECT",
+      "qty": 25,
+      "picked": 25,
+      "shipped": 25,
+      "price": 29.0,
+      "amount": 725.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 6,
+      "picked": 6,
+      "shipped": 6,
+      "price": 56.0,
+      "amount": 336.0
+     }
+    ],
+    "fees": [],
+    "total": 1061.0,
+    "invoice_id": "INV-30934"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20807"
+   },
+   "result": {
+    "order_id": "SO-20807",
+    "tracking": "PRO 5267-9859",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-21",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-23 10:10",
+    "signed_by": "RECEIVING",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-21 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-23 10:10",
+      "text": "Delivered, signed by RECEIVING"
+     }
+    ]
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Felix,\n\nYes. SO-20807 (your PO BE-77402) shows as delivered. The carrier delivered it on Friday, October 23 at 10:10 AM to your Plant location in Longmont, CO. It was signed for by \"RECEIVING\". The tracking number is PRO 5267-9859, and it shipped by LTL freight.\n\nThe order had 25 of the 12x12x12 32 ECT shipping boxes and 6 rolls of the 2 in x 110 yd clear carton sealing tape.\n\nPlease check with whoever signs at your receiving dock. The pallet may have been received but not logged. If you still can't find it, reply and we will take it up with the carrier.\n\nThe Wendlow order desk",
+  "note": "Order SO-20807 shows delivered Oct 23 10:10, signed by RECEIVING, no exceptions. I took no action and told the customer to check their dock. They may need a carrier trace if it is still missing.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01WjuYkjS6rCeRnLP5aSB1e3",
+     "name": "get_customer",
+     "input": {
+      "email": "felix@brecken.example"
+     }
+    },
+    {
+     "id": "toolu_011HuBg9f7Dx7y9uAskVc8Kr",
+     "name": "get_order",
+     "input": {
+      "order_id": "20807"
+     }
+    },
+    {
+     "id": "toolu_01JiQLp5ru9nM1qx5LXQ534h",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20807"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 201,
+     "output": 151,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1320,
+    "cost": 0.002893
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_015LaWcoZXTBrhGXgpmWso61",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Felix,\n\nYes. SO-20807 (your PO BE-77402) shows as delivered. The carrier delivered it on Friday, October 23 at 10:10 AM to your Plant location in Longmont, CO. It was signed for by \"RECEIVING\". The tracking number is PRO 5267-9859, and it shipped by LTL freight.\n\nThe order had 25 of the 12x12x12 32 ECT shipping boxes and 6 rolls of the 2 in x 110 yd clear carton sealing tape.\n\nPlease check with whoever signs at your receiving dock. The pallet may have been received but not logged. If you still can't find it, reply and we will take it up with the carrier.\n\nThe Wendlow order desk",
+      "note": "Order SO-20807 shows delivered Oct 23 10:10, signed by RECEIVING, no exceptions. I took no action and told the customer to check their dock. They may need a carrier trace if it is still missing.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1273,
+     "output": 427,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3365,
+    "cost": 0.007797
+   }
+  }
+ ],
+ "usage": {
+  "turns": 2,
+  "seconds": 4.7,
+  "input_tokens": 1474,
+  "output_tokens": 578,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 9806,
+  "cost": 0.01069
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:34",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

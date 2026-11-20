@@ -1,0 +1,56 @@
+{
+ "company": "Wendlow Packaging Supply",
+ "today": "2026-10-27",
+ "morning": {
+  "from": "07:00",
+  "to": "09:30"
+ },
+ "warehouses": [
+  "North",
+  "Valley"
+ ],
+ "fees": {
+  "rush": 95.0,
+  "liftgate": 45.0,
+  "residential": 35.0
+ },
+ "carrier": "the carrier",
+ "seed": 1027,
+ "next_ids": {
+  "order": 20840,
+  "invoice": 30960,
+  "credit": 2231,
+  "return": 1182,
+  "shipment": 61840
+ },
+ "staff": [
+  {
+   "name": "Hazel Garrity",
+   "role": "order desk lead",
+   "team": "order_desk",
+   "email": "hazel@wendlow.example",
+   "approver": true
+  },
+  {
+   "name": "Wes Harlan",
+   "role": "order desk",
+   "team": "order_desk",
+   "email": "wes@wendlow.example",
+   "approver": false
+  },
+  {
+   "name": "Rhys Whitlock",
+   "role": "sales, custom print",
+   "team": "sales",
+   "email": "rhys@wendlow.example",
+   "approver": false
+  },
+  {
+   "name": "Elena Brandt",
+   "role": "credit manager",
+   "team": "credit",
+   "email": "elena@wendlow.example",
+   "approver": false
+  }
+ ]
+}

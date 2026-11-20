@@ -1,0 +1,99 @@
+{
+ "id": "m05",
+ "at": "2026-10-27T07:48",
+ "from": {
+  "name": "Clara Voss",
+  "email": "clara@tallowandteak.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Rush: 60 bundles of 12x10x6 by Friday",
+ "body": [
+  [
+   "Hi team, our holiday kits sold out faster than we planned.",
+   "Can we get 60 bundles of the 12x10x6 boxes delivered by Friday?",
+   "And could you waive the rush fee this once?"
+  ]
+ ],
+ "sig": [
+  "Thanks so much,",
+  "Clara",
+  "Clara Voss",
+  "Owner, Tallow & Teak"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "new_order",
+   "rush",
+   "fee_waiver"
+  ],
+  "handling": "Place the rush order for 60 bundles at the $21.40 contract price, 40 from North and 20 from Valley, which fits the open credit. The $95 rush fee waiver is over the $75 cap, so it waits for you.",
+  "expected": [
+   {
+    "tool": "create_order",
+    "args": {
+     "customer_id": "C-1003",
+     "lines": [
+      {
+       "sku": "BX-121006-32",
+       "qty": 60
+      }
+     ],
+     "rush": true,
+     "requested_date": "2026-10-30"
+    },
+    "sentence": 2
+   },
+   {
+    "tool": "waive_fee",
+    "args": {
+     "order_id": "$new_order",
+     "fee": "rush"
+    },
+    "sentence": 3
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 1284.0,
+    "source": "action:1.total"
+   },
+   {
+    "kind": "amount",
+    "value": 95.0,
+    "source": "action:2.amount"
+   },
+   {
+    "kind": "date",
+    "value": "2026-10-30",
+    "source": "literal"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi team, our holiday kits sold out faster than we planned.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Can we get 60 bundles of the 12x10x6 boxes delivered by Friday?",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "And could you waive the rush fee this once?",
+   "part": "body"
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "id": "m02",
+ "at": "2026-10-27T07:12",
+ "from": {
+  "name": "Omar Haddad",
+  "email": "omar@pellbrook.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "3 cases crushed on pallet 2",
+ "body": [
+  [
+   "Morning."
+  ],
+  [
+   "SO-20809 came in yesterday afternoon and 3 cases of the 2 inch clear tape on pallet 2 were crushed, I wrote it on the delivery receipt.",
+   "We already covered those jobs from our other stock so we don't need them resent.",
+   "Can you just credit us for the 3 cases?"
+  ]
+ ],
+ "sig": [
+  "Omar Haddad",
+  "Receiving Lead, Building 2",
+  "Pellbrook Fulfillment"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "damaged_delivery",
+   "credit_request"
+  ],
+  "handling": "The delivery receipt notes 3 crushed cartons, so credit 3 cases at the invoiced $56.00 on INV-30941. $168.00 is under the $250 credit cap, so it goes through.",
+  "expected": [
+   {
+    "tool": "issue_credit",
+    "args": {
+     "customer_id": "C-1001",
+     "invoice_id": "INV-30941",
+     "amount": 168.0
+    },
+    "sentence": 4,
+    "basis": {
+     "kind": "damaged",
+     "order": "SO-20809",
+     "lines": [
+      {
+       "sku": "TP-2C-110",
+       "qty": 3
+      }
+     ]
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 168.0,
+    "source": "action:1.amount"
+   },
+   {
+    "kind": "invoice",
+    "value": "INV-30941",
+    "source": "invoice:INV-30941.id"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Morning.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "SO-20809 came in yesterday afternoon and 3 cases of the 2 inch clear tape on pallet 2 were crushed, I wrote it on the delivery receipt.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "We already covered those jobs from our other stock so we don't need them resent.",
+   "part": "body"
+  },
+  {
+   "n": 4,
+   "text": "Can you just credit us for the 3 cases?",
+   "part": "body"
+  }
+ ]
+}

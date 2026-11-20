@@ -1,0 +1,340 @@
+{
+ "email_id": "m02",
+ "split": "morning",
+ "seq": 1,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "e560525b8ea4f472",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20809"
+   },
+   "result": {
+    "order_id": "SO-20809",
+    "customer_id": "C-1001",
+    "po": "PF-88213",
+    "placed": "2026-10-21 09:30",
+    "requested": "2026-10-26",
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Building 2",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 24,
+      "picked": 24,
+      "shipped": 24,
+      "price": 56.0,
+      "amount": 1344.0,
+      "damaged_on_delivery": 3
+     },
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 58.0,
+      "amount": 580.0
+     }
+    ],
+    "fees": [],
+    "total": 1924.0,
+    "invoice_id": "INV-30941"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "invoice_id": "30941"
+   },
+   "result": {
+    "invoice_id": "INV-30941",
+    "order_id": "SO-20809",
+    "customer_id": "C-1001",
+    "date": "2026-10-23",
+    "due": "2026-11-22",
+    "lines": [
+     {
+      "sku": "TP-2C-110",
+      "qty": 24,
+      "price": 56.0,
+      "amount": 1344.0,
+      "name": "Carton sealing tape 2 in x 110 yd, clear"
+     },
+     {
+      "sku": "SF-18-80",
+      "qty": 10,
+      "price": 58.0,
+      "amount": 580.0,
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge"
+     }
+    ],
+    "fees": [],
+    "total": 1924.0,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 1924.0
+   },
+   "valid": true
+  },
+  {
+   "tool": "issue_credit",
+   "args": {
+    "customer_id": "C-1001",
+    "invoice_id": "30941",
+    "amount": 168,
+    "reason": "Credit for 3 crushed cases of 2 in clear tape reported at delivery",
+    "sentence": 4
+   },
+   "result": {
+    "credit_memo": "CM-2234",
+    "invoice_id": "INV-30941",
+    "amount": 168.0,
+    "invoice_open_after": 1756.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Omar,\n\nWe credited $168.00 for the 3 crushed cases of 2 inch clear tape on order SO-20809. The credit memo is CM-2234, applied to invoice INV-30941.\n\nThe Wendlow order desk",
+  "note": "Issued credit memo CM-2234 for the three damaged tape cases reported on delivery. No reship was requested.",
+  "intents": [
+   "damaged_delivery",
+   "credit_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_IESBDtmymx9y9PIC1nbEW0VQ",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 156,
+     "output": 21,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 921,
+    "cost": 8.5e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_5blxYfWik530aPKVl3dvSL1n",
+     "name": "get_order",
+     "input": {
+      "order_id": "20809"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 345,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2514
+    },
+    "ms": 1069,
+    "cost": 0.000107
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_MY5tC67t6CXQ9ikjOPulBqSo",
+     "name": "get_invoice",
+     "input": {
+      "invoice_id": "30941"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 294,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2856
+    },
+    "ms": 987,
+    "cost": 0.00011
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_8A1i6AWS42vaJLAk2LBCTvTq",
+     "name": "issue_credit",
+     "input": {
+      "customer_id": "C-1001",
+      "invoice_id": "30941",
+      "amount": 168,
+      "reason": "Credit for 3 crushed cases of 2 in clear tape reported at delivery",
+      "sentence": 4
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 230,
+     "output": 53,
+     "cache_write": 0,
+     "cache_read": 3147
+    },
+    "ms": 1452,
+    "cost": 0.000128
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_5l6Q32fAKeV82LW5Bzwh0E19",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Omar,\n\nWe credited $168.00 for the 3 crushed cases of 2 inch clear tape on order SO-20809. The credit memo is CM-2234, applied to invoice INV-30941.\n\nThe Wendlow order desk",
+      "note": "Issued credit memo CM-2234 for the three damaged tape cases reported on delivery. No reship was requested.",
+      "intents": [
+       "damaged_delivery",
+       "credit_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 113,
+     "output": 111,
+     "cache_write": 0,
+     "cache_read": 3374
+    },
+    "ms": 1535,
+    "cost": 0.000151
+   }
+  }
+ ],
+ "usage": {
+  "turns": 5,
+  "seconds": 6.0,
+  "input_tokens": 1138,
+  "output_tokens": 223,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14252,
+  "cost": 0.000581
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:39:43",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

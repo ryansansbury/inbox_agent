@@ -1,0 +1,65 @@
+{
+ "id": "t06",
+ "at": "2026-10-27T11:36",
+ "from": {
+  "name": "Gwen Talbot",
+  "email": "gwen@lanternfold.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "rigid mailers",
+ "body": [
+  [
+   "Hi, we need 6 cases of the 9x11.5 rigid mailers for a print run next week.",
+   "Are they in stock?"
+  ]
+ ],
+ "sig": [
+  "Gwen"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "out_of_stock",
+   "new_order"
+  ],
+  "handling": "The rigid mailers are out, with 40 cases due November 5 and no equivalent, so ask whether to place the order for that date.",
+  "expected": [
+   {
+    "tool": "ask_customer",
+    "args": {
+     "about": [
+      "RM-0911"
+     ]
+    },
+    "sentence": 2
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "date",
+    "value": "2026-11-05",
+    "source": "stock:RM-0911.inbound_date"
+   }
+  ],
+  "lane": "customer",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, we need 6 cases of the 9x11.5 rigid mailers for a print run next week.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Are they in stock?",
+   "part": "body"
+  }
+ ]
+}

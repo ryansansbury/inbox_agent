@@ -1,0 +1,239 @@
+{
+ "email_id": "t23",
+ "split": "test",
+ "seq": 46,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "1400598f22455d16",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "lucy@juniperandvale.example"
+   },
+   "result": {
+    "customer_id": "C-1006",
+    "name": "Juniper & Vale",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 1080.8,
+    "open_orders": 575.6,
+    "available_credit": 4343.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Lucy Tran",
+      "role": "buyer",
+      "email": "lucy@juniperandvale.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Boulder, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Warehouse",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20814"
+   },
+   "result": {
+    "order_id": "SO-20814",
+    "customer_id": "C-1006",
+    "po": "JV-1021",
+    "placed": "2026-10-21 15:20",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Boulder, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-0812",
+      "name": "Padded kraft mailer 8.5x12",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 44.0,
+      "amount": 440.0,
+      "damaged_on_delivery": 2
+     },
+     {
+      "sku": "VF-CRK-10",
+      "name": "Crinkle paper, 10 lb box",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 3,
+      "price": 38.0,
+      "amount": 114.0
+     }
+    ],
+    "fees": [],
+    "total": 554.0,
+    "invoice_id": "INV-30946"
+   },
+   "valid": true
+  },
+  {
+   "tool": "issue_credit",
+   "args": {
+    "customer_id": "C-1006",
+    "invoice_id": "INV-30946",
+    "amount": 88.0,
+    "reason": "Damaged on delivery: 2 of 10 padded kraft mailers PD-0812 on SO-20814 arrived wet and torn at $44.00 each",
+    "sentence": 2
+   },
+   "result": {
+    "credit_memo": "CM-2369",
+    "invoice_id": "INV-30946",
+    "amount": 88.0,
+    "invoice_open_after": 466.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Lucy,\n\nWe're sorry the padded mailers arrived wet and torn. We've issued credit memo CM-2369 for $88.00 against invoice INV-30946, covering the 2 damaged 8.5x12 padded mailers (PD-0812) on order SO-20814 at $44.00 each.\n\nThe Wendlow order desk",
+  "note": "Credit of $88.00 (2 damaged PD-0812 at $44.00) issued as CM-2369 against INV-30946 for SO-20814, within the auto-approval limit. Invoice open balance is now $466.00.",
+  "intents": [
+   "damaged_delivery",
+   "credit_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01R1Kt9ZpjkNG9XtYneLkqYV",
+     "name": "get_customer",
+     "input": {
+      "email": "lucy@juniperandvale.example"
+     }
+    },
+    {
+     "id": "toolu_01Us6Z1g28rCWzWd3SbeNivx",
+     "name": "get_order",
+     "input": {
+      "order_id": "20814"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 216,
+     "output": 106,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 889,
+    "cost": 0.000124
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Q2WHPCS4KLCJPd7bX9GGXL",
+     "name": "issue_credit",
+     "input": {
+      "customer_id": "C-1006",
+      "invoice_id": "INV-30946",
+      "amount": 88.0,
+      "reason": "Damaged on delivery: 2 of 10 padded kraft mailers PD-0812 on SO-20814 arrived wet and torn at $44.00 each",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 957,
+     "output": 631,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3242,
+    "cost": 0.00046
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Gqg2ZNnZDTduLKczdT5s9b",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Lucy,\n\nWe're sorry the padded mailers arrived wet and torn. We've issued credit memo CM-2369 for $88.00 against invoice INV-30946, covering the 2 damaged 8.5x12 padded mailers (PD-0812) on order SO-20814 at $44.00 each.\n\nThe Wendlow order desk",
+      "note": "Credit of $88.00 (2 damaged PD-0812 at $44.00) issued as CM-2369 against INV-30946 for SO-20814, within the auto-approval limit. Invoice open balance is now $466.00.",
+      "intents": [
+       "damaged_delivery",
+       "credit_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1225,
+     "output": 318,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1559,
+    "cost": 0.000331
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.7,
+  "input_tokens": 2398,
+  "output_tokens": 1055,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000915
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:39:27",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

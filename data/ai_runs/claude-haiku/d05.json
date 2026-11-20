@@ -1,0 +1,346 @@
+{
+ "email_id": "d05",
+ "split": "dev",
+ "seq": 16,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "d53b10fa80782a47",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "lucy@juniperandvale.example"
+   },
+   "result": {
+    "customer_id": "C-1006",
+    "name": "Juniper & Vale",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 1080.8,
+    "open_orders": 575.6,
+    "available_credit": 4343.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Lucy Tran",
+      "role": "buyer",
+      "email": "lucy@juniperandvale.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Boulder, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Warehouse",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "14x10x6 boxes"
+   },
+   "result": {
+    "query": "14x10x6 boxes",
+    "matches": [
+     {
+      "sku": "BX-141006-32",
+      "name": "Shipping box 14x10x6, 32 ECT",
+      "unit": "bundle of 25",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 24.3,
+      "available": 500
+     },
+     {
+      "sku": "BX-141006-44",
+      "name": "Shipping box 14x10x6, 44 ECT",
+      "unit": "bundle of 25",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 31.6,
+      "available": 541
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "fragile tape"
+   },
+   "result": {
+    "query": "fragile tape",
+    "matches": [
+     {
+      "sku": "TP-FRG-2",
+      "name": "Printed fragile tape 2 in x 110 yd",
+      "unit": "case of 36 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 69.0,
+      "available": 679
+     },
+     {
+      "sku": "LB-FRG",
+      "name": "Fragile labels, roll of 500",
+      "unit": "roll",
+      "strength": null,
+      "line": "standard",
+      "list_price": 9.5,
+      "available": 588
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "unit": "case of 36 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 56.0,
+      "available": 459
+     },
+     {
+      "sku": "TP-2H-110",
+      "name": "Hot melt tape 2 in x 110 yd, heavy duty",
+      "unit": "case of 36 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 64.0,
+      "available": 421
+     },
+     {
+      "sku": "TP-3C-110",
+      "name": "Carton sealing tape 3 in x 110 yd, clear",
+      "unit": "case of 24 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 54.0,
+      "available": 590
+     },
+     {
+      "sku": "TP-GUN",
+      "name": "Tape gun dispenser",
+      "unit": "case of 6",
+      "strength": null,
+      "line": "standard",
+      "list_price": 54.0,
+      "available": 239
+     },
+     {
+      "sku": "TP-WAT-3",
+      "name": "Water-activated kraft tape 3 in x 450 ft",
+      "unit": "case of 10 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 72.0,
+      "available": 575
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1006",
+    "lines": [
+     {
+      "sku": "BX-141006-32",
+      "qty": 20
+     },
+     {
+      "sku": "TP-FRG-2",
+      "qty": 4
+     }
+    ],
+    "location_id": "L2",
+    "sentence": 2
+   },
+   "result": {
+    "order_id": "SO-20888",
+    "total": 762.0,
+    "fees": [],
+    "lines": [
+     {
+      "sku": "BX-141006-32",
+      "qty": 20,
+      "price": 24.3
+     },
+     {
+      "sku": "TP-FRG-2",
+      "qty": 4,
+      "price": 69.0
+     }
+    ],
+    "allocation": {
+     "BX-141006-32": [
+      {
+       "warehouse": "Valley",
+       "qty": 20
+      }
+     ],
+     "TP-FRG-2": [
+      {
+       "warehouse": "North",
+       "qty": 4
+      }
+     ]
+    },
+    "requested_date": null,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Lucy,\n\nThank you for your order. We placed it as order SO-20888 for delivery to your Longmont warehouse:\n\n- 20 bundles of 14x10x6 shipping boxes, 32 ECT (bundle of 25), at $24.30 each: $486.00\n- 4 cases of printed fragile tape, 2 in x 110 yd (case of 36 rolls), at $69.00 each: $276.00\n\nOrder total: $762.00, billed to your account on Net 30 terms. Shipping is standard, as you asked.\n\nIf you wanted the 44 ECT heavy box instead of the 32 ECT standard, please let us know and we will adjust the order.\n\nThe Wendlow order desk",
+  "note": "Placed SO-20888 for C-1006 (Juniper & Vale): 20 bundles BX-141006-32 and 4 cases TP-FRG-2, shipped from the Longmont warehouse (L2), total $762.00, standard shipping. The email did not specify box strength, so I used the standard 32 ECT default and said so in the reply; confirm that is what she wants.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_0111xFeW8q8SJVLpdxRYqiRp",
+     "name": "get_customer",
+     "input": {
+      "email": "lucy@juniperandvale.example"
+     }
+    },
+    {
+     "id": "toolu_01Lv5qSCVhT8w77AExXwaHu8",
+     "name": "search_items",
+     "input": {
+      "query": "14x10x6 boxes"
+     }
+    },
+    {
+     "id": "toolu_01SEi6A2vDj9uVs37MgFdY3H",
+     "name": "search_items",
+     "input": {
+      "query": "fragile tape"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 235,
+     "output": 159,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1141,
+    "cost": 0.000152
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_011WBepPNPFBKaTe63z9H3iQ",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1006",
+      "lines": [
+       {
+        "sku": "BX-141006-32",
+        "qty": 20
+       },
+       {
+        "sku": "TP-FRG-2",
+        "qty": 4
+       }
+      ],
+      "location_id": "L2",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1509,
+     "output": 514,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2562,
+    "cost": 0.000457
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01X6PH4cwHHaRtwJeEGx9bC1",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Lucy,\n\nThank you for your order. We placed it as order SO-20888 for delivery to your Longmont warehouse:\n\n- 20 bundles of 14x10x6 shipping boxes, 32 ECT (bundle of 25), at $24.30 each: $486.00\n- 4 cases of printed fragile tape, 2 in x 110 yd (case of 36 rolls), at $69.00 each: $276.00\n\nOrder total: $762.00, billed to your account on Net 30 terms. Shipping is standard, as you asked.\n\nIf you wanted the 44 ECT heavy box instead of the 32 ECT standard, please let us know and we will adjust the order.\n\nThe Wendlow order desk",
+      "note": "Placed SO-20888 for C-1006 (Juniper & Vale): 20 bundles BX-141006-32 and 4 cases TP-FRG-2, shipped from the Longmont warehouse (L2), total $762.00, standard shipping. The email did not specify box strength, so I used the standard 32 ECT default and said so in the reply; confirm that is what she wants.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1856,
+     "output": 574,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2887,
+    "cost": 0.000522
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 6.6,
+  "input_tokens": 3600,
+  "output_tokens": 1247,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.001131
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:27:28",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

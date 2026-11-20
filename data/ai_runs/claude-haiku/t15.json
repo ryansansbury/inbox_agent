@@ -1,0 +1,106 @@
+{
+ "email_id": "t15",
+ "split": "test",
+ "seq": 38,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "eb853f90585726b2",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "partners@freight-audit.example"
+   },
+   "result": {
+    "error": "No account has the address partners@freight-audit.example."
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "The email is unverified and reads as a vendor's sales pitch, so no reply is sent.",
+  "note": "Unsolicited freight-audit pitch from an address with no account. No action taken and no reply sent. Nothing to approve.",
+  "intents": [
+   "solicitation"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 1,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01BQdfR5JaQ1ZkpTEmMw2RpX",
+     "name": "get_customer",
+     "input": {
+      "email": "partners@freight-audit.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 224,
+     "output": 247,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2369,
+    "cost": 0.000195
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01VSL6ddXtmtprHVMZSF152V",
+     "name": "finish",
+     "input": {
+      "reply": "The email is unverified and reads as a vendor's sales pitch, so no reply is sent.",
+      "note": "Unsolicited freight-audit pitch from an address with no account. No action taken and no reply sent. Nothing to approve.",
+      "intents": [
+       "solicitation"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 308,
+     "output": 223,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1823,
+    "cost": 0.000191
+   }
+  }
+ ],
+ "usage": {
+  "turns": 2,
+  "seconds": 4.2,
+  "input_tokens": 532,
+  "output_tokens": 470,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 9806,
+  "cost": 0.000386
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:38:53",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

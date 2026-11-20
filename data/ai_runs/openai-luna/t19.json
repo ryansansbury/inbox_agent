@@ -1,0 +1,368 @@
+{
+ "email_id": "t19",
+ "split": "test",
+ "seq": 42,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "2706205a6a95f750",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "ezra@kilnmoor.example"
+   },
+   "result": {
+    "customer_id": "C-1009",
+    "name": "Kilnmoor Ceramics",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 5209.0,
+    "open_orders": 213.0,
+    "available_credit": 578.0,
+    "on_hold": false,
+    "past_due": [
+     {
+      "invoice_id": "INV-30883",
+      "due": "2026-10-25",
+      "open": 2685.0
+     }
+    ],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 7
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ezra Moreno",
+      "role": "owner",
+      "email": "ezra@kilnmoor.example"
+     },
+     {
+      "name": "Sora Baek",
+      "role": "shipping lead",
+      "email": "sora@kilnmoor.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Pueblo, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Gallery",
+      "city": "Colorado Springs, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "packing peanuts",
+    "customer_id": "C-1009"
+   },
+   "result": {
+    "query": "packing peanuts",
+    "matches": [
+     {
+      "sku": "VF-PEA-14",
+      "name": "Packing peanuts, 14 cu ft bag",
+      "unit": "bag",
+      "strength": null,
+      "line": "standard",
+      "list_price": 26.0,
+      "available": 494,
+      "price": 26.0
+     },
+     {
+      "sku": "LB-PLE-75",
+      "name": "Packing list envelopes 7.5x5.5",
+      "unit": "case of 1000",
+      "strength": null,
+      "line": "standard",
+      "list_price": 42.0,
+      "available": 610,
+      "price": 42.0
+     },
+     {
+      "sku": "VF-KP-30",
+      "name": "Kraft packing paper 30 in x 1200 ft",
+      "unit": "roll",
+      "strength": null,
+      "line": "standard",
+      "list_price": 40.0,
+      "available": 197,
+      "price": 40.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "fragile labels",
+    "customer_id": "C-1009"
+   },
+   "result": {
+    "query": "fragile labels",
+    "matches": [
+     {
+      "sku": "LB-FRG",
+      "name": "Fragile labels, roll of 500",
+      "unit": "roll",
+      "strength": null,
+      "line": "standard",
+      "list_price": 9.5,
+      "available": 588,
+      "price": 9.5
+     },
+     {
+      "sku": "LB-21-TH",
+      "name": "Thermal labels 2x1",
+      "unit": "case of 12 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 36.0,
+      "available": 186,
+      "price": 36.0
+     },
+     {
+      "sku": "LB-46-TH",
+      "name": "Thermal labels 4x6",
+      "unit": "case of 20 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 72.0,
+      "available": 407,
+      "price": 72.0
+     },
+     {
+      "sku": "TP-FRG-2",
+      "name": "Printed fragile tape 2 in x 110 yd",
+      "unit": "case of 36 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 69.0,
+      "available": 679,
+      "price": 69.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1009",
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 10
+     },
+     {
+      "sku": "LB-FRG",
+      "qty": 10
+     }
+    ],
+    "location_id": "L1",
+    "sentence": 1
+   },
+   "result": {
+    "order_id": "SO-20966",
+    "total": 355.0,
+    "fees": [],
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 10,
+      "price": 26.0
+     },
+     {
+      "sku": "LB-FRG",
+      "qty": 10,
+      "price": 9.5
+     }
+    ],
+    "allocation": {
+     "VF-PEA-14": [
+      {
+       "warehouse": "North",
+       "qty": 10
+      }
+     ],
+     "LB-FRG": [
+      {
+       "warehouse": "Valley",
+       "qty": 10
+      }
+     ]
+    },
+    "requested_date": null,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "We placed your order for 10 bags of packing peanuts and 10 rolls of fragile labels to the studio. The order number is SO-20966, and the total is $355.00.\n\nThe Wendlow order desk",
+  "note": "Placed the requested order to the account’s Studio location. The order is within available credit.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_qq1ExpqbgKeETkAuDePc9Kol",
+     "name": "get_customer",
+     "input": {
+      "email": "ezra@kilnmoor.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 84,
+     "output": 23,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 895,
+    "cost": 7.9e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_iJuCroZmx4j3OSXOtuLdBRUj",
+     "name": "search_items",
+     "input": {
+      "query": "packing peanuts",
+      "customer_id": "C-1009"
+     }
+    },
+    {
+     "id": "call_ysAfxSkwcMal1xiy45bHDasp",
+     "name": "search_items",
+     "input": {
+      "query": "fragile labels",
+      "customer_id": "C-1009"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 289,
+     "output": 66,
+     "cache_write": 0,
+     "cache_read": 2442
+    },
+    "ms": 1531,
+    "cost": 0.000123
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_1DACeLOXIWmcxEEXV19CshLM",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1009",
+      "lines": [
+       {
+        "sku": "VF-PEA-14",
+        "qty": 10
+       },
+       {
+        "sku": "LB-FRG",
+        "qty": 10
+       }
+      ],
+      "location_id": "L1",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 570,
+     "output": 58,
+     "cache_write": 0,
+     "cache_read": 2728
+    },
+    "ms": 1222,
+    "cost": 0.000154
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_4jHRS63r6AM0JLPRws05X96m",
+     "name": "finish",
+     "input": {
+      "reply": "We placed your order for 10 bags of packing peanuts and 10 rolls of fragile labels to the studio. The order number is SO-20966, and the total is $355.00.\n\nThe Wendlow order desk",
+      "note": "Placed the requested order to the account’s Studio location. The order is within available credit.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 198,
+     "output": 95,
+     "cache_write": 0,
+     "cache_read": 3295
+    },
+    "ms": 1546,
+    "cost": 0.00015
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 5.2,
+  "input_tokens": 1141,
+  "output_tokens": 242,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 10826,
+  "cost": 0.000506
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:42:15",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

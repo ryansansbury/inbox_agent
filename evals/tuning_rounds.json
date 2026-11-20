@@ -1,0 +1,111 @@
+{
+ "rounds": [
+  {
+   "round": 1,
+   "date": "2026-11-09",
+   "prompt_hash": "8c41038307192385",
+   "dev": {
+    "claude-sonnet": {
+     "f1": 0.824,
+     "precision": 0.875,
+     "recall": 0.778,
+     "routing": "12 of 12",
+     "facts": "14 of 17",
+     "unsupported_claims": 3,
+     "premature_claims": 0,
+     "unfinished": 0,
+     "unsafe": 0
+    },
+    "claude-haiku": {
+     "f1": 0.824,
+     "precision": 0.875,
+     "recall": 0.778,
+     "routing": "11 of 12",
+     "facts": "13 of 17",
+     "unsupported_claims": 2,
+     "premature_claims": 0,
+     "unfinished": 0,
+     "unsafe": 0
+    }
+   }
+  },
+  {
+   "round": 2,
+   "date": "2026-11-09",
+   "prompt_hash": "c5880b94cfb1ef9a",
+   "dev": {
+    "claude-sonnet": {
+     "f1": 1.0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "routing": "12 of 12",
+     "facts": "16 of 17",
+     "unsupported_claims": 3,
+     "premature_claims": 1,
+     "unfinished": 0,
+     "unsafe": 0
+    },
+    "claude-haiku": {
+     "f1": 1.0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "routing": "12 of 12",
+     "facts": "17 of 17",
+     "unsupported_claims": 1,
+     "premature_claims": 1,
+     "unfinished": 0,
+     "unsafe": 0
+    },
+    "openai-luna": {
+     "f1": 0.941,
+     "precision": 1.0,
+     "recall": 0.889,
+     "routing": "11 of 12",
+     "facts": "14 of 17",
+     "unsupported_claims": 0,
+     "premature_claims": 0,
+     "unfinished": 0,
+     "unsafe": 0
+    }
+   },
+   "rescored": {
+    "why": "The reply checker's last calibrations on round 2 (return-window dates, open credit, a held order called pending, a substitute named by description), before the scoring code froze.",
+    "dev": {
+     "claude-sonnet": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "routing": "12 of 12",
+      "facts": "16 of 17",
+      "unsupported_claims": 1,
+      "premature_claims": 0,
+      "unfinished": 0,
+      "unsafe": 0
+     },
+     "claude-haiku": {
+      "f1": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "routing": "12 of 12",
+      "facts": "17 of 17",
+      "unsupported_claims": 0,
+      "premature_claims": 0,
+      "unfinished": 0,
+      "unsafe": 0
+     },
+     "openai-luna": {
+      "f1": 0.941,
+      "precision": 1.0,
+      "recall": 0.889,
+      "routing": "11 of 12",
+      "facts": "15 of 17",
+      "unsupported_claims": 0,
+      "premature_claims": 0,
+      "unfinished": 0,
+      "unsafe": 0
+     }
+    }
+   }
+  }
+ ]
+}

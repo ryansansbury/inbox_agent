@@ -1,0 +1,78 @@
+{
+ "id": "t02",
+ "at": "2026-10-27T09:52",
+ "from": {
+  "name": "Omar Haddad",
+  "email": "omar@pellbrook.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Pallet tipped, 12 cases crushed",
+ "body": [
+  [
+   "SO-20813 showed up at Building 4 yesterday with pallet 1 tipped over.",
+   "12 cases of the 18 inch film are crushed and unusable.",
+   "We need those 12 replaced asap, we're out on the floor."
+  ]
+ ],
+ "sig": [
+  "Omar"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "damaged_delivery"
+  ],
+  "handling": "The carrier noted 12 crushed cases, and replacing them comes to $696.00, over the $500 reship cap, so it waits for you.",
+  "expected": [
+   {
+    "tool": "reship",
+    "args": {
+     "order_id": "SO-20813",
+     "lines": [
+      {
+       "sku": "SF-18-80",
+       "qty": 12
+      }
+     ]
+    },
+    "sentence": 3,
+    "basis": {
+     "kind": "damaged",
+     "order": "SO-20813"
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "count",
+    "value": 12,
+    "source": "line:SO-20813:SF-18-80.damaged"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "SO-20813 showed up at Building 4 yesterday with pallet 1 tipped over.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "12 cases of the 18 inch film are crushed and unusable.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "We need those 12 replaced asap, we're out on the floor.",
+   "part": "body"
+  }
+ ]
+}

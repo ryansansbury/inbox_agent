@@ -1,0 +1,253 @@
+{
+ "email_id": "t05",
+ "split": "test",
+ "seq": 28,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "a9b73d4bb6125bde",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "theo@kettleby.example"
+   },
+   "result": {
+    "customer_id": "C-1005",
+    "name": "Kettleby Pet Supply",
+    "terms": "Net 30",
+    "credit_limit": 8000.0,
+    "open_balance": 1602.5,
+    "open_orders": 0.0,
+    "available_credit": 6397.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Theo Ramsey",
+      "role": "operations lead",
+      "email": "theo@kettleby.example"
+     },
+     {
+      "name": "Audrey Tsai",
+      "role": "accounts payable",
+      "email": "audrey@kettleby.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Warehouse",
+      "city": "Lakewood, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "invoice_id": "30927"
+   },
+   "result": {
+    "invoice_id": "INV-30927",
+    "order_id": "SO-20804",
+    "customer_id": "C-1005",
+    "date": "2026-10-19",
+    "due": "2026-11-18",
+    "lines": [
+     {
+      "sku": "BX-080808-32",
+      "qty": 30,
+      "price": 21.25,
+      "amount": 637.5,
+      "name": "Shipping box 8x8x8, 32 ECT"
+     },
+     {
+      "sku": "PM-1013",
+      "qty": 4,
+      "price": 48.0,
+      "amount": 192.0,
+      "name": "Poly mailer 10x13"
+     },
+     {
+      "sku": "LB-46-TH",
+      "qty": 2,
+      "price": 72.0,
+      "amount": 144.0,
+      "name": "Thermal labels 4x6"
+     }
+    ],
+    "fees": [
+     {
+      "type": "liftgate",
+      "amount": 45.0
+     }
+    ],
+    "total": 1018.5,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 1018.5
+   },
+   "valid": true
+  },
+  {
+   "tool": "waive_fee",
+   "args": {
+    "invoice_id": "30927",
+    "fee": "liftgate",
+    "sentence": 3
+   },
+   "result": {
+    "fee": "liftgate",
+    "amount": 45.0,
+    "on": "INV-30927",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "We removed the $45.00 liftgate fee from invoice 30927. The updated invoice balance is $973.50.\n\nThe Wendlow order desk",
+  "note": "Waived the liftgate fee on INV-30927 as requested. Please confirm the invoice balance reflects the credit correctly.",
+  "intents": [
+   "fee_waiver"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_ru2dfUXVVViqwc80o26rAE08",
+     "name": "get_customer",
+     "input": {
+      "email": "theo@kettleby.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 119,
+     "output": 23,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1007,
+    "cost": 8.2e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_Vgj3C6QHpUI4nQgt85IQ5VAi",
+     "name": "get_invoice",
+     "input": {
+      "invoice_id": "30927"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 238,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2477
+    },
+    "ms": 961,
+    "cost": 9.5e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_pLx4zL6cjs7HTBCp1Yp5QiMw",
+     "name": "waive_fee",
+     "input": {
+      "invoice_id": "30927",
+      "fee": "liftgate",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 279,
+     "output": 30,
+     "cache_write": 0,
+     "cache_read": 2712
+    },
+    "ms": 1040,
+    "cost": 0.000111
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_vC8bf5XN8MHSEeOQdVgy3cBJ",
+     "name": "finish",
+     "input": {
+      "reply": "We removed the $45.00 liftgate fee from invoice 30927. The updated invoice balance is $973.50.\n\nThe Wendlow order desk",
+      "note": "Waived the liftgate fee on INV-30927 as requested. Please confirm the invoice balance reflects the credit correctly.",
+      "intents": [
+       "fee_waiver"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 75,
+     "output": 89,
+     "cache_write": 0,
+     "cache_read": 2988
+    },
+    "ms": 1582,
+    "cost": 0.000127
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 4.6,
+  "input_tokens": 711,
+  "output_tokens": 161,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 10538,
+  "cost": 0.000415
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:41:01",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

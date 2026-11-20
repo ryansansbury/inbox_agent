@@ -1,0 +1,72 @@
+{
+ "id": "t03",
+ "at": "2026-10-27T10:14",
+ "from": {
+  "name": "Sora Baek",
+  "email": "sora@kilnmoor.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "missing peanuts",
+ "body": [
+  [
+   "hi, SO-20816 came with 9 bags of the packing peanuts but we ordered 12.",
+   "can you send the other 3?"
+  ]
+ ],
+ "sig": [
+  "Sora"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "short_shipment"
+  ],
+  "handling": "The order shipped 9 of 12, so reship 3 bags for $78.00, under the cap.",
+  "expected": [
+   {
+    "tool": "reship",
+    "args": {
+     "order_id": "SO-20816",
+     "lines": [
+      {
+       "sku": "VF-PEA-14",
+       "qty": 3
+      }
+     ]
+    },
+    "sentence": 2,
+    "basis": {
+     "kind": "short",
+     "order": "SO-20816"
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "count",
+    "value": 3,
+    "source": "line:SO-20816:VF-PEA-14.short"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "hi, SO-20816 came with 9 bags of the packing peanuts but we ordered 12.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "can you send the other 3?",
+   "part": "body"
+  }
+ ]
+}

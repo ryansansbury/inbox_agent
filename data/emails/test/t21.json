@@ -1,0 +1,74 @@
+{
+ "id": "t21",
+ "at": "2026-10-27T17:15",
+ "from": {
+  "name": "Dana Okafor",
+  "email": "dana@pellbrook.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Return film from SO-20788",
+ "body": [
+  [
+   "We have 10 cases of the 18 inch 80 gauge film from SO-20788 that are still sealed.",
+   "Our client switched to machine wrap, can we return them?"
+  ]
+ ],
+ "sig": [
+  "Dana"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "return"
+  ],
+  "handling": "Delivered 13 days ago and sealed, so the return is allowed, but the $493.00 credit after the $87.00 restocking fee is over the $250 cap, so it waits for you.",
+  "expected": [
+   {
+    "tool": "create_return",
+    "args": {
+     "order_id": "SO-20788",
+     "lines": [
+      {
+       "sku": "SF-18-80",
+       "qty": 10
+      }
+     ],
+     "unopened": true
+    },
+    "sentence": 2
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 493.0,
+    "source": "action:1.credit"
+   },
+   {
+    "kind": "amount",
+    "value": 87.0,
+    "source": "action:1.restocking_fee"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "We have 10 cases of the 18 inch 80 gauge film from SO-20788 that are still sealed.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Our client switched to machine wrap, can we return them?",
+   "part": "body"
+  }
+ ]
+}

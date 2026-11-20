@@ -1,0 +1,485 @@
+{
+ "email_id": "d09",
+ "split": "dev",
+ "seq": 20,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "8c41038307192385",
+ "input_hash": "49c1f63371caac51",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "mateo@tarnwell.example"
+   },
+   "result": {
+    "customer_id": "C-1010",
+    "name": "Tarnwell Leather Goods",
+    "terms": "Net 30",
+    "credit_limit": 9000.0,
+    "open_balance": 7572.8,
+    "open_orders": 427.2,
+    "available_credit": 1000.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mateo Reyes",
+      "role": "operations manager",
+      "email": "mateo@tarnwell.example"
+     },
+     {
+      "name": "Silas Pruitt",
+      "role": "accounts payable",
+      "email": "silas@tarnwell.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Englewood, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Showroom",
+      "city": "Denver, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "PD-1016",
+      "price": 53.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1010"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20539",
+      "po": "10-5845",
+      "placed": "2026-05-13 08:29",
+      "status": "delivered",
+      "total": 2772.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20540",
+      "po": "10-1724",
+      "placed": "2026-05-14 10:27",
+      "status": "delivered",
+      "total": 2145.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20542",
+      "po": "10-7635",
+      "placed": "2026-05-16 16:02",
+      "status": "delivered",
+      "total": 1331.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20544",
+      "po": "10-6188",
+      "placed": "2026-05-19 15:02",
+      "status": "delivered",
+      "total": 2683.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20546",
+      "po": "10-5454",
+      "placed": "2026-05-23 14:59",
+      "status": "delivered",
+      "total": 2483.5,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20559",
+      "po": "10-7755",
+      "placed": "2026-06-24 12:22",
+      "status": "delivered",
+      "total": 1303.2,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20562",
+      "po": "10-6561",
+      "placed": "2026-07-02 16:07",
+      "status": "delivered",
+      "total": 2448.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20568",
+      "po": "10-2128",
+      "placed": "2026-07-11 16:16",
+      "status": "delivered",
+      "total": 3056.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20574",
+      "po": "10-2049",
+      "placed": "2026-07-16 12:26",
+      "status": "delivered",
+      "total": 4880.5,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20579",
+      "po": "10-7500",
+      "placed": "2026-07-25 14:51",
+      "status": "delivered",
+      "total": 386.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20594",
+      "po": "10-8851",
+      "placed": "2026-08-10 15:38",
+      "status": "delivered",
+      "total": 168.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20614",
+      "po": "10-7842",
+      "placed": "2026-09-30 09:00",
+      "status": "delivered",
+      "total": 1454.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20798",
+      "po": "TW-5512",
+      "placed": "2026-10-09 08:45",
+      "status": "delivered",
+      "total": 956.8,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20793",
+      "po": "TW-5498",
+      "placed": "2026-10-10 10:00",
+      "status": "delivered",
+      "total": 1328.0,
+      "ship_to": "Showroom, Denver, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20615",
+      "po": "10-3168",
+      "placed": "2026-10-12 09:00",
+      "status": "delivered",
+      "total": 2860.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20616",
+      "po": "10-9492",
+      "placed": "2026-10-20 09:00",
+      "status": "delivered",
+      "total": 974.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20827",
+      "po": "TW-5530",
+      "placed": "2026-10-26 13:50",
+      "status": "open",
+      "total": 427.2,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20827"
+   },
+   "result": {
+    "order_id": "SO-20827",
+    "customer_id": "C-1010",
+    "po": "TW-5530",
+    "placed": "2026-10-26 13:50",
+    "requested": null,
+    "status": "open",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Workshop",
+     "city": "Englewood, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-1016",
+      "name": "Padded kraft mailer 10.5x16",
+      "qty": 6,
+      "picked": 0,
+      "shipped": 0,
+      "price": 53.2,
+      "amount": 319.2
+     },
+     {
+      "sku": "TP-3C-110",
+      "name": "Carton sealing tape 3 in x 110 yd, clear",
+      "qty": 2,
+      "picked": 0,
+      "shipped": 0,
+      "price": 54.0,
+      "amount": 108.0
+     }
+    ],
+    "fees": [],
+    "total": 427.2,
+    "invoice_id": null
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_customer",
+   "args": {
+    "customer_id": "C-1010"
+   },
+   "result": {
+    "customer_id": "C-1010",
+    "name": "Tarnwell Leather Goods",
+    "terms": "Net 30",
+    "credit_limit": 9000.0,
+    "open_balance": 7572.8,
+    "open_orders": 427.2,
+    "available_credit": 1000.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mateo Reyes",
+      "role": "operations manager",
+      "email": "mateo@tarnwell.example"
+     },
+     {
+      "name": "Silas Pruitt",
+      "role": "accounts payable",
+      "email": "silas@tarnwell.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Englewood, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Showroom",
+      "city": "Denver, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "PD-1016",
+      "price": 53.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "ask_customer",
+   "args": {
+    "question": "Could you confirm the exact item SKUs for the 18x12x12 boxes and the 12 inch foam? We need the SKU for each line before we can price and place the order. Please also confirm the quantities: 30 bundles of the boxes and 6 rolls of the foam, shipping to the Workshop in Englewood, CO.",
+    "sentence": 1
+   },
+   "result": {
+    "note": "Put the question in the reply.",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Mateo,\n\nThanks for your order request. We can place it, but we need one detail first. Could you send the exact item SKUs for the 18x12x12 boxes and the 12 inch foam? Once we have them we will check stock and price, then place the order for 30 bundles of the boxes and 6 rolls of the foam, shipping to the Workshop in Englewood, CO.\n\nPlease also tell us if you want a requested delivery date for next week.\n\nThe Wendlow order desk",
+  "note": "Mateo asked for 30 bundles of 18x12x12 boxes and 6 rolls of 12 inch foam to the Workshop, but gave no SKUs and I had no product search tool to match them. I asked for the SKUs and made no order. Account C-1010 has only $1,000 of available credit, so a new order over that amount will need approval.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 5,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_013KyLWrceLYyvKycW4SvEku",
+     "name": "get_customer",
+     "input": {
+      "email": "mateo@tarnwell.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 229,
+     "output": 58,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 981,
+    "cost": 9.6e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_014dKcrFcgNTeoKzDhpTNGkk",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1010"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 630,
+     "output": 161,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1265,
+    "cost": 0.000188
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01VBNAUKzCGEV8ZoyCPyf2yS",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20827"
+     }
+    },
+    {
+     "id": "toolu_01AfkjREfsZGar9QHQqLJBG2",
+     "name": "get_customer",
+     "input": {
+      "customer_id": "C-1010"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 2102,
+     "output": 341,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 2101,
+    "cost": 0.000425
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_017wgbgYe1hSbdvxqMckZ4EV",
+     "name": "ask_customer",
+     "input": {
+      "question": "Could you confirm the exact item SKUs for the 18x12x12 boxes and the 12 inch foam? We need the SKU for each line before we can price and place the order. Please also confirm the quantities: 30 bundles of the boxes and 6 rolls of the foam, shipping to the Workshop in Englewood, CO.",
+      "sentence": 1
+     }
+    },
+    {
+     "id": "toolu_01EdyJ4uFFe5rmoSosxyKwKq",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Mateo,\n\nThanks for your order request. We can place it, but we need one detail first. Could you send the exact item SKUs for the 18x12x12 boxes and the 12 inch foam? Once we have them we will check stock and price, then place the order for 30 bundles of the boxes and 6 rolls of the foam, shipping to the Workshop in Englewood, CO.\n\nPlease also tell us if you want a requested delivery date for next week.\n\nThe Wendlow order desk",
+      "note": "Mateo asked for 30 bundles of 18x12x12 boxes and 6 rolls of 12 inch foam to the Workshop, but gave no SKUs and I had no product search tool to match them. I asked for the SKUs and made no order. Account C-1010 has only $1,000 of available credit, so a new order over that amount will need approval.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 2892,
+     "output": 1140,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 5483,
+    "cost": 0.000904
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 9.8,
+  "input_tokens": 5853,
+  "output_tokens": 1700,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 17816,
+  "cost": 0.001613
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:18:38",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

@@ -1,0 +1,277 @@
+{
+ "email_id": "t06",
+ "split": "test",
+ "seq": 29,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "b4d9d0900f68b259",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "gwen@lanternfold.example"
+   },
+   "result": {
+    "customer_id": "C-1007",
+    "name": "Lanternfold Candle Co.",
+    "terms": "Net 30",
+    "credit_limit": 7500.0,
+    "open_balance": 861.5,
+    "open_orders": 0.0,
+    "available_credit": 6638.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ayumi Nakaya",
+      "role": "founder",
+      "email": "ayumi@lanternfold.example"
+     },
+     {
+      "name": "Gwen Talbot",
+      "role": "operations",
+      "email": "gwen@lanternfold.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "9x11.5 rigid mailers"
+   },
+   "result": {
+    "query": "9x11.5 rigid mailers",
+    "matches": [
+     {
+      "sku": "RM-0911",
+      "name": "Rigid mailer 9x11.5",
+      "unit": "case of 100",
+      "strength": null,
+      "line": "standard",
+      "list_price": 61.0,
+      "available": 0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_equivalents",
+   "args": {
+    "sku": "RM-0911"
+   },
+   "result": {
+    "sku": "RM-0911",
+    "name": "Rigid mailer 9x11.5",
+    "equivalents": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "check_stock",
+   "args": {
+    "sku": "RM-0911"
+   },
+   "result": {
+    "sku": "RM-0911",
+    "name": "Rigid mailer 9x11.5",
+    "unit": "case of 100",
+    "warehouses": {
+     "North": {
+      "available": 0,
+      "inbound": [
+       {
+        "qty": 40,
+        "date": "2026-11-05"
+       }
+      ]
+     },
+     "Valley": {
+      "available": 0,
+      "inbound": []
+     }
+    },
+    "available_total": 0
+   },
+   "valid": true
+  },
+  {
+   "tool": "ask_customer",
+   "args": {
+    "question": "Would you like us to order 6 cases of RM-0911 for the inbound date of Thursday, November 5? Nothing has been ordered yet.",
+    "sentence": 2
+   },
+   "result": {
+    "note": "Put the question in the reply.",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Gwen,\n\nThe 9x11.5 rigid mailers (RM-0911, case of 100, $61.00 per case) are not in stock right now. Both warehouses show zero available. 40 cases are due in on Thursday, November 5. There is no equivalent item with the same size and strength.\n\nWould you like us to order 6 cases for that inbound date? Nothing has been ordered yet. Since your print run is next week, please let us know if November 5 still works for you.\n\nThe Wendlow order desk",
+  "note": "RM-0911 is out of stock with no equivalents; 40 cases inbound November 5. Asked the customer whether to order 6 cases for that date. No order placed.",
+  "intents": [
+   "out_of_stock",
+   "stock_inquiry"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 5,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01WWWa8Dft4fLHFf9L43FX9r",
+     "name": "get_customer",
+     "input": {
+      "email": "gwen@lanternfold.example"
+     }
+    },
+    {
+     "id": "toolu_01HanPPsC7tP3RVcz4L1rUoL",
+     "name": "search_items",
+     "input": {
+      "query": "9x11.5 rigid mailers"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 210,
+     "output": 113,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1325,
+    "cost": 0.002531
+   }
+  },
+  {
+   "text": "Out of stock; check equivalents and stock.",
+   "calls": [
+    {
+     "id": "toolu_01HiFDseRnZQYhuoWVC55ap7",
+     "name": "find_equivalents",
+     "input": {
+      "sku": "RM-0911"
+     }
+    },
+    {
+     "id": "toolu_01K2BcNTwJ6WwzrGQ9Fp5pKp",
+     "name": "check_stock",
+     "input": {
+      "sku": "RM-0911"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 757,
+     "output": 121,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1330,
+    "cost": 0.003705
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Wii5bFc32dHZUzCadfixLm",
+     "name": "ask_customer",
+     "input": {
+      "question": "Would you like us to order 6 cases of RM-0911 for the inbound date of Thursday, November 5? Nothing has been ordered yet.",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1091,
+     "output": 182,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1656,
+    "cost": 0.004983
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01V82vS4KwDnGBDsjRkqZBZc",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Gwen,\n\nThe 9x11.5 rigid mailers (RM-0911, case of 100, $61.00 per case) are not in stock right now. Both warehouses show zero available. 40 cases are due in on Thursday, November 5. There is no equivalent item with the same size and strength.\n\nWould you like us to order 6 cases for that inbound date? Nothing has been ordered yet. Since your print run is next week, please let us know if November 5 still works for you.\n\nThe Wendlow order desk",
+      "note": "RM-0911 is out of stock with no equivalents; 40 cases inbound November 5. Asked the customer whether to order 6 cases for that date. No order placed.",
+      "intents": [
+       "out_of_stock",
+       "stock_inquiry"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1236,
+     "output": 348,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2645,
+    "cost": 0.006933
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 7.0,
+  "input_tokens": 3294,
+  "output_tokens": 764,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 19612,
+  "cost": 0.018152
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:34:19",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

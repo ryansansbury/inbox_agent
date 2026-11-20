@@ -1,0 +1,94 @@
+{
+ "id": "m09",
+ "at": "2026-10-27T08:40",
+ "from": {
+  "name": "Ezra Moreno",
+  "email": "ezra@kilnmoor.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Holiday order",
+ "body": [
+  [
+   "Hello Wendlow,"
+  ],
+  [
+   "We're gearing up for the holiday markets and need to stock up.",
+   "Please send 40 bundles of the heavy 12x12x12 boxes and 10 rolls of the 30 inch kraft paper.",
+   "Next week is fine."
+  ]
+ ],
+ "sig": [
+  "Ezra Moreno",
+  "Kilnmoor Ceramics"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "new_order"
+  ],
+  "handling": "The order comes to $2,048.00 and the account has $578.00 of open credit with an invoice past due, so it's held for credit to review. The reply says it's on hold, without promising a ship date.",
+  "expected": [
+   {
+    "tool": "create_order",
+    "args": {
+     "customer_id": "C-1009",
+     "lines": [
+      {
+       "sku": "BX-121212-44",
+       "qty": 40
+      },
+      {
+       "sku": "VF-KP-30",
+       "qty": 10
+      }
+     ]
+    },
+    "sentence": 3
+   }
+  ],
+  "acceptable": [
+   {
+    "tool": "route_to_person",
+    "args": {
+     "team": "credit"
+    }
+   }
+  ],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 2048.0,
+    "source": "action:1.total"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hello Wendlow,",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "We're gearing up for the holiday markets and need to stock up.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Please send 40 bundles of the heavy 12x12x12 boxes and 10 rolls of the 30 inch kraft paper.",
+   "part": "body"
+  },
+  {
+   "n": 4,
+   "text": "Next week is fine.",
+   "part": "body"
+  }
+ ]
+}

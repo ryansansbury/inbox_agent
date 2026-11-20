@@ -1,0 +1,83 @@
+{
+ "id": "d02",
+ "at": "2026-10-27T10:21",
+ "from": {
+  "name": "Felix Dunmore",
+  "email": "felix@brecken.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Crushed bundles on SO-20811",
+ "body": [
+  [
+   "Good morning."
+  ],
+  [
+   "Two bundles of the 12x12x12 boxes on SO-20811 came in crushed yesterday.",
+   "Please ship two replacement bundles with our next delivery or sooner if you can."
+  ]
+ ],
+ "sig": [
+  "Best,",
+  "Felix Dunmore",
+  "Purchasing Manager",
+  "Brecken Electronics"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "damaged_delivery"
+  ],
+  "handling": "The delivery notes 2 damaged bundles, so reship 2 at no charge. $58.00 is well under the reship cap.",
+  "expected": [
+   {
+    "tool": "reship",
+    "args": {
+     "order_id": "SO-20811",
+     "lines": [
+      {
+       "sku": "BX-121212-32",
+       "qty": 2
+      }
+     ]
+    },
+    "sentence": 3,
+    "basis": {
+     "kind": "damaged",
+     "order": "SO-20811"
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "count",
+    "value": 2,
+    "source": "line:SO-20811:BX-121212-32.damaged"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Good morning.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Two bundles of the 12x12x12 boxes on SO-20811 came in crushed yesterday.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Please ship two replacement bundles with our next delivery or sooner if you can.",
+   "part": "body"
+  }
+ ]
+}

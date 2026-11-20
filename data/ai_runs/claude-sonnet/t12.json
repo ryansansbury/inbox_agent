@@ -1,0 +1,249 @@
+{
+ "email_id": "t12",
+ "split": "test",
+ "seq": 35,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "ca4f1e4f6255d339",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "caleb@sablewood.example"
+   },
+   "result": {
+    "customer_id": "C-1002",
+    "name": "Sablewood Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 20000.0,
+    "open_balance": 9904.0,
+    "open_orders": 3550.0,
+    "available_credit": 6546.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Caleb Kowalski",
+      "role": "purchasing",
+      "email": "caleb@sablewood.example"
+     },
+     {
+      "name": "Leela Varadan",
+      "role": "accounts payable",
+      "email": "leela@sablewood.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Main warehouse",
+      "city": "Commerce City, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Overflow building",
+      "city": "Commerce City, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-241812-32",
+      "price": 49.8
+     },
+     {
+      "sku": "VF-AIR-84",
+      "price": 46.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1002",
+    "placed_from": "2026-10-26",
+    "placed_to": "2026-10-26"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20829",
+      "po": "SW-4431",
+      "placed": "2026-10-26 09:45",
+      "status": "open",
+      "total": 924.0,
+      "ship_to": "Main warehouse, Commerce City, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20831",
+      "po": "SW-4432",
+      "placed": "2026-10-26 15:30",
+      "status": "open",
+      "total": 796.0,
+      "ship_to": "Main warehouse, Commerce City, CO",
+      "lines": 2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "ask_customer",
+   "args": {
+    "question": "Which order should go to the overflow building: SO-20829 (PO SW-4431, $924.00) or SO-20831 (PO SW-4432, $796.00)? Or both?",
+    "sentence": 1
+   },
+   "result": {
+    "note": "Put the question in the reply.",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Caleb,\n\nWe placed two orders yesterday, and both are still open and going to the Main warehouse.\n\nSO-20829 is PO SW-4431 for $924.00. SO-20831 is PO SW-4432 for $796.00.\n\nWhich order should go to the overflow building? Or should both go there? Once you tell us, we will change the ship-to. We have not changed anything yet.\n\nThe Wendlow order desk",
+  "note": "Two open orders were placed yesterday (SO-20829 and SO-20831), both to Main warehouse. The email doesn't say which one, so I asked and made no change.",
+  "intents": [
+   "ship_to_change",
+   "ambiguous_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Ao8Yy7RnQ58ktC9YepMFpg",
+     "name": "get_customer",
+     "input": {
+      "email": "caleb@sablewood.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 202,
+     "output": 57,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1011,
+    "cost": 0.001955
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_013dX9EEvGMDxKJezCPCEyDQ",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1002",
+      "placed_from": "2026-10-26",
+      "placed_to": "2026-10-26"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 632,
+     "output": 112,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1152,
+    "cost": 0.003365
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01N5cYuRHytYVjeiFdLXLJSA",
+     "name": "ask_customer",
+     "input": {
+      "question": "Which order should go to the overflow building: SO-20829 (PO SW-4431, $924.00) or SO-20831 (PO SW-4432, $796.00)? Or both?",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 924,
+     "output": 151,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1620,
+    "cost": 0.004339
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01XfE7fPQFsCkxtrJimB76h4",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Caleb,\n\nWe placed two orders yesterday, and both are still open and going to the Main warehouse.\n\nSO-20829 is PO SW-4431 for $924.00. SO-20831 is PO SW-4432 for $796.00.\n\nWhich order should go to the overflow building? Or should both go there? Once you tell us, we will change the ship-to. We have not changed anything yet.\n\nThe Wendlow order desk",
+      "note": "Two open orders were placed yesterday (SO-20829 and SO-20831), both to Main warehouse. The email doesn't say which one, so I asked and made no change.",
+      "intents": [
+       "ship_to_change",
+       "ambiguous_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1080,
+     "output": 321,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2560,
+    "cost": 0.006351
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 6.3,
+  "input_tokens": 2838,
+  "output_tokens": 641,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 19612,
+  "cost": 0.01601
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:01",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

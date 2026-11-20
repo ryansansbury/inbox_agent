@@ -1,0 +1,86 @@
+{
+ "id": "t12",
+ "at": "2026-10-27T14:15",
+ "from": {
+  "name": "Caleb Kowalski",
+  "email": "caleb@sablewood.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "ship-to change",
+ "body": [
+  [
+   "Can you send our order from yesterday to the overflow building instead?",
+   "Main warehouse dock is jammed."
+  ]
+ ],
+ "sig": [
+  "Caleb"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "ship_to_change",
+   "ambiguous_order"
+  ],
+  "handling": "Sablewood placed two orders yesterday, SO-20829 and SO-20831, so ask which one should move.",
+  "expected": [
+   {
+    "tool": "ask_customer",
+    "args": {
+     "about": [
+      "SO-20829",
+      "SO-20831"
+     ]
+    },
+    "sentence": 1,
+    "ambiguous": {
+     "customer_id": "C-1002",
+     "placed_from": "2026-10-26",
+     "placed_to": "2026-10-26",
+     "statuses": [
+      "open",
+      "picked"
+     ]
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [
+   {
+    "tool": "update_ship_to",
+    "args": {},
+    "why": "Neither order was named."
+   }
+  ],
+  "facts": [
+   {
+    "kind": "order",
+    "value": "SO-20829",
+    "source": "order:SO-20829.id"
+   },
+   {
+    "kind": "order",
+    "value": "SO-20831",
+    "source": "order:SO-20831.id"
+   }
+  ],
+  "lane": "customer",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Can you send our order from yesterday to the overflow building instead?",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Main warehouse dock is jammed.",
+   "part": "body"
+  }
+ ]
+}

@@ -1,0 +1,386 @@
+{
+ "email_id": "m09",
+ "split": "morning",
+ "seq": 8,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "5e20dad1d1b7290d",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "ezra@kilnmoor.example"
+   },
+   "result": {
+    "customer_id": "C-1009",
+    "name": "Kilnmoor Ceramics",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 5209.0,
+    "open_orders": 213.0,
+    "available_credit": 578.0,
+    "on_hold": false,
+    "past_due": [
+     {
+      "invoice_id": "INV-30883",
+      "due": "2026-10-25",
+      "open": 2685.0
+     }
+    ],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 7
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ezra Moreno",
+      "role": "owner",
+      "email": "ezra@kilnmoor.example"
+     },
+     {
+      "name": "Sora Baek",
+      "role": "shipping lead",
+      "email": "sora@kilnmoor.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Pueblo, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Gallery",
+      "city": "Colorado Springs, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "heavy 12x12x12 boxes",
+    "customer_id": "C-1009"
+   },
+   "result": {
+    "query": "heavy 12x12x12 boxes",
+    "matches": [
+     {
+      "sku": "BX-121212-44",
+      "name": "Shipping box 12x12x12, 44 ECT",
+      "unit": "bundle of 20",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 41.2,
+      "available": 78,
+      "price": 41.2
+     },
+     {
+      "sku": "BX-121212-32",
+      "name": "Shipping box 12x12x12, 32 ECT",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 31.8,
+      "available": 661,
+      "price": 31.8
+     },
+     {
+      "sku": "BX-121212-32E",
+      "name": "Shipping box 12x12x12, 32 ECT, recycled kraft",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "recycled",
+      "list_price": 32.9,
+      "available": 586,
+      "price": 32.9
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "30 inch kraft paper",
+    "customer_id": "C-1009"
+   },
+   "result": {
+    "query": "30 inch kraft paper",
+    "matches": [
+     {
+      "sku": "VF-KP-30",
+      "name": "Kraft packing paper 30 in x 1200 ft",
+      "unit": "roll",
+      "strength": null,
+      "line": "standard",
+      "list_price": 40.0,
+      "available": 197,
+      "price": 40.0
+     },
+     {
+      "sku": "BX-100806-32E",
+      "name": "Shipping box 10x8x6, 32 ECT, recycled kraft",
+      "unit": "bundle of 25",
+      "strength": "32 ECT",
+      "line": "recycled",
+      "list_price": 20.6,
+      "available": 282,
+      "price": 20.6
+     },
+     {
+      "sku": "BX-121212-32E",
+      "name": "Shipping box 12x12x12, 32 ECT, recycled kraft",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "recycled",
+      "list_price": 32.9,
+      "available": 586,
+      "price": 32.9
+     },
+     {
+      "sku": "BX-141414-32E",
+      "name": "Shipping box 14x14x14, 32 ECT, recycled kraft",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "recycled",
+      "list_price": 39.8,
+      "available": 45,
+      "price": 39.8
+     },
+     {
+      "sku": "BX-161210-32E",
+      "name": "Shipping box 16x12x10, 32 ECT, recycled kraft",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "recycled",
+      "list_price": 27.9,
+      "available": 105,
+      "price": 27.9
+     },
+     {
+      "sku": "PD-0812",
+      "name": "Padded kraft mailer 8.5x12",
+      "unit": "case of 100",
+      "strength": null,
+      "line": "standard",
+      "list_price": 44.0,
+      "available": 449,
+      "price": 44.0
+     },
+     {
+      "sku": "PD-1016",
+      "name": "Padded kraft mailer 10.5x16",
+      "unit": "case of 100",
+      "strength": null,
+      "line": "standard",
+      "list_price": 58.0,
+      "available": 623,
+      "price": 58.0
+     },
+     {
+      "sku": "TP-WAT-3",
+      "name": "Water-activated kraft tape 3 in x 450 ft",
+      "unit": "case of 10 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 72.0,
+      "available": 575,
+      "price": 72.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1009",
+    "lines": [
+     {
+      "sku": "BX-121212-44",
+      "qty": 40
+     },
+     {
+      "sku": "VF-KP-30",
+      "qty": 10
+     }
+    ],
+    "requested_date": "2026-11-03",
+    "sentence": 3
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-125",
+    "waiting_on": "credit",
+    "rule": "credit_line",
+    "note": "The order is over the account's open credit of $578, so credit reviews it first. It happens only if a person approves it, so describe it as pending.",
+    "order_id": "SO-20864",
+    "total": 2048.0,
+    "amount": 2048.0,
+    "limit": 578.0
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Ezra,\n\nYour holiday order is pending credit approval. The order number is SO-20864, for 40 bundles of heavy 12x12x12 boxes and 10 rolls of 30 inch kraft paper, requested for Tuesday, November 3. The total is $2,048.00.\n\nThe Wendlow order desk",
+  "note": "Created order SO-20864; it is pending credit approval because it exceeds the account's available credit. Credit should review approval.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_8FIRvvC9dJi4h4187feOSXxs",
+     "name": "get_customer",
+     "input": {
+      "email": "ezra@kilnmoor.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 130,
+     "output": 23,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1183,
+    "cost": 8.4e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_aOu3CZEOoIVVTdprAYg4FoAt",
+     "name": "search_items",
+     "input": {
+      "query": "heavy 12x12x12 boxes",
+      "customer_id": "C-1009"
+     }
+    },
+    {
+     "id": "call_2b0dtVhAwBd2LK6PdHPXR98N",
+     "name": "search_items",
+     "input": {
+      "query": "30 inch kraft paper",
+      "customer_id": "C-1009"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 289,
+     "output": 73,
+     "cache_write": 0,
+     "cache_read": 2488
+    },
+    "ms": 1796,
+    "cost": 0.000128
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_RBu8fBjSkakpBThN9o1pig3y",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1009",
+      "lines": [
+       {
+        "sku": "BX-121212-44",
+        "qty": 40
+       },
+       {
+        "sku": "VF-KP-30",
+        "qty": 10
+       }
+      ],
+      "requested_date": "2026-11-03",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 945,
+     "output": 64,
+     "cache_write": 0,
+     "cache_read": 2774
+    },
+    "ms": 1406,
+    "cost": 0.000196
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_Ru0rGshp8sGB7kG5SrMlsdBa",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Ezra,\n\nYour holiday order is pending credit approval. The order number is SO-20864, for 40 bundles of heavy 12x12x12 boxes and 10 rolls of 30 inch kraft paper, requested for Tuesday, November 3. The total is $2,048.00.\n\nThe Wendlow order desk",
+      "note": "Created order SO-20864; it is pending credit approval because it exceeds the account's available credit. Credit should review approval.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 181,
+     "output": 127,
+     "cache_write": 0,
+     "cache_read": 3716
+    },
+    "ms": 1710,
+    "cost": 0.000175
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 6.1,
+  "input_tokens": 1545,
+  "output_tokens": 287,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 11339,
+  "cost": 0.000583
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:40:23",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

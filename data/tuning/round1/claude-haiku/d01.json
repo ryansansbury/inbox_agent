@@ -1,0 +1,243 @@
+{
+ "email_id": "d01",
+ "split": "dev",
+ "seq": 12,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "8c41038307192385",
+ "input_hash": "7c9507fbc95333fe",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "theo@kettleby.example"
+   },
+   "result": {
+    "customer_id": "C-1005",
+    "name": "Kettleby Pet Supply",
+    "terms": "Net 30",
+    "credit_limit": 8000.0,
+    "open_balance": 1602.5,
+    "open_orders": 0.0,
+    "available_credit": 6397.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Theo Ramsey",
+      "role": "operations lead",
+      "email": "theo@kettleby.example"
+     },
+     {
+      "name": "Audrey Tsai",
+      "role": "accounts payable",
+      "email": "audrey@kettleby.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Warehouse",
+      "city": "Lakewood, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20810"
+   },
+   "result": {
+    "order_id": "SO-20810",
+    "customer_id": "C-1005",
+    "po": "KB-2240",
+    "placed": "2026-10-19 09:10",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Warehouse",
+     "city": "Lakewood, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-120904-32",
+      "name": "Shipping box 12x9x4, 32 ECT",
+      "qty": 20,
+      "picked": 20,
+      "shipped": 20,
+      "price": 18.4,
+      "amount": 368.0
+     },
+     {
+      "sku": "LB-46-TH",
+      "name": "Thermal labels 4x6",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 3,
+      "price": 72.0,
+      "amount": 216.0
+     }
+    ],
+    "fees": [],
+    "total": 584.0,
+    "invoice_id": "INV-30938"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "SO-20810"
+   },
+   "result": {
+    "order_id": "SO-20810",
+    "tracking": "PRO 5270-9970",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-22",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-26 15:42",
+    "signed_by": "DOCK 2",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-22 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-26 15:42",
+      "text": "Delivered, signed by DOCK 2"
+     }
+    ]
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Theo,\n\nYes, SO-20810 shipped and was delivered. The order (PO KB-2240) included 20 of the 12x9x4 boxes (BX-120904-32) and 3 packs of thermal labels 4x6 (LB-46-TH). It was picked up on October 22, 2026 and delivered on October 26, 2026 at 3:42 PM, signed by DOCK 2. The LTL freight tracking number is PRO 5270-9970.\n\nSince it was signed for at the dock on October 26, it may be in a different area of your site from your dock list. If the boxes are not on site, please reply and we will look into it further.\n\nThe Wendlow order desk",
+  "note": "SO-20810 was delivered on 2026-10-26, signed by DOCK 2 per the carrier (PRO 5270-9970). No action taken. The customer may have missed the receipt; no reship or claim was opened.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01SZefb5SnTHuNAaUe2AtGuX",
+     "name": "get_customer",
+     "input": {
+      "email": "theo@kettleby.example"
+     }
+    },
+    {
+     "id": "toolu_019eXX849nrxFo7uFtZKgi5x",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20810"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 218,
+     "output": 106,
+     "cache_write": 4454,
+     "cache_read": 0
+    },
+    "ms": 999,
+    "cost": 0.000632
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01EGbXMD4n9YSHqhYhVeRinJ",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "SO-20810"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 962,
+     "output": 101,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1273,
+    "cost": 0.000191
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01PtCNhjuJaSUnrKMGGd1z8j",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Theo,\n\nYes, SO-20810 shipped and was delivered. The order (PO KB-2240) included 20 of the 12x9x4 boxes (BX-120904-32) and 3 packs of thermal labels 4x6 (LB-46-TH). It was picked up on October 22, 2026 and delivered on October 26, 2026 at 3:42 PM, signed by DOCK 2. The LTL freight tracking number is PRO 5270-9970.\n\nSince it was signed for at the dock on October 26, it may be in a different area of your site from your dock list. If the boxes are not on site, please reply and we will look into it further.\n\nThe Wendlow order desk",
+      "note": "SO-20810 was delivered on 2026-10-26, signed by DOCK 2 per the carrier (PRO 5270-9970). No action taken. The customer may have missed the receipt; no reship or claim was opened.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1210,
+     "output": 413,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 2324,
+    "cost": 0.000372
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 4.6,
+  "input_tokens": 2390,
+  "output_tokens": 620,
+  "cache_write_tokens": 4454,
+  "cache_read_tokens": 8908,
+  "cost": 0.001195
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:17:39",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "id": "d01",
+ "at": "2026-10-27T10:06",
+ "from": {
+  "name": "Theo Ramsey",
+  "email": "theo@kettleby.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "did SO-20810 ship?",
+ "body": [
+  [
+   "Hey, did SO-20810 ever ship?",
+   "I don't see it on our dock list and I need those 12x9x4s for tomorrow's orders."
+  ]
+ ],
+ "sig": [
+  "Theo"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "order_status"
+  ],
+  "handling": "It was delivered yesterday at 3:42 PM and signed for at dock 2, so the reply says so with the tracking number.",
+  "expected": [],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "date",
+    "value": "2026-10-26",
+    "source": "shipment:SO-20810.delivered_date"
+   },
+   {
+    "kind": "text",
+    "value": "DOCK 2",
+    "source": "shipment:SO-20810.signed_by"
+   },
+   {
+    "kind": "tracking",
+    "value": "PRO 5270-9970",
+    "source": "shipment:SO-20810.tracking"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hey, did SO-20810 ever ship?",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "I don't see it on our dock list and I need those 12x9x4s for tomorrow's orders.",
+   "part": "body"
+  }
+ ]
+}

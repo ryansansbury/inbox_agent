@@ -1,0 +1,64 @@
+{
+ "id": "t01",
+ "at": "2026-10-27T09:35",
+ "from": {
+  "name": "Caleb Kowalski",
+  "email": "caleb@sablewood.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "SO-20818 late?",
+ "body": [
+  [
+   "SO-20818 was supposed to be here yesterday.",
+   "Any update on when it'll show up?"
+  ]
+ ],
+ "sig": [
+  "Caleb"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "order_status"
+  ],
+  "handling": "The carrier reports a weather delay with a new estimate of October 29, so the reply gives that date and the tracking number.",
+  "expected": [],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "status",
+    "value": "delayed",
+    "source": "shipment:SO-20818.status"
+   },
+   {
+    "kind": "date",
+    "value": "2026-10-29",
+    "source": "shipment:SO-20818.eta_date"
+   },
+   {
+    "kind": "tracking",
+    "value": "PRO 5521-8839",
+    "source": "shipment:SO-20818.tracking"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "SO-20818 was supposed to be here yesterday.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Any update on when it'll show up?",
+   "part": "body"
+  }
+ ]
+}

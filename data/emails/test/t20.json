@@ -1,0 +1,57 @@
+{
+ "id": "t20",
+ "at": "2026-10-27T17:04",
+ "from": {
+  "name": "Mateo Reyes",
+  "email": "mateo@tarnwell.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "SO-20827 to the showroom",
+ "body": [
+  [
+   "Hi, please ship SO-20827 to our Denver showroom instead of the workshop."
+  ]
+ ],
+ "sig": [
+  "Mateo"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "ship_to_change"
+  ],
+  "handling": "SO-20827 hasn't been picked, so the ship-to changes to the showroom.",
+  "expected": [
+   {
+    "tool": "update_ship_to",
+    "args": {
+     "order_id": "SO-20827",
+     "location_id": "L2"
+    },
+    "sentence": 1
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "order",
+    "value": "SO-20827",
+    "source": "order:SO-20827.id"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, please ship SO-20827 to our Denver showroom instead of the workshop.",
+   "part": "body"
+  }
+ ]
+}

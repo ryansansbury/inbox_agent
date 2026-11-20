@@ -1,0 +1,581 @@
+{
+ "email_id": "d05",
+ "split": "dev",
+ "seq": 16,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "8c41038307192385",
+ "input_hash": "d53b10fa80782a47",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "lucy@juniperandvale.example"
+   },
+   "result": {
+    "customer_id": "C-1006",
+    "name": "Juniper & Vale",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 1080.8,
+    "open_orders": 575.6,
+    "available_credit": 4343.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Lucy Tran",
+      "role": "buyer",
+      "email": "lucy@juniperandvale.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Boulder, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Warehouse",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1006"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20510",
+      "po": "06-4288",
+      "placed": "2026-04-12 16:49",
+      "status": "delivered",
+      "total": 2324.0,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20513",
+      "po": "06-1422",
+      "placed": "2026-04-15 13:48",
+      "status": "delivered",
+      "total": 2546.5,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20524",
+      "po": "06-9009",
+      "placed": "2026-04-25 15:00",
+      "status": "delivered",
+      "total": 3708.0,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20529",
+      "po": "06-8830",
+      "placed": "2026-05-02 12:01",
+      "status": "delivered",
+      "total": 176.0,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20532",
+      "po": "06-8217",
+      "placed": "2026-05-08 16:11",
+      "status": "delivered",
+      "total": 1665.0,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20548",
+      "po": "06-8757",
+      "placed": "2026-06-01 10:55",
+      "status": "delivered",
+      "total": 2509.75,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20585",
+      "po": "06-9938",
+      "placed": "2026-07-31 08:09",
+      "status": "delivered",
+      "total": 1943.6,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20586",
+      "po": "06-3817",
+      "placed": "2026-07-31 08:19",
+      "status": "delivered",
+      "total": 696.5,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20603",
+      "po": "06-4359",
+      "placed": "2026-08-18 10:19",
+      "status": "delivered",
+      "total": 2629.0,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20610",
+      "po": "06-8576",
+      "placed": "2026-08-27 16:44",
+      "status": "delivered",
+      "total": 560.0,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20814",
+      "po": "JV-1021",
+      "placed": "2026-10-21 15:20",
+      "status": "delivered",
+      "total": 554.0,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20822",
+      "po": "JV-1023",
+      "placed": "2026-10-23 09:25",
+      "status": "shipped",
+      "total": 526.8,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20817",
+      "po": "JV-1026",
+      "placed": "2026-10-26 16:40",
+      "status": "picked",
+      "total": 575.6,
+      "ship_to": "Studio, Boulder, CO",
+      "lines": 3
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20817"
+   },
+   "result": {
+    "order_id": "SO-20817",
+    "customer_id": "C-1006",
+    "po": "JV-1026",
+    "placed": "2026-10-26 16:40",
+    "requested": "2026-10-29",
+    "status": "picked",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Boulder, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-141006-32",
+      "name": "Shipping box 14x10x6, 32 ECT",
+      "qty": 12,
+      "picked": 12,
+      "shipped": 0,
+      "price": 24.3,
+      "amount": 291.6
+     },
+     {
+      "sku": "PD-0812",
+      "name": "Padded kraft mailer 8.5x12",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 0,
+      "price": 44.0,
+      "amount": 132.0
+     },
+     {
+      "sku": "VF-CRK-10",
+      "name": "Crinkle paper, 10 lb box",
+      "qty": 4,
+      "picked": 4,
+      "shipped": 0,
+      "price": 38.0,
+      "amount": 152.0
+     }
+    ],
+    "fees": [],
+    "total": 575.6,
+    "invoice_id": null,
+    "picked_at": "2026-10-27 06:40"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20822"
+   },
+   "result": {
+    "order_id": "SO-20822",
+    "customer_id": "C-1006",
+    "po": "JV-1023",
+    "placed": "2026-10-23 09:25",
+    "requested": null,
+    "status": "shipped",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Boulder, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-141006-32",
+      "name": "Shipping box 14x10x6, 32 ECT",
+      "qty": 16,
+      "picked": 16,
+      "shipped": 16,
+      "price": 24.3,
+      "amount": 388.8
+     },
+     {
+      "sku": "TP-FRG-2",
+      "name": "Printed fragile tape 2 in x 110 yd",
+      "qty": 2,
+      "picked": 2,
+      "shipped": 2,
+      "price": 69.0,
+      "amount": 138.0
+     }
+    ],
+    "fees": [],
+    "total": 526.8,
+    "invoice_id": "INV-30951"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20814"
+   },
+   "result": {
+    "order_id": "SO-20814",
+    "customer_id": "C-1006",
+    "po": "JV-1021",
+    "placed": "2026-10-21 15:20",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Boulder, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-0812",
+      "name": "Padded kraft mailer 8.5x12",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 44.0,
+      "amount": 440.0,
+      "damaged_on_delivery": 2
+     },
+     {
+      "sku": "VF-CRK-10",
+      "name": "Crinkle paper, 10 lb box",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 3,
+      "price": 38.0,
+      "amount": 114.0
+     }
+    ],
+    "fees": [],
+    "total": 554.0,
+    "invoice_id": "INV-30946"
+   },
+   "valid": true
+  },
+  {
+   "tool": "check_stock",
+   "args": {
+    "sku": "BX-141006-32"
+   },
+   "result": {
+    "sku": "BX-141006-32",
+    "name": "Shipping box 14x10x6, 32 ECT",
+    "unit": "bundle of 25",
+    "warehouses": {
+     "North": {
+      "available": 202,
+      "inbound": []
+     },
+     "Valley": {
+      "available": 298,
+      "inbound": []
+     }
+    },
+    "available_total": 500
+   },
+   "valid": true
+  },
+  {
+   "tool": "check_stock",
+   "args": {
+    "sku": "TP-FRG-2"
+   },
+   "result": {
+    "sku": "TP-FRG-2",
+    "name": "Printed fragile tape 2 in x 110 yd",
+    "unit": "case of 36 rolls",
+    "warehouses": {
+     "North": {
+      "available": 356,
+      "inbound": []
+     },
+     "Valley": {
+      "available": 323,
+      "inbound": []
+     }
+    },
+    "available_total": 679
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_price",
+   "args": {
+    "customer_id": "C-1006",
+    "sku": "BX-141006-32"
+   },
+   "result": {
+    "sku": "BX-141006-32",
+    "name": "Shipping box 14x10x6, 32 ECT",
+    "unit": "bundle of 25",
+    "list_price": 24.3,
+    "contract_price": null,
+    "price": 24.3
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Lucy,\n\nThanks for your order request. We have stock for both items at the Longmont warehouse. Your order has not been placed yet, so there is no order number to share at this time. Our order desk will review your request and follow up with you to confirm the order details and pricing before it is placed.\n\nThe Wendlow order desk",
+  "note": "Sender Lucy Tran (C-1006, Juniper & Vale) asked for 20 bundles of 14x10x6 boxes and 4 cases of fragile tape to the Longmont warehouse (L2), regular shipping. Stock is available: BX-141006-32 (bundle of 25, list $24.30, the 32 ECT item on her prior order) and TP-FRG-2 (case of 36, $69.00 on her last order). I hit the tool-call limit before I could check the tape price, create the order, or confirm the box spec, so no order was placed. Please have the order desk confirm the box strength, the tape price, and place the order to L2 (Longmont); the account has $4,343.60 of available credit.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 9,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01G8PPAKeFRookQcCz1uDDRZ",
+     "name": "get_customer",
+     "input": {
+      "email": "lucy@juniperandvale.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 235,
+     "output": 59,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 957,
+    "cost": 9.8e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01WYycAqf78uS8qSMc9XbZrU",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1006"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 571,
+     "output": 156,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1104,
+    "cost": 0.00018
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Cwe2QwB2zvzjdoBmMrbYZL",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20817"
+     }
+    },
+    {
+     "id": "toolu_01NPxrk81EW8JGUXDC6nN45J",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20822"
+     }
+    },
+    {
+     "id": "toolu_014DtAWTfb6a2yjPDEzS2ggt",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20814"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1699,
+     "output": 309,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1570,
+    "cost": 0.000369
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01D3TYboFhsFRh5Fs6f3yfbj",
+     "name": "check_stock",
+     "input": {
+      "sku": "BX-141006-32"
+     }
+    },
+    {
+     "id": "toolu_01AqprUv3W3EAgywDAZt5EeH",
+     "name": "check_stock",
+     "input": {
+      "sku": "TP-FRG-2"
+     }
+    },
+    {
+     "id": "toolu_01Chabv67HiMn1uhJYJztSVh",
+     "name": "get_price",
+     "input": {
+      "customer_id": "C-1006",
+      "sku": "BX-141006-32"
+     }
+    },
+    {
+     "id": "toolu_01SMG59DWU29jcBG1K3XPnPb",
+     "name": "get_price",
+     "input": {
+      "customer_id": "C-1006",
+      "sku": "TP-FRG-2"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 2927,
+     "output": 484,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 2265,
+    "cost": 0.000579
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01YUXhixuCAMj6ysFeWr2frq",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Lucy,\n\nThanks for your order request. We have stock for both items at the Longmont warehouse. Your order has not been placed yet, so there is no order number to share at this time. Our order desk will review your request and follow up with you to confirm the order details and pricing before it is placed.\n\nThe Wendlow order desk",
+      "note": "Sender Lucy Tran (C-1006, Juniper & Vale) asked for 20 bundles of 14x10x6 boxes and 4 cases of fragile tape to the Longmont warehouse (L2), regular shipping. Stock is available: BX-141006-32 (bundle of 25, list $24.30, the 32 ECT item on her prior order) and TP-FRG-2 (case of 36, $69.00 on her last order). I hit the tool-call limit before I could check the tape price, create the order, or confirm the box spec, so no order was placed. Please have the order desk confirm the box strength, the tape price, and place the order to L2 (Longmont); the account has $4,343.60 of available credit.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 3611,
+     "output": 916,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 4803,
+    "cost": 0.000864
+   }
+  }
+ ],
+ "usage": {
+  "turns": 5,
+  "seconds": 10.7,
+  "input_tokens": 9043,
+  "output_tokens": 1924,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 22270,
+  "cost": 0.00209
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:18:04",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

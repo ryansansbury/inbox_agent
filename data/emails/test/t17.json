@@ -1,0 +1,57 @@
+{
+ "id": "t17",
+ "at": "2026-10-27T16:12",
+ "from": {
+  "name": "Mara Lindqvist",
+  "email": "mara@fernhollowtea.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Net 60?",
+ "body": [
+  [
+   "Hi, would it be possible to move us to net 60 terms through the holidays?",
+   "Cash gets tight for us in November."
+  ]
+ ],
+ "sig": [
+  "Mara Lindqvist",
+  "Fernhollow Tea"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "terms_request"
+  ],
+  "handling": "Terms are credit's decision, so it's routed there, and the reply promises nothing.",
+  "expected": [
+   {
+    "tool": "route_to_person",
+    "args": {
+     "team": "credit"
+    },
+    "sentence": 1
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [],
+  "lane": "stopped",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, would it be possible to move us to net 60 terms through the holidays?",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Cash gets tight for us in November.",
+   "part": "body"
+  }
+ ]
+}

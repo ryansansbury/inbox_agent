@@ -1,0 +1,339 @@
+{
+ "email_id": "t19",
+ "split": "test",
+ "seq": 42,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "2706205a6a95f750",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "ezra@kilnmoor.example"
+   },
+   "result": {
+    "customer_id": "C-1009",
+    "name": "Kilnmoor Ceramics",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 5209.0,
+    "open_orders": 213.0,
+    "available_credit": 578.0,
+    "on_hold": false,
+    "past_due": [
+     {
+      "invoice_id": "INV-30883",
+      "due": "2026-10-25",
+      "open": 2685.0
+     }
+    ],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 7
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ezra Moreno",
+      "role": "owner",
+      "email": "ezra@kilnmoor.example"
+     },
+     {
+      "name": "Sora Baek",
+      "role": "shipping lead",
+      "email": "sora@kilnmoor.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Pueblo, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Gallery",
+      "city": "Colorado Springs, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "packing peanuts"
+   },
+   "result": {
+    "query": "packing peanuts",
+    "matches": [
+     {
+      "sku": "VF-PEA-14",
+      "name": "Packing peanuts, 14 cu ft bag",
+      "unit": "bag",
+      "strength": null,
+      "line": "standard",
+      "list_price": 26.0,
+      "available": 494
+     },
+     {
+      "sku": "LB-PLE-75",
+      "name": "Packing list envelopes 7.5x5.5",
+      "unit": "case of 1000",
+      "strength": null,
+      "line": "standard",
+      "list_price": 42.0,
+      "available": 610
+     },
+     {
+      "sku": "VF-KP-30",
+      "name": "Kraft packing paper 30 in x 1200 ft",
+      "unit": "roll",
+      "strength": null,
+      "line": "standard",
+      "list_price": 40.0,
+      "available": 197
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "fragile labels"
+   },
+   "result": {
+    "query": "fragile labels",
+    "matches": [
+     {
+      "sku": "LB-FRG",
+      "name": "Fragile labels, roll of 500",
+      "unit": "roll",
+      "strength": null,
+      "line": "standard",
+      "list_price": 9.5,
+      "available": 588
+     },
+     {
+      "sku": "LB-21-TH",
+      "name": "Thermal labels 2x1",
+      "unit": "case of 12 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 36.0,
+      "available": 186
+     },
+     {
+      "sku": "LB-46-TH",
+      "name": "Thermal labels 4x6",
+      "unit": "case of 20 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 72.0,
+      "available": 407
+     },
+     {
+      "sku": "TP-FRG-2",
+      "name": "Printed fragile tape 2 in x 110 yd",
+      "unit": "case of 36 rolls",
+      "strength": null,
+      "line": "standard",
+      "list_price": 69.0,
+      "available": 679
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1009",
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 10
+     },
+     {
+      "sku": "LB-FRG",
+      "qty": 10
+     }
+    ],
+    "location_id": "L1",
+    "sentence": 1
+   },
+   "result": {
+    "order_id": "SO-20966",
+    "total": 355.0,
+    "fees": [],
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 10,
+      "price": 26.0
+     },
+     {
+      "sku": "LB-FRG",
+      "qty": 10,
+      "price": 9.5
+     }
+    ],
+    "allocation": {
+     "VF-PEA-14": [
+      {
+       "warehouse": "North",
+       "qty": 10
+      }
+     ],
+     "LB-FRG": [
+      {
+       "warehouse": "Valley",
+       "qty": 10
+      }
+     ]
+    },
+    "requested_date": null,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Ezra,\n\nYour order is placed. The order number is SO-20966, shipping to the Studio in Pueblo, CO.\n\nIt has 10 bags of packing peanuts (14 cu ft) at $26.00 each and 10 rolls of fragile labels (500 per roll) at $9.50 each. The total is $355.00.\n\nThe order desk will send tracking once it ships.\n\nThe Wendlow order desk",
+  "note": "Placed SO-20966 for 10 VF-PEA-14 and 10 LB-FRG to Studio (L1), total $355.00, within available credit of $578.00. Note the account has past-due invoice INV-30883 ($2,685.00, due October 25); I didn't mention it in the reply.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_011RXUiyhC8YEJNDu82DUfeN",
+     "name": "get_customer",
+     "input": {
+      "email": "ezra@kilnmoor.example"
+     }
+    },
+    {
+     "id": "toolu_01Fd8VwdyjHxbuGFtKzpsF1d",
+     "name": "search_items",
+     "input": {
+      "query": "packing peanuts"
+     }
+    },
+    {
+     "id": "toolu_01NkB25W5SXhwYVLzNRa4gbc",
+     "name": "search_items",
+     "input": {
+      "query": "fragile labels"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 197,
+     "output": 156,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1316,
+    "cost": 0.002935
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01PfBpiJtw83bwRpwCjgAEue",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1009",
+      "lines": [
+       {
+        "sku": "VF-PEA-14",
+        "qty": 10
+       },
+       {
+        "sku": "LB-FRG",
+        "qty": 10
+       }
+      ],
+      "location_id": "L1",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1347,
+     "output": 215,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1670,
+    "cost": 0.005825
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_017vQLs8LaisbdFXQisLQUfU",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Ezra,\n\nYour order is placed. The order number is SO-20966, shipping to the Studio in Pueblo, CO.\n\nIt has 10 bags of packing peanuts (14 cu ft) at $26.00 each and 10 rolls of fragile labels (500 per roll) at $9.50 each. The total is $355.00.\n\nThe order desk will send tracking once it ships.\n\nThe Wendlow order desk",
+      "note": "Placed SO-20966 for 10 VF-PEA-14 and 10 LB-FRG to Studio (L1), total $355.00, within available credit of $578.00. Note the account has past-due invoice INV-30883 ($2,685.00, due October 25); I didn't mention it in the reply.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1691,
+     "output": 417,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3157,
+    "cost": 0.008533
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 6.1,
+  "input_tokens": 3235,
+  "output_tokens": 788,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.017293
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:40",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

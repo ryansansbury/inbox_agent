@@ -1,0 +1,235 @@
+{
+ "email_id": "t05",
+ "split": "test",
+ "seq": 28,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "a9b73d4bb6125bde",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "theo@kettleby.example"
+   },
+   "result": {
+    "customer_id": "C-1005",
+    "name": "Kettleby Pet Supply",
+    "terms": "Net 30",
+    "credit_limit": 8000.0,
+    "open_balance": 1602.5,
+    "open_orders": 0.0,
+    "available_credit": 6397.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Theo Ramsey",
+      "role": "operations lead",
+      "email": "theo@kettleby.example"
+     },
+     {
+      "name": "Audrey Tsai",
+      "role": "accounts payable",
+      "email": "audrey@kettleby.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Warehouse",
+      "city": "Lakewood, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "invoice_id": "30927"
+   },
+   "result": {
+    "invoice_id": "INV-30927",
+    "order_id": "SO-20804",
+    "customer_id": "C-1005",
+    "date": "2026-10-19",
+    "due": "2026-11-18",
+    "lines": [
+     {
+      "sku": "BX-080808-32",
+      "qty": 30,
+      "price": 21.25,
+      "amount": 637.5,
+      "name": "Shipping box 8x8x8, 32 ECT"
+     },
+     {
+      "sku": "PM-1013",
+      "qty": 4,
+      "price": 48.0,
+      "amount": 192.0,
+      "name": "Poly mailer 10x13"
+     },
+     {
+      "sku": "LB-46-TH",
+      "qty": 2,
+      "price": 72.0,
+      "amount": 144.0,
+      "name": "Thermal labels 4x6"
+     }
+    ],
+    "fees": [
+     {
+      "type": "liftgate",
+      "amount": 45.0
+     }
+    ],
+    "total": 1018.5,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 1018.5
+   },
+   "valid": true
+  },
+  {
+   "tool": "waive_fee",
+   "args": {
+    "fee": "liftgate",
+    "invoice_id": "INV-30927",
+    "sentence": 3
+   },
+   "result": {
+    "fee": "liftgate",
+    "amount": 45.0,
+    "on": "INV-30927",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Theo,\n\nWe have removed the $45.00 liftgate fee from invoice 30927. The invoice total is now $973.50, due Wednesday, November 18.\n\nThank you for letting us know about the dock at Lakewood.\n\nThe Wendlow order desk",
+  "note": "Waived the $45.00 liftgate fee on INV-30927 (order SO-20804) at the customer's request. The invoice total drops from $1,018.50 to $973.50. Nothing else changed.",
+  "intents": [
+   "fee_waiver"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01XiShALYqPXcQ1Biidn2tWf",
+     "name": "get_customer",
+     "input": {
+      "email": "theo@kettleby.example"
+     }
+    },
+    {
+     "id": "toolu_01JJ3PZwAARxAS43v8PB9mgi",
+     "name": "get_invoice",
+     "input": {
+      "invoice_id": "30927"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 251,
+     "output": 196,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2319,
+    "cost": 0.000172
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_011hd1wwAzpotJHwpeW2a997",
+     "name": "waive_fee",
+     "input": {
+      "fee": "liftgate",
+      "invoice_id": "INV-30927",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1002,
+     "output": 198,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1965,
+    "cost": 0.000248
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01CGyApFWgpk1FskGxww7QR9",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Theo,\n\nWe have removed the $45.00 liftgate fee from invoice 30927. The invoice total is now $973.50, due Wednesday, November 18.\n\nThank you for letting us know about the dock at Lakewood.\n\nThe Wendlow order desk",
+      "note": "Waived the $45.00 liftgate fee on INV-30927 (order SO-20804) at the customer's request. The invoice total drops from $1,018.50 to $973.50. Nothing else changed.",
+      "intents": [
+       "fee_waiver"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1149,
+     "output": 276,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1482,
+    "cost": 0.000302
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.8,
+  "input_tokens": 2402,
+  "output_tokens": 670,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000722
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:37:49",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

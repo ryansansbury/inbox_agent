@@ -1,0 +1,308 @@
+{
+ "email_id": "t21",
+ "split": "test",
+ "seq": 44,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "1e5099aaa5f88fb2",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "dana@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20788"
+   },
+   "result": {
+    "order_id": "SO-20788",
+    "customer_id": "C-1001",
+    "po": "PF-87940",
+    "placed": "2026-10-08 11:10",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Building 2",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 16,
+      "picked": 16,
+      "shipped": 16,
+      "price": 58.0,
+      "amount": 928.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 56.0,
+      "amount": 560.0
+     }
+    ],
+    "fees": [],
+    "total": 1488.0,
+    "invoice_id": "INV-30909"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20788"
+   },
+   "result": {
+    "order_id": "SO-20788",
+    "tracking": "PRO 5248-9156",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-12",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-14 14:30",
+    "signed_by": "O HADDAD",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-12 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-14 14:30",
+      "text": "Delivered, signed by O HADDAD"
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_return",
+   "args": {
+    "order_id": "SO-20788",
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "qty": 10
+     }
+    ],
+    "unopened": true,
+    "sentence": 2
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-233",
+    "waiting_on": "order_desk",
+    "rule": "credit_cap",
+    "note": "Credits over $250 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "gross": 580.0,
+    "restocking_fee": 87.0,
+    "credit": 493.0,
+    "amount": 493.0,
+    "limit": 250
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Dana,\n\nThank you for your email. SO-20788 was delivered on Wednesday, October 14, so it is inside our 30-day return window. Sealed, unopened items can be returned.\n\nWe have requested a return of 10 cases of the 18 inch 80 gauge stretch film (SF-18-80). The cases are priced at $58.00 each, so the gross is $580.00. A 15% restocking fee of $87.00 comes off that. The credit would be $493.00.\n\nThe credit is over $250, so the return is pending approval by a person on our team. We will confirm once it is approved. Please hold the cases sealed until then.\n\nThe Wendlow order desk",
+  "note": "Opened return for 10 of 16 SF-18-80 on SO-20788 (delivered Oct 14, within 30 days). Credit of $493.00 after the $87.00 restocking fee exceeds the $250 cap, so it is pending approval (AP-233).",
+  "intents": [
+   "return"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01KBwwNKVGajCa88U47KLhYE",
+     "name": "get_customer",
+     "input": {
+      "email": "dana@pellbrook.example"
+     }
+    },
+    {
+     "id": "toolu_01K6xbcqQ3bpBD1JDCMJT9Hy",
+     "name": "get_order",
+     "input": {
+      "order_id": "20788"
+     }
+    },
+    {
+     "id": "toolu_01WXTaw9TNwjMFkuhcAoEUeC",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20788"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 222,
+     "output": 153,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2057,
+    "cost": 0.002955
+   }
+  },
+  {
+   "text": "Delivered Oct 14, within 30 days. Open the return.",
+   "calls": [
+    {
+     "id": "toolu_01Ro7jMu48FyKac7RvFKkcts",
+     "name": "create_return",
+     "input": {
+      "order_id": "SO-20788",
+      "lines": [
+       {
+        "sku": "SF-18-80",
+        "qty": 10
+       }
+      ],
+      "unopened": true,
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1381,
+     "output": 162,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1502,
+    "cost": 0.005363
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01B5uHXsq39QCXdU1XmWV6y9",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Dana,\n\nThank you for your email. SO-20788 was delivered on Wednesday, October 14, so it is inside our 30-day return window. Sealed, unopened items can be returned.\n\nWe have requested a return of 10 cases of the 18 inch 80 gauge stretch film (SF-18-80). The cases are priced at $58.00 each, so the gross is $580.00. A 15% restocking fee of $87.00 comes off that. The credit would be $493.00.\n\nThe credit is over $250, so the return is pending approval by a person on our team. We will confirm once it is approved. Please hold the cases sealed until then.\n\nThe Wendlow order desk",
+      "note": "Opened return for 10 of 16 SF-18-80 on SO-20788 (delivered Oct 14, within 30 days). Credit of $493.00 after the $87.00 restocking fee exceeds the $250 cap, so it is pending approval (AP-233).",
+      "intents": [
+       "return"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1679,
+     "output": 420,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3447,
+    "cost": 0.008539
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 7.0,
+  "input_tokens": 3282,
+  "output_tokens": 735,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.016857
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:52",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

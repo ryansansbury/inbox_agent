@@ -1,0 +1,823 @@
+[
+ {
+  "sku": "BX-060606-32",
+  "name": "Shipping box 6x6x6, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 18.75,
+  "dims": [
+   6,
+   6,
+   6
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 6x6x6 32 ECT"
+ },
+ {
+  "sku": "BX-060606-44",
+  "name": "Shipping box 6x6x6, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 24.5,
+  "dims": [
+   6,
+   6,
+   6
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 6x6x6 44 ECT"
+ },
+ {
+  "sku": "BX-080808-32",
+  "name": "Shipping box 8x8x8, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 21.25,
+  "dims": [
+   8,
+   8,
+   8
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 8x8x8 32 ECT"
+ },
+ {
+  "sku": "BX-080808-44",
+  "name": "Shipping box 8x8x8, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 27.75,
+  "dims": [
+   8,
+   8,
+   8
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 8x8x8 44 ECT"
+ },
+ {
+  "sku": "BX-100806-32",
+  "name": "Shipping box 10x8x6, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 19.9,
+  "dims": [
+   10,
+   8,
+   6
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 10x8x6 32 ECT"
+ },
+ {
+  "sku": "BX-100806-44",
+  "name": "Shipping box 10x8x6, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 26.1,
+  "dims": [
+   10,
+   8,
+   6
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 10x8x6 44 ECT"
+ },
+ {
+  "sku": "BX-100806-32E",
+  "name": "Shipping box 10x8x6, 32 ECT, recycled kraft",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 20.6,
+  "dims": [
+   10,
+   8,
+   6
+  ],
+  "strength": "32 ECT",
+  "line": "recycled",
+  "equivalent_group": "RSC 10x8x6 32 ECT"
+ },
+ {
+  "sku": "BX-120904-32",
+  "name": "Shipping box 12x9x4, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 18.4,
+  "dims": [
+   12,
+   9,
+   4
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 12x9x4 32 ECT"
+ },
+ {
+  "sku": "BX-120904-44",
+  "name": "Shipping box 12x9x4, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 24.2,
+  "dims": [
+   12,
+   9,
+   4
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 12x9x4 44 ECT"
+ },
+ {
+  "sku": "BX-121006-32",
+  "name": "Shipping box 12x10x6, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 22.6,
+  "dims": [
+   12,
+   10,
+   6
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 12x10x6 32 ECT"
+ },
+ {
+  "sku": "BX-121006-44",
+  "name": "Shipping box 12x10x6, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 29.4,
+  "dims": [
+   12,
+   10,
+   6
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 12x10x6 44 ECT"
+ },
+ {
+  "sku": "BX-121212-32",
+  "name": "Shipping box 12x12x12, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 31.8,
+  "dims": [
+   12,
+   12,
+   12
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 12x12x12 32 ECT"
+ },
+ {
+  "sku": "BX-121212-44",
+  "name": "Shipping box 12x12x12, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 41.2,
+  "dims": [
+   12,
+   12,
+   12
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 12x12x12 44 ECT"
+ },
+ {
+  "sku": "BX-121212-32E",
+  "name": "Shipping box 12x12x12, 32 ECT, recycled kraft",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 32.9,
+  "dims": [
+   12,
+   12,
+   12
+  ],
+  "strength": "32 ECT",
+  "line": "recycled",
+  "equivalent_group": "RSC 12x12x12 32 ECT"
+ },
+ {
+  "sku": "BX-141006-32",
+  "name": "Shipping box 14x10x6, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 24.3,
+  "dims": [
+   14,
+   10,
+   6
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 14x10x6 32 ECT"
+ },
+ {
+  "sku": "BX-141006-44",
+  "name": "Shipping box 14x10x6, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 25",
+  "list_price": 31.6,
+  "dims": [
+   14,
+   10,
+   6
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 14x10x6 44 ECT"
+ },
+ {
+  "sku": "BX-141414-32",
+  "name": "Shipping box 14x14x14, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 38.6,
+  "dims": [
+   14,
+   14,
+   14
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 14x14x14 32 ECT"
+ },
+ {
+  "sku": "BX-141414-44",
+  "name": "Shipping box 14x14x14, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 49.9,
+  "dims": [
+   14,
+   14,
+   14
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 14x14x14 44 ECT"
+ },
+ {
+  "sku": "BX-141414-32E",
+  "name": "Shipping box 14x14x14, 32 ECT, recycled kraft",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 39.8,
+  "dims": [
+   14,
+   14,
+   14
+  ],
+  "strength": "32 ECT",
+  "line": "recycled",
+  "equivalent_group": "RSC 14x14x14 32 ECT"
+ },
+ {
+  "sku": "BX-161210-32",
+  "name": "Shipping box 16x12x10, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 27.06,
+  "dims": [
+   16,
+   12,
+   10
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 16x12x10 32 ECT"
+ },
+ {
+  "sku": "BX-161210-44",
+  "name": "Shipping box 16x12x10, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 35.4,
+  "dims": [
+   16,
+   12,
+   10
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 16x12x10 44 ECT"
+ },
+ {
+  "sku": "BX-161210-32E",
+  "name": "Shipping box 16x12x10, 32 ECT, recycled kraft",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 27.9,
+  "dims": [
+   16,
+   12,
+   10
+  ],
+  "strength": "32 ECT",
+  "line": "recycled",
+  "equivalent_group": "RSC 16x12x10 32 ECT"
+ },
+ {
+  "sku": "BX-181212-32",
+  "name": "Shipping box 18x12x12, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 39.2,
+  "dims": [
+   18,
+   12,
+   12
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 18x12x12 32 ECT"
+ },
+ {
+  "sku": "BX-181212-44",
+  "name": "Shipping box 18x12x12, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 20",
+  "list_price": 50.8,
+  "dims": [
+   18,
+   12,
+   12
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 18x12x12 44 ECT"
+ },
+ {
+  "sku": "BX-181818-32",
+  "name": "Shipping box 18x18x18, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 15",
+  "list_price": 46.2,
+  "dims": [
+   18,
+   18,
+   18
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 18x18x18 32 ECT"
+ },
+ {
+  "sku": "BX-181818-44",
+  "name": "Shipping box 18x18x18, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 15",
+  "list_price": 59.7,
+  "dims": [
+   18,
+   18,
+   18
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 18x18x18 44 ECT"
+ },
+ {
+  "sku": "BX-241812-32",
+  "name": "Shipping box 24x18x12, 32 ECT",
+  "category": "boxes",
+  "unit": "bundle of 15",
+  "list_price": 52.4,
+  "dims": [
+   24,
+   18,
+   12
+  ],
+  "strength": "32 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 24x18x12 32 ECT"
+ },
+ {
+  "sku": "BX-241812-44",
+  "name": "Shipping box 24x18x12, 44 ECT",
+  "category": "boxes",
+  "unit": "bundle of 15",
+  "list_price": 67.8,
+  "dims": [
+   24,
+   18,
+   12
+  ],
+  "strength": "44 ECT",
+  "line": "standard",
+  "equivalent_group": "RSC 24x18x12 44 ECT"
+ },
+ {
+  "sku": "MB-090603",
+  "name": "Corrugated mailer box 9x6x3",
+  "category": "mailers",
+  "unit": "bundle of 50",
+  "list_price": 34.5,
+  "dims": [
+   9,
+   6,
+   3
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "MB-110804",
+  "name": "Corrugated mailer box 11x8x4",
+  "category": "mailers",
+  "unit": "bundle of 50",
+  "list_price": 41.0,
+  "dims": [
+   11,
+   8,
+   4
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "MB-120903",
+  "name": "Corrugated mailer box 12x9x3",
+  "category": "mailers",
+  "unit": "bundle of 50",
+  "list_price": 39.5,
+  "dims": [
+   12,
+   9,
+   3
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "PM-1013",
+  "name": "Poly mailer 10x13",
+  "category": "mailers",
+  "unit": "case of 500",
+  "list_price": 48.0,
+  "dims": [
+   10,
+   13
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "PM-1419",
+  "name": "Poly mailer 14.5x19",
+  "category": "mailers",
+  "unit": "case of 250",
+  "list_price": 52.0,
+  "dims": [
+   14.5,
+   19
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "PD-0812",
+  "name": "Padded kraft mailer 8.5x12",
+  "category": "mailers",
+  "unit": "case of 100",
+  "list_price": 44.0,
+  "dims": [
+   8.5,
+   12
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "PD-1016",
+  "name": "Padded kraft mailer 10.5x16",
+  "category": "mailers",
+  "unit": "case of 100",
+  "list_price": 58.0,
+  "dims": [
+   10.5,
+   16
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "RM-0911",
+  "name": "Rigid mailer 9x11.5",
+  "category": "mailers",
+  "unit": "case of 100",
+  "list_price": 61.0,
+  "dims": [
+   9,
+   11.5
+  ],
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "TP-2C-110",
+  "name": "Carton sealing tape 2 in x 110 yd, clear",
+  "category": "tape",
+  "unit": "case of 36 rolls",
+  "list_price": 56.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "TP-3C-110",
+  "name": "Carton sealing tape 3 in x 110 yd, clear",
+  "category": "tape",
+  "unit": "case of 24 rolls",
+  "list_price": 54.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "TP-2H-110",
+  "name": "Hot melt tape 2 in x 110 yd, heavy duty",
+  "category": "tape",
+  "unit": "case of 36 rolls",
+  "list_price": 64.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "TP-WAT-3",
+  "name": "Water-activated kraft tape 3 in x 450 ft",
+  "category": "tape",
+  "unit": "case of 10 rolls",
+  "list_price": 72.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "TP-FRG-2",
+  "name": "Printed fragile tape 2 in x 110 yd",
+  "category": "tape",
+  "unit": "case of 36 rolls",
+  "list_price": 69.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "TP-GUN",
+  "name": "Tape gun dispenser",
+  "category": "tape",
+  "unit": "case of 6",
+  "list_price": 54.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "SF-18-80",
+  "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+  "category": "stretch film",
+  "unit": "case of 4 rolls",
+  "list_price": 64.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "SF-18-63",
+  "name": "Stretch film 18 in x 1500 ft, 63 gauge",
+  "category": "stretch film",
+  "unit": "case of 4 rolls",
+  "list_price": 56.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "SF-20-80M",
+  "name": "Machine stretch film 20 in x 5000 ft, 80 gauge",
+  "category": "stretch film",
+  "unit": "roll",
+  "list_price": 89.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "SF-05-BND",
+  "name": "Bundling film 5 in x 1000 ft",
+  "category": "stretch film",
+  "unit": "case of 12 rolls",
+  "list_price": 38.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "SF-16-PRE",
+  "name": "Pre-stretched film 16 in x 1500 ft",
+  "category": "stretch film",
+  "unit": "case of 4 rolls",
+  "list_price": 59.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "SF-DISP",
+  "name": "Stretch film hand dispenser",
+  "category": "stretch film",
+  "unit": "each",
+  "list_price": 24.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "VF-AIR-84",
+  "name": "Air pillow film 8x4, 1500 ft roll",
+  "category": "void fill",
+  "unit": "roll",
+  "list_price": 46.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "VF-KP-30",
+  "name": "Kraft packing paper 30 in x 1200 ft",
+  "category": "void fill",
+  "unit": "roll",
+  "list_price": 40.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "VF-PEA-14",
+  "name": "Packing peanuts, 14 cu ft bag",
+  "category": "void fill",
+  "unit": "bag",
+  "list_price": 26.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "VF-CRK-10",
+  "name": "Crinkle paper, 10 lb box",
+  "category": "void fill",
+  "unit": "box",
+  "list_price": 38.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "VF-HNY-15",
+  "name": "Honeycomb paper wrap 15 in roll",
+  "category": "void fill",
+  "unit": "roll",
+  "list_price": 52.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "VF-FOAM-12",
+  "name": "Foam sheet roll 12 in x 550 ft",
+  "category": "void fill",
+  "unit": "roll",
+  "list_price": 44.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "LB-46-TH",
+  "name": "Thermal labels 4x6",
+  "category": "labels",
+  "unit": "case of 20 rolls",
+  "list_price": 72.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "LB-PLE-75",
+  "name": "Packing list envelopes 7.5x5.5",
+  "category": "labels",
+  "unit": "case of 1000",
+  "list_price": 42.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "LB-FRG",
+  "name": "Fragile labels, roll of 500",
+  "category": "labels",
+  "unit": "roll",
+  "list_price": 9.5,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "LB-21-TH",
+  "name": "Thermal labels 2x1",
+  "category": "labels",
+  "unit": "case of 12 rolls",
+  "list_price": 36.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "PL-4840-N",
+  "name": "Pallet 48x40, new",
+  "category": "pallets",
+  "unit": "each",
+  "list_price": 21.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "PL-4840-R",
+  "name": "Pallet 48x40, recycled",
+  "category": "pallets",
+  "unit": "each",
+  "list_price": 11.5,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "ST-PP-12",
+  "name": "Poly strapping 1/2 in, 7200 ft coil",
+  "category": "pallets",
+  "unit": "coil",
+  "list_price": 48.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ },
+ {
+  "sku": "EP-2236",
+  "name": "Edge protectors 2x2x36",
+  "category": "pallets",
+  "unit": "bundle of 100",
+  "list_price": 64.0,
+  "dims": null,
+  "strength": null,
+  "line": "standard",
+  "equivalent_group": null
+ }
+]

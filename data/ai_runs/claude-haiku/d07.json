@@ -1,0 +1,239 @@
+{
+ "email_id": "d07",
+ "split": "dev",
+ "seq": 18,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "f20209ece5510f01",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "leela@sablewood.example"
+   },
+   "result": {
+    "customer_id": "C-1002",
+    "name": "Sablewood Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 20000.0,
+    "open_balance": 9904.0,
+    "open_orders": 3550.0,
+    "available_credit": 6546.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Caleb Kowalski",
+      "role": "purchasing",
+      "email": "caleb@sablewood.example"
+     },
+     {
+      "name": "Leela Varadan",
+      "role": "accounts payable",
+      "email": "leela@sablewood.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Main warehouse",
+      "city": "Commerce City, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Overflow building",
+      "city": "Commerce City, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-241812-32",
+      "price": 49.8
+     },
+     {
+      "sku": "VF-AIR-84",
+      "price": 46.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "invoice_id": "30917"
+   },
+   "result": {
+    "invoice_id": "INV-30917",
+    "order_id": "SO-20791",
+    "customer_id": "C-1002",
+    "date": "2026-10-15",
+    "due": "2026-11-14",
+    "lines": [
+     {
+      "sku": "BX-241812-32",
+      "qty": 120,
+      "price": 52.4,
+      "amount": 6288.0,
+      "name": "Shipping box 24x18x12, 32 ECT"
+     }
+    ],
+    "fees": [],
+    "total": 6288.0,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 6288.0
+   },
+   "valid": true
+  },
+  {
+   "tool": "issue_credit",
+   "args": {
+    "customer_id": "C-1002",
+    "invoice_id": "INV-30917",
+    "amount": 312.0,
+    "reason": "Invoice billed BX-241812-32 at $52.40; contract price is $49.80. Difference of $2.60 on 120 bundles.",
+    "sentence": 3
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-155",
+    "waiting_on": "order_desk",
+    "rule": "credit_cap",
+    "note": "Credits over $250 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "amount": 312.0,
+    "limit": 250
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Leela,\n\nThank you for your email about invoice 30917. We checked the invoice and your contract price. Invoice INV-30917 (order SO-20791) bills 120 bundles of the 24x18x12 box (BX-241812-32) at $52.40. Your contract price for that item is $49.80, so the difference is $2.60 a bundle, or $312.00 in total.\n\nWe have submitted a credit memo for $312.00 against invoice INV-30917. Because it is over our $250.00 limit for automatic credits, it is pending approval by a member of our team. We will confirm once it is approved.\n\nThe Wendlow order desk",
+  "note": "Invoice INV-30917 bills BX-241812-32 at $52.40 versus the $49.80 contract price, so the overcharge is $312.00 on 120 bundles. The credit request is over the $250 cap and is pending approval as AP-155. Check the approval before the credit posts.",
+  "intents": [
+   "price_dispute",
+   "credit_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_017FjP7hD5W8DHekuLAW2arV",
+     "name": "get_customer",
+     "input": {
+      "email": "leela@sablewood.example"
+     }
+    },
+    {
+     "id": "toolu_01Cagg65wguyNEYaQgZDAX4F",
+     "name": "get_invoice",
+     "input": {
+      "invoice_id": "30917"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 266,
+     "output": 179,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1134,
+    "cost": 0.000165
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01PUj8hPFqiXk6AEahszwapk",
+     "name": "issue_credit",
+     "input": {
+      "customer_id": "C-1002",
+      "invoice_id": "INV-30917",
+      "amount": 312.0,
+      "reason": "Invoice billed BX-241812-32 at $52.40; contract price is $49.80. Difference of $2.60 on 120 bundles.",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 975,
+     "output": 289,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1684,
+    "cost": 0.000291
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01XkD3cMAZX7Mit2tH8UNkry",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Leela,\n\nThank you for your email about invoice 30917. We checked the invoice and your contract price. Invoice INV-30917 (order SO-20791) bills 120 bundles of the 24x18x12 box (BX-241812-32) at $52.40. Your contract price for that item is $49.80, so the difference is $2.60 a bundle, or $312.00 in total.\n\nWe have submitted a credit memo for $312.00 against invoice INV-30917. Because it is over our $250.00 limit for automatic credits, it is pending approval by a member of our team. We will confirm once it is approved.\n\nThe Wendlow order desk",
+      "note": "Invoice INV-30917 bills BX-241812-32 at $52.40 versus the $49.80 contract price, so the overcharge is $312.00 on 120 bundles. The credit request is over the $250 cap and is pending approval as AP-155. Check the approval before the credit posts.",
+      "intents": [
+       "price_dispute",
+       "credit_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1276,
+     "output": 429,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2155,
+    "cost": 0.000391
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.0,
+  "input_tokens": 2517,
+  "output_tokens": 897,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000847
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:27:43",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

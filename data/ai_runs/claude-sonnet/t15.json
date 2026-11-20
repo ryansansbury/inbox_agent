@@ -1,0 +1,106 @@
+{
+ "email_id": "t15",
+ "split": "test",
+ "seq": 38,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "eb853f90585726b2",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "partners@freight-audit.example"
+   },
+   "result": {
+    "error": "No account has the address partners@freight-audit.example."
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "",
+  "note": "Unsolicited freight-audit sales pitch from an address with no account. No action taken and no reply sent.",
+  "intents": [
+   "solicitation"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 1,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01RnVVc2C7puhM5vaBMoKcgw",
+     "name": "get_customer",
+     "input": {
+      "email": "partners@freight-audit.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 224,
+     "output": 57,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1108,
+    "cost": 0.001999
+   }
+  },
+  {
+   "text": "This is a vendor sales pitch from an unverified sender. It needs no action and no reply.",
+   "calls": [
+    {
+     "id": "toolu_012RgKCcykBic3uEM3GBXFr7",
+     "name": "finish",
+     "input": {
+      "reply": "",
+      "note": "Unsolicited freight-audit sales pitch from an address with no account. No action taken and no reply sent.",
+      "intents": [
+       "solicitation"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 308,
+     "output": 186,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1646,
+    "cost": 0.003457
+   }
+  }
+ ],
+ "usage": {
+  "turns": 2,
+  "seconds": 2.8,
+  "input_tokens": 532,
+  "output_tokens": 243,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 9806,
+  "cost": 0.005456
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:20",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

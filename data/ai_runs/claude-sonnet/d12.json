@@ -1,0 +1,258 @@
+{
+ "email_id": "d12",
+ "split": "dev",
+ "seq": 23,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "c3a207edb8d7bd79",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1001",
+    "placed_from": "2026-10-26",
+    "placed_to": "2026-10-26"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20828",
+      "po": "PF-88301",
+      "placed": "2026-10-26 08:05",
+      "status": "open",
+      "total": 1408.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20830",
+      "po": "PF-88302",
+      "placed": "2026-10-26 14:20",
+      "status": "open",
+      "total": 1116.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "ask_customer",
+   "args": {
+    "question": "Which Monday order should we hold until Friday: SO-20828 (PO PF-88301) or SO-20830 (PO PF-88302), or both?",
+    "sentence": 1
+   },
+   "result": {
+    "note": "Put the question in the reply.",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Omar,\n\nWe placed two orders for you on Monday, October 26. Both are open and ship to Building 2.\n\nSO-20828, PO PF-88301, total $1,408.00.\nSO-20830, PO PF-88302, total $1,116.00.\n\nWhich one should we hold until Friday, October 30? Or should we hold both? We haven't held anything yet. We'll do it as soon as you tell us.\n\nThe Wendlow order desk",
+  "note": "Two open orders were placed Monday (SO-20828 and SO-20830), both to Building 2. The email doesn't say which to hold, so I asked and took no action.",
+  "intents": [
+   "hold_order",
+   "ambiguous_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01WpQiMJRYxCdBLaN3dPHRXu",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 232,
+     "output": 57,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1524,
+    "cost": 0.002015
+   }
+  },
+  {
+   "text": "Monday was October 26.",
+   "calls": [
+    {
+     "id": "toolu_016vNWSaU3LYp6bfHF8RN5iw",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1001",
+      "placed_from": "2026-10-26",
+      "placed_to": "2026-10-26"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 719,
+     "output": 121,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1343,
+    "cost": 0.003629
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01E6ZHRX5J1MU5DrrMzsuabu",
+     "name": "ask_customer",
+     "input": {
+      "question": "Which Monday order should we hold until Friday: SO-20828 (PO PF-88301) or SO-20830 (PO PF-88302), or both?",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1016,
+     "output": 161,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1462,
+    "cost": 0.004623
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01RZE8Wgst4DnnhMrYc7F6Y5",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Omar,\n\nWe placed two orders for you on Monday, October 26. Both are open and ship to Building 2.\n\nSO-20828, PO PF-88301, total $1,408.00.\nSO-20830, PO PF-88302, total $1,116.00.\n\nWhich one should we hold until Friday, October 30? Or should we hold both? We haven't held anything yet. We'll do it as soon as you tell us.\n\nThe Wendlow order desk",
+      "note": "Two open orders were placed Monday (SO-20828 and SO-20830), both to Building 2. The email doesn't say which to hold, so I asked and took no action.",
+      "intents": [
+       "hold_order",
+       "ambiguous_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1163,
+     "output": 326,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2519,
+    "cost": 0.006567
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 6.8,
+  "input_tokens": 3130,
+  "output_tokens": 665,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 19612,
+  "cost": 0.016834
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:27:02",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

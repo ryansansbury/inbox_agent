@@ -1,0 +1,74 @@
+{
+ "id": "d03",
+ "at": "2026-10-27T10:48",
+ "from": {
+  "name": "Dana Okafor",
+  "email": "dana@pellbrook.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "SO-20808 short 2 cases",
+ "body": [
+  [
+   "Hi, SO-20808 arrived at Building 4 yesterday with 18 cases of the 18 inch 80 gauge film instead of 20.",
+   "Please send the 2 missing cases."
+  ]
+ ],
+ "sig": [
+  "Dana Okafor",
+  "Operations Manager",
+  "Pellbrook Fulfillment"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "short_shipment"
+  ],
+  "handling": "The order shipped 18 of 20, so reship the 2 cases. $116.00 is under the reship cap.",
+  "expected": [
+   {
+    "tool": "reship",
+    "args": {
+     "order_id": "SO-20808",
+     "lines": [
+      {
+       "sku": "SF-18-80",
+       "qty": 2
+      }
+     ]
+    },
+    "sentence": 2,
+    "basis": {
+     "kind": "short",
+     "order": "SO-20808"
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "count",
+    "value": 2,
+    "source": "line:SO-20808:SF-18-80.short"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, SO-20808 arrived at Building 4 yesterday with 18 cases of the 18 inch 80 gauge film instead of 20.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Please send the 2 missing cases.",
+   "part": "body"
+  }
+ ]
+}

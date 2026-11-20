@@ -1,0 +1,73 @@
+{
+ "id": "t04",
+ "at": "2026-10-27T10:41",
+ "from": {
+  "name": "Penny Brooks",
+  "email": "penny@fernhollowtea.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Change address on SO-20820",
+ "body": [
+  [
+   "Hi, could SO-20820 go to our pop-up shop in Loveland instead of the packing room?",
+   "We're setting up there this week."
+  ]
+ ],
+ "sig": [
+  "Penny Brooks",
+  "Operations, Fernhollow Tea"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "ship_to_change"
+  ],
+  "handling": "SO-20820 is already with the carrier, due October 28, so only the order desk can try a carrier reroute. Route it there, and the reply makes no promise.",
+  "expected": [
+   {
+    "tool": "route_to_person",
+    "args": {
+     "team": "order_desk"
+    },
+    "sentence": 1
+   }
+  ],
+  "acceptable": [
+   {
+    "tool": "update_ship_to",
+    "args": {}
+   }
+  ],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "status",
+    "value": "in_transit",
+    "source": "shipment:SO-20820.status"
+   },
+   {
+    "kind": "date",
+    "value": "2026-10-28",
+    "source": "shipment:SO-20820.eta_date"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, could SO-20820 go to our pop-up shop in Loveland instead of the packing room?",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "We're setting up there this week.",
+   "part": "body"
+  }
+ ]
+}

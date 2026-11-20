@@ -1,0 +1,77 @@
+{
+ "id": "t09",
+ "at": "2026-10-27T12:58",
+ "from": {
+  "name": "Dana Okafor",
+  "email": "dana@pellbrook.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Big order for Building 4",
+ "body": [
+  [
+   "Please send 40 bundles of the heavy 24x18x12 boxes to Building 4.",
+   "We're onboarding a new client and need them next week."
+  ]
+ ],
+ "sig": [
+  "Dana Okafor",
+  "Pellbrook Fulfillment"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "new_order"
+  ],
+  "handling": "The order is $2,712.00, inside Pellbrook's open credit but over the $2,500 order cap, so it waits for you.",
+  "expected": [
+   {
+    "tool": "create_order",
+    "args": {
+     "customer_id": "C-1001",
+     "lines": [
+      {
+       "sku": "BX-241812-44",
+       "qty": 40
+      }
+     ],
+     "location_id": "L2"
+    },
+    "sentence": 1
+   }
+  ],
+  "acceptable": [
+   {
+    "tool": "route_to_person",
+    "args": {
+     "team": "order_desk"
+    }
+   }
+  ],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 2712.0,
+    "source": "action:1.total"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Please send 40 bundles of the heavy 24x18x12 boxes to Building 4.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "We're onboarding a new client and need them next week.",
+   "part": "body"
+  }
+ ]
+}

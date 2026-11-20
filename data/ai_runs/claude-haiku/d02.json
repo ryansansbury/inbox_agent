@@ -1,0 +1,266 @@
+{
+ "email_id": "d02",
+ "split": "dev",
+ "seq": 13,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "6ce1667b5f728efb",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "felix@brecken.example"
+   },
+   "result": {
+    "customer_id": "C-1008",
+    "name": "Brecken Electronics",
+    "terms": "Net 30",
+    "credit_limit": 15000.0,
+    "open_balance": 4259.4,
+    "open_orders": 0.0,
+    "available_credit": 10740.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 13
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Felix Dunmore",
+      "role": "purchasing manager",
+      "email": "felix@brecken.example"
+     },
+     {
+      "name": "Anya Fischer",
+      "role": "accounts payable",
+      "email": "anya@brecken.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Plant",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-121212-32",
+      "price": 29.0
+     },
+     {
+      "sku": "BX-161210-32",
+      "price": 22.4
+     },
+     {
+      "sku": "LB-46-TH",
+      "price": 66.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20811"
+   },
+   "result": {
+    "order_id": "SO-20811",
+    "customer_id": "C-1008",
+    "po": "BE-77455",
+    "placed": "2026-10-21 11:00",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Plant",
+     "city": "Longmont, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-121212-32",
+      "name": "Shipping box 12x12x12, 32 ECT",
+      "qty": 30,
+      "picked": 30,
+      "shipped": 30,
+      "price": 29.0,
+      "amount": 870.0,
+      "damaged_on_delivery": 2
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 6,
+      "picked": 6,
+      "shipped": 6,
+      "price": 56.0,
+      "amount": 336.0
+     }
+    ],
+    "fees": [],
+    "total": 1206.0,
+    "invoice_id": "INV-30940"
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "20811",
+    "lines": [
+     {
+      "sku": "BX-121212-32",
+      "qty": 2
+     }
+    ],
+    "reason": "2 bundles of BX-121212-32 damaged on delivery, per customer email",
+    "sentence": 3
+   },
+   "result": {
+    "replacement_order": "SO-20879",
+    "replaces": "SO-20811",
+    "lines": [
+     {
+      "sku": "BX-121212-32",
+      "qty": 2
+     }
+    ],
+    "value": 58.0,
+    "charge": 0.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Good morning Felix,\n\nWe're sorry the two bundles of 12x12x12 boxes on SO-20811 arrived crushed. We've sent two replacement bundles at no charge under replacement order SO-20879. The order shows 2 bundles of shipping box 12x12x12, 32 ECT, valued at $58.00. We don't have a ship date for it yet, so I can't confirm the delivery day in this reply.\n\nThe Wendlow order desk",
+  "note": "Sender matched account C-1008 (Brecken Electronics). SO-20811 shows 2 of 30 BX-121212-32 damaged on delivery, so I reshipped 2 units on replacement order SO-20879 at no charge ($58.00, within the reship limit). The reply gives no delivery date because none was returned; check SO-20879's ship date if the customer asks for one.",
+  "intents": [
+   "damaged_delivery",
+   "reship"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Fbwv75qimGUqmkGX3D9L5E",
+     "name": "get_customer",
+     "input": {
+      "email": "felix@brecken.example"
+     }
+    },
+    {
+     "id": "toolu_01Teq1VcfRjnKJxPKNTEY5Wk",
+     "name": "get_order",
+     "input": {
+      "order_id": "20811"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 268,
+     "output": 102,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 822,
+    "cost": 0.000127
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01K7oGX8gMbmFo1RmqQ2G5y3",
+     "name": "reship",
+     "input": {
+      "order_id": "20811",
+      "lines": [
+       {
+        "sku": "BX-121212-32",
+        "qty": 2
+       }
+      ],
+      "reason": "2 bundles of BX-121212-32 damaged on delivery, per customer email",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1090,
+     "output": 627,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3497,
+    "cost": 0.000472
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_018kzWjUKPp1bnoenanu27kH",
+     "name": "finish",
+     "input": {
+      "reply": "Good morning Felix,\n\nWe're sorry the two bundles of 12x12x12 boxes on SO-20811 arrived crushed. We've sent two replacement bundles at no charge under replacement order SO-20879. The order shows 2 bundles of shipping box 12x12x12, 32 ECT, valued at $58.00. We don't have a ship date for it yet, so I can't confirm the delivery day in this reply.\n\nThe Wendlow order desk",
+      "note": "Sender matched account C-1008 (Brecken Electronics). SO-20811 shows 2 of 30 BX-121212-32 damaged on delivery, so I reshipped 2 units on replacement order SO-20879 at no charge ($58.00, within the reship limit). The reply gives no delivery date because none was returned; check SO-20879's ship date if the customer asks for one.",
+      "intents": [
+       "damaged_delivery",
+       "reship"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1336,
+     "output": 508,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2677,
+    "cost": 0.000437
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 7.0,
+  "input_tokens": 2694,
+  "output_tokens": 1237,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.001036
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:27:13",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

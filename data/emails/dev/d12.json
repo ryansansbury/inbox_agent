@@ -1,0 +1,87 @@
+{
+ "id": "d12",
+ "at": "2026-10-27T15:30",
+ "from": {
+  "name": "Omar Haddad",
+  "email": "omar@pellbrook.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Hold Monday's order",
+ "body": [
+  [
+   "Can you hold our order from Monday until Friday?",
+   "Building 2 receiving is closed through Thursday for a rack install."
+  ]
+ ],
+ "sig": [
+  "Omar Haddad",
+  "Receiving Lead, Pellbrook Fulfillment"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "hold_order",
+   "ambiguous_order"
+  ],
+  "handling": "Pellbrook placed two orders Monday, SO-20828 and SO-20830, both for Building 2, so ask which one.",
+  "expected": [
+   {
+    "tool": "ask_customer",
+    "args": {
+     "about": [
+      "SO-20828",
+      "SO-20830"
+     ]
+    },
+    "sentence": 1,
+    "ambiguous": {
+     "customer_id": "C-1001",
+     "placed_from": "2026-10-26",
+     "placed_to": "2026-10-26",
+     "statuses": [
+      "open",
+      "picked"
+     ]
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [
+   {
+    "tool": "hold_order",
+    "args": {},
+    "why": "Neither order was named."
+   }
+  ],
+  "facts": [
+   {
+    "kind": "order",
+    "value": "SO-20828",
+    "source": "order:SO-20828.id"
+   },
+   {
+    "kind": "order",
+    "value": "SO-20830",
+    "source": "order:SO-20830.id"
+   }
+  ],
+  "lane": "customer",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Can you hold our order from Monday until Friday?",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Building 2 receiving is closed through Thursday for a rack install.",
+   "part": "body"
+  }
+ ]
+}

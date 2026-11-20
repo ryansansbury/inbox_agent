@@ -1,0 +1,262 @@
+{
+ "email_id": "m04",
+ "split": "morning",
+ "seq": 3,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "eb92d85865df2d92",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "lucy@juniperandvale.example"
+   },
+   "result": {
+    "customer_id": "C-1006",
+    "name": "Juniper & Vale",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 1080.8,
+    "open_orders": 575.6,
+    "available_credit": 4343.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Lucy Tran",
+      "role": "buyer",
+      "email": "lucy@juniperandvale.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Boulder, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Warehouse",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20817"
+   },
+   "result": {
+    "order_id": "SO-20817",
+    "customer_id": "C-1006",
+    "po": "JV-1026",
+    "placed": "2026-10-26 16:40",
+    "requested": "2026-10-29",
+    "status": "picked",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Boulder, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-141006-32",
+      "name": "Shipping box 14x10x6, 32 ECT",
+      "qty": 12,
+      "picked": 12,
+      "shipped": 0,
+      "price": 24.3,
+      "amount": 291.6
+     },
+     {
+      "sku": "PD-0812",
+      "name": "Padded kraft mailer 8.5x12",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 0,
+      "price": 44.0,
+      "amount": 132.0
+     },
+     {
+      "sku": "VF-CRK-10",
+      "name": "Crinkle paper, 10 lb box",
+      "qty": 4,
+      "picked": 4,
+      "shipped": 0,
+      "price": 38.0,
+      "amount": 152.0
+     }
+    ],
+    "fees": [],
+    "total": 575.6,
+    "invoice_id": null,
+    "picked_at": "2026-10-27 06:40"
+   },
+   "valid": true
+  },
+  {
+   "tool": "update_ship_to",
+   "args": {
+    "order_id": "20817",
+    "location_id": "L2",
+    "sentence": 3
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-110",
+    "waiting_on": "order_desk",
+    "rule": "ship_to_before_pick",
+    "note": "The order has been picked, so a person decides whether to reroute it. It happens only if a person approves it, so describe it as pending."
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Lucy,\n\nThe request to change SO-20817 to your Longmont warehouse is pending approval because the order has already been picked. The order is still requested for Thursday, October 29.\n\nThe Wendlow order desk",
+  "note": "Submitted the requested ship-to change for SO-20817 to Longmont; it is pending order desk approval because the order was picked. Please review the reroute request and whether Thursday delivery remains feasible.",
+  "intents": [
+   "ship_to_change",
+   "rush"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_y2hopaqY5Aas6NHG9dwd4dT6",
+     "name": "get_customer",
+     "input": {
+      "email": "lucy@juniperandvale.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 135,
+     "output": 24,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1022,
+    "cost": 8.5e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_ia4UtYQqOjwo5FDfeL4peKy9",
+     "name": "get_order",
+     "input": {
+      "order_id": "20817"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 233,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2493
+    },
+    "ms": 1237,
+    "cost": 9.5e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_82BATdUU66Bp4AFGfC3V40yL",
+     "name": "update_ship_to",
+     "input": {
+      "order_id": "20817",
+      "location_id": "L2",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 347,
+     "output": 30,
+     "cache_write": 0,
+     "cache_read": 2723
+    },
+    "ms": 1048,
+    "cost": 0.000118
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_26oMrxHMgQOMj2podc3XsJ1C",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Lucy,\n\nThe request to change SO-20817 to your Longmont warehouse is pending approval because the order has already been picked. The order is still requested for Thursday, October 29.\n\nThe Wendlow order desk",
+      "note": "Submitted the requested ship-to change for SO-20817 to Longmont; it is pending order desk approval because the order was picked. Please review the reroute request and whether Thursday delivery remains feasible.",
+      "intents": [
+       "ship_to_change",
+       "rush"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 114,
+     "output": 121,
+     "cache_write": 0,
+     "cache_read": 3067
+    },
+    "ms": 1800,
+    "cost": 0.000149
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 5.1,
+  "input_tokens": 829,
+  "output_tokens": 194,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 10644,
+  "cost": 0.000447
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:39:53",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

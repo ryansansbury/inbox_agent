@@ -1,0 +1,241 @@
+{
+ "email_id": "d04",
+ "split": "dev",
+ "seq": 15,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "131cbf8e7a712389",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "sora@kilnmoor.example"
+   },
+   "result": {
+    "customer_id": "C-1009",
+    "name": "Kilnmoor Ceramics",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 5209.0,
+    "open_orders": 213.0,
+    "available_credit": 578.0,
+    "on_hold": false,
+    "past_due": [
+     {
+      "invoice_id": "INV-30883",
+      "due": "2026-10-25",
+      "open": 2685.0
+     }
+    ],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 7
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ezra Moreno",
+      "role": "owner",
+      "email": "ezra@kilnmoor.example"
+     },
+     {
+      "name": "Sora Baek",
+      "role": "shipping lead",
+      "email": "sora@kilnmoor.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Pueblo, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Gallery",
+      "city": "Colorado Springs, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20826"
+   },
+   "result": {
+    "order_id": "SO-20826",
+    "customer_id": "C-1009",
+    "po": "KC-0420",
+    "placed": "2026-10-26 11:30",
+    "requested": null,
+    "status": "open",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Pueblo, CO"
+    },
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "name": "Packing peanuts, 14 cu ft bag",
+      "qty": 6,
+      "picked": 0,
+      "shipped": 0,
+      "price": 26.0,
+      "amount": 156.0
+     },
+     {
+      "sku": "LB-FRG",
+      "name": "Fragile labels, roll of 500",
+      "qty": 6,
+      "picked": 0,
+      "shipped": 0,
+      "price": 9.5,
+      "amount": 57.0
+     }
+    ],
+    "fees": [],
+    "total": 213.0,
+    "invoice_id": null
+   },
+   "valid": true
+  },
+  {
+   "tool": "update_ship_to",
+   "args": {
+    "order_id": "SO-20826",
+    "location_id": "L2",
+    "sentence": 1
+   },
+   "result": {
+    "order_id": "SO-20826",
+    "ship_to": "Gallery, Colorado Springs, CO",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Sora,\n\nWe have changed the ship-to on order SO-20826 to the Gallery in Colorado Springs, CO. The order is still open and has not been picked, so the change applies.\n\nThank you,\nThe Wendlow order desk",
+  "note": "Changed SO-20826 ship-to from Studio (L1) to Gallery (L2, Colorado Springs) for sender Sora Baek on account C-1009. The order is open and unpicked, so the change was allowed. The account shows a past-due balance on INV-30883, which is unrelated to this request.",
+  "intents": [
+   "ship_to_change"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Hz7ghmxveEPuk2kLc9AXFC",
+     "name": "get_customer",
+     "input": {
+      "email": "sora@kilnmoor.example"
+     }
+    },
+    {
+     "id": "toolu_01Ty1ywRCLSNMjGjd4BcrFj9",
+     "name": "get_order",
+     "input": {
+      "order_id": "20826"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 243,
+     "output": 105,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 901,
+    "cost": 0.000126
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01SGZWP6h5D9qoECTnKEcNaP",
+     "name": "update_ship_to",
+     "input": {
+      "order_id": "SO-20826",
+      "location_id": "L2",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1046,
+     "output": 187,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1200,
+    "cost": 0.000247
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_015fpXRq9ZQjULNWqjYVgF3x",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Sora,\n\nWe have changed the ship-to on order SO-20826 to the Gallery in Colorado Springs, CO. The order is still open and has not been picked, so the change applies.\n\nThank you,\nThe Wendlow order desk",
+      "note": "Changed SO-20826 ship-to from Studio (L1) to Gallery (L2, Colorado Springs) for sender Sora Baek on account C-1009. The order is open and unpicked, so the change was allowed. The account shows a past-due balance on INV-30883, which is unrelated to this request.",
+      "intents": [
+       "ship_to_change"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1197,
+     "output": 300,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1612,
+    "cost": 0.000319
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 3.7,
+  "input_tokens": 2486,
+  "output_tokens": 592,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000692
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:27:22",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "id": "d05",
+ "at": "2026-10-27T11:30",
+ "from": {
+  "name": "Lucy Tran",
+  "email": "lucy@juniperandvale.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "New order",
+ "body": [
+  [
+   "Hi!"
+  ],
+  [
+   "Please send 20 bundles of the 14x10x6 boxes and 4 cases of the fragile tape to the Longmont warehouse.",
+   "Regular shipping is fine."
+  ]
+ ],
+ "sig": [
+  "Thanks!",
+  "Lucy"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "new_order"
+  ],
+  "handling": "A $762.00 order inside the open credit and the order cap, so it's placed for the Longmont warehouse.",
+  "expected": [
+   {
+    "tool": "create_order",
+    "args": {
+     "customer_id": "C-1006",
+     "lines": [
+      {
+       "sku": "BX-141006-32",
+       "qty": 20
+      },
+      {
+       "sku": "TP-FRG-2",
+       "qty": 4
+      }
+     ],
+     "location_id": "L2"
+    },
+    "sentence": 2
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 762.0,
+    "source": "action:1.total"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi!",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Please send 20 bundles of the 14x10x6 boxes and 4 cases of the fragile tape to the Longmont warehouse.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Regular shipping is fine.",
+   "part": "body"
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "email_id": "m03",
+ "split": "morning",
+ "seq": 2,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "2df65ae87f728028",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "caleb@sablewood.example"
+   },
+   "result": {
+    "customer_id": "C-1002",
+    "name": "Sablewood Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 20000.0,
+    "open_balance": 9904.0,
+    "open_orders": 3550.0,
+    "available_credit": 6546.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Caleb Kowalski",
+      "role": "purchasing",
+      "email": "caleb@sablewood.example"
+     },
+     {
+      "name": "Leela Varadan",
+      "role": "accounts payable",
+      "email": "leela@sablewood.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Main warehouse",
+      "city": "Commerce City, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Overflow building",
+      "city": "Commerce City, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-241812-32",
+      "price": 49.8
+     },
+     {
+      "sku": "VF-AIR-84",
+      "price": 46.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20815"
+   },
+   "result": {
+    "order_id": "SO-20815",
+    "customer_id": "C-1002",
+    "po": "SW-4410",
+    "placed": "2026-10-20 10:05",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Main warehouse",
+     "city": "Commerce City, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-181818-32",
+      "name": "Shipping box 18x18x18, 32 ECT",
+      "qty": 40,
+      "picked": 38,
+      "shipped": 38,
+      "price": 46.2,
+      "amount": 1848.0
+     },
+     {
+      "sku": "VF-AIR-84",
+      "name": "Air pillow film 8x4, 1500 ft roll",
+      "qty": 6,
+      "picked": 6,
+      "shipped": 6,
+      "price": 46.0,
+      "amount": 276.0
+     }
+    ],
+    "fees": [],
+    "total": 2124.0,
+    "invoice_id": "INV-30943",
+    "pick_note": "Short 2 bundles, bin empty"
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "20815",
+    "lines": [
+     {
+      "sku": "BX-181818-32",
+      "qty": 2
+     }
+    ],
+    "reason": "Short shipment",
+    "sentence": 3
+   },
+   "result": {
+    "replacement_order": "SO-20846",
+    "replaces": "SO-20815",
+    "lines": [
+     {
+      "sku": "BX-181818-32",
+      "qty": 2
+     }
+    ],
+    "value": 92.4,
+    "charge": 0.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Caleb,\n\nWe’ve sent the 2 missing bundles of 18x18x18 boxes at no charge. The replacement order is SO-20846.\n\nThe Wendlow order desk",
+  "note": "Confirmed SO-20815 shipped 38 of 40 bundles and processed a no-charge reship of the missing 2 bundles as SO-20846.",
+  "intents": [
+   "short_shipment"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_EPbwD7mgt2AZgmiHfl8L3HtT",
+     "name": "get_customer",
+     "input": {
+      "email": "caleb@sablewood.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 141,
+     "output": 22,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1449,
+    "cost": 8.4e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_IZPKsq6RFNRweQZK2ZxbuReF",
+     "name": "get_order",
+     "input": {
+      "order_id": "20815"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 301,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2499
+    },
+    "ms": 1018,
+    "cost": 0.000102
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_H6Yudo7kIS8u1o5zP4TFPNzl",
+     "name": "reship",
+     "input": {
+      "order_id": "20815",
+      "lines": [
+       {
+        "sku": "BX-181818-32",
+        "qty": 2
+       }
+      ],
+      "reason": "Short shipment",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 290,
+     "output": 45,
+     "cache_write": 0,
+     "cache_read": 2797
+    },
+    "ms": 1168,
+    "cost": 0.000121
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_3e9vHQCQx3rgTANgtr2MAI3i",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Caleb,\n\nWe’ve sent the 2 missing bundles of 18x18x18 boxes at no charge. The replacement order is SO-20846.\n\nThe Wendlow order desk",
+      "note": "Confirmed SO-20815 shipped 38 of 40 bundles and processed a no-charge reship of the missing 2 bundles as SO-20846.",
+      "intents": [
+       "short_shipment"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 121,
+     "output": 103,
+     "cache_write": 0,
+     "cache_read": 3084
+    },
+    "ms": 1735,
+    "cost": 0.000141
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 5.4,
+  "input_tokens": 853,
+  "output_tokens": 189,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 10741,
+  "cost": 0.000448
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:39:48",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

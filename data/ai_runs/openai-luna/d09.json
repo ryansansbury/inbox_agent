@@ -1,0 +1,305 @@
+{
+ "email_id": "d09",
+ "split": "dev",
+ "seq": 20,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "49c1f63371caac51",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "mateo@tarnwell.example"
+   },
+   "result": {
+    "customer_id": "C-1010",
+    "name": "Tarnwell Leather Goods",
+    "terms": "Net 30",
+    "credit_limit": 9000.0,
+    "open_balance": 7572.8,
+    "open_orders": 427.2,
+    "available_credit": 1000.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mateo Reyes",
+      "role": "operations manager",
+      "email": "mateo@tarnwell.example"
+     },
+     {
+      "name": "Silas Pruitt",
+      "role": "accounts payable",
+      "email": "silas@tarnwell.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Englewood, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Showroom",
+      "city": "Denver, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "PD-1016",
+      "price": 53.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "18x12x12 boxes",
+    "customer_id": "C-1010"
+   },
+   "result": {
+    "query": "18x12x12 boxes",
+    "matches": [
+     {
+      "sku": "BX-181212-32",
+      "name": "Shipping box 18x12x12, 32 ECT",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 39.2,
+      "available": 393,
+      "price": 39.2
+     },
+     {
+      "sku": "BX-181212-44",
+      "name": "Shipping box 18x12x12, 44 ECT",
+      "unit": "bundle of 20",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 50.8,
+      "available": 358,
+      "price": 50.8
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "12 inch foam",
+    "customer_id": "C-1010"
+   },
+   "result": {
+    "query": "12 inch foam",
+    "matches": [
+     {
+      "sku": "VF-FOAM-12",
+      "name": "Foam sheet roll 12 in x 550 ft",
+      "unit": "roll",
+      "strength": null,
+      "line": "standard",
+      "list_price": 44.0,
+      "available": 377,
+      "price": 44.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1010",
+    "lines": [
+     {
+      "sku": "BX-181212-32",
+      "qty": 30
+     },
+     {
+      "sku": "VF-FOAM-12",
+      "qty": 6
+     }
+    ],
+    "location_id": "L1",
+    "sentence": 1
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-161",
+    "waiting_on": "credit",
+    "rule": "credit_line",
+    "note": "The order is over the account's open credit of $1,000, so credit reviews it first. It happens only if a person approves it, so describe it as pending.",
+    "order_id": "SO-20900",
+    "total": 1440.0,
+    "amount": 1440.0,
+    "limit": 1000.0
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Mateo,\n\nOrder SO-20900 for 30 bundles of 18x12x12 standard boxes and 6 rolls of 12 inch foam is pending credit approval. It is set to ship to the workshop.\n\nThe Wendlow order desk",
+  "note": "Created order SO-20900 for the requested items and workshop location; it is pending credit approval because the $1,440.00 order exceeds the account's $1,000.00 available credit. Credit should review approval.",
+  "intents": [
+   "new_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_M999WoVBtSYkben6wZHNNaSg",
+     "name": "get_customer",
+     "input": {
+      "email": "mateo@tarnwell.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 107,
+     "output": 23,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1054,
+    "cost": 8.1e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_25ynIjsb6cQ1t7Z0r5FfAkFi",
+     "name": "search_items",
+     "input": {
+      "query": "18x12x12 boxes",
+      "customer_id": "C-1010"
+     }
+    },
+    {
+     "id": "call_bBVbghQan3rObZSX1KxnPwLk",
+     "name": "search_items",
+     "input": {
+      "query": "12 inch foam",
+      "customer_id": "C-1010"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 280,
+     "output": 70,
+     "cache_write": 0,
+     "cache_read": 2465
+    },
+    "ms": 1332,
+    "cost": 0.000125
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_YKl8V9mU3xYDBPjroNlZDZqR",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1010",
+      "lines": [
+       {
+        "sku": "BX-181212-32",
+        "qty": 30
+       },
+       {
+        "sku": "VF-FOAM-12",
+        "qty": 6
+       }
+      ],
+      "location_id": "L1",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 332,
+     "output": 61,
+     "cache_write": 0,
+     "cache_read": 2742
+    },
+    "ms": 1229,
+    "cost": 0.000132
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_mPZWVYlHKDIRNns9RVcz1FI2",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Mateo,\n\nOrder SO-20900 for 30 bundles of 18x12x12 standard boxes and 6 rolls of 12 inch foam is pending credit approval. It is set to ship to the workshop.\n\nThe Wendlow order desk",
+      "note": "Created order SO-20900 for the requested items and workshop location; it is pending credit approval because the $1,440.00 order exceeds the account's $1,000.00 available credit. Credit should review approval.",
+      "intents": [
+       "new_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 181,
+     "output": 129,
+     "cache_write": 0,
+     "cache_read": 3071
+    },
+    "ms": 2111,
+    "cost": 0.000159
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 5.7,
+  "input_tokens": 900,
+  "output_tokens": 283,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 10639,
+  "cost": 0.000497
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:29:08",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

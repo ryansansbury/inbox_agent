@@ -1,0 +1,577 @@
+[
+ {
+  "invoice_id": "INV-30607",
+  "date": "2026-05-03",
+  "amount": 190.0
+ },
+ {
+  "invoice_id": "INV-30601",
+  "date": "2026-05-04",
+  "amount": 2053.5
+ },
+ {
+  "invoice_id": "INV-30608",
+  "date": "2026-05-05",
+  "amount": 738.0
+ },
+ {
+  "invoice_id": "INV-30612",
+  "date": "2026-05-06",
+  "amount": 1385.25
+ },
+ {
+  "invoice_id": "INV-30602",
+  "date": "2026-05-07",
+  "amount": 3437.5
+ },
+ {
+  "invoice_id": "INV-30603",
+  "date": "2026-05-07",
+  "amount": 3643.5
+ },
+ {
+  "invoice_id": "INV-30604",
+  "date": "2026-05-08",
+  "amount": 316.0
+ },
+ {
+  "invoice_id": "INV-30605",
+  "date": "2026-05-08",
+  "amount": 2032.0
+ },
+ {
+  "invoice_id": "INV-30606",
+  "date": "2026-05-08",
+  "amount": 342.0
+ },
+ {
+  "invoice_id": "INV-30610",
+  "date": "2026-05-11",
+  "amount": 2324.0
+ },
+ {
+  "invoice_id": "INV-30611",
+  "date": "2026-05-11",
+  "amount": 96.0
+ },
+ {
+  "invoice_id": "INV-30614",
+  "date": "2026-05-14",
+  "amount": 956.25
+ },
+ {
+  "invoice_id": "INV-30600",
+  "date": "2026-05-15",
+  "amount": 624.0
+ },
+ {
+  "invoice_id": "INV-30621",
+  "date": "2026-05-15",
+  "amount": 2111.25
+ },
+ {
+  "invoice_id": "INV-30615",
+  "date": "2026-05-17",
+  "amount": 623.0
+ },
+ {
+  "invoice_id": "INV-30617",
+  "date": "2026-05-20",
+  "amount": 1497.75
+ },
+ {
+  "invoice_id": "INV-30619",
+  "date": "2026-05-20",
+  "amount": 1483.0
+ },
+ {
+  "invoice_id": "INV-30620",
+  "date": "2026-05-21",
+  "amount": 1580.0
+ },
+ {
+  "invoice_id": "INV-30627",
+  "date": "2026-05-21",
+  "amount": 2688.25
+ },
+ {
+  "invoice_id": "INV-30622",
+  "date": "2026-05-23",
+  "amount": 3273.5
+ },
+ {
+  "invoice_id": "INV-30624",
+  "date": "2026-05-23",
+  "amount": 3708.0
+ },
+ {
+  "invoice_id": "INV-30625",
+  "date": "2026-05-23",
+  "amount": 1899.0
+ },
+ {
+  "invoice_id": "INV-30623",
+  "date": "2026-05-24",
+  "amount": 2112.0
+ },
+ {
+  "invoice_id": "INV-30628",
+  "date": "2026-05-24",
+  "amount": 6299.0
+ },
+ {
+  "invoice_id": "INV-30629",
+  "date": "2026-05-25",
+  "amount": 176.0
+ },
+ {
+  "invoice_id": "INV-30613",
+  "date": "2026-05-26",
+  "amount": 2546.5
+ },
+ {
+  "invoice_id": "INV-30626",
+  "date": "2026-05-26",
+  "amount": 1742.25
+ },
+ {
+  "invoice_id": "INV-30609",
+  "date": "2026-05-31",
+  "amount": 704.0
+ },
+ {
+  "invoice_id": "INV-30616",
+  "date": "2026-05-31",
+  "amount": 1945.0
+ },
+ {
+  "invoice_id": "INV-30634",
+  "date": "2026-06-01",
+  "amount": 1048.0
+ },
+ {
+  "invoice_id": "INV-30630",
+  "date": "2026-06-03",
+  "amount": 2500.0
+ },
+ {
+  "invoice_id": "INV-30631",
+  "date": "2026-06-03",
+  "amount": 4386.0
+ },
+ {
+  "invoice_id": "INV-30618",
+  "date": "2026-06-07",
+  "amount": 831.0
+ },
+ {
+  "invoice_id": "INV-30637",
+  "date": "2026-06-08",
+  "amount": 252.0
+ },
+ {
+  "invoice_id": "INV-30632",
+  "date": "2026-06-09",
+  "amount": 1665.0
+ },
+ {
+  "invoice_id": "INV-30639",
+  "date": "2026-06-11",
+  "amount": 2772.0
+ },
+ {
+  "invoice_id": "INV-30635",
+  "date": "2026-06-12",
+  "amount": 1629.5
+ },
+ {
+  "invoice_id": "INV-30638",
+  "date": "2026-06-12",
+  "amount": 1273.5
+ },
+ {
+  "invoice_id": "INV-30640",
+  "date": "2026-06-12",
+  "amount": 2145.0
+ },
+ {
+  "invoice_id": "INV-30636",
+  "date": "2026-06-13",
+  "amount": 2676.0
+ },
+ {
+  "invoice_id": "INV-30633",
+  "date": "2026-06-18",
+  "amount": 3288.0
+ },
+ {
+  "invoice_id": "INV-30646",
+  "date": "2026-06-21",
+  "amount": 2483.5
+ },
+ {
+  "invoice_id": "INV-30647",
+  "date": "2026-06-21",
+  "amount": 954.0
+ },
+ {
+  "invoice_id": "INV-30643",
+  "date": "2026-06-24",
+  "amount": 4746.0
+ },
+ {
+  "invoice_id": "INV-30648",
+  "date": "2026-06-24",
+  "amount": 2509.75
+ },
+ {
+  "invoice_id": "INV-30645",
+  "date": "2026-06-25",
+  "amount": 2226.0
+ },
+ {
+  "invoice_id": "INV-30651",
+  "date": "2026-06-29",
+  "amount": 504.0
+ },
+ {
+  "invoice_id": "INV-30641",
+  "date": "2026-07-01",
+  "amount": 2039.0
+ },
+ {
+  "invoice_id": "INV-30642",
+  "date": "2026-07-04",
+  "amount": 1331.0
+ },
+ {
+  "invoice_id": "INV-30649",
+  "date": "2026-07-04",
+  "amount": 1082.4
+ },
+ {
+  "invoice_id": "INV-30652",
+  "date": "2026-07-05",
+  "amount": 3383.0
+ },
+ {
+  "invoice_id": "INV-30653",
+  "date": "2026-07-05",
+  "amount": 126.0
+ },
+ {
+  "invoice_id": "INV-30644",
+  "date": "2026-07-06",
+  "amount": 2683.0
+ },
+ {
+  "invoice_id": "INV-30654",
+  "date": "2026-07-06",
+  "amount": 396.0
+ },
+ {
+  "invoice_id": "INV-30650",
+  "date": "2026-07-07",
+  "amount": 1526.25
+ },
+ {
+  "invoice_id": "INV-30655",
+  "date": "2026-07-07",
+  "amount": 1012.0
+ },
+ {
+  "invoice_id": "INV-30656",
+  "date": "2026-07-15",
+  "amount": 1673.75
+ },
+ {
+  "invoice_id": "INV-30659",
+  "date": "2026-07-17",
+  "amount": 1303.2
+ },
+ {
+  "invoice_id": "INV-30657",
+  "date": "2026-07-20",
+  "amount": 3305.0
+ },
+ {
+  "invoice_id": "INV-30658",
+  "date": "2026-07-21",
+  "amount": 1076.0
+ },
+ {
+  "invoice_id": "INV-30662",
+  "date": "2026-07-24",
+  "amount": 2448.0
+ },
+ {
+  "invoice_id": "INV-30665",
+  "date": "2026-07-27",
+  "amount": 1594.0
+ },
+ {
+  "invoice_id": "INV-30663",
+  "date": "2026-07-28",
+  "amount": 334.0
+ },
+ {
+  "invoice_id": "INV-30660",
+  "date": "2026-07-29",
+  "amount": 2796.5
+ },
+ {
+  "invoice_id": "INV-30664",
+  "date": "2026-07-29",
+  "amount": 2146.5
+ },
+ {
+  "invoice_id": "INV-30661",
+  "date": "2026-07-31",
+  "amount": 1155.0
+ },
+ {
+  "invoice_id": "INV-30672",
+  "date": "2026-08-06",
+  "amount": 2135.0
+ },
+ {
+  "invoice_id": "INV-30667",
+  "date": "2026-08-08",
+  "amount": 824.0
+ },
+ {
+  "invoice_id": "INV-30666",
+  "date": "2026-08-09",
+  "amount": 1450.0
+ },
+ {
+  "invoice_id": "INV-30671",
+  "date": "2026-08-10",
+  "amount": 511.5
+ },
+ {
+  "invoice_id": "INV-30673",
+  "date": "2026-08-10",
+  "amount": 452.0
+ },
+ {
+  "invoice_id": "INV-30674",
+  "date": "2026-08-10",
+  "amount": 4880.5
+ },
+ {
+  "invoice_id": "INV-30669",
+  "date": "2026-08-12",
+  "amount": 486.0
+ },
+ {
+  "invoice_id": "INV-30670",
+  "date": "2026-08-13",
+  "amount": 2244.0
+ },
+ {
+  "invoice_id": "INV-30668",
+  "date": "2026-08-14",
+  "amount": 3056.0
+ },
+ {
+  "invoice_id": "INV-30675",
+  "date": "2026-08-14",
+  "amount": 6497.0
+ },
+ {
+  "invoice_id": "INV-30676",
+  "date": "2026-08-20",
+  "amount": 1323.0
+ },
+ {
+  "invoice_id": "INV-30678",
+  "date": "2026-08-20",
+  "amount": 2806.0
+ },
+ {
+  "invoice_id": "INV-30679",
+  "date": "2026-08-20",
+  "amount": 386.0
+ },
+ {
+  "invoice_id": "INV-30681",
+  "date": "2026-08-20",
+  "amount": 295.0
+ },
+ {
+  "invoice_id": "INV-30677",
+  "date": "2026-08-23",
+  "amount": 452.0
+ },
+ {
+  "invoice_id": "INV-30686",
+  "date": "2026-08-23",
+  "amount": 696.5
+ },
+ {
+  "invoice_id": "INV-30682",
+  "date": "2026-08-25",
+  "amount": 228.0
+ },
+ {
+  "invoice_id": "INV-30683",
+  "date": "2026-08-25",
+  "amount": 1714.0
+ },
+ {
+  "invoice_id": "INV-30685",
+  "date": "2026-08-26",
+  "amount": 1943.6
+ },
+ {
+  "invoice_id": "INV-30690",
+  "date": "2026-08-27",
+  "amount": 1029.0
+ },
+ {
+  "invoice_id": "INV-30680",
+  "date": "2026-08-28",
+  "amount": 904.0
+ },
+ {
+  "invoice_id": "INV-30684",
+  "date": "2026-08-28",
+  "amount": 1017.0
+ },
+ {
+  "invoice_id": "INV-30688",
+  "date": "2026-08-28",
+  "amount": 95.0
+ },
+ {
+  "invoice_id": "INV-30689",
+  "date": "2026-08-29",
+  "amount": 1275.0
+ },
+ {
+  "invoice_id": "INV-30691",
+  "date": "2026-08-31",
+  "amount": 84.0
+ },
+ {
+  "invoice_id": "INV-30687",
+  "date": "2026-09-02",
+  "amount": 540.0
+ },
+ {
+  "invoice_id": "INV-30692",
+  "date": "2026-09-04",
+  "amount": 4011.7
+ },
+ {
+  "invoice_id": "INV-30695",
+  "date": "2026-09-07",
+  "amount": 2859.0
+ },
+ {
+  "invoice_id": "INV-30694",
+  "date": "2026-09-09",
+  "amount": 168.0
+ },
+ {
+  "invoice_id": "INV-30703",
+  "date": "2026-09-09",
+  "amount": 2629.0
+ },
+ {
+  "invoice_id": "INV-30693",
+  "date": "2026-09-10",
+  "amount": 1176.0
+ },
+ {
+  "invoice_id": "INV-30702",
+  "date": "2026-09-10",
+  "amount": 368.0
+ },
+ {
+  "invoice_id": "INV-30701",
+  "date": "2026-09-12",
+  "amount": 708.0
+ },
+ {
+  "invoice_id": "INV-30696",
+  "date": "2026-09-13",
+  "amount": 1938.0
+ },
+ {
+  "invoice_id": "INV-30700",
+  "date": "2026-09-13",
+  "amount": 790.0
+ },
+ {
+  "invoice_id": "INV-30697",
+  "date": "2026-09-14",
+  "amount": 948.0
+ },
+ {
+  "invoice_id": "INV-30704",
+  "date": "2026-09-14",
+  "amount": 1022.0
+ },
+ {
+  "invoice_id": "INV-30705",
+  "date": "2026-09-14",
+  "amount": 1891.5
+ },
+ {
+  "invoice_id": "INV-30698",
+  "date": "2026-09-16",
+  "amount": 2316.0
+ },
+ {
+  "invoice_id": "INV-30699",
+  "date": "2026-09-16",
+  "amount": 1310.0
+ },
+ {
+  "invoice_id": "INV-30707",
+  "date": "2026-09-17",
+  "amount": 2552.0
+ },
+ {
+  "invoice_id": "INV-30710",
+  "date": "2026-09-18",
+  "amount": 560.0
+ },
+ {
+  "invoice_id": "INV-30708",
+  "date": "2026-09-19",
+  "amount": 2975.0
+ },
+ {
+  "invoice_id": "INV-30706",
+  "date": "2026-09-23",
+  "amount": 522.0
+ },
+ {
+  "invoice_id": "INV-30709",
+  "date": "2026-09-23",
+  "amount": 994.0
+ },
+ {
+  "invoice_id": "INV-30711",
+  "date": "2026-09-23",
+  "amount": 152.0
+ },
+ {
+  "invoice_id": "INV-30871",
+  "date": "2026-10-06",
+  "amount": 566.0
+ },
+ {
+  "invoice_id": "INV-30931",
+  "date": "2026-10-22",
+  "amount": 4782.0
+ },
+ {
+  "invoice_id": "INV-30909",
+  "date": "2026-10-23",
+  "amount": 1488.0
+ }
+]

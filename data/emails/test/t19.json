@@ -1,0 +1,67 @@
+{
+ "id": "t19",
+ "at": "2026-10-27T16:50",
+ "from": {
+  "name": "Ezra Moreno",
+  "email": "ezra@kilnmoor.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "small order",
+ "body": [
+  [
+   "Please send 10 bags of the packing peanuts and 10 rolls of fragile labels to the studio."
+  ]
+ ],
+ "sig": [
+  "Ezra"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "new_order"
+  ],
+  "handling": "A $355.00 order fits inside Kilnmoor's $578.00 of open credit, so it's placed.",
+  "expected": [
+   {
+    "tool": "create_order",
+    "args": {
+     "customer_id": "C-1009",
+     "lines": [
+      {
+       "sku": "VF-PEA-14",
+       "qty": 10
+      },
+      {
+       "sku": "LB-FRG",
+       "qty": 10
+      }
+     ],
+     "location_id": "L1"
+    },
+    "sentence": 1
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 355.0,
+    "source": "action:1.total"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Please send 10 bags of the packing peanuts and 10 rolls of fragile labels to the studio.",
+   "part": "body"
+  }
+ ]
+}

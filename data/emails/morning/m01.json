@@ -1,0 +1,91 @@
+{
+ "id": "m01",
+ "at": "2026-10-27T07:04",
+ "from": {
+  "name": "Ayumi Nakaya",
+  "email": "ayumi@lanternfold.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "PO 4471 still not here",
+ "body": [
+  [
+   "Hi!"
+  ],
+  [
+   "Our PO 4471 was supposed to arrive yesterday and we still don't have it.",
+   "We launch our holiday candles on Thursday and those boxes are what we ship them in, so I'm getting a little nervous.",
+   "Can you tell me where it is and when it'll get here?"
+  ]
+ ],
+ "sig": [
+  "Thank you!",
+  "Ayumi",
+  "Ayumi Nakaya | Founder",
+  "Lanternfold Candle Co."
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "order_status"
+  ],
+  "handling": "Find PO 4471 (SO-20812), see it's out for delivery, and reply with the tracking number and the 2 PM estimate.",
+  "expected": [],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "order",
+    "value": "SO-20812",
+    "source": "order:SO-20812.id"
+   },
+   {
+    "kind": "tracking",
+    "value": "PRO 5521-8804",
+    "source": "shipment:SO-20812.tracking"
+   },
+   {
+    "kind": "status",
+    "value": "out_for_delivery",
+    "source": "shipment:SO-20812.status"
+   },
+   {
+    "kind": "date",
+    "value": "2026-10-27",
+    "source": "shipment:SO-20812.eta_date"
+   },
+   {
+    "kind": "time",
+    "value": "14:00",
+    "source": "shipment:SO-20812.eta_time"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi!",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Our PO 4471 was supposed to arrive yesterday and we still don't have it.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "We launch our holiday candles on Thursday and those boxes are what we ship them in, so I'm getting a little nervous.",
+   "part": "body"
+  },
+  {
+   "n": 4,
+   "text": "Can you tell me where it is and when it'll get here?",
+   "part": "body"
+  }
+ ]
+}

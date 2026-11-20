@@ -1,0 +1,240 @@
+{
+ "email_id": "t07",
+ "split": "test",
+ "seq": 30,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "8c83a1bcbfdd4648",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "silas@tarnwell.example"
+   },
+   "result": {
+    "customer_id": "C-1010",
+    "name": "Tarnwell Leather Goods",
+    "terms": "Net 30",
+    "credit_limit": 9000.0,
+    "open_balance": 7572.8,
+    "open_orders": 427.2,
+    "available_credit": 1000.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mateo Reyes",
+      "role": "operations manager",
+      "email": "mateo@tarnwell.example"
+     },
+     {
+      "name": "Silas Pruitt",
+      "role": "accounts payable",
+      "email": "silas@tarnwell.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Englewood, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Showroom",
+      "city": "Denver, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "PD-1016",
+      "price": 53.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "invoice_id": "30919"
+   },
+   "result": {
+    "invoice_id": "INV-30919",
+    "order_id": "SO-20793",
+    "customer_id": "C-1010",
+    "date": "2026-10-14",
+    "due": "2026-11-13",
+    "lines": [
+     {
+      "sku": "PD-1016",
+      "qty": 20,
+      "price": 58.0,
+      "amount": 1160.0,
+      "name": "Padded kraft mailer 10.5x16"
+     },
+     {
+      "sku": "TP-2C-110",
+      "qty": 3,
+      "price": 56.0,
+      "amount": 168.0,
+      "name": "Carton sealing tape 2 in x 110 yd, clear"
+     }
+    ],
+    "fees": [],
+    "total": 1328.0,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 1328.0
+   },
+   "valid": true
+  },
+  {
+   "tool": "issue_credit",
+   "args": {
+    "customer_id": "C-1010",
+    "invoice_id": "30919",
+    "amount": 96.0,
+    "reason": "Contract price $53.20 vs billed $58.00 on PD-1016, 20 cases ($4.80 x 20)",
+    "sentence": 3
+   },
+   "result": {
+    "credit_memo": "CM-2321",
+    "invoice_id": "INV-30919",
+    "amount": 96.0,
+    "invoice_open_after": 1232.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Silas,\n\nThank you for catching this. Invoice 30919 billed the padded kraft mailers (PD-1016, 10.5x16) at $58.00 a case. Your contract price is $53.20, so we have issued credit memo CM-2321 for $96.00 ($4.80 across 20 cases). The invoice balance is now $1,232.00.\n\nThe Wendlow order desk",
+  "note": "Credit memo CM-2321 for $96.00 issued on INV-30919 for PD-1016 billed at $58.00 vs contract $53.20 (20 cases). The 3 cases of tape on the same invoice were not part of the dispute and were left as billed.",
+  "intents": [
+   "price_dispute",
+   "credit_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Ejcve5yPQP6G9ss3j8ZHVM",
+     "name": "get_customer",
+     "input": {
+      "email": "silas@tarnwell.example"
+     }
+    },
+    {
+     "id": "toolu_01A2cxQo15nejdo93CZFLxTS",
+     "name": "get_invoice",
+     "input": {
+      "invoice_id": "30919"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 260,
+     "output": 108,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1514,
+    "cost": 0.000129
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01VBTBYogxnGLDPZrxNUSXG7",
+     "name": "issue_credit",
+     "input": {
+      "customer_id": "C-1010",
+      "invoice_id": "30919",
+      "amount": 96.0,
+      "reason": "Contract price $53.20 vs billed $58.00 on PD-1016, 20 cases ($4.80 x 20)",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1001,
+     "output": 338,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2143,
+    "cost": 0.000318
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01DiNyeSz1Ls49Z8UACEAcND",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Silas,\n\nThank you for catching this. Invoice 30919 billed the padded kraft mailers (PD-1016, 10.5x16) at $58.00 a case. Your contract price is $53.20, so we have issued credit memo CM-2321 for $96.00 ($4.80 across 20 cases). The invoice balance is now $1,232.00.\n\nThe Wendlow order desk",
+      "note": "Credit memo CM-2321 for $96.00 issued on INV-30919 for PD-1016 billed at $58.00 vs contract $53.20 (20 cases). The 3 cases of tape on the same invoice were not part of the dispute and were left as billed.",
+      "intents": [
+       "price_dispute",
+       "credit_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1255,
+     "output": 344,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2463,
+    "cost": 0.000347
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 6.1,
+  "input_tokens": 2516,
+  "output_tokens": 790,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000794
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:38:01",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

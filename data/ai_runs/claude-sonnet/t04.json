@@ -1,0 +1,288 @@
+{
+ "email_id": "t04",
+ "split": "test",
+ "seq": 27,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "4e82aa09005e8262",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "penny@fernhollowtea.example"
+   },
+   "result": {
+    "customer_id": "C-1004",
+    "name": "Fernhollow Tea",
+    "terms": "Net 30",
+    "credit_limit": 4000.0,
+    "open_balance": 420.0,
+    "open_orders": 556.0,
+    "available_credit": 3024.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 9,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mara Lindqvist",
+      "role": "owner",
+      "email": "mara@fernhollowtea.example"
+     },
+     {
+      "name": "Penny Brooks",
+      "role": "operations",
+      "email": "penny@fernhollowtea.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Packing room",
+      "city": "Fort Collins, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Pop-up shop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20820"
+   },
+   "result": {
+    "order_id": "SO-20820",
+    "customer_id": "C-1004",
+    "po": "FT-0090",
+    "placed": "2026-10-22 10:40",
+    "requested": null,
+    "status": "shipped",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Packing room",
+     "city": "Fort Collins, CO"
+    },
+    "lines": [
+     {
+      "sku": "MB-090603",
+      "name": "Corrugated mailer box 9x6x3",
+      "qty": 8,
+      "picked": 8,
+      "shipped": 8,
+      "price": 34.5,
+      "amount": 276.0
+     },
+     {
+      "sku": "LB-46-TH",
+      "name": "Thermal labels 4x6",
+      "qty": 2,
+      "picked": 2,
+      "shipped": 2,
+      "price": 72.0,
+      "amount": 144.0
+     }
+    ],
+    "fees": [],
+    "total": 420.0,
+    "invoice_id": "INV-30950"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20820"
+   },
+   "result": {
+    "order_id": "SO-20820",
+    "tracking": "PRO 5521-8851",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-26",
+    "status": "in_transit",
+    "eta": "2026-10-28 17:00",
+    "delivered": null,
+    "signed_by": null,
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-26 15:05",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-27 05:20",
+      "text": "In transit, estimated delivery 10/28"
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "order_desk",
+    "summary": "Penny Brooks (Fernhollow Tea, C-1004) asks to change SO-20820 ship-to from Packing room (L1, Fort Collins) to Pop-up shop (L2, Loveland). Order already shipped 2026-10-26, LTL freight PRO 5521-8851, in transit, ETA 2026-10-28. Needs carrier reroute.",
+    "sentence": 1
+   },
+   "result": {
+    "routed_to": "order_desk",
+    "mailbox": "orders@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Penny,\n\nSO-20820 has already shipped, so we can't change the address in our system. It left on Monday, October 26 by LTL freight under tracking number PRO 5521-8851. The carrier's estimated delivery is Wednesday, October 28.\n\nI've sent your request to move it to the Pop-up shop in Loveland to our order desk team. They will ask the carrier about a reroute. I can't promise the carrier will be able to do it. We'll follow up once we hear back.\n\nThe Wendlow order desk",
+  "note": "SO-20820 already shipped (in transit, ETA Oct 28), so ship-to could not be changed. I routed it to the order desk for a carrier reroute to L2 (Loveland). Time is short because delivery is due tomorrow.",
+  "intents": [
+   "ship_to_change"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_017bagYgnAoq4QzdA4yCFWdf",
+     "name": "get_customer",
+     "input": {
+      "email": "penny@fernhollowtea.example"
+     }
+    },
+    {
+     "id": "toolu_01N61pAejEuffBp8WZWBXMHa",
+     "name": "get_order",
+     "input": {
+      "order_id": "20820"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 232,
+     "output": 106,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1629,
+    "cost": 0.002505
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01EjPp3bEsBCkLyTX3xrmHkB",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20820"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1004,
+     "output": 132,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1469,
+    "cost": 0.004309
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01AqnGcYutufaN39quJA5ALD",
+     "name": "route_to_person",
+     "input": {
+      "team": "order_desk",
+      "summary": "Penny Brooks (Fernhollow Tea, C-1004) asks to change SO-20820 ship-to from Packing room (L1, Fort Collins) to Pop-up shop (L2, Loveland). Order already shipped 2026-10-26, LTL freight PRO 5521-8851, in transit, ETA 2026-10-28. Needs carrier reroute.",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1244,
+     "output": 253,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2012,
+    "cost": 0.005999
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01N5fL1VAbp4twcbTDvuK4J5",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Penny,\n\nSO-20820 has already shipped, so we can't change the address in our system. It left on Monday, October 26 by LTL freight under tracking number PRO 5521-8851. The carrier's estimated delivery is Wednesday, October 28.\n\nI've sent your request to move it to the Pop-up shop in Loveland to our order desk team. They will ask the carrier about a reroute. I can't promise the carrier will be able to do it. We'll follow up once we hear back.\n\nThe Wendlow order desk",
+      "note": "SO-20820 already shipped (in transit, ETA Oct 28), so ship-to could not be changed. I routed it to the order desk for a carrier reroute to L2 (Loveland). Time is short because delivery is due tomorrow.",
+      "intents": [
+       "ship_to_change"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1506,
+     "output": 370,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2841,
+    "cost": 0.007693
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 8.0,
+  "input_tokens": 3986,
+  "output_tokens": 861,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 19612,
+  "cost": 0.020506
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:34:07",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "id": "t14",
+ "at": "2026-10-27T15:02",
+ "from": {
+  "name": "Clara Voss",
+  "email": "clara@tallowandteak.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "a few things",
+ "body": [
+  [
+   "Hi team, a few things!"
+  ],
+  [
+   "Is SO-20825 shipping today?",
+   "Can you also send 10 bundles of the 6x6x6 boxes, regular shipping is fine.",
+   "And could you resend invoice 30922, I can't find it."
+  ]
+ ],
+ "sig": [
+  "Thanks!",
+  "Clara"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "order_status",
+   "new_order",
+   "invoice_copy"
+  ],
+  "handling": "Three answers in one reply: SO-20825 is picked and ships today, the new order for 10 bundles is placed for $187.50, and invoice 30922 is $1,820.00 due November 15.",
+  "expected": [
+   {
+    "tool": "create_order",
+    "args": {
+     "customer_id": "C-1003",
+     "lines": [
+      {
+       "sku": "BX-060606-32",
+       "qty": 10
+      }
+     ]
+    },
+    "sentence": 3
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "status",
+    "value": "picked",
+    "source": "order:SO-20825.status"
+   },
+   {
+    "kind": "amount",
+    "value": 187.5,
+    "source": "action:1.total"
+   },
+   {
+    "kind": "amount",
+    "value": 1820.0,
+    "source": "invoice:INV-30922.total"
+   },
+   {
+    "kind": "date",
+    "value": "2026-11-15",
+    "source": "invoice:INV-30922.due"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi team, a few things!",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Is SO-20825 shipping today?",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Can you also send 10 bundles of the 6x6x6 boxes, regular shipping is fine.",
+   "part": "body"
+  },
+  {
+   "n": 4,
+   "text": "And could you resend invoice 30922, I can't find it.",
+   "part": "body"
+  }
+ ]
+}

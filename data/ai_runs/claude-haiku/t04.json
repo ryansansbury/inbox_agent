@@ -1,0 +1,235 @@
+{
+ "email_id": "t04",
+ "split": "test",
+ "seq": 27,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "4e82aa09005e8262",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "penny@fernhollowtea.example"
+   },
+   "result": {
+    "customer_id": "C-1004",
+    "name": "Fernhollow Tea",
+    "terms": "Net 30",
+    "credit_limit": 4000.0,
+    "open_balance": 420.0,
+    "open_orders": 556.0,
+    "available_credit": 3024.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 9,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mara Lindqvist",
+      "role": "owner",
+      "email": "mara@fernhollowtea.example"
+     },
+     {
+      "name": "Penny Brooks",
+      "role": "operations",
+      "email": "penny@fernhollowtea.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Packing room",
+      "city": "Fort Collins, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Pop-up shop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20820"
+   },
+   "result": {
+    "order_id": "SO-20820",
+    "customer_id": "C-1004",
+    "po": "FT-0090",
+    "placed": "2026-10-22 10:40",
+    "requested": null,
+    "status": "shipped",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Packing room",
+     "city": "Fort Collins, CO"
+    },
+    "lines": [
+     {
+      "sku": "MB-090603",
+      "name": "Corrugated mailer box 9x6x3",
+      "qty": 8,
+      "picked": 8,
+      "shipped": 8,
+      "price": 34.5,
+      "amount": 276.0
+     },
+     {
+      "sku": "LB-46-TH",
+      "name": "Thermal labels 4x6",
+      "qty": 2,
+      "picked": 2,
+      "shipped": 2,
+      "price": 72.0,
+      "amount": 144.0
+     }
+    ],
+    "fees": [],
+    "total": 420.0,
+    "invoice_id": "INV-30950"
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "order_desk",
+    "summary": "Fernhollow Tea (C-1004) asks to redirect SO-20820 (PO FT-0090) from the Packing room (L1, Fort Collins) to the Pop-up shop (L2, Loveland). The order already shipped on the Valley warehouse, so the ship-to cannot be changed in the system. Please check whether the carrier can reroute it to Loveland.",
+    "sentence": 1
+   },
+   "result": {
+    "routed_to": "order_desk",
+    "mailbox": "orders@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Penny,\n\nThank you for your email about SO-20820 (PO FT-0090). That order has already shipped from our Valley warehouse, so we can't change its ship-to in our system. We have passed your request to our order desk, who will check with the carrier about redirecting the shipment to the Loveland pop-up shop. We can't promise the carrier will be able to change it. If you'd like, we can also set up future orders for the Loveland location.\n\nThe Wendlow order desk",
+  "note": "SO-20820 shipped on Oct 22 from the Valley warehouse, so the ship-to change (Packing room L1 to Pop-up shop L2) was not made. Routed to the order desk to ask the carrier about rerouting. Check the carrier response before confirming anything to the customer.",
+  "intents": [
+   "ship_to_change"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_016zhw4mgGd9DkNUxdeWC2rP",
+     "name": "get_customer",
+     "input": {
+      "email": "penny@fernhollowtea.example"
+     }
+    },
+    {
+     "id": "toolu_017jGxoL62xuXnDNNgPvudvJ",
+     "name": "get_order",
+     "input": {
+      "order_id": "20820"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 232,
+     "output": 121,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1065,
+    "cost": 0.000133
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01YAN4Hn7z2PUE8eQcZKovCF",
+     "name": "route_to_person",
+     "input": {
+      "team": "order_desk",
+      "summary": "Fernhollow Tea (C-1004) asks to redirect SO-20820 (PO FT-0090) from the Packing room (L1, Fort Collins) to the Pop-up shop (L2, Loveland). The order already shipped on the Valley warehouse, so the ship-to cannot be changed in the system. Please check whether the carrier can reroute it to Loveland.",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1004,
+     "output": 368,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1793,
+    "cost": 0.000333
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01JbjVtYwjiSRcLapsMD22iE",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Penny,\n\nThank you for your email about SO-20820 (PO FT-0090). That order has already shipped from our Valley warehouse, so we can't change its ship-to in our system. We have passed your request to our order desk, who will check with the carrier about redirecting the shipment to the Loveland pop-up shop. We can't promise the carrier will be able to change it. If you'd like, we can also set up future orders for the Loveland location.\n\nThe Wendlow order desk",
+      "note": "SO-20820 shipped on Oct 22 from the Valley warehouse, so the ship-to change (Packing room L1 to Pop-up shop L2) was not made. Routed to the order desk to ask the carrier about rerouting. Check the carrier response before confirming anything to the customer.",
+      "intents": [
+       "ship_to_change"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1265,
+     "output": 371,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2282,
+    "cost": 0.000361
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.1,
+  "input_tokens": 2501,
+  "output_tokens": 860,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000827
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:37:43",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

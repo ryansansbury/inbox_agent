@@ -1,0 +1,240 @@
+{
+ "email_id": "t20",
+ "split": "test",
+ "seq": 43,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "67b031c7615ddd12",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "mateo@tarnwell.example"
+   },
+   "result": {
+    "customer_id": "C-1010",
+    "name": "Tarnwell Leather Goods",
+    "terms": "Net 30",
+    "credit_limit": 9000.0,
+    "open_balance": 7572.8,
+    "open_orders": 427.2,
+    "available_credit": 1000.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mateo Reyes",
+      "role": "operations manager",
+      "email": "mateo@tarnwell.example"
+     },
+     {
+      "name": "Silas Pruitt",
+      "role": "accounts payable",
+      "email": "silas@tarnwell.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Englewood, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Showroom",
+      "city": "Denver, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "PD-1016",
+      "price": 53.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20827"
+   },
+   "result": {
+    "order_id": "SO-20827",
+    "customer_id": "C-1010",
+    "po": "TW-5530",
+    "placed": "2026-10-26 13:50",
+    "requested": null,
+    "status": "open",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Workshop",
+     "city": "Englewood, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-1016",
+      "name": "Padded kraft mailer 10.5x16",
+      "qty": 6,
+      "picked": 0,
+      "shipped": 0,
+      "price": 53.2,
+      "amount": 319.2
+     },
+     {
+      "sku": "TP-3C-110",
+      "name": "Carton sealing tape 3 in x 110 yd, clear",
+      "qty": 2,
+      "picked": 0,
+      "shipped": 0,
+      "price": 54.0,
+      "amount": 108.0
+     }
+    ],
+    "fees": [],
+    "total": 427.2,
+    "invoice_id": null
+   },
+   "valid": true
+  },
+  {
+   "tool": "update_ship_to",
+   "args": {
+    "order_id": "20827",
+    "location_id": "L2",
+    "sentence": 1
+   },
+   "result": {
+    "order_id": "SO-20827",
+    "ship_to": "Showroom, Denver, CO",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Mateo,\n\nWe have changed the ship-to on order SO-20827 to your Denver showroom. The order is still open and has not been picked, so it will go to the showroom.\n\nThe Wendlow order desk",
+  "note": "Changed ship-to on open order SO-20827 (PO TW-5530) from the Englewood workshop (L1) to the Denver showroom (L2) for account C-1010. The order was open and unpicked, so the change was allowed.",
+  "intents": [
+   "ship_to_change"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01KTbKyn3rcSQ7N6qccZSyqG",
+     "name": "get_customer",
+     "input": {
+      "email": "mateo@tarnwell.example"
+     }
+    },
+    {
+     "id": "toolu_01FX4GKHaRZtTDVvU6y5YhNF",
+     "name": "get_order",
+     "input": {
+      "order_id": "20827"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 200,
+     "output": 105,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 916,
+    "cost": 0.000122
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_012DfEx3t3C27vchEU5Mqhh9",
+     "name": "update_ship_to",
+     "input": {
+      "order_id": "20827",
+      "location_id": "L2",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 991,
+     "output": 139,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1078,
+    "cost": 0.000218
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_014pBZjvPaELmpbDXkZUCCpp",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Mateo,\n\nWe have changed the ship-to on order SO-20827 to your Denver showroom. The order is still open and has not been picked, so it will go to the showroom.\n\nThe Wendlow order desk",
+      "note": "Changed ship-to on open order SO-20827 (PO TW-5530) from the Englewood workshop (L1) to the Denver showroom (L2) for account C-1010. The order was open and unpicked, so the change was allowed.",
+      "intents": [
+       "ship_to_change"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1135,
+     "output": 266,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1435,
+    "cost": 0.000296
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 3.4,
+  "input_tokens": 2326,
+  "output_tokens": 510,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000636
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:39:12",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

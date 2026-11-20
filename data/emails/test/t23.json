@@ -1,0 +1,75 @@
+{
+ "id": "t23",
+ "at": "2026-10-27T17:38",
+ "from": {
+  "name": "Lucy Tran",
+  "email": "lucy@juniperandvale.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "damaged mailers",
+ "body": [
+  [
+   "Hi, 2 cases of the 8.5x12 padded mailers on SO-20814 arrived wet and torn.",
+   "Could you credit those?"
+  ]
+ ],
+ "sig": [
+  "Lucy"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "damaged_delivery",
+   "credit_request"
+  ],
+  "handling": "The carrier noted 2 cases wet and torn, so credit 2 cases at $44.00, $88.00, under the cap.",
+  "expected": [
+   {
+    "tool": "issue_credit",
+    "args": {
+     "customer_id": "C-1006",
+     "invoice_id": "INV-30946",
+     "amount": 88.0
+    },
+    "sentence": 2,
+    "basis": {
+     "kind": "damaged",
+     "order": "SO-20814",
+     "lines": [
+      {
+       "sku": "PD-0812",
+       "qty": 2
+      }
+     ]
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 88.0,
+    "source": "action:1.amount"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, 2 cases of the 8.5x12 padded mailers on SO-20814 arrived wet and torn.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Could you credit those?",
+   "part": "body"
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "id": "m03",
+ "at": "2026-10-27T07:26",
+ "from": {
+  "name": "Caleb Kowalski",
+  "email": "caleb@sablewood.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Only 38 of 40 bundles arrived",
+ "body": [
+  [
+   "Hey team, we got SO-20815 in yesterday but only 38 bundles of the 18x18x18 boxes came in.",
+   "It should have been 40, we counted twice.",
+   "Can you send the other 2?"
+  ]
+ ],
+ "sig": [
+  "Thanks",
+  "Caleb",
+  "Caleb Kowalski",
+  "Purchasing | Sablewood Fulfillment"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "short_shipment"
+  ],
+  "handling": "The pick record shows 38 picked of 40, so reship the 2 short bundles. $92.40 is under the $500 reship cap.",
+  "expected": [
+   {
+    "tool": "reship",
+    "args": {
+     "order_id": "SO-20815",
+     "lines": [
+      {
+       "sku": "BX-181818-32",
+       "qty": 2
+      }
+     ]
+    },
+    "sentence": 3,
+    "basis": {
+     "kind": "short",
+     "order": "SO-20815"
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "count",
+    "value": 2,
+    "source": "line:SO-20815:BX-181818-32.short"
+   },
+   {
+    "kind": "order",
+    "value": "SO-20815",
+    "source": "order:SO-20815.id"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hey team, we got SO-20815 in yesterday but only 38 bundles of the 18x18x18 boxes came in.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "It should have been 40, we counted twice.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Can you send the other 2?",
+   "part": "body"
+  }
+ ]
+}

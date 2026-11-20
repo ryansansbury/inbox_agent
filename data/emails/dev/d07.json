@@ -1,0 +1,78 @@
+{
+ "id": "d07",
+ "at": "2026-10-27T12:40",
+ "from": {
+  "name": "Leela Varadan",
+  "email": "leela@sablewood.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Invoice 30917 pricing",
+ "body": [
+  [
+   "Hi, invoice 30917 has the 24x18x12 boxes at $52.40 a bundle.",
+   "Our contract price is $49.80.",
+   "Please credit the difference on the 120 bundles."
+  ]
+ ],
+ "sig": [
+  "Thank you,",
+  "Leela Varadan",
+  "Accounts Payable, Sablewood Fulfillment"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "price_dispute",
+   "credit_request"
+  ],
+  "handling": "The difference is $2.60 on 120 bundles, $312.00, which is over the $250 credit cap, so it waits for you and the reply calls it pending.",
+  "expected": [
+   {
+    "tool": "issue_credit",
+    "args": {
+     "customer_id": "C-1002",
+     "invoice_id": "INV-30917",
+     "amount": 312.0
+    },
+    "sentence": 3,
+    "basis": {
+     "kind": "price_difference",
+     "invoice": "INV-30917",
+     "sku": "BX-241812-32"
+    }
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 312.0,
+    "source": "action:1.amount"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "dev",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, invoice 30917 has the 24x18x12 boxes at $52.40 a bundle.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "Our contract price is $49.80.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Please credit the difference on the 120 bundles.",
+   "part": "body"
+  }
+ ]
+}

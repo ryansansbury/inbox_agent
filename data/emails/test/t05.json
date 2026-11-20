@@ -1,0 +1,70 @@
+{
+ "id": "t05",
+ "at": "2026-10-27T11:08",
+ "from": {
+  "name": "Theo Ramsey",
+  "email": "theo@kettleby.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "liftgate fee on 30927",
+ "body": [
+  [
+   "Hey, invoice 30927 has a $45 liftgate fee on it.",
+   "We have a dock at the Lakewood warehouse and didn't need a liftgate.",
+   "Can you take that off?"
+  ]
+ ],
+ "sig": [
+  "Theo Ramsey",
+  "Kettleby Pet Supply"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "fee_waiver"
+  ],
+  "handling": "A $45.00 waiver is under the $75 cap, so the liftgate fee comes off invoice 30927.",
+  "expected": [
+   {
+    "tool": "waive_fee",
+    "args": {
+     "invoice_id": "INV-30927",
+     "fee": "liftgate"
+    },
+    "sentence": 3
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 45.0,
+    "source": "invoice:INV-30927.fee:liftgate"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hey, invoice 30927 has a $45 liftgate fee on it.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "We have a dock at the Lakewood warehouse and didn't need a liftgate.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Can you take that off?",
+   "part": "body"
+  }
+ ]
+}

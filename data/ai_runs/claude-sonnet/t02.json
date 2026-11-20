@@ -1,0 +1,300 @@
+{
+ "email_id": "t02",
+ "split": "test",
+ "seq": 25,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "38371e598478d8cc",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20813"
+   },
+   "result": {
+    "order_id": "SO-20813",
+    "customer_id": "C-1001",
+    "po": "PF-88219",
+    "placed": "2026-10-21 13:15",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L2",
+     "label": "Building 4",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 30,
+      "picked": 30,
+      "shipped": 30,
+      "price": 58.0,
+      "amount": 1740.0,
+      "damaged_on_delivery": 12
+     }
+    ],
+    "fees": [],
+    "total": 1740.0,
+    "invoice_id": "INV-30944"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20813"
+   },
+   "result": {
+    "order_id": "SO-20813",
+    "tracking": "PRO 5273-0081",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-23",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-26 16:05",
+    "signed_by": "D OKAFOR",
+    "exception": "Pallet 1 tipped in transit, 12 cases crushed",
+    "events": [
+     {
+      "at": "2026-10-23 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-26 16:05",
+      "text": "Delivered, signed by D OKAFOR. Exception noted: Pallet 1 tipped in transit, 12 cases crushed"
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "SO-20813",
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "qty": 12
+     }
+    ],
+    "reason": "12 cases crushed when pallet 1 tipped in transit; carrier exception noted at delivery",
+    "sentence": 3
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-176",
+    "waiting_on": "order_desk",
+    "rule": "reship_cap",
+    "note": "Reships worth over $500 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "value": 696.0,
+    "amount": 696.0,
+    "limit": 500
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Omar,\n\nThank you for the details. We see the carrier noted the exception on SO-20813 at delivery on Monday, October 26: pallet 1 tipped in transit and 12 cases were crushed. The tracking number is PRO 5273-0081.\n\nWe have requested a free replacement of the 12 cases of 18 in x 1500 ft, 80 gauge stretch film (SF-18-80). The replacement is worth $696.00, which is over what we can release on our own. It is pending approval by a person on our team. We will confirm once it is approved.\n\nThe Wendlow order desk",
+  "note": "Reship of 12 SF-18-80 on SO-20813 (value $696.00) is over the $500 cap, so it is pending approval (AP-176). Carrier delivery exception confirms the damage.",
+  "intents": [
+   "damaged_delivery",
+   "reship"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01DvB9UD9apNWBnqxLwT6844",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    },
+    {
+     "id": "toolu_01CZjjMo24eBZAJ4eWu9SsQZ",
+     "name": "get_order",
+     "input": {
+      "order_id": "20813"
+     }
+    },
+    {
+     "id": "toolu_01DskTVkupdtQjqH6ztuBCEm",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20813"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 254,
+     "output": 153,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1825,
+    "cost": 0.003019
+   }
+  },
+  {
+   "text": "12 × 58 = $696, over $500, so it'll wait for approval.",
+   "calls": [
+    {
+     "id": "toolu_016xZaFmJaJmM2R193q5joWK",
+     "name": "reship",
+     "input": {
+      "order_id": "SO-20813",
+      "lines": [
+       {
+        "sku": "SF-18-80",
+        "qty": 12
+       }
+      ],
+      "reason": "12 cases crushed when pallet 1 tipped in transit; carrier exception noted at delivery",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1401,
+     "output": 194,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1741,
+    "cost": 0.005723
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01H8JrtfcjcFyYLf76ds72Gf",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Omar,\n\nThank you for the details. We see the carrier noted the exception on SO-20813 at delivery on Monday, October 26: pallet 1 tipped in transit and 12 cases were crushed. The tracking number is PRO 5273-0081.\n\nWe have requested a free replacement of the 12 cases of 18 in x 1500 ft, 80 gauge stretch film (SF-18-80). The replacement is worth $696.00, which is over what we can release on our own. It is pending approval by a person on our team. We will confirm once it is approved.\n\nThe Wendlow order desk",
+      "note": "Reship of 12 SF-18-80 on SO-20813 (value $696.00) is over the $500 cap, so it is pending approval (AP-176). Carrier delivery exception confirms the damage.",
+      "intents": [
+       "damaged_delivery",
+       "reship"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1710,
+     "output": 386,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3077,
+    "cost": 0.008261
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 6.6,
+  "input_tokens": 3365,
+  "output_tokens": 733,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.017003
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:33:52",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

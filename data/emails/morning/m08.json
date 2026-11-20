@@ -1,0 +1,82 @@
+{
+ "id": "m08",
+ "at": "2026-10-27T08:27",
+ "from": {
+  "name": "Mateo Reyes",
+  "email": "mateo@tarnwell.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Returning 4 cases of tape",
+ "body": [
+  [
+   "Hi, we over ordered the 3 inch clear tape on SO-20798.",
+   "4 of the cases are still sealed in the shrink wrap.",
+   "Can we send those back?"
+  ]
+ ],
+ "sig": [
+  "Mateo Reyes",
+  "Operations Manager",
+  "Tarnwell Leather Goods"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "return"
+  ],
+  "handling": "Delivered 12 days ago and still sealed, so open the return. 4 cases at $54.00 is $216.00, less the 15% restocking fee of $32.40, for a $183.60 credit, under the cap.",
+  "expected": [
+   {
+    "tool": "create_return",
+    "args": {
+     "order_id": "SO-20798",
+     "lines": [
+      {
+       "sku": "TP-3C-110",
+       "qty": 4
+      }
+     ],
+     "unopened": true
+    },
+    "sentence": 3
+   }
+  ],
+  "acceptable": [],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "amount",
+    "value": 32.4,
+    "source": "action:1.restocking_fee"
+   },
+   {
+    "kind": "amount",
+    "value": 183.6,
+    "source": "action:1.credit"
+   }
+  ],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, we over ordered the 3 inch clear tape on SO-20798.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "4 of the cases are still sealed in the shrink wrap.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Can we send those back?",
+   "part": "body"
+  }
+ ]
+}

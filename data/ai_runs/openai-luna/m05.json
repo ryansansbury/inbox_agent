@@ -1,0 +1,328 @@
+{
+ "email_id": "m05",
+ "split": "morning",
+ "seq": 4,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "00317c91bdf61d53",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "clara@tallowandteak.example"
+   },
+   "result": {
+    "customer_id": "C-1003",
+    "name": "Tallow & Teak",
+    "terms": "Net 30",
+    "credit_limit": 5000.0,
+    "open_balance": 1820.0,
+    "open_orders": 337.0,
+    "available_credit": 2843.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 12,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Clara Voss",
+      "role": "owner",
+      "email": "clara@tallowandteak.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Golden, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-121006-32",
+      "price": 21.4
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "12x10x6 boxes",
+    "customer_id": "C-1003"
+   },
+   "result": {
+    "query": "12x10x6 boxes",
+    "matches": [
+     {
+      "sku": "BX-121006-32",
+      "name": "Shipping box 12x10x6, 32 ECT",
+      "unit": "bundle of 25",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 22.6,
+      "available": 66,
+      "price": 21.4
+     },
+     {
+      "sku": "BX-121006-44",
+      "name": "Shipping box 12x10x6, 44 ECT",
+      "unit": "bundle of 25",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 29.4,
+      "available": 479,
+      "price": 29.4
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1003",
+    "lines": [
+     {
+      "sku": "BX-121006-32",
+      "qty": 60
+     }
+    ],
+    "rush": true,
+    "requested_date": "2026-10-30",
+    "location_id": "L1",
+    "sentence": 2
+   },
+   "result": {
+    "order_id": "SO-20852",
+    "total": 1284.0,
+    "fees": [
+     {
+      "type": "rush",
+      "amount": 95.0
+     }
+    ],
+    "lines": [
+     {
+      "sku": "BX-121006-32",
+      "qty": 60,
+      "price": 21.4
+     }
+    ],
+    "allocation": {
+     "BX-121006-32": [
+      {
+       "warehouse": "North",
+       "qty": 40
+      },
+      {
+       "warehouse": "Valley",
+       "qty": 20
+      }
+     ]
+    },
+    "requested_date": "2026-10-30",
+    "result": "done"
+   },
+   "valid": true
+  },
+  {
+   "tool": "waive_fee",
+   "args": {
+    "order_id": "SO-20852",
+    "fee": "rush",
+    "sentence": 3
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-113",
+    "waiting_on": "order_desk",
+    "rule": "fee_waiver_cap",
+    "note": "Fee waivers over $75 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "amount": 95.0,
+    "limit": 75
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Clara,\n\nI placed order SO-20852 for 60 bundles of the 12x10x6 boxes, requested for Friday, October 30. The $95.00 rush-fee waiver is pending approval.\n\nThe Wendlow order desk",
+  "note": "Placed the requested order using the account's 32 ECT contract-priced boxes. Rush-fee waiver exceeds the $75.00 limit and is pending order desk approval under AP-113.",
+  "intents": [
+   "new_order",
+   "rush",
+   "fee_waiver"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_Yi6yKpII9jWmkXeQS7KtsZyJ",
+     "name": "get_customer",
+     "input": {
+      "email": "clara@tallowandteak.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 144,
+     "output": 25,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1093,
+    "cost": 8.6e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_DnEDiHA2apiTzgO3bTG43dSk",
+     "name": "search_items",
+     "input": {
+      "query": "12x10x6 boxes",
+      "customer_id": "C-1003"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 232,
+     "output": 30,
+     "cache_write": 0,
+     "cache_read": 2502
+    },
+    "ms": 1093,
+    "cost": 0.000101
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_TGdwXBvZliNShb7Z1GczPOHd",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1003",
+      "lines": [
+       {
+        "sku": "BX-121006-32",
+        "qty": 60
+       }
+      ],
+      "rush": true,
+      "requested_date": "2026-10-30",
+      "location_id": "L1",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 209,
+     "output": 62,
+     "cache_write": 0,
+     "cache_read": 2731
+    },
+    "ms": 1377,
+    "cost": 0.00012
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_KZplgj9VUFuWDSRdtlUdYdme",
+     "name": "waive_fee",
+     "input": {
+      "order_id": "SO-20852",
+      "fee": "rush",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 195,
+     "output": 31,
+     "cache_write": 0,
+     "cache_read": 2937
+    },
+    "ms": 1075,
+    "cost": 0.000108
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_OhkqwCSeAGfBQE3q4dEHuWHh",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Clara,\n\nI placed order SO-20852 for 60 bundles of the 12x10x6 boxes, requested for Friday, October 30. The $95.00 rush-fee waiver is pending approval.\n\nThe Wendlow order desk",
+      "note": "Placed the requested order using the account's 32 ECT contract-priced boxes. Rush-fee waiver exceeds the $75.00 limit and is pending order desk approval under AP-113.",
+      "intents": [
+       "new_order",
+       "rush",
+       "fee_waiver"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 124,
+     "output": 129,
+     "cache_write": 0,
+     "cache_read": 3129
+    },
+    "ms": 1669,
+    "cost": 0.000155
+   }
+  }
+ ],
+ "usage": {
+  "turns": 5,
+  "seconds": 6.3,
+  "input_tokens": 904,
+  "output_tokens": 277,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 13660,
+  "cost": 0.00057
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:40:00",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

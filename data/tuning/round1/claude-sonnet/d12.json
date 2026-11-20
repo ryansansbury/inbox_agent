@@ -1,0 +1,258 @@
+{
+ "email_id": "d12",
+ "split": "dev",
+ "seq": 23,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "8c41038307192385",
+ "input_hash": "c3a207edb8d7bd79",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1001",
+    "placed_from": "2026-10-26",
+    "placed_to": "2026-10-26"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20828",
+      "po": "PF-88301",
+      "placed": "2026-10-26 08:05",
+      "status": "open",
+      "total": 1408.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20830",
+      "po": "PF-88302",
+      "placed": "2026-10-26 14:20",
+      "status": "open",
+      "total": 1116.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "ask_customer",
+   "args": {
+    "question": "We have two orders from Monday, October 26: SO-20828 (PO PF-88301, $1408.00) and SO-20830 (PO PF-88302, $1116.00). Both ship to Building 2. Which one should we hold until Friday, or should we hold both?",
+    "sentence": 1
+   },
+   "result": {
+    "note": "Put the question in the reply.",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Omar,\n\nWe placed two orders for you on Monday, October 26. SO-20828 is PO PF-88301 for $1408.00. SO-20830 is PO PF-88302 for $1116.00. Both are open and ship to Building 2.\n\nWhich one should we hold until Friday? Or should we hold both? We have not changed either order yet. Once you tell us, we will set the hold.\n\nThe Wendlow order desk",
+  "note": "Two open orders were placed Monday (SO-20828 and SO-20830), so I asked which to hold before acting. No hold was placed. Hold date would be Friday 2026-10-30.",
+  "intents": [
+   "hold_order",
+   "ambiguous_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_016Kq9Mner8Co4hCeThqKeUT",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 232,
+     "output": 57,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1190,
+    "cost": 0.001925
+   }
+  },
+  {
+   "text": "Monday was Oct 26.",
+   "calls": [
+    {
+     "id": "toolu_016c3w5xPPNvAU9TpLMqbs2d",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1001",
+      "placed_from": "2026-10-26",
+      "placed_to": "2026-10-26"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 719,
+     "output": 123,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1215,
+    "cost": 0.003559
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_019mxetxb5pGToKnH1vMKzXU",
+     "name": "ask_customer",
+     "input": {
+      "question": "We have two orders from Monday, October 26: SO-20828 (PO PF-88301, $1408.00) and SO-20830 (PO PF-88302, $1116.00). Both ship to Building 2. Which one should we hold until Friday, or should we hold both?",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1018,
+     "output": 201,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1857,
+    "cost": 0.004937
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_014jvDnT6feSJLsYwyAgLJaq",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Omar,\n\nWe placed two orders for you on Monday, October 26. SO-20828 is PO PF-88301 for $1408.00. SO-20830 is PO PF-88302 for $1116.00. Both are open and ship to Building 2.\n\nWhich one should we hold until Friday? Or should we hold both? We have not changed either order yet. Once you tell us, we will set the hold.\n\nThe Wendlow order desk",
+      "note": "Two open orders were placed Monday (SO-20828 and SO-20830), so I asked which to hold before acting. No hold was placed. Hold date would be Friday 2026-10-30.",
+      "intents": [
+       "hold_order",
+       "ambiguous_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1202,
+     "output": 329,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 2330,
+    "cost": 0.006585
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 6.6,
+  "input_tokens": 3171,
+  "output_tokens": 710,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 17816,
+  "cost": 0.017006
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:17:34",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

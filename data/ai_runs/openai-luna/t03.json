@@ -1,0 +1,332 @@
+{
+ "email_id": "t03",
+ "split": "test",
+ "seq": 26,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "40c67bca7f2f63cb",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "sora@kilnmoor.example"
+   },
+   "result": {
+    "customer_id": "C-1009",
+    "name": "Kilnmoor Ceramics",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 5209.0,
+    "open_orders": 213.0,
+    "available_credit": 578.0,
+    "on_hold": false,
+    "past_due": [
+     {
+      "invoice_id": "INV-30883",
+      "due": "2026-10-25",
+      "open": 2685.0
+     }
+    ],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 7
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ezra Moreno",
+      "role": "owner",
+      "email": "ezra@kilnmoor.example"
+     },
+     {
+      "name": "Sora Baek",
+      "role": "shipping lead",
+      "email": "sora@kilnmoor.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Pueblo, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Gallery",
+      "city": "Colorado Springs, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20816"
+   },
+   "result": {
+    "order_id": "SO-20816",
+    "customer_id": "C-1009",
+    "po": "KC-0412",
+    "placed": "2026-10-21 14:00",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Pueblo, CO"
+    },
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "name": "Packing peanuts, 14 cu ft bag",
+      "qty": 12,
+      "picked": 9,
+      "shipped": 9,
+      "price": 26.0,
+      "amount": 312.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 2,
+      "picked": 2,
+      "shipped": 2,
+      "price": 56.0,
+      "amount": 112.0
+     }
+    ],
+    "fees": [],
+    "total": 424.0,
+    "invoice_id": "INV-30945"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20816"
+   },
+   "result": {
+    "order_id": "SO-20816",
+    "tracking": "PRO 5276-0192",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-23",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-26 13:30",
+    "signed_by": "S BAEK",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-23 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-26 13:30",
+      "text": "Delivered, signed by S BAEK"
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "20816",
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 3
+     }
+    ],
+    "reason": "Short shipment: 3 bags not shipped",
+    "sentence": 2
+   },
+   "result": {
+    "replacement_order": "SO-20918",
+    "replaces": "SO-20816",
+    "lines": [
+     {
+      "sku": "VF-PEA-14",
+      "qty": 3
+     }
+    ],
+    "value": 78.0,
+    "charge": 0.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Sora,\n\nWe confirmed that SO-20816 shipped 9 of the 12 bags of packing peanuts ordered. We’ve sent the remaining 3 bags at no charge under replacement order SO-20918.\n\nThe Wendlow order desk",
+  "note": "Confirmed the short shipment against SO-20816 and created a no-charge reshipment, SO-20918.",
+  "intents": [
+   "short_shipment"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_LL0IdZc4rPisMNBLWoAaLpka",
+     "name": "get_customer",
+     "input": {
+      "email": "sora@kilnmoor.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 98,
+     "output": 23,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 953,
+    "cost": 8e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_BigLyN0WZ1dODckr0Vojq8UM",
+     "name": "get_order",
+     "input": {
+      "order_id": "20816"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 289,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2456
+    },
+    "ms": 1041,
+    "cost": 0.0001
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_9Woxjxrn0Mr4o6PoUCcKwmUk",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20816"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 271,
+     "output": 20,
+     "cache_write": 0,
+     "cache_read": 2742
+    },
+    "ms": 1104,
+    "cost": 0.000106
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_9bxMSN2yCsYPi0mtWc0eXcfB",
+     "name": "reship",
+     "input": {
+      "order_id": "20816",
+      "lines": [
+       {
+        "sku": "VF-PEA-14",
+        "qty": 3
+       }
+      ],
+      "reason": "Short shipment: 3 bags not shipped",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 184,
+     "output": 51,
+     "cache_write": 0,
+     "cache_read": 3010
+    },
+    "ms": 1145,
+    "cost": 0.000119
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_OjS75NgrKEOpDkWVNvjZiclu",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Sora,\n\nWe confirmed that SO-20816 shipped 9 of the 12 bags of packing peanuts ordered. We’ve sent the remaining 3 bags at no charge under replacement order SO-20918.\n\nThe Wendlow order desk",
+      "note": "Confirmed the short shipment against SO-20816 and created a no-charge reshipment, SO-20918.",
+      "intents": [
+       "short_shipment"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 127,
+     "output": 106,
+     "cache_write": 0,
+     "cache_read": 3191
+    },
+    "ms": 1610,
+    "cost": 0.000145
+   }
+  }
+ ],
+ "usage": {
+  "turns": 5,
+  "seconds": 5.9,
+  "input_tokens": 969,
+  "output_tokens": 219,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 13760,
+  "cost": 0.00055
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:40:51",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

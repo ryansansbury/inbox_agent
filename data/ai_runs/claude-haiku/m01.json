@@ -1,0 +1,265 @@
+{
+ "email_id": "m01",
+ "split": "morning",
+ "seq": 0,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "84b1510af3d93f47",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "ayumi@lanternfold.example"
+   },
+   "result": {
+    "customer_id": "C-1007",
+    "name": "Lanternfold Candle Co.",
+    "terms": "Net 30",
+    "credit_limit": 7500.0,
+    "open_balance": 861.5,
+    "open_orders": 0.0,
+    "available_credit": 6638.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ayumi Nakaya",
+      "role": "founder",
+      "email": "ayumi@lanternfold.example"
+     },
+     {
+      "name": "Gwen Talbot",
+      "role": "operations",
+      "email": "gwen@lanternfold.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-PLACEHOLDER",
+    "po": "4471"
+   },
+   "result": {
+    "error": "No account C-PLACEHOLDER."
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1007",
+    "po": "4471"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20812",
+      "po": "4471",
+      "placed": "2026-10-20 10:15",
+      "status": "shipped",
+      "total": 861.5,
+      "ship_to": "Workshop, Loveland, CO",
+      "lines": 2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20812"
+   },
+   "result": {
+    "order_id": "SO-20812",
+    "tracking": "PRO 5521-8804",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-23",
+    "status": "out_for_delivery",
+    "eta": "2026-10-27 14:00",
+    "delivered": null,
+    "signed_by": null,
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-23 14:10",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-24 05:40",
+      "text": "Departed origin terminal"
+     },
+     {
+      "at": "2026-10-26 17:55",
+      "text": "Arrived at destination terminal, delivery appointment set for 10/27"
+     },
+     {
+      "at": "2026-10-27 06:12",
+      "text": "Out for delivery, estimated by 2:00 PM"
+     }
+    ]
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Ayumi,\n\nPO 4471 is order SO-20812. It shipped on Friday, October 23, by LTL freight under tracking number PRO 5521-8804. The shipment arrived at the destination terminal yesterday with a delivery appointment set for today, and it is out for delivery now. The carrier estimates delivery by 2:00 PM today, Tuesday, October 27, to your Workshop location in Loveland, CO.\n\nIf it hasn't arrived by the end of the day, please reply to this email and we will look into it with the carrier.\n\nThe Wendlow order desk",
+  "note": "Looked up PO 4471 for account C-1007 (Lanternfold Candle Co.). It is order SO-20812, shipped October 23 by LTL freight, tracking PRO 5521-8804, out for delivery with an ETA of 2:00 PM today. No actions taken.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_014koSgFAgyjx5t4gPYNHNCo",
+     "name": "get_customer",
+     "input": {
+      "email": "ayumi@lanternfold.example"
+     }
+    },
+    {
+     "id": "toolu_017nLtN9APLevFEkXSrDjPzG",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-PLACEHOLDER",
+      "po": "4471"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 307,
+     "output": 139,
+     "cache_write": 4903,
+     "cache_read": 0
+    },
+    "ms": 1108,
+    "cost": 0.000713
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01JhBKPU3FamPjxpsmvEzppU",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1007",
+      "po": "4471"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 807,
+     "output": 99,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 869,
+    "cost": 0.000179
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_0128CaqE7zMaToKzbsS8Q5SY",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20812"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 975,
+     "output": 52,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 605,
+    "cost": 0.000173
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_015EvvnyyE5JBS873WWyUb4m",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Ayumi,\n\nPO 4471 is order SO-20812. It shipped on Friday, October 23, by LTL freight under tracking number PRO 5521-8804. The shipment arrived at the destination terminal yesterday with a delivery appointment set for today, and it is out for delivery now. The carrier estimates delivery by 2:00 PM today, Tuesday, October 27, to your Workshop location in Loveland, CO.\n\nIf it hasn't arrived by the end of the day, please reply to this email and we will look into it with the carrier.\n\nThe Wendlow order desk",
+      "note": "Looked up PO 4471 for account C-1007 (Lanternfold Candle Co.). It is order SO-20812, shipped October 23 by LTL freight, tracking PRO 5521-8804, out for delivery with an ETA of 2:00 PM today. No actions taken.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1299,
+     "output": 403,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1853,
+    "cost": 0.00038
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 4.4,
+  "input_tokens": 3388,
+  "output_tokens": 693,
+  "cache_write_tokens": 4903,
+  "cache_read_tokens": 14709,
+  "cost": 0.001445
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:36:14",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

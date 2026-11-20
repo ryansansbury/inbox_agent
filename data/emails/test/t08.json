@@ -1,0 +1,59 @@
+{
+ "id": "t08",
+ "at": "2026-10-27T12:29",
+ "from": {
+  "name": "Clara Voss",
+  "email": "clara@tallowandteak.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "Return crinkle paper",
+ "body": [
+  [
+   "Hi, the crinkle paper from SO-20802 is a different shade than we expected.",
+   "We opened the boxes to check, and we'd like to return all 5."
+  ]
+ ],
+ "sig": [
+  "Clara"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "return"
+  ],
+  "handling": "Only unopened items can come back, and all five boxes were opened, so the reply explains the policy and no return is opened.",
+  "expected": [],
+  "acceptable": [
+   {
+    "tool": "create_return",
+    "args": {}
+   },
+   {
+    "tool": "route_to_person",
+    "args": {
+     "team": "order_desk"
+    }
+   }
+  ],
+  "forbidden": [],
+  "facts": [],
+  "lane": "handled",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "test",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi, the crinkle paper from SO-20802 is a different shade than we expected.",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "We opened the boxes to check, and we'd like to return all 5.",
+   "part": "body"
+  }
+ ]
+}

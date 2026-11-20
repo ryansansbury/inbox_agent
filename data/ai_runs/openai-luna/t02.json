@@ -1,0 +1,464 @@
+{
+ "email_id": "t02",
+ "split": "test",
+ "seq": 25,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "38371e598478d8cc",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20813"
+   },
+   "result": {
+    "order_id": "SO-20813",
+    "customer_id": "C-1001",
+    "po": "PF-88219",
+    "placed": "2026-10-21 13:15",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L2",
+     "label": "Building 4",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 30,
+      "picked": 30,
+      "shipped": 30,
+      "price": 58.0,
+      "amount": 1740.0,
+      "damaged_on_delivery": 12
+     }
+    ],
+    "fees": [],
+    "total": 1740.0,
+    "invoice_id": "INV-30944"
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1001",
+    "status": "delivered"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20500",
+      "po": "01-3365",
+      "placed": "2026-04-01 11:35",
+      "status": "delivered",
+      "total": 624.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20504",
+      "po": "01-5938",
+      "placed": "2026-04-06 15:48",
+      "status": "delivered",
+      "total": 316.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20507",
+      "po": "01-7503",
+      "placed": "2026-04-10 12:39",
+      "status": "delivered",
+      "total": 190.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20512",
+      "po": "01-4075",
+      "placed": "2026-04-14 11:25",
+      "status": "delivered",
+      "total": 1385.25,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20519",
+      "po": "01-7538",
+      "placed": "2026-04-22 10:34",
+      "status": "delivered",
+      "total": 1483.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20527",
+      "po": "01-3397",
+      "placed": "2026-04-30 08:44",
+      "status": "delivered",
+      "total": 2688.25,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20547",
+      "po": "01-7795",
+      "placed": "2026-05-27 13:07",
+      "status": "delivered",
+      "total": 954.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20572",
+      "po": "01-1722",
+      "placed": "2026-07-15 16:06",
+      "status": "delivered",
+      "total": 2135.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20590",
+      "po": "01-9350",
+      "placed": "2026-08-04 09:16",
+      "status": "delivered",
+      "total": 1029.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20591",
+      "po": "01-5621",
+      "placed": "2026-08-09 12:29",
+      "status": "delivered",
+      "total": 84.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20593",
+      "po": "01-5393",
+      "placed": "2026-08-10 11:23",
+      "status": "delivered",
+      "total": 1176.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20598",
+      "po": "01-1610",
+      "placed": "2026-08-14 13:32",
+      "status": "delivered",
+      "total": 2316.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20601",
+      "po": "01-7334",
+      "placed": "2026-08-17 09:36",
+      "status": "delivered",
+      "total": 708.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20606",
+      "po": "01-6804",
+      "placed": "2026-08-24 13:27",
+      "status": "delivered",
+      "total": 522.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20788",
+      "po": "PF-87940",
+      "placed": "2026-10-08 11:10",
+      "status": "delivered",
+      "total": 1488.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20808",
+      "po": "PF-88130",
+      "placed": "2026-10-16 15:00",
+      "status": "delivered",
+      "total": 1160.0,
+      "ship_to": "Building 4, Aurora, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20809",
+      "po": "PF-88213",
+      "placed": "2026-10-21 09:30",
+      "status": "delivered",
+      "total": 1924.0,
+      "ship_to": "Building 2, Aurora, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20813",
+      "po": "PF-88219",
+      "placed": "2026-10-21 13:15",
+      "status": "delivered",
+      "total": 1740.0,
+      "ship_to": "Building 4, Aurora, CO",
+      "lines": 1
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "20813",
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "qty": 12
+     }
+    ],
+    "reason": "12 cases crushed and unusable on delivery",
+    "sentence": 3
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-176",
+    "waiting_on": "order_desk",
+    "rule": "reship_cap",
+    "note": "Reships worth over $500 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "value": 696.0,
+    "amount": 696.0,
+    "limit": 500
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "We’ve submitted a replacement request for 12 cases of 18-inch stretch film for SO-20813. It is pending approval.\n\nThe Wendlow order desk",
+  "note": "The order record confirms 12 cases of SF-18-80 were damaged on delivery. Reship request for $696.00 is pending order desk approval under AP-176.",
+  "intents": [
+   "damaged_delivery",
+   "reship"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_42tXu4bvxGxOHV5RANlSephR",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 122,
+     "output": 21,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 784,
+    "cost": 8.2e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_ztY4uil8JiplwhMr1Uj96y3H",
+     "name": "get_order",
+     "input": {
+      "order_id": "20813"
+     }
+    },
+    {
+     "id": "call_iDrLYUJcgrBY1YwX60DJQj1Y",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1001",
+      "status": "delivered"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 345,
+     "output": 58,
+     "cache_write": 0,
+     "cache_read": 2480
+    },
+    "ms": 1328,
+    "cost": 0.000125
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_jeHMOnNVrojL81VkLAU2UfbD",
+     "name": "reship",
+     "input": {
+      "order_id": "20813",
+      "lines": [
+       {
+        "sku": "SF-18-80",
+        "qty": 12
+       }
+      ],
+      "reason": "12 cases crushed and unusable on delivery",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 1506,
+     "output": 50,
+     "cache_write": 0,
+     "cache_read": 2822
+    },
+    "ms": 1265,
+    "cost": 0.000246
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_vRROTCUzup5C95S1p9CD6qrw",
+     "name": "finish",
+     "input": {
+      "reply": "We’ve submitted a replacement request for 12 cases of 18-inch stretch film for SO-20813. It is pending approval.\n\nThe Wendlow order desk",
+      "note": "The order record confirms 12 cases of SF-18-80 were damaged on delivery. Reship request for $696.00 is pending order desk approval under AP-176.",
+      "intents": [
+       "damaged_delivery",
+       "reship"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 148,
+     "output": 104,
+     "cache_write": 0,
+     "cache_read": 4325
+    },
+    "ms": 1599,
+    "cost": 0.000175
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 5.0,
+  "input_tokens": 2121,
+  "output_tokens": 233,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 11988,
+  "cost": 0.000628
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:40:45",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

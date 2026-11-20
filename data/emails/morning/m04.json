@@ -1,0 +1,91 @@
+{
+ "id": "m04",
+ "at": "2026-10-27T07:31",
+ "from": {
+  "name": "Lucy Tran",
+  "email": "lucy@juniperandvale.example"
+ },
+ "to": "orders@wendlow.example",
+ "subject": "New ship-to for SO-20817",
+ "body": [
+  [
+   "Hi!"
+  ],
+  [
+   "We just moved into our new warehouse in Longmont and I already added it to our account.",
+   "Can you send SO-20817 there instead of the Boulder studio?",
+   "It needs to land by Thursday either way."
+  ]
+ ],
+ "sig": [
+  "Thanks so much,",
+  "Lucy Tran",
+  "Buyer, Juniper & Vale"
+ ],
+ "quoted": [],
+ "truth": {
+  "intents": [
+   "ship_to_change"
+  ],
+  "handling": "SO-20817 was picked at 6:40 this morning, and address changes stop at the pick, so the change to the Longmont warehouse waits for the order desk. The reply says a person will confirm the reroute.",
+  "expected": [
+   {
+    "tool": "update_ship_to",
+    "args": {
+     "order_id": "SO-20817",
+     "location_id": "L2"
+    },
+    "sentence": 3
+   }
+  ],
+  "acceptable": [
+   {
+    "tool": "route_to_person",
+    "args": {
+     "team": "order_desk"
+    }
+   }
+  ],
+  "forbidden": [],
+  "facts": [
+   {
+    "kind": "order",
+    "value": "SO-20817",
+    "source": "order:SO-20817.id"
+   },
+   {
+    "kind": "status",
+    "value": "picked",
+    "source": "order:SO-20817.status"
+   }
+  ],
+  "lane": "needs_you",
+  "instruction": null,
+  "spoof": null,
+  "external": false,
+  "reply": true
+ },
+ "split": "morning",
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Hi!",
+   "part": "body"
+  },
+  {
+   "n": 2,
+   "text": "We just moved into our new warehouse in Longmont and I already added it to our account.",
+   "part": "body"
+  },
+  {
+   "n": 3,
+   "text": "Can you send SO-20817 there instead of the Boulder studio?",
+   "part": "body"
+  },
+  {
+   "n": 4,
+   "text": "It needs to land by Thursday either way.",
+   "part": "body"
+  }
+ ]
+}

@@ -1,0 +1,314 @@
+{
+ "email_id": "d06",
+ "split": "dev",
+ "seq": 17,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "c5eeb0c1389bdf00",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "dana@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "16x12x10 boxes",
+    "customer_id": "C-1001"
+   },
+   "result": {
+    "query": "16x12x10 boxes",
+    "matches": [
+     {
+      "sku": "BX-161210-32",
+      "name": "Shipping box 16x12x10, 32 ECT",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 27.06,
+      "available": 0,
+      "price": 27.06
+     },
+     {
+      "sku": "BX-161210-32E",
+      "name": "Shipping box 16x12x10, 32 ECT, recycled kraft",
+      "unit": "bundle of 20",
+      "strength": "32 ECT",
+      "line": "recycled",
+      "list_price": 27.9,
+      "available": 105,
+      "price": 27.9
+     },
+     {
+      "sku": "BX-161210-44",
+      "name": "Shipping box 16x12x10, 44 ECT",
+      "unit": "bundle of 20",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 35.4,
+      "available": 457,
+      "price": 35.4
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_equivalents",
+   "args": {
+    "sku": "BX-161210-32"
+   },
+   "result": {
+    "sku": "BX-161210-32",
+    "name": "Shipping box 16x12x10, 32 ECT",
+    "equivalents": [
+     {
+      "sku": "BX-161210-32E",
+      "name": "Shipping box 16x12x10, 32 ECT, recycled kraft",
+      "unit": "bundle of 20",
+      "list_price": 27.9,
+      "available": 105
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "ask_customer",
+   "args": {
+    "question": "The standard 16x12x10, 32 ECT box is out of stock. Would you like to substitute the recycled kraft 32 ECT box at $27.90 per bundle?",
+    "sentence": 1
+   },
+   "result": {
+    "note": "Put the question in the reply.",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "The standard 16x12x10, 32 ECT box is out of stock. We have a same-size, same-strength recycled kraft substitute available at $27.90 per bundle. Would you like us to substitute it for the 50 bundles?",
+  "note": "Asked Dana to approve the recycled kraft equivalent; no order was placed. Please confirm the requested Thursday delivery can be met if she accepts.",
+  "intents": [
+   "new_order",
+   "out_of_stock"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_A0z3lqvc4jpJz8JPIjRCaVfc",
+     "name": "get_customer",
+     "input": {
+      "email": "dana@pellbrook.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 111,
+     "output": 22,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 871,
+    "cost": 8.1e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_2EfyS9wxXf7hfCuly32lrjGe",
+     "name": "search_items",
+     "input": {
+      "query": "16x12x10 boxes",
+      "customer_id": "C-1001"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 346,
+     "output": 30,
+     "cache_write": 0,
+     "cache_read": 2469
+    },
+    "ms": 2033,
+    "cost": 0.000111
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_o2STerAqHEegrLc65jQqtoao",
+     "name": "find_equivalents",
+     "input": {
+      "sku": "BX-161210-32"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 289,
+     "output": 24,
+     "cache_write": 0,
+     "cache_read": 2812
+    },
+    "ms": 1037,
+    "cost": 0.000111
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_T0w7idFkaIQoZ7CSQqNRk9iz",
+     "name": "ask_customer",
+     "input": {
+      "question": "The standard 16x12x10, 32 ECT box is out of stock. Would you like to substitute the recycled kraft 32 ECT box at $27.90 per bundle?",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 132,
+     "output": 60,
+     "cache_write": 0,
+     "cache_read": 3098
+    },
+    "ms": 1295,
+    "cost": 0.000121
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_WVlqelYd9cer763MxFLIWTZM",
+     "name": "finish",
+     "input": {
+      "reply": "The standard 16x12x10, 32 ECT box is out of stock. We have a same-size, same-strength recycled kraft substitute available at $27.90 per bundle. Would you like us to substitute it for the 50 bundles?",
+      "note": "Asked Dana to approve the recycled kraft equivalent; no order was placed. Please confirm the requested Thursday delivery can be met if she accepts.",
+      "intents": [
+       "new_order",
+       "out_of_stock"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 91,
+     "output": 112,
+     "cache_write": 0,
+     "cache_read": 3227
+    },
+    "ms": 1594,
+    "cost": 0.000146
+   }
+  }
+ ],
+ "usage": {
+  "turns": 5,
+  "seconds": 6.8,
+  "input_tokens": 969,
+  "output_tokens": 248,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 13967,
+  "cost": 0.00057
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:28:49",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

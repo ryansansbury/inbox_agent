@@ -1,0 +1,238 @@
+{
+ "email_id": "t22",
+ "split": "test",
+ "seq": 45,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "2c8ab2c867fc28f1",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "theo@kettleby.example"
+   },
+   "result": {
+    "customer_id": "C-1005",
+    "name": "Kettleby Pet Supply",
+    "terms": "Net 30",
+    "credit_limit": 8000.0,
+    "open_balance": 1602.5,
+    "open_orders": 0.0,
+    "available_credit": 6397.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Theo Ramsey",
+      "role": "operations lead",
+      "email": "theo@kettleby.example"
+     },
+     {
+      "name": "Audrey Tsai",
+      "role": "accounts payable",
+      "email": "audrey@kettleby.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Warehouse",
+      "city": "Lakewood, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "12x9x4 boxes",
+    "customer_id": "C-1005"
+   },
+   "result": {
+    "query": "12x9x4 boxes",
+    "matches": [
+     {
+      "sku": "BX-120904-32",
+      "name": "Shipping box 12x9x4, 32 ECT",
+      "unit": "bundle of 25",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 18.4,
+      "available": 262,
+      "price": 18.4
+     },
+     {
+      "sku": "BX-120904-44",
+      "name": "Shipping box 12x9x4, 44 ECT",
+      "unit": "bundle of 25",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 24.2,
+      "available": 504,
+      "price": 24.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "sales",
+    "summary": "Customer requests ongoing price change to $16 per bundle for 12x9x4 boxes (sentence 1); account's standard 32 ECT price is currently $18.40 per bundle.",
+    "sentence": 1
+   },
+   "result": {
+    "routed_to": "sales",
+    "mailbox": "sales@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "I’ve sent your request for a price of $16.00 per bundle going forward to our sales team for review. Your current price for the 12x9x4 32 ECT boxes is $18.40 per bundle. The requested change is not yet in effect.\n\nThe Wendlow order desk",
+  "note": "Routed the requested ongoing price change to sales. The account has two 12x9x4 strengths; the email did not specify one, so sales should confirm which strength the request applies to.",
+  "intents": [
+   "price_change"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_2ZVE6WdfPcG9Pr62cwHmeo4q",
+     "name": "get_customer",
+     "input": {
+      "email": "theo@kettleby.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 103,
+     "output": 23,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 946,
+    "cost": 8.1e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_2kpqVHatxLysqyZjtogI1Vfv",
+     "name": "search_items",
+     "input": {
+      "query": "12x9x4 boxes",
+      "customer_id": "C-1005"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 238,
+     "output": 30,
+     "cache_write": 0,
+     "cache_read": 2461
+    },
+    "ms": 1299,
+    "cost": 0.0001
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_txjyeuN4Gcc4v2FV6nGjG2gl",
+     "name": "route_to_person",
+     "input": {
+      "team": "sales",
+      "summary": "Customer requests ongoing price change to $16 per bundle for 12x9x4 boxes (sentence 1); account's standard 32 ECT price is currently $18.40 per bundle.",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 209,
+     "output": 64,
+     "cache_write": 0,
+     "cache_read": 2696
+    },
+    "ms": 1417,
+    "cost": 0.00012
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_7Sgrg9GLEVh3nwnW0WmIsd1M",
+     "name": "finish",
+     "input": {
+      "reply": "I’ve sent your request for a price of $16.00 per bundle going forward to our sales team for review. Your current price for the 12x9x4 32 ECT boxes is $18.40 per bundle. The requested change is not yet in effect.\n\nThe Wendlow order desk",
+      "note": "Routed the requested ongoing price change to sales. The account has two 12x9x4 strengths; the email did not specify one, so sales should confirm which strength the request applies to.",
+      "intents": [
+       "price_change"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 105,
+     "output": 134,
+     "cache_write": 0,
+     "cache_read": 2902
+    },
+    "ms": 1725,
+    "cost": 0.00015
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 5.4,
+  "input_tokens": 655,
+  "output_tokens": 251,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 10420,
+  "cost": 0.000451
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:42:32",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

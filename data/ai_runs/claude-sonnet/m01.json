@@ -1,0 +1,297 @@
+{
+ "email_id": "m01",
+ "split": "morning",
+ "seq": 0,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "84b1510af3d93f47",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "ayumi@lanternfold.example"
+   },
+   "result": {
+    "customer_id": "C-1007",
+    "name": "Lanternfold Candle Co.",
+    "terms": "Net 30",
+    "credit_limit": 7500.0,
+    "open_balance": 861.5,
+    "open_orders": 0.0,
+    "available_credit": 6638.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ayumi Nakaya",
+      "role": "founder",
+      "email": "ayumi@lanternfold.example"
+     },
+     {
+      "name": "Gwen Talbot",
+      "role": "operations",
+      "email": "gwen@lanternfold.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1007",
+    "po": "4471"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20812",
+      "po": "4471",
+      "placed": "2026-10-20 10:15",
+      "status": "shipped",
+      "total": 861.5,
+      "ship_to": "Workshop, Loveland, CO",
+      "lines": 2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "SO-20812"
+   },
+   "result": {
+    "order_id": "SO-20812",
+    "tracking": "PRO 5521-8804",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-23",
+    "status": "out_for_delivery",
+    "eta": "2026-10-27 14:00",
+    "delivered": null,
+    "signed_by": null,
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-23 14:10",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-24 05:40",
+      "text": "Departed origin terminal"
+     },
+     {
+      "at": "2026-10-26 17:55",
+      "text": "Arrived at destination terminal, delivery appointment set for 10/27"
+     },
+     {
+      "at": "2026-10-27 06:12",
+      "text": "Out for delivery, estimated by 2:00 PM"
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20812"
+   },
+   "result": {
+    "order_id": "SO-20812",
+    "customer_id": "C-1007",
+    "po": "4471",
+    "placed": "2026-10-20 10:15",
+    "requested": "2026-10-26",
+    "status": "shipped",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Workshop",
+     "city": "Loveland, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-080808-32",
+      "name": "Shipping box 8x8x8, 32 ECT",
+      "qty": 30,
+      "picked": 30,
+      "shipped": 30,
+      "price": 21.25,
+      "amount": 637.5
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 4,
+      "picked": 4,
+      "shipped": 4,
+      "price": 56.0,
+      "amount": 224.0
+     }
+    ],
+    "fees": [],
+    "total": 861.5,
+    "invoice_id": "INV-30942"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Ayumi,\n\nYour PO 4471 (order SO-20812) is out for delivery today, Tuesday, October 27. The carrier estimates it will arrive by 2:00 PM.\n\nIt shipped on Friday, October 23 by LTL freight. The tracking number is PRO 5521-8804. It reached the destination terminal last night, and the carrier set a delivery appointment for today. That is why it missed yesterday's date.\n\nThe order has 30 shipping boxes, 8x8x8, 32 ECT, and 4 rolls of carton sealing tape. It goes to your Workshop in Loveland, CO.\n\nPlease let us know if it hasn't arrived by the end of the day.\n\nThe Wendlow order desk",
+  "note": "Order SO-20812 (PO 4471) shipped LTL, out for delivery today with ETA by 2:00 PM. Status only, no actions taken.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_013rf6XEtrB7t1wYgdjLNiLX",
+     "name": "get_customer",
+     "input": {
+      "email": "ayumi@lanternfold.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 307,
+     "output": 59,
+     "cache_write": 4903,
+     "cache_read": 0
+    },
+    "ms": 1596,
+    "cost": 0.013461
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01EyL9afYApikkkM7ic8AZKK",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1007",
+      "po": "4471"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 654,
+     "output": 76,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1181,
+    "cost": 0.003049
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01FyTgwFH5g3scCw1p66hLPo",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "SO-20812"
+     }
+    },
+    {
+     "id": "toolu_01Lps89BcbKPxEZFx3u2dk93",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20812"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 822,
+     "output": 105,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1332,
+    "cost": 0.003675
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01TUSZ4pkh6c8LwaS5qHCuee",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Ayumi,\n\nYour PO 4471 (order SO-20812) is out for delivery today, Tuesday, October 27. The carrier estimates it will arrive by 2:00 PM.\n\nIt shipped on Friday, October 23 by LTL freight. The tracking number is PRO 5521-8804. It reached the destination terminal last night, and the carrier set a delivery appointment for today. That is why it missed yesterday's date.\n\nThe order has 30 shipping boxes, 8x8x8, 32 ECT, and 4 rolls of carton sealing tape. It goes to your Workshop in Loveland, CO.\n\nPlease let us know if it hasn't arrived by the end of the day.\n\nThe Wendlow order desk",
+      "note": "Order SO-20812 (PO 4471) shipped LTL, out for delivery today with ETA by 2:00 PM. Status only, no actions taken.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1561,
+     "output": 409,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3071,
+    "cost": 0.008193
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 7.2,
+  "input_tokens": 3344,
+  "output_tokens": 649,
+  "cache_write_tokens": 4903,
+  "cache_read_tokens": 14709,
+  "cost": 0.028378
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:32:25",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

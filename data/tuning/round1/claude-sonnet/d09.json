@@ -1,0 +1,555 @@
+{
+ "email_id": "d09",
+ "split": "dev",
+ "seq": 20,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "8c41038307192385",
+ "input_hash": "49c1f63371caac51",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "mateo@tarnwell.example"
+   },
+   "result": {
+    "customer_id": "C-1010",
+    "name": "Tarnwell Leather Goods",
+    "terms": "Net 30",
+    "credit_limit": 9000.0,
+    "open_balance": 7572.8,
+    "open_orders": 427.2,
+    "available_credit": 1000.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mateo Reyes",
+      "role": "operations manager",
+      "email": "mateo@tarnwell.example"
+     },
+     {
+      "name": "Silas Pruitt",
+      "role": "accounts payable",
+      "email": "silas@tarnwell.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Englewood, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Showroom",
+      "city": "Denver, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "PD-1016",
+      "price": 53.2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "find_orders",
+   "args": {
+    "customer_id": "C-1010"
+   },
+   "result": {
+    "orders": [
+     {
+      "order_id": "SO-20539",
+      "po": "10-5845",
+      "placed": "2026-05-13 08:29",
+      "status": "delivered",
+      "total": 2772.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20540",
+      "po": "10-1724",
+      "placed": "2026-05-14 10:27",
+      "status": "delivered",
+      "total": 2145.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20542",
+      "po": "10-7635",
+      "placed": "2026-05-16 16:02",
+      "status": "delivered",
+      "total": 1331.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20544",
+      "po": "10-6188",
+      "placed": "2026-05-19 15:02",
+      "status": "delivered",
+      "total": 2683.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20546",
+      "po": "10-5454",
+      "placed": "2026-05-23 14:59",
+      "status": "delivered",
+      "total": 2483.5,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20559",
+      "po": "10-7755",
+      "placed": "2026-06-24 12:22",
+      "status": "delivered",
+      "total": 1303.2,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20562",
+      "po": "10-6561",
+      "placed": "2026-07-02 16:07",
+      "status": "delivered",
+      "total": 2448.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20568",
+      "po": "10-2128",
+      "placed": "2026-07-11 16:16",
+      "status": "delivered",
+      "total": 3056.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20574",
+      "po": "10-2049",
+      "placed": "2026-07-16 12:26",
+      "status": "delivered",
+      "total": 4880.5,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20579",
+      "po": "10-7500",
+      "placed": "2026-07-25 14:51",
+      "status": "delivered",
+      "total": 386.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20594",
+      "po": "10-8851",
+      "placed": "2026-08-10 15:38",
+      "status": "delivered",
+      "total": 168.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20614",
+      "po": "10-7842",
+      "placed": "2026-09-30 09:00",
+      "status": "delivered",
+      "total": 1454.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20798",
+      "po": "TW-5512",
+      "placed": "2026-10-09 08:45",
+      "status": "delivered",
+      "total": 956.8,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 3
+     },
+     {
+      "order_id": "SO-20793",
+      "po": "TW-5498",
+      "placed": "2026-10-10 10:00",
+      "status": "delivered",
+      "total": 1328.0,
+      "ship_to": "Showroom, Denver, CO",
+      "lines": 2
+     },
+     {
+      "order_id": "SO-20615",
+      "po": "10-3168",
+      "placed": "2026-10-12 09:00",
+      "status": "delivered",
+      "total": 2860.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20616",
+      "po": "10-9492",
+      "placed": "2026-10-20 09:00",
+      "status": "delivered",
+      "total": 974.0,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 1
+     },
+     {
+      "order_id": "SO-20827",
+      "po": "TW-5530",
+      "placed": "2026-10-26 13:50",
+      "status": "open",
+      "total": 427.2,
+      "ship_to": "Workshop, Englewood, CO",
+      "lines": 2
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20798"
+   },
+   "result": {
+    "order_id": "SO-20798",
+    "customer_id": "C-1010",
+    "po": "TW-5512",
+    "placed": "2026-10-09 08:45",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Workshop",
+     "city": "Englewood, CO"
+    },
+    "lines": [
+     {
+      "sku": "TP-3C-110",
+      "name": "Carton sealing tape 3 in x 110 yd, clear",
+      "qty": 8,
+      "picked": 8,
+      "shipped": 8,
+      "price": 54.0,
+      "amount": 432.0
+     },
+     {
+      "sku": "PD-1016",
+      "name": "Padded kraft mailer 10.5x16",
+      "qty": 4,
+      "picked": 4,
+      "shipped": 4,
+      "price": 53.2,
+      "amount": 212.8
+     },
+     {
+      "sku": "VF-HNY-15",
+      "name": "Honeycomb paper wrap 15 in roll",
+      "qty": 6,
+      "picked": 6,
+      "shipped": 6,
+      "price": 52.0,
+      "amount": 312.0
+     }
+    ],
+    "fees": [],
+    "total": 956.8,
+    "invoice_id": "INV-30914"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20793"
+   },
+   "result": {
+    "order_id": "SO-20793",
+    "customer_id": "C-1010",
+    "po": "TW-5498",
+    "placed": "2026-10-10 10:00",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L2",
+     "label": "Showroom",
+     "city": "Denver, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-1016",
+      "name": "Padded kraft mailer 10.5x16",
+      "qty": 20,
+      "picked": 20,
+      "shipped": 20,
+      "price": 58.0,
+      "amount": 1160.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 3,
+      "price": 56.0,
+      "amount": 168.0
+     }
+    ],
+    "fees": [],
+    "total": 1328.0,
+    "invoice_id": "INV-30919"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20827"
+   },
+   "result": {
+    "order_id": "SO-20827",
+    "customer_id": "C-1010",
+    "po": "TW-5530",
+    "placed": "2026-10-26 13:50",
+    "requested": null,
+    "status": "open",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Workshop",
+     "city": "Englewood, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-1016",
+      "name": "Padded kraft mailer 10.5x16",
+      "qty": 6,
+      "picked": 0,
+      "shipped": 0,
+      "price": 53.2,
+      "amount": 319.2
+     },
+     {
+      "sku": "TP-3C-110",
+      "name": "Carton sealing tape 3 in x 110 yd, clear",
+      "qty": 2,
+      "picked": 0,
+      "shipped": 0,
+      "price": 54.0,
+      "amount": 108.0
+     }
+    ],
+    "fees": [],
+    "total": 427.2,
+    "invoice_id": null
+   },
+   "valid": true
+  },
+  {
+   "tool": "ask_customer",
+   "args": {
+    "question": "Can you send the item numbers for the 18x12x12 boxes (and the bundle size or strength) and the 12 inch foam roll? Please also give the date you want them next week. We'll ship to the Workshop in Englewood, CO.",
+    "sentence": 1
+   },
+   "result": {
+    "note": "Put the question in the reply.",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Mateo,\n\nThanks for your order request. Before we enter it, we need a few details.\n\nCan you send the item numbers for the 18x12x12 boxes, with the strength or bundle size, and for the 12 inch foam roll? We have no way to match those descriptions to a single item on our side, and we don't want to guess.\n\nAlso, what date do you need them next week?\n\nWe will ship to the Workshop in Englewood, CO. Your account has $1,000.00 in available credit right now. A new order above that amount will need a person to approve it.\n\nThe Wendlow order desk",
+  "note": "The order has not been placed. The email gives no SKUs for the boxes or the foam, and I have no catalog search to match them. I asked for item numbers and a date. Ship-to is clear: Workshop (L1). Available credit is $1,000.00, so the order may exceed it and need approval.",
+  "intents": [
+   "new_order",
+   "ambiguous_order"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 6,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_0173hV9RsR46vP4yFeT6KgyE",
+     "name": "get_customer",
+     "input": {
+      "email": "mateo@tarnwell.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 229,
+     "output": 58,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1119,
+    "cost": 0.001929
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01BrmyH4RYZkPsL21ETvn2CM",
+     "name": "find_orders",
+     "input": {
+      "customer_id": "C-1010"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 630,
+     "output": 92,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1435,
+    "cost": 0.003071
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01SfgYgfYR434joD4qRsaU4u",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20798"
+     }
+    },
+    {
+     "id": "toolu_01USxvLi714HuP4BTG353Frj",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20793"
+     }
+    },
+    {
+     "id": "toolu_01ELH2gHGA5A54c33ah9B2EK",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20827"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 2102,
+     "output": 277,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 2348,
+    "cost": 0.007865
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01R86MrBNhbP9nkBTv32BSFb",
+     "name": "ask_customer",
+     "input": {
+      "question": "Can you send the item numbers for the 18x12x12 boxes (and the bundle size or strength) and the 12 inch foam roll? Please also give the date you want them next week. We'll ship to the Workshop in Englewood, CO.",
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 3305,
+     "output": 363,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 3465,
+    "cost": 0.011131
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Wgtmoq7CrKDk6s6Yn8AquD",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Mateo,\n\nThanks for your order request. Before we enter it, we need a few details.\n\nCan you send the item numbers for the 18x12x12 boxes, with the strength or bundle size, and for the 12 inch foam roll? We have no way to match those descriptions to a single item on our side, and we don't want to guess.\n\nAlso, what date do you need them next week?\n\nWe will ship to the Workshop in Englewood, CO. Your account has $1,000.00 in available credit right now. A new order above that amount will need a person to approve it.\n\nThe Wendlow order desk",
+      "note": "The order has not been placed. The email gives no SKUs for the boxes or the foam, and I have no catalog search to match them. I asked for item numbers and a date. Ship-to is clear: Workshop (L1). Available credit is $1,000.00, so the order may exceed it and need approval.",
+      "intents": [
+       "new_order",
+       "ambiguous_order"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 3479,
+     "output": 435,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 3670,
+    "cost": 0.012199
+   }
+  }
+ ],
+ "usage": {
+  "turns": 5,
+  "seconds": 12.0,
+  "input_tokens": 9745,
+  "output_tokens": 1225,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 22270,
+  "cost": 0.036195
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:17:14",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

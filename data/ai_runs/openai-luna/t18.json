@@ -1,0 +1,274 @@
+{
+ "email_id": "t18",
+ "split": "test",
+ "seq": 41,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "a5b4cd45bc36077e",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "felix@brecken.example"
+   },
+   "result": {
+    "customer_id": "C-1008",
+    "name": "Brecken Electronics",
+    "terms": "Net 30",
+    "credit_limit": 15000.0,
+    "open_balance": 4259.4,
+    "open_orders": 0.0,
+    "available_credit": 10740.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 13,
+     "paid_on_time": 13
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Felix Dunmore",
+      "role": "purchasing manager",
+      "email": "felix@brecken.example"
+     },
+     {
+      "name": "Anya Fischer",
+      "role": "accounts payable",
+      "email": "anya@brecken.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Plant",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-121212-32",
+      "price": 29.0
+     },
+     {
+      "sku": "BX-161210-32",
+      "price": 22.4
+     },
+     {
+      "sku": "LB-46-TH",
+      "price": 66.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20807"
+   },
+   "result": {
+    "order_id": "SO-20807",
+    "customer_id": "C-1008",
+    "po": "BE-77402",
+    "placed": "2026-10-16 10:30",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Plant",
+     "city": "Longmont, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-121212-32",
+      "name": "Shipping box 12x12x12, 32 ECT",
+      "qty": 25,
+      "picked": 25,
+      "shipped": 25,
+      "price": 29.0,
+      "amount": 725.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 6,
+      "picked": 6,
+      "shipped": 6,
+      "price": 56.0,
+      "amount": 336.0
+     }
+    ],
+    "fees": [],
+    "total": 1061.0,
+    "invoice_id": "INV-30934"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20807"
+   },
+   "result": {
+    "order_id": "SO-20807",
+    "tracking": "PRO 5267-9859",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-21",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-23 10:10",
+    "signed_by": "RECEIVING",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-21 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-23 10:10",
+      "text": "Delivered, signed by RECEIVING"
+     }
+    ]
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Felix,\n\nOrder SO-20807 was delivered on Friday, October 23 at 10:10 AM. The carrier’s tracking number is PRO 5267-9859, and the delivery was signed for by RECEIVING.\n\nThe Wendlow order desk",
+  "note": "Confirmed the shipment record for SO-20807 shows delivery and a receiving signature. The customer reports their receiving log does not show it.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_EJDFZi1m35nYOnVCDj1SKEqs",
+     "name": "get_customer",
+     "input": {
+      "email": "felix@brecken.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 87,
+     "output": 22,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1807,
+    "cost": 7.9e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_VlPVIoMHHqlLit7ojjua0OB4",
+     "name": "get_order",
+     "input": {
+      "order_id": "20807"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 290,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2445
+    },
+    "ms": 1176,
+    "cost": 0.0001
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_BJYWCW4aAy0422xy4qcEDLqz",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20807"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 276,
+     "output": 20,
+     "cache_write": 0,
+     "cache_read": 2732
+    },
+    "ms": 1080,
+    "cost": 0.000106
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_7BpzoOzArCL67Zf1EvQFJ1ce",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Felix,\n\nOrder SO-20807 was delivered on Friday, October 23 at 10:10 AM. The carrier’s tracking number is PRO 5267-9859, and the delivery was signed for by RECEIVING.\n\nThe Wendlow order desk",
+      "note": "Confirmed the shipment record for SO-20807 shows delivery and a receiving signature. The customer reports their receiving log does not show it.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 181,
+     "output": 113,
+     "cache_write": 0,
+     "cache_read": 3005
+    },
+    "ms": 2232,
+    "cost": 0.00015
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 6.3,
+  "input_tokens": 834,
+  "output_tokens": 174,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 10543,
+  "cost": 0.000435
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:42:10",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

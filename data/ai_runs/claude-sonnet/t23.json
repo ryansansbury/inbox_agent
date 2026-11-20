@@ -1,0 +1,318 @@
+{
+ "email_id": "t23",
+ "split": "test",
+ "seq": 46,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "1400598f22455d16",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "lucy@juniperandvale.example"
+   },
+   "result": {
+    "customer_id": "C-1006",
+    "name": "Juniper & Vale",
+    "terms": "Net 30",
+    "credit_limit": 6000.0,
+    "open_balance": 1080.8,
+    "open_orders": 575.6,
+    "available_credit": 4343.6,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 10,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Lucy Tran",
+      "role": "buyer",
+      "email": "lucy@juniperandvale.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Boulder, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Warehouse",
+      "city": "Longmont, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20814"
+   },
+   "result": {
+    "order_id": "SO-20814",
+    "customer_id": "C-1006",
+    "po": "JV-1021",
+    "placed": "2026-10-21 15:20",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Boulder, CO"
+    },
+    "lines": [
+     {
+      "sku": "PD-0812",
+      "name": "Padded kraft mailer 8.5x12",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 44.0,
+      "amount": 440.0,
+      "damaged_on_delivery": 2
+     },
+     {
+      "sku": "VF-CRK-10",
+      "name": "Crinkle paper, 10 lb box",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 3,
+      "price": 38.0,
+      "amount": 114.0
+     }
+    ],
+    "fees": [],
+    "total": 554.0,
+    "invoice_id": "INV-30946"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20814"
+   },
+   "result": {
+    "order_id": "SO-20814",
+    "tracking": "PRO 5274-0118",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-23",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-26 12:15",
+    "signed_by": "STUDIO",
+    "exception": "2 cases wet and torn",
+    "events": [
+     {
+      "at": "2026-10-23 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-26 12:15",
+      "text": "Delivered, signed by STUDIO. Exception noted: 2 cases wet and torn"
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "order_id": "20814"
+   },
+   "result": {
+    "invoice_id": "INV-30946",
+    "order_id": "SO-20814",
+    "customer_id": "C-1006",
+    "date": "2026-10-23",
+    "due": "2026-11-22",
+    "lines": [
+     {
+      "sku": "PD-0812",
+      "qty": 10,
+      "price": 44.0,
+      "amount": 440.0,
+      "name": "Padded kraft mailer 8.5x12"
+     },
+     {
+      "sku": "VF-CRK-10",
+      "qty": 3,
+      "price": 38.0,
+      "amount": 114.0,
+      "name": "Crinkle paper, 10 lb box"
+     }
+    ],
+    "fees": [],
+    "total": 554.0,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 554.0
+   },
+   "valid": true
+  },
+  {
+   "tool": "issue_credit",
+   "args": {
+    "customer_id": "C-1006",
+    "invoice_id": "INV-30946",
+    "amount": 88.0,
+    "reason": "2 cases PD-0812 wet and torn on delivery, carrier exception noted",
+    "sentence": 2
+   },
+   "result": {
+    "credit_memo": "CM-2369",
+    "invoice_id": "INV-30946",
+    "amount": 88.0,
+    "invoice_open_after": 466.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Lucy,\n\nI'm sorry the mailers arrived wet and torn. The carrier noted the same exception at delivery on Monday, October 26.\n\nI issued credit memo CM-2369 for $88.00 against invoice INV-30946 for the 2 damaged cases of 8.5x12 padded mailers on order SO-20814. That is 2 cases at $44.00 each. The open balance on the invoice is now $466.00.\n\nYou asked only for a credit, so I didn't send replacements. If you'd like 2 replacement cases instead, tell us.\n\nThe Wendlow order desk",
+  "note": "Verified sender. Order SO-20814 shows 2 PD-0812 damaged on delivery, and the carrier exception matches. Issued credit CM-2369 for $88.00 (2 x $44.00) on INV-30946, which was done automatically. No reship was made.",
+  "intents": [
+   "damaged_delivery",
+   "credit_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 5,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_015KPPcQ6bMgWPg17wu4pC38",
+     "name": "get_customer",
+     "input": {
+      "email": "lucy@juniperandvale.example"
+     }
+    },
+    {
+     "id": "toolu_01FVoEeXMUEgQ6nPWnFGUvR4",
+     "name": "get_order",
+     "input": {
+      "order_id": "20814"
+     }
+    },
+    {
+     "id": "toolu_01YW35qEYy76gZwVwJvq8sNP",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20814"
+     }
+    },
+    {
+     "id": "toolu_01MAZYCy8QBt5H7VHmWmzTqn",
+     "name": "get_invoice",
+     "input": {
+      "order_id": "20814"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 216,
+     "output": 204,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2167,
+    "cost": 0.003453
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01VEHg9aTMtHT8sC6YvBgMF3",
+     "name": "issue_credit",
+     "input": {
+      "customer_id": "C-1006",
+      "invoice_id": "INV-30946",
+      "amount": 88.0,
+      "reason": "2 cases PD-0812 wet and torn on delivery, carrier exception noted",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1548,
+     "output": 225,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2312,
+    "cost": 0.006327
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01V8Q5K7qxAfk8wNPrx1n6Ut",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Lucy,\n\nI'm sorry the mailers arrived wet and torn. The carrier noted the same exception at delivery on Monday, October 26.\n\nI issued credit memo CM-2369 for $88.00 against invoice INV-30946 for the 2 damaged cases of 8.5x12 padded mailers on order SO-20814. That is 2 cases at $44.00 each. The open balance on the invoice is now $466.00.\n\nYou asked only for a credit, so I didn't send replacements. If you'd like 2 replacement cases instead, tell us.\n\nThe Wendlow order desk",
+      "note": "Verified sender. Order SO-20814 shows 2 PD-0812 damaged on delivery, and the carrier exception matches. Issued credit CM-2369 for $88.00 (2 x $44.00) on INV-30946, which was done automatically. No reship was made.",
+      "intents": [
+       "damaged_delivery",
+       "credit_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1791,
+     "output": 412,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2998,
+    "cost": 0.008683
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 7.5,
+  "input_tokens": 3555,
+  "output_tokens": 841,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.018463
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:36:05",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

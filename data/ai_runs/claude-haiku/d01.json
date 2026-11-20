@@ -1,0 +1,243 @@
+{
+ "email_id": "d01",
+ "split": "dev",
+ "seq": 12,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "7c9507fbc95333fe",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "theo@kettleby.example"
+   },
+   "result": {
+    "customer_id": "C-1005",
+    "name": "Kettleby Pet Supply",
+    "terms": "Net 30",
+    "credit_limit": 8000.0,
+    "open_balance": 1602.5,
+    "open_orders": 0.0,
+    "available_credit": 6397.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Theo Ramsey",
+      "role": "operations lead",
+      "email": "theo@kettleby.example"
+     },
+     {
+      "name": "Audrey Tsai",
+      "role": "accounts payable",
+      "email": "audrey@kettleby.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Warehouse",
+      "city": "Lakewood, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20810"
+   },
+   "result": {
+    "order_id": "SO-20810",
+    "customer_id": "C-1005",
+    "po": "KB-2240",
+    "placed": "2026-10-19 09:10",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Warehouse",
+     "city": "Lakewood, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-120904-32",
+      "name": "Shipping box 12x9x4, 32 ECT",
+      "qty": 20,
+      "picked": 20,
+      "shipped": 20,
+      "price": 18.4,
+      "amount": 368.0
+     },
+     {
+      "sku": "LB-46-TH",
+      "name": "Thermal labels 4x6",
+      "qty": 3,
+      "picked": 3,
+      "shipped": 3,
+      "price": 72.0,
+      "amount": 216.0
+     }
+    ],
+    "fees": [],
+    "total": 584.0,
+    "invoice_id": "INV-30938"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20810"
+   },
+   "result": {
+    "order_id": "SO-20810",
+    "tracking": "PRO 5270-9970",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-22",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-26 15:42",
+    "signed_by": "DOCK 2",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-22 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-26 15:42",
+      "text": "Delivered, signed by DOCK 2"
+     }
+    ]
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Theo,\n\nYes, SO-20810 shipped and was delivered. The order contains 20 boxes 12x9x4 (32 ECT) and 3 thermal labels 4x6, under PO KB-2240.\n\nIt was picked up by the carrier on Thursday, October 22 and delivered on Monday, October 26 at 3:42 PM, signed by DOCK 2. The LTL freight tracking number is PRO 5270-9970.\n\nIf the delivery is not at your dock, or the boxes are not where you expect them, please reply to this email and we will look into it.\n\nThe Wendlow order desk",
+  "note": "Read-only inquiry. SO-20810 was delivered Oct 26, signed by DOCK 2, per the carrier record. Sender's note that it isn't on the dock list may be a receiving question; no action taken.",
+  "intents": [
+   "order_status"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_015hAZaMUpyVk7cXhxkLiTZ1",
+     "name": "get_customer",
+     "input": {
+      "email": "theo@kettleby.example"
+     }
+    },
+    {
+     "id": "toolu_01FbZ9VYc8keKBZ968xVNGKE",
+     "name": "get_order",
+     "input": {
+      "order_id": "20810"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 218,
+     "output": 103,
+     "cache_write": 1569,
+     "cache_read": 3334
+    },
+    "ms": 904,
+    "cost": 0.000303
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01TSvQJLUvWZMAhAPTN82bBU",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20810"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 959,
+     "output": 95,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1025,
+    "cost": 0.000192
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01R9xT3hghEgd1esFLJusQqQ",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Theo,\n\nYes, SO-20810 shipped and was delivered. The order contains 20 boxes 12x9x4 (32 ECT) and 3 thermal labels 4x6, under PO KB-2240.\n\nIt was picked up by the carrier on Thursday, October 22 and delivered on Monday, October 26 at 3:42 PM, signed by DOCK 2. The LTL freight tracking number is PRO 5270-9970.\n\nIf the delivery is not at your dock, or the boxes are not where you expect them, please reply to this email and we will look into it.\n\nThe Wendlow order desk",
+      "note": "Read-only inquiry. SO-20810 was delivered Oct 26, signed by DOCK 2, per the carrier record. Sender's note that it isn't on the dock list may be a receiving question; no action taken.",
+      "intents": [
+       "order_status"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1204,
+     "output": 388,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2019,
+    "cost": 0.000363
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 3.9,
+  "input_tokens": 2381,
+  "output_tokens": 586,
+  "cache_write_tokens": 1569,
+  "cache_read_tokens": 13140,
+  "cost": 0.000858
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:27:06",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

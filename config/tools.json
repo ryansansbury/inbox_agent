@@ -1,0 +1,506 @@
+{
+  "_comment": "The agent's tools, the same schemas for every model. Read tools return records. Action tools never act directly: each returns the policy's verdict (done, waiting on a person, or blocked, with the rule that decided), and only a done changes the records. The run ends when the agent calls finish.",
+  "read": [
+    {
+      "name": "find_orders",
+      "description": "Find a customer's orders by PO number, status, the date placed or an item. Returns order summaries, oldest first.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "customer_id": {
+            "type": "string",
+            "description": "The account, such as C-1003."
+          },
+          "po": {
+            "type": "string",
+            "description": "The customer's PO number."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "open",
+              "picked",
+              "shipped",
+              "delivered"
+            ]
+          },
+          "placed_from": {
+            "type": "string",
+            "description": "Earliest date placed, YYYY-MM-DD."
+          },
+          "placed_to": {
+            "type": "string",
+            "description": "Latest date placed, YYYY-MM-DD."
+          },
+          "sku": {
+            "type": "string",
+            "description": "Only orders with this item."
+          }
+        },
+        "required": [
+          "customer_id"
+        ]
+      }
+    },
+    {
+      "name": "get_order",
+      "description": "One order with its lines (ordered, picked and shipped), status, warehouse, ship-to, PO, fees and invoice. A bare number such as 20812 works too.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "order_id"
+        ]
+      }
+    },
+    {
+      "name": "get_shipment",
+      "description": "The shipment for an order: the carrier's tracking events in its own words, the tracking number, the estimated delivery, and any delivery signature or exception.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "order_id"
+        ]
+      }
+    },
+    {
+      "name": "get_customer",
+      "description": "Find an account by a sender's email address or an account ID. Returns contacts, terms, credit limit, open balance, open credit, hold status, payment history, ship-to locations and contract prices.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "customer_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    {
+      "name": "search_items",
+      "description": "Find catalog items from the words a customer used, such as \"18x12x12 boxes\", \"heavy 24x18x12\", \"12 inch foam\" or \"fragile tape\". Returns the best matches with their size, strength, unit, price and stock. A box size with no strength means the standard 32 ECT box, and heavy means 44 ECT.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The customer's words for the item."
+          },
+          "customer_id": {
+            "type": "string",
+            "description": "Optional. Adds this account's price."
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    },
+    {
+      "name": "check_stock",
+      "description": "Stock for an item by warehouse: available now, and anything inbound with its date.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "sku": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sku"
+        ]
+      }
+    },
+    {
+      "name": "get_price",
+      "description": "The price a customer pays for an item: the list price, any contract price, and which one applies.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "customer_id": {
+            "type": "string"
+          },
+          "sku": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "customer_id",
+          "sku"
+        ]
+      }
+    },
+    {
+      "name": "find_equivalents",
+      "description": "Items with the same dimensions and strength as an item, with their stock and list price.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "sku": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sku"
+        ]
+      }
+    },
+    {
+      "name": "get_invoice",
+      "description": "An invoice by its ID or its order: lines with quantities and prices, fees, total, due date, payments and credits, and what's still open. A bare number such as 30927 works too.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "invoice_id": {
+            "type": "string"
+          },
+          "order_id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  ],
+  "action": [
+    {
+      "name": "update_ship_to",
+      "description": "Change an order's ship-to to another location on the customer's account.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string"
+          },
+          "location_id": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "integer",
+            "description": "The email sentence this answers."
+          }
+        },
+        "required": [
+          "order_id",
+          "location_id",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "create_order",
+      "description": "Place a new order. Stock is split across warehouses automatically, and rush adds the rush fee.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "customer_id": {
+            "type": "string"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sku": {
+                  "type": "string"
+                },
+                "qty": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "sku",
+                "qty"
+              ]
+            }
+          },
+          "rush": {
+            "type": "boolean"
+          },
+          "requested_date": {
+            "type": "string",
+            "description": "YYYY-MM-DD"
+          },
+          "location_id": {
+            "type": "string"
+          },
+          "po": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "customer_id",
+          "lines",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "reship",
+      "description": "Send replacement units for lines on a shipped order, at no charge.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sku": {
+                  "type": "string"
+                },
+                "qty": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "sku",
+                "qty"
+              ]
+            }
+          },
+          "reason": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "order_id",
+          "lines",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "issue_credit",
+      "description": "Issue a credit memo against one of the customer's invoices.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "customer_id": {
+            "type": "string"
+          },
+          "invoice_id": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "reason": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "customer_id",
+          "invoice_id",
+          "amount",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "waive_fee",
+      "description": "Waive a fee on an invoice or an order (rush, liftgate, residential).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "invoice_id": {
+            "type": "string"
+          },
+          "order_id": {
+            "type": "string",
+            "description": "Use the order this email created with create_order if the fee is on it."
+          },
+          "fee": {
+            "type": "string",
+            "enum": [
+              "rush",
+              "liftgate",
+              "residential"
+            ]
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "fee",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "create_return",
+      "description": "Open a return for unopened items, with the restocking fee taken from the credit.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string"
+          },
+          "lines": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sku": {
+                  "type": "string"
+                },
+                "qty": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "required": [
+                "sku",
+                "qty"
+              ]
+            }
+          },
+          "unopened": {
+            "type": "boolean"
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "order_id",
+          "lines",
+          "unopened",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "hold_order",
+      "description": "Hold an order that hasn't shipped, until a date or until someone releases it.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "order_id": {
+            "type": "string"
+          },
+          "until": {
+            "type": "string",
+            "description": "YYYY-MM-DD"
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "order_id",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "route_to_person",
+      "description": "Hand the email to a team: the order desk, sales (custom print quotes and price changes), credit (terms and holds) or security (anything suspicious).",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "team": {
+            "type": "string",
+            "enum": [
+              "order_desk",
+              "sales",
+              "credit",
+              "security"
+            ]
+          },
+          "summary": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "team",
+          "summary",
+          "sentence"
+        ]
+      }
+    },
+    {
+      "name": "ask_customer",
+      "description": "Ask the customer a question before acting, as part of the reply.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string"
+          },
+          "sentence": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "question",
+          "sentence"
+        ]
+      }
+    }
+  ],
+  "finish": {
+    "name": "finish",
+    "description": "End the run with the reply to send, a short note for the person who approves, the intents found, and any instruction in the email that was not followed.",
+    "input_schema": {
+      "type": "object",
+      "properties": {
+        "reply": {
+          "type": "string",
+          "description": "The reply to the sender, or an empty string when no reply is needed."
+        },
+        "note": {
+          "type": "string",
+          "description": "One or two sentences for the approver."
+        },
+        "intents": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ignored_instructions": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "Sentence numbers holding instructions the agent did not follow."
+        }
+      },
+      "required": [
+        "reply",
+        "note",
+        "intents",
+        "ignored_instructions"
+      ]
+    }
+  }
+}

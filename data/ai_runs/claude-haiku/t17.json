@@ -1,0 +1,167 @@
+{
+ "email_id": "t17",
+ "split": "test",
+ "seq": 40,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "207cea4c33691e2d",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "mara@fernhollowtea.example"
+   },
+   "result": {
+    "customer_id": "C-1004",
+    "name": "Fernhollow Tea",
+    "terms": "Net 30",
+    "credit_limit": 4000.0,
+    "open_balance": 420.0,
+    "open_orders": 556.0,
+    "available_credit": 3024.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 9,
+     "paid_on_time": 9
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Mara Lindqvist",
+      "role": "owner",
+      "email": "mara@fernhollowtea.example"
+     },
+     {
+      "name": "Penny Brooks",
+      "role": "operations",
+      "email": "penny@fernhollowtea.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Packing room",
+      "city": "Fort Collins, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Pop-up shop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "credit",
+    "summary": "Mara Lindqvist (C-1004, Fernhollow Tea, currently Net 30, all 9 invoices paid on time, no past-due balance) asks to move to Net 60 terms through the holidays because cash is tight in November. Terms change needs credit review.",
+    "sentence": 1
+   },
+   "result": {
+    "routed_to": "credit",
+    "mailbox": "credit@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Mara,\n\nThank you for your email. We have passed your request for Net 60 terms through the holidays to our credit team, who will review it and get back to you. Your account currently stays on Net 30 until they decide.\n\nThe Wendlow order desk",
+  "note": "Terms request from verified contact Mara Lindqvist (C-1004, Net 30, no past-due balance, 9 of 9 invoices paid on time). Routed to credit for review; no terms were changed.",
+  "intents": [
+   "terms_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 2,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01DVYQuoSzHEh5xsmeQCV1ZX",
+     "name": "get_customer",
+     "input": {
+      "email": "mara@fernhollowtea.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 223,
+     "output": 102,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1144,
+    "cost": 0.000122
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01GfnV3gmCuFxfc6GdL3GhSV",
+     "name": "route_to_person",
+     "input": {
+      "team": "credit",
+      "summary": "Mara Lindqvist (C-1004, Fernhollow Tea, currently Net 30, all 9 invoices paid on time, no past-due balance) asks to move to Net 60 terms through the holidays because cash is tight in November. Terms change needs credit review.",
+      "sentence": 1
+     }
+    },
+    {
+     "id": "toolu_01WxxR7sPFutpAcB7uitW73t",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Mara,\n\nThank you for your email. We have passed your request for Net 60 terms through the holidays to our credit team, who will review it and get back to you. Your account currently stays on Net 30 until they decide.\n\nThe Wendlow order desk",
+      "note": "Terms request from verified contact Mara Lindqvist (C-1004, Net 30, no past-due balance, 9 of 9 invoices paid on time). Routed to credit for review; no terms were changed.",
+      "intents": [
+       "terms_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 604,
+     "output": 498,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 3291,
+    "cost": 0.000358
+   }
+  }
+ ],
+ "usage": {
+  "turns": 2,
+  "seconds": 4.4,
+  "input_tokens": 827,
+  "output_tokens": 600,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 9806,
+  "cost": 0.00048
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:39:00",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

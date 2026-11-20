@@ -1,0 +1,389 @@
+{
+ "email_id": "t14",
+ "split": "test",
+ "seq": 37,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "9302c8700e049590",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "clara@tallowandteak.example"
+   },
+   "result": {
+    "customer_id": "C-1003",
+    "name": "Tallow & Teak",
+    "terms": "Net 30",
+    "credit_limit": 5000.0,
+    "open_balance": 1820.0,
+    "open_orders": 337.0,
+    "available_credit": 2843.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 12,
+     "paid_on_time": 12
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Clara Voss",
+      "role": "owner",
+      "email": "clara@tallowandteak.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Studio",
+      "city": "Golden, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-121006-32",
+      "price": 21.4
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20825"
+   },
+   "result": {
+    "order_id": "SO-20825",
+    "customer_id": "C-1003",
+    "po": "TT-1026",
+    "placed": "2026-10-26 08:15",
+    "requested": null,
+    "status": "picked",
+    "warehouse": "Valley",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Studio",
+     "city": "Golden, CO"
+    },
+    "lines": [
+     {
+      "sku": "BX-060606-32",
+      "name": "Shipping box 6x6x6, 32 ECT",
+      "qty": 12,
+      "picked": 12,
+      "shipped": 0,
+      "price": 18.75,
+      "amount": 225.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 2,
+      "picked": 2,
+      "shipped": 0,
+      "price": 56.0,
+      "amount": 112.0
+     }
+    ],
+    "fees": [],
+    "total": 337.0,
+    "invoice_id": null,
+    "picked_at": "2026-10-27 06:55"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20825"
+   },
+   "result": {
+    "error": "SO-20825 hasn't shipped yet. Its status is picked."
+   },
+   "valid": true
+  },
+  {
+   "tool": "search_items",
+   "args": {
+    "query": "6x6x6 boxes",
+    "customer_id": "C-1003"
+   },
+   "result": {
+    "query": "6x6x6 boxes",
+    "matches": [
+     {
+      "sku": "BX-060606-32",
+      "name": "Shipping box 6x6x6, 32 ECT",
+      "unit": "bundle of 25",
+      "strength": "32 ECT",
+      "line": "standard",
+      "list_price": 18.75,
+      "available": 571,
+      "price": 18.75
+     },
+     {
+      "sku": "BX-060606-44",
+      "name": "Shipping box 6x6x6, 44 ECT",
+      "unit": "bundle of 25",
+      "strength": "44 ECT",
+      "line": "standard",
+      "list_price": 24.5,
+      "available": 361,
+      "price": 24.5
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_invoice",
+   "args": {
+    "invoice_id": "30922"
+   },
+   "result": {
+    "invoice_id": "INV-30922",
+    "order_id": "SO-20802",
+    "customer_id": "C-1003",
+    "date": "2026-10-16",
+    "due": "2026-11-15",
+    "lines": [
+     {
+      "sku": "BX-121006-32",
+      "qty": 50,
+      "price": 21.4,
+      "amount": 1070.0,
+      "name": "Shipping box 12x10x6, 32 ECT"
+     },
+     {
+      "sku": "VF-CRK-10",
+      "qty": 5,
+      "price": 38.0,
+      "amount": 190.0,
+      "name": "Crinkle paper, 10 lb box"
+     },
+     {
+      "sku": "TP-2C-110",
+      "qty": 10,
+      "price": 56.0,
+      "amount": 560.0,
+      "name": "Carton sealing tape 2 in x 110 yd, clear"
+     }
+    ],
+    "fees": [],
+    "total": 1820.0,
+    "paid": 0.0,
+    "payments": [],
+    "credits": [],
+    "open": 1820.0
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_order",
+   "args": {
+    "customer_id": "C-1003",
+    "lines": [
+     {
+      "sku": "BX-060606-32",
+      "qty": 10
+     }
+    ],
+    "location_id": "L1",
+    "sentence": 3
+   },
+   "result": {
+    "order_id": "SO-20951",
+    "total": 187.5,
+    "fees": [],
+    "lines": [
+     {
+      "sku": "BX-060606-32",
+      "qty": 10,
+      "price": 18.75
+     }
+    ],
+    "allocation": {
+     "BX-060606-32": [
+      {
+       "warehouse": "North",
+       "qty": 10
+      }
+     ]
+    },
+    "requested_date": null,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Clara,\n\nSO-20825 (PO TT-1026) is picked as of this morning, Tuesday, October 27, but it has not shipped yet. I can't promise it leaves today. It has no tracking number yet. We will have one once the carrier scans it.\n\nWe placed your new order SO-20951 for 10 bundles of 6x6x6 boxes, 32 ECT, at $18.75 per bundle. The total is $187.50, with no fees. It ships to your Studio in Golden, CO by regular shipping.\n\nHere are the details of invoice INV-30922, for order SO-20802, dated Friday, October 16. It is due Sunday, November 15.\n50 Shipping box 12x10x6, 32 ECT at $21.40: $1,070.00\n5 Crinkle paper, 10 lb box at $38.00: $190.00\n10 Carton sealing tape 2 in x 110 yd, clear at $56.00: $560.00\nTotal: $1,820.00. Nothing has been paid yet, so $1,820.00 is open.\n\nI can't attach a copy of the invoice here. If you want the PDF, reply and we will get it to you.\n\nThanks,\nThe Wendlow order desk",
+  "note": "Order SO-20825 is picked but not shipped. I placed SO-20951 (10 bundles BX-060606-32, $187.50) to L1. I have no tool to email the invoice, so the reply gives INV-30922 details inline. Please send the PDF if one is needed.",
+  "intents": [
+   "order_status",
+   "new_order",
+   "invoice_copy"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 6,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01U25DLcneAcadUBvmUM5Pg2",
+     "name": "get_customer",
+     "input": {
+      "email": "clara@tallowandteak.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 251,
+     "output": 58,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1543,
+    "cost": 0.002063
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01Xw9zxZxE2fF8Ba4wHqYZWB",
+     "name": "get_order",
+     "input": {
+      "order_id": "20825"
+     }
+    },
+    {
+     "id": "toolu_013fCffK9v7KTJdquSTfACfs",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20825"
+     }
+    },
+    {
+     "id": "toolu_01PnTPuKFZuLYHr6QbvaQq9s",
+     "name": "search_items",
+     "input": {
+      "query": "6x6x6 boxes",
+      "customer_id": "C-1003"
+     }
+    },
+    {
+     "id": "toolu_01YRgtxhPqFqgMdCTTUeC6oC",
+     "name": "get_invoice",
+     "input": {
+      "invoice_id": "30922"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 571,
+     "output": 229,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1828,
+    "cost": 0.004413
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01WAwwZguzrHuoxMiR5gkerY",
+     "name": "create_order",
+     "input": {
+      "customer_id": "C-1003",
+      "lines": [
+       {
+        "sku": "BX-060606-32",
+        "qty": 10
+       }
+      ],
+      "location_id": "L1",
+      "sentence": 3
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 1761,
+     "output": 207,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2048,
+    "cost": 0.006573
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_015V87CzatcnpqaDznR3EeMR",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Clara,\n\nSO-20825 (PO TT-1026) is picked as of this morning, Tuesday, October 27, but it has not shipped yet. I can't promise it leaves today. It has no tracking number yet. We will have one once the carrier scans it.\n\nWe placed your new order SO-20951 for 10 bundles of 6x6x6 boxes, 32 ECT, at $18.75 per bundle. The total is $187.50, with no fees. It ships to your Studio in Golden, CO by regular shipping.\n\nHere are the details of invoice INV-30922, for order SO-20802, dated Friday, October 16. It is due Sunday, November 15.\n50 Shipping box 12x10x6, 32 ECT at $21.40: $1,070.00\n5 Crinkle paper, 10 lb box at $38.00: $190.00\n10 Carton sealing tape 2 in x 110 yd, clear at $56.00: $560.00\nTotal: $1,820.00. Nothing has been paid yet, so $1,820.00 is open.\n\nI can't attach a copy of the invoice here. If you want the PDF, reply and we will get it to you.\n\nThanks,\nThe Wendlow order desk",
+      "note": "Order SO-20825 is picked but not shipped. I placed SO-20951 (10 bundles BX-060606-32, $187.50) to L1. I have no tool to email the invoice, so the reply gives INV-30922 details inline. Please send the PDF if one is needed.",
+      "intents": [
+       "order_status",
+       "new_order",
+       "invoice_copy"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 2023,
+     "output": 647,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 4913,
+    "cost": 0.011497
+   }
+  }
+ ],
+ "usage": {
+  "turns": 4,
+  "seconds": 10.3,
+  "input_tokens": 4606,
+  "output_tokens": 1141,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 19612,
+  "cost": 0.024546
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:17",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

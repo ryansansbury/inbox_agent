@@ -1,0 +1,343 @@
+{
+ "email_id": "t21",
+ "split": "test",
+ "seq": 44,
+ "model": "openai-luna",
+ "label": "GPT-6 Luna",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "1e5099aaa5f88fb2",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "dana@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20788"
+   },
+   "result": {
+    "order_id": "SO-20788",
+    "customer_id": "C-1001",
+    "po": "PF-87940",
+    "placed": "2026-10-08 11:10",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Building 2",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 16,
+      "picked": 16,
+      "shipped": 16,
+      "price": 58.0,
+      "amount": 928.0
+     },
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 56.0,
+      "amount": 560.0
+     }
+    ],
+    "fees": [],
+    "total": 1488.0,
+    "invoice_id": "INV-30909"
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_shipment",
+   "args": {
+    "order_id": "20788"
+   },
+   "result": {
+    "order_id": "SO-20788",
+    "tracking": "PRO 5248-9156",
+    "mode": "LTL freight",
+    "carrier": "the carrier",
+    "shipped": "2026-10-12",
+    "status": "delivered",
+    "eta": null,
+    "delivered": "2026-10-14 14:30",
+    "signed_by": "O HADDAD",
+    "exception": null,
+    "events": [
+     {
+      "at": "2026-10-12 15:00",
+      "text": "Picked up at shipper"
+     },
+     {
+      "at": "2026-10-14 14:30",
+      "text": "Delivered, signed by O HADDAD"
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "create_return",
+   "args": {
+    "order_id": "20788",
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "qty": 10
+     }
+    ],
+    "unopened": true,
+    "sentence": 1
+   },
+   "result": {
+    "result": "waiting",
+    "approval_id": "AP-233",
+    "waiting_on": "order_desk",
+    "rule": "credit_cap",
+    "note": "Credits over $250 wait for a person. It happens only if a person approves it, so describe it as pending.",
+    "gross": 580.0,
+    "restocking_fee": 87.0,
+    "credit": 493.0,
+    "amount": 493.0,
+    "limit": 250
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "We opened a return request for 10 sealed cases of the stretch film from SO-20788. It is pending approval. If approved, the credit will be $493.00 after the $87.00 restocking fee.\n\nThe Wendlow order desk",
+  "note": "Return request is pending order desk approval under AP-233 because the $493.00 credit exceeds the automatic approval limit. The order was delivered Wednesday, October 14, within the 30-day return window.",
+  "intents": [
+   "return"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 4,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_A2xF5oNq1Yi02QzvqzgJjtMK",
+     "name": "get_customer",
+     "input": {
+      "email": "dana@pellbrook.example"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 108,
+     "output": 22,
+     "cache_write": 0,
+     "cache_read": 2361
+    },
+    "ms": 1063,
+    "cost": 8.1e-05
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_aqCvXMEDTEEnmTlXncAWQNhf",
+     "name": "get_order",
+     "input": {
+      "order_id": "20788"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 346,
+     "output": 19,
+     "cache_write": 0,
+     "cache_read": 2466
+    },
+    "ms": 1142,
+    "cost": 0.000106
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_TqqtKv8oTojq89deSMi8IlYC",
+     "name": "get_shipment",
+     "input": {
+      "order_id": "20788"
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 278,
+     "output": 20,
+     "cache_write": 0,
+     "cache_read": 2809
+    },
+    "ms": 1107,
+    "cost": 0.000108
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_HjEiNttyTeBEiuuAjdx1rFiw",
+     "name": "create_return",
+     "input": {
+      "order_id": "20788",
+      "lines": [
+       {
+        "sku": "SF-18-80",
+        "qty": 10
+       }
+      ],
+      "unopened": true,
+      "sentence": 1
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 184,
+     "output": 44,
+     "cache_write": 0,
+     "cache_read": 3084
+    },
+    "ms": 1163,
+    "cost": 0.000118
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "call_OalatBy0o698hPomCSXpqBYj",
+     "name": "finish",
+     "input": {
+      "reply": "We opened a return request for 10 sealed cases of the stretch film from SO-20788. It is pending approval. If approved, the credit will be $493.00 after the $87.00 restocking fee.\n\nThe Wendlow order desk",
+      "note": "Return request is pending order desk approval under AP-233 because the $493.00 credit exceeds the automatic approval limit. The order was delivered Wednesday, October 14, within the 30-day return window.",
+      "intents": [
+       "return"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_calls",
+   "meta": {
+    "model": "gpt-6-luna",
+    "tokens": {
+     "input": 157,
+     "output": 124,
+     "cache_write": 0,
+     "cache_read": 3265
+    },
+    "ms": 2010,
+    "cost": 0.000159
+   }
+  }
+ ],
+ "usage": {
+  "turns": 5,
+  "seconds": 6.5,
+  "input_tokens": 1073,
+  "output_tokens": 229,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 13985,
+  "cost": 0.000572
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:42:26",
+ "backend": {
+  "vendor": "OpenAI",
+  "model": "gpt-6-luna",
+  "label": "GPT-6 Luna",
+  "reasoning_effort": "none"
+ }
+}

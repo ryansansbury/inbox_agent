@@ -1,0 +1,264 @@
+{
+ "email_id": "d03",
+ "split": "dev",
+ "seq": 14,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "8c41038307192385",
+ "input_hash": "53a8fa66d109fc0a",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "dana@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "SO-20808"
+   },
+   "result": {
+    "order_id": "SO-20808",
+    "customer_id": "C-1001",
+    "po": "PF-88130",
+    "placed": "2026-10-16 15:00",
+    "requested": null,
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L2",
+     "label": "Building 4",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 20,
+      "picked": 18,
+      "shipped": 18,
+      "price": 58.0,
+      "amount": 1160.0
+     }
+    ],
+    "fees": [],
+    "total": 1160.0,
+    "invoice_id": "INV-30936"
+   },
+   "valid": true
+  },
+  {
+   "tool": "reship",
+   "args": {
+    "order_id": "SO-20808",
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "qty": 2
+     }
+    ],
+    "reason": "Short shipment: 18 of 20 cases delivered; system shows 2 cases picked and shipped short.",
+    "sentence": 2
+   },
+   "result": {
+    "replacement_order": "SO-20882",
+    "replaces": "SO-20808",
+    "lines": [
+     {
+      "sku": "SF-18-80",
+      "qty": 2
+     }
+    ],
+    "value": 116.0,
+    "charge": 0.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Dana,\n\nWe are sorry that SO-20808 arrived short. Our records show 18 of the 20 cases of the 18 in x 1500 ft, 80 gauge stretch film (SF-18-80) were picked and shipped, so the 2 missing cases were a short pick on our side.\n\nWe have sent the 2 replacement cases at no charge under replacement order SO-20882. The value is $116.00, and there is no charge for the reship.\n\nThe Wendlow order desk",
+  "note": "Reshipped 2 cases of SF-18-80 on SO-20808 at no charge as replacement order SO-20882 ($116.00, within the reship limit). The order record shows 20 ordered, 18 picked and shipped, so this matches the shortage. Check the tracking on SO-20882 when it ships.",
+  "intents": [
+   "short_shipment"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01VN9cTWW5f9N8Gmi8Z7iAAN",
+     "name": "get_customer",
+     "input": {
+      "email": "dana@pellbrook.example"
+     }
+    },
+    {
+     "id": "toolu_012mvnnPbVGSZXaMsAfaz45h",
+     "name": "get_order",
+     "input": {
+      "order_id": "SO-20808"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 258,
+     "output": 127,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1150,
+    "cost": 0.000134
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01PGagXnPyKX5P3FyPCXDZ3H",
+     "name": "reship",
+     "input": {
+      "order_id": "SO-20808",
+      "lines": [
+       {
+        "sku": "SF-18-80",
+        "qty": 2
+       }
+      ],
+      "reason": "Short shipment: 18 of 20 cases delivered; system shows 2 cases picked and shipped short.",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1077,
+     "output": 370,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1849,
+    "cost": 0.000337
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01QEab6qeVqhp6vvaVAD9xN2",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Dana,\n\nWe are sorry that SO-20808 arrived short. Our records show 18 of the 20 cases of the 18 in x 1500 ft, 80 gauge stretch film (SF-18-80) were picked and shipped, so the 2 missing cases were a short pick on our side.\n\nWe have sent the 2 replacement cases at no charge under replacement order SO-20882. The value is $116.00, and there is no charge for the reship.\n\nThe Wendlow order desk",
+      "note": "Reshipped 2 cases of SF-18-80 on SO-20808 at no charge as replacement order SO-20882 ($116.00, within the reship limit). The order record shows 20 ordered, 18 picked and shipped, so this matches the shortage. Check the tracking on SO-20882 when it ships.",
+      "intents": [
+       "short_shipment"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1333,
+     "output": 380,
+     "cache_write": 0,
+     "cache_read": 4454
+    },
+    "ms": 1964,
+    "cost": 0.000368
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 5.0,
+  "input_tokens": 2668,
+  "output_tokens": 877,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 13362,
+  "cost": 0.000839
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:17:50",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}

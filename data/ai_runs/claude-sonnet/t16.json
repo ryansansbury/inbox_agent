@@ -1,0 +1,179 @@
+{
+ "email_id": "t16",
+ "split": "test",
+ "seq": 39,
+ "model": "claude-sonnet",
+ "label": "Claude Sonnet 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "3edf177d8429acc6",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "ayumi@lanternfold.example"
+   },
+   "result": {
+    "customer_id": "C-1007",
+    "name": "Lanternfold Candle Co.",
+    "terms": "Net 30",
+    "credit_limit": 7500.0,
+    "open_balance": 861.5,
+    "open_orders": 0.0,
+    "available_credit": 6638.5,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 11,
+     "paid_on_time": 10
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Ayumi Nakaya",
+      "role": "founder",
+      "email": "ayumi@lanternfold.example"
+     },
+     {
+      "name": "Gwen Talbot",
+      "role": "operations",
+      "email": "gwen@lanternfold.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Workshop",
+      "city": "Loveland, CO"
+     }
+    ],
+    "contract_prices": []
+   },
+   "valid": true
+  },
+  {
+   "tool": "route_to_person",
+   "args": {
+    "team": "sales",
+    "summary": "Lanternfold Candle Co. (C-1007) requests a custom print quote: 2,000 printed mailer boxes, 9x6x3, with their logo, for next year.",
+    "sentence": 2
+   },
+   "result": {
+    "routed_to": "sales",
+    "mailbox": "sales@wendlow.example",
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hi Ayumi,\n\nThank you for your note. Custom printed quotes are handled by our sales team. I have passed your request for 2,000 printed 9x6x3 mailer boxes with your logo to them. They will reply to you with a quote.\n\nThe Wendlow order desk",
+  "note": "Custom print quote request from verified customer C-1007; routed to sales. No other action taken.",
+  "intents": [
+   "custom_quote"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 2,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01RRThvj9Zrbts54ZNSd8yjy",
+     "name": "get_customer",
+     "input": {
+      "email": "ayumi@lanternfold.example"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 225,
+     "output": 59,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 988,
+    "cost": 0.002021
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01EBp18ZuyaFBjPTbFu8yHAC",
+     "name": "route_to_person",
+     "input": {
+      "team": "sales",
+      "summary": "Lanternfold Candle Co. (C-1007) requests a custom print quote: 2,000 printed mailer boxes, 9x6x3, with their logo, for next year.",
+      "sentence": 2
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 572,
+     "output": 151,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1459,
+    "cost": 0.003635
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01WA2YCGj7eTDxTQwPfFKgH9",
+     "name": "finish",
+     "input": {
+      "reply": "Hi Ayumi,\n\nThank you for your note. Custom printed quotes are handled by our sales team. I have passed your request for 2,000 printed 9x6x3 mailer boxes with your logo to them. They will reply to you with a quote.\n\nThe Wendlow order desk",
+      "note": "Custom print quote request from verified customer C-1007; routed to sales. No other action taken.",
+      "intents": [
+       "custom_quote"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-sonnet-5-5",
+    "tokens": {
+     "input": 763,
+     "output": 242,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1792,
+    "cost": 0.004927
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 4.2,
+  "input_tokens": 1560,
+  "output_tokens": 452,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.010583
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:35:24",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-sonnet-5-5",
+  "label": "Claude Sonnet 5.5"
+ }
+}

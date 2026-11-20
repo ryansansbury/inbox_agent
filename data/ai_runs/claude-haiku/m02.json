@@ -1,0 +1,262 @@
+{
+ "email_id": "m02",
+ "split": "morning",
+ "seq": 1,
+ "model": "claude-haiku",
+ "label": "Claude Haiku 5.5",
+ "prompt_hash": "c5880b94cfb1ef9a",
+ "input_hash": "e560525b8ea4f472",
+ "steps": [
+  {
+   "tool": "get_customer",
+   "args": {
+    "email": "omar@pellbrook.example"
+   },
+   "result": {
+    "customer_id": "C-1001",
+    "name": "Pellbrook Fulfillment",
+    "terms": "Net 30",
+    "credit_limit": 25000.0,
+    "open_balance": 4824.0,
+    "open_orders": 2524.0,
+    "available_credit": 17652.0,
+    "on_hold": false,
+    "past_due": [],
+    "payment_history": {
+     "invoices_paid": 15,
+     "paid_on_time": 14
+    },
+    "tax": "exempt, resale certificate on file",
+    "contacts": [
+     {
+      "name": "Dana Okafor",
+      "role": "operations manager",
+      "email": "dana@pellbrook.example"
+     },
+     {
+      "name": "Omar Haddad",
+      "role": "receiving lead",
+      "email": "omar@pellbrook.example"
+     },
+     {
+      "name": "Bea Lockhart",
+      "role": "accounts payable",
+      "email": "bea@pellbrook.example"
+     }
+    ],
+    "locations": [
+     {
+      "location_id": "L1",
+      "label": "Building 2",
+      "city": "Aurora, CO"
+     },
+     {
+      "location_id": "L2",
+      "label": "Building 4",
+      "city": "Aurora, CO"
+     }
+    ],
+    "contract_prices": [
+     {
+      "sku": "BX-181818-32",
+      "price": 44.1
+     },
+     {
+      "sku": "BX-241812-44",
+      "price": 67.8
+     },
+     {
+      "sku": "SF-18-80",
+      "price": 58.0
+     }
+    ]
+   },
+   "valid": true
+  },
+  {
+   "tool": "get_order",
+   "args": {
+    "order_id": "20809"
+   },
+   "result": {
+    "order_id": "SO-20809",
+    "customer_id": "C-1001",
+    "po": "PF-88213",
+    "placed": "2026-10-21 09:30",
+    "requested": "2026-10-26",
+    "status": "delivered",
+    "warehouse": "North",
+    "ship_to": {
+     "location_id": "L1",
+     "label": "Building 2",
+     "city": "Aurora, CO"
+    },
+    "lines": [
+     {
+      "sku": "TP-2C-110",
+      "name": "Carton sealing tape 2 in x 110 yd, clear",
+      "qty": 24,
+      "picked": 24,
+      "shipped": 24,
+      "price": 56.0,
+      "amount": 1344.0,
+      "damaged_on_delivery": 3
+     },
+     {
+      "sku": "SF-18-80",
+      "name": "Stretch film 18 in x 1500 ft, 80 gauge",
+      "qty": 10,
+      "picked": 10,
+      "shipped": 10,
+      "price": 58.0,
+      "amount": 580.0
+     }
+    ],
+    "fees": [],
+    "total": 1924.0,
+    "invoice_id": "INV-30941"
+   },
+   "valid": true
+  },
+  {
+   "tool": "issue_credit",
+   "args": {
+    "customer_id": "C-1001",
+    "invoice_id": "INV-30941",
+    "amount": 168.0,
+    "reason": "3 cases of TP-2C-110 damaged on delivery, SO-20809",
+    "sentence": 4
+   },
+   "result": {
+    "credit_memo": "CM-2234",
+    "invoice_id": "INV-30941",
+    "amount": 168.0,
+    "invoice_open_after": 1756.0,
+    "result": "done"
+   },
+   "valid": true
+  }
+ ],
+ "finish": {
+  "reply": "Hello Omar,\n\nWe have issued a credit of $168.00 against invoice INV-30941 for the 3 cases of 2 inch clear carton sealing tape (TP-2C-110) that were crushed on delivery under order SO-20809. The credit memo number is CM-2234. As you asked, no replacement will be sent.\n\nThe Wendlow order desk",
+  "note": "Credited $168.00 (3 cases at $56.00) on INV-30941 as CM-2234 for the crushed TP-2C-110 cases on SO-20809, within the $250 auto-approval limit. No reship, as the customer requested.",
+  "intents": [
+   "damaged_delivery",
+   "credit_request"
+  ],
+  "ignored_instructions": []
+ },
+ "unfinished": false,
+ "repaired": false,
+ "reminded": false,
+ "problems": [],
+ "calls": 3,
+ "transcript": [
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01MPxhrddyovfUGEnmAStF8Q",
+     "name": "get_customer",
+     "input": {
+      "email": "omar@pellbrook.example"
+     }
+    },
+    {
+     "id": "toolu_01U1ScvivWXRR6DfoMwEqsxE",
+     "name": "get_order",
+     "input": {
+      "order_id": "20809"
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 313,
+     "output": 117,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 966,
+    "cost": 0.000139
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01BkhvYNkaaDUzRD2GnEDVbX",
+     "name": "issue_credit",
+     "input": {
+      "customer_id": "C-1001",
+      "invoice_id": "INV-30941",
+      "amount": 168.0,
+      "reason": "3 cases of TP-2C-110 damaged on delivery, SO-20809",
+      "sentence": 4
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1229,
+     "output": 356,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 2048,
+    "cost": 0.00035
+   }
+  },
+  {
+   "text": "",
+   "calls": [
+    {
+     "id": "toolu_01FwK8Bd9z71MQB15VqMqj5T",
+     "name": "finish",
+     "input": {
+      "reply": "Hello Omar,\n\nWe have issued a credit of $168.00 against invoice INV-30941 for the 3 cases of 2 inch clear carton sealing tape (TP-2C-110) that were crushed on delivery under order SO-20809. The credit memo number is CM-2234. As you asked, no replacement will be sent.\n\nThe Wendlow order desk",
+      "note": "Credited $168.00 (3 cases at $56.00) on INV-30941 as CM-2234 for the crushed TP-2C-110 cases on SO-20809, within the $250 auto-approval limit. No reship, as the customer requested.",
+      "intents": [
+       "damaged_delivery",
+       "credit_request"
+      ],
+      "ignored_instructions": []
+     }
+    }
+   ],
+   "stop": "tool_use",
+   "meta": {
+    "model": "claude-haiku-5-5",
+    "tokens": {
+     "input": 1472,
+     "output": 326,
+     "cache_write": 0,
+     "cache_read": 4903
+    },
+    "ms": 1752,
+    "cost": 0.000359
+   }
+  }
+ ],
+ "usage": {
+  "turns": 3,
+  "seconds": 4.8,
+  "input_tokens": 3014,
+  "output_tokens": 799,
+  "cache_write_tokens": 0,
+  "cache_read_tokens": 14709,
+  "cost": 0.000848
+ },
+ "kind": "model",
+ "date": "2026-11-09",
+ "recorded_at": "2026-11-09T20:36:18",
+ "backend": {
+  "vendor": "Anthropic",
+  "model": "claude-haiku-5-5",
+  "label": "Claude Haiku 5.5"
+ }
+}
