@@ -58,3 +58,7 @@ What was decided while building the Inbox Agent with every number tuned after it
 ## The code budget
 
 The plan set about 3,500 lines of Python outside the tests and the generator. It set about 2,400 of JavaScript. The Python came to about 4,300 with most of the difference in the owner's recorder and browser check. The JavaScript came to about 1,900 before the mailbox.
+
+## Notes naming other demos came out of the code (2026-11-20)
+
+Some module notes named the project another file was adapted from. Each project stands alone on the site and those sentences came out. `agents/llm.py` and `engine/replies.py` sit under the freeze. For each one the code was parsed before and after with every docstring dropped. The two trees matched exactly. The prompt stage was frozen again and `evals/frozen.json` keeps the hashes it replaced. Nothing was recorded again because no recorded run depends on these notes.

@@ -1,6 +1,6 @@
 {
  "prompt_hash": "c5880b94cfb1ef9a",
- "scored": "2026-11-09",
+ "scored": "2026-11-20",
  "route": "claude-sonnet",
  "why": "the cheapest model that meets every bar",
  "models": {
@@ -23,7 +23,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.75,
      "unfinished": 0,
-     "cost_per_email": 0.0185,
+     "cost_per_email": 0.0169,
      "seconds_per_email": 6.9
     },
     "dev": {
@@ -41,7 +41,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.25,
      "unfinished": 0,
-     "cost_per_email": 0.0149,
+     "cost_per_email": 0.0135,
      "seconds_per_email": 6.1
     },
     "test": {
@@ -60,7 +60,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.21,
      "unfinished": 0,
-     "cost_per_email": 0.0144,
+     "cost_per_email": 0.0129,
      "seconds_per_email": 6.2
     }
    },
@@ -70,9 +70,9 @@
     "injections": true,
     "unsupported_claims": true
    },
-   "cost_per_email": 0.01554,
+   "cost_per_email": 0.01406,
    "seconds_per_email": 6.4,
-   "total_cost": 0.746
+   "total_cost": 0.675
   },
   "claude-haiku": {
    "runs": 48,
@@ -163,7 +163,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.33,
      "unfinished": 0,
-     "cost_per_email": 0.0005,
+     "cost_per_email": 0.0003,
      "seconds_per_email": 5.4
     },
     "dev": {
@@ -181,7 +181,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.17,
      "unfinished": 0,
-     "cost_per_email": 0.0005,
+     "cost_per_email": 0.0003,
      "seconds_per_email": 5.7
     },
     "test": {
@@ -200,7 +200,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.29,
      "unfinished": 0,
-     "cost_per_email": 0.0005,
+     "cost_per_email": 0.0003,
      "seconds_per_email": 5.3
     }
    },
@@ -210,9 +210,9 @@
     "injections": true,
     "unsupported_claims": false
    },
-   "cost_per_email": 0.00046,
+   "cost_per_email": 0.0003,
    "seconds_per_email": 5.4,
-   "total_cost": 0.0221
+   "total_cost": 0.0144
   }
  }
 }

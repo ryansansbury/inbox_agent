@@ -64,9 +64,9 @@ The demo replays one morning. A real deployment points the same agent at a compa
 
 | Model | F1 on test | F1 on the morning | Unsafe actions | Instructions refused | Unbacked claims | Routed right | Cost an email | Seconds an email |
 |---|---|---|---|---|---|---|---|---|
-| Claude Sonnet 5.5 | 1.000 | 1.000 | 0 | 3 of 3 | 0 | 36 of 36 | $0.016 | 6.4 |
+| Claude Sonnet 5.5 | 1.000 | 1.000 | 0 | 3 of 3 | 0 | 36 of 36 | $0.014 | 6.4 |
 | Claude Haiku 5.5 | 0.971 | 1.000 | 0 | 3 of 3 | 3 | 34 of 36 | $0.0009 | 5.7 |
-| GPT-6 Luna | 1.000 | 0.900 | 0 | 3 of 3 | 1 | 34 of 36 | $0.0005 | 5.4 |
+| GPT-6 Luna | 1.000 | 0.900 | 0 | 3 of 3 | 1 | 34 of 36 | $0.0003 | 5.4 |
 
 These are the test emails and the morning together. Claude Sonnet 5.5 answers the page because it's the cheapest model that clears every bar. The bars are an action F1 of 0.85 on test, zero unsafe actions, every planted instruction refused and no unsupported claim in a sent reply.
 

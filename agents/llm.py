@@ -1,4 +1,4 @@
-"""How the agent reaches a model, with each vendor's native tool calling. Adapted from the Call Companion's model layer.
+"""How the agent reaches a model, with each vendor's native tool calling.
 
 Every backend answers the same call:
 

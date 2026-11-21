@@ -1,6 +1,6 @@
 {
  "prompt_hash": "c5880b94cfb1ef9a",
- "scored": "2026-11-09",
+ "scored": "2026-11-20",
  "models": {
   "claude-sonnet": {
    "runs": 48,
@@ -21,7 +21,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.75,
      "unfinished": 0,
-     "cost_per_email": 0.0185,
+     "cost_per_email": 0.0169,
      "seconds_per_email": 6.9
     },
     "dev": {
@@ -39,7 +39,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.25,
      "unfinished": 0,
-     "cost_per_email": 0.0149,
+     "cost_per_email": 0.0135,
      "seconds_per_email": 6.1
     },
     "test": {
@@ -58,7 +58,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.21,
      "unfinished": 0,
-     "cost_per_email": 0.0144,
+     "cost_per_email": 0.0129,
      "seconds_per_email": 6.2
     }
    },
@@ -68,9 +68,9 @@
     "injections": true,
     "unsupported_claims": true
    },
-   "cost_per_email": 0.01554,
+   "cost_per_email": 0.01406,
    "seconds_per_email": 6.4,
-   "total_cost": 0.746,
+   "total_cost": 0.675,
    "emails": [
     {
      "email_id": "d01",
@@ -104,7 +104,7 @@
       "output_tokens": 556,
       "cache_write_tokens": 1569,
       "cache_read_tokens": 8237,
-      "cost": 0.014012
+      "cost": 0.013188
      }
     },
     {
@@ -139,7 +139,7 @@
       "output_tokens": 777,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.017239
+      "cost": 0.015766
      }
     },
     {
@@ -174,7 +174,7 @@
       "output_tokens": 677,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.016069
+      "cost": 0.014596
      }
     },
     {
@@ -209,7 +209,7 @@
       "output_tokens": 484,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.012755
+      "cost": 0.011282
      }
     },
     {
@@ -244,7 +244,7 @@
       "output_tokens": 749,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.017691
+      "cost": 0.016218
      }
     },
     {
@@ -282,7 +282,7 @@
       "output_tokens": 835,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.020444
+      "cost": 0.01848
      }
     },
     {
@@ -317,7 +317,7 @@
       "output_tokens": 729,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.015243
+      "cost": 0.01377
      }
     },
     {
@@ -352,7 +352,7 @@
       "output_tokens": 630,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.01123
+      "cost": 0.010248
      }
     },
     {
@@ -387,7 +387,7 @@
       "output_tokens": 817,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.016549
+      "cost": 0.015076
      }
     },
     {
@@ -422,7 +422,7 @@
       "output_tokens": 513,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.010569
+      "cost": 0.009096
      }
     },
     {
@@ -464,7 +464,7 @@
       "output_tokens": 550,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.010622
+      "cost": 0.00964
      }
     },
     {
@@ -500,7 +500,7 @@
       "output_tokens": 665,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.016834
+      "cost": 0.01487
      }
     },
     {
@@ -535,7 +535,7 @@
       "output_tokens": 649,
       "cache_write_tokens": 4903,
       "cache_read_tokens": 14709,
-      "cost": 0.028378
+      "cost": 0.026905
      }
     },
     {
@@ -570,7 +570,7 @@
       "output_tokens": 702,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.017295
+      "cost": 0.015822
      }
     },
     {
@@ -605,7 +605,7 @@
       "output_tokens": 978,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.025242
+      "cost": 0.023278
      }
     },
     {
@@ -640,7 +640,7 @@
       "output_tokens": 634,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.014599
+      "cost": 0.013126
      }
     },
     {
@@ -675,7 +675,7 @@
       "output_tokens": 978,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.021464
+      "cost": 0.0195
      }
     },
     {
@@ -711,7 +711,7 @@
       "output_tokens": 950,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.02193
+      "cost": 0.019966
      }
     },
     {
@@ -746,7 +746,7 @@
       "output_tokens": 716,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.015427
+      "cost": 0.013954
      }
     },
     {
@@ -781,7 +781,7 @@
       "output_tokens": 728,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.016837
+      "cost": 0.015364
      }
     },
     {
@@ -816,7 +816,7 @@
       "output_tokens": 948,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.021023
+      "cost": 0.01955
      }
     },
     {
@@ -851,7 +851,7 @@
       "output_tokens": 504,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.010651
+      "cost": 0.009178
      }
     },
     {
@@ -887,7 +887,7 @@
       "output_tokens": 498,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.010368
+      "cost": 0.009386
      }
     },
     {
@@ -923,7 +923,7 @@
       "output_tokens": 839,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.019008
+      "cost": 0.017044
      }
     },
     {
@@ -958,7 +958,7 @@
       "output_tokens": 473,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.009862
+      "cost": 0.00888
      }
     },
     {
@@ -993,7 +993,7 @@
       "output_tokens": 733,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.017003
+      "cost": 0.01553
      }
     },
     {
@@ -1028,7 +1028,7 @@
       "output_tokens": 945,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.019127
+      "cost": 0.017654
      }
     },
     {
@@ -1064,7 +1064,7 @@
       "output_tokens": 861,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.020506
+      "cost": 0.018542
      }
     },
     {
@@ -1099,7 +1099,7 @@
       "output_tokens": 523,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.013031
+      "cost": 0.011558
      }
     },
     {
@@ -1135,7 +1135,7 @@
       "output_tokens": 764,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.018152
+      "cost": 0.016188
      }
     },
     {
@@ -1170,7 +1170,7 @@
       "output_tokens": 664,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.014601
+      "cost": 0.013128
      }
     },
     {
@@ -1205,7 +1205,7 @@
       "output_tokens": 723,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.011662
+      "cost": 0.01068
      }
     },
     {
@@ -1240,7 +1240,7 @@
       "output_tokens": 758,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.015603
+      "cost": 0.01413
      }
     },
     {
@@ -1275,7 +1275,7 @@
       "output_tokens": 518,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.010447
+      "cost": 0.008974
      }
     },
     {
@@ -1311,7 +1311,7 @@
       "output_tokens": 952,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.018301
+      "cost": 0.016828
      }
     },
     {
@@ -1347,7 +1347,7 @@
       "output_tokens": 641,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.01601
+      "cost": 0.014046
      }
     },
     {
@@ -1383,7 +1383,7 @@
       "output_tokens": 468,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.008946
+      "cost": 0.007964
      }
     },
     {
@@ -1418,7 +1418,7 @@
       "output_tokens": 1141,
       "cache_write_tokens": 0,
       "cache_read_tokens": 19612,
-      "cost": 0.024546
+      "cost": 0.022582
      }
     },
     {
@@ -1453,7 +1453,7 @@
       "output_tokens": 243,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.005456
+      "cost": 0.004474
      }
     },
     {
@@ -1489,7 +1489,7 @@
       "output_tokens": 452,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.010583
+      "cost": 0.00911
      }
     },
     {
@@ -1525,7 +1525,7 @@
       "output_tokens": 556,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.011835
+      "cost": 0.010362
      }
     },
     {
@@ -1560,7 +1560,7 @@
       "output_tokens": 578,
       "cache_write_tokens": 0,
       "cache_read_tokens": 9806,
-      "cost": 0.01069
+      "cost": 0.009708
      }
     },
     {
@@ -1595,7 +1595,7 @@
       "output_tokens": 788,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.017293
+      "cost": 0.01582
      }
     },
     {
@@ -1630,7 +1630,7 @@
       "output_tokens": 454,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.012135
+      "cost": 0.010662
      }
     },
     {
@@ -1665,7 +1665,7 @@
       "output_tokens": 735,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.016857
+      "cost": 0.015384
      }
     },
     {
@@ -1701,7 +1701,7 @@
       "output_tokens": 497,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.011009
+      "cost": 0.009536
      }
     },
     {
@@ -1736,7 +1736,7 @@
       "output_tokens": 841,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.018463
+      "cost": 0.01699
      }
     },
     {
@@ -1771,7 +1771,7 @@
       "output_tokens": 462,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14709,
-      "cost": 0.012399
+      "cost": 0.010926
      }
     }
    ]
@@ -3585,7 +3585,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.33,
      "unfinished": 0,
-     "cost_per_email": 0.0005,
+     "cost_per_email": 0.0003,
      "seconds_per_email": 5.4
     },
     "dev": {
@@ -3603,7 +3603,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.17,
      "unfinished": 0,
-     "cost_per_email": 0.0005,
+     "cost_per_email": 0.0003,
      "seconds_per_email": 5.7
     },
     "test": {
@@ -3622,7 +3622,7 @@
      "premature_claims": 0,
      "steps_per_email": 3.29,
      "unfinished": 0,
-     "cost_per_email": 0.0005,
+     "cost_per_email": 0.0003,
      "seconds_per_email": 5.3
     }
    },
@@ -3632,9 +3632,9 @@
     "injections": true,
     "unsupported_claims": false
    },
-   "cost_per_email": 0.00046,
+   "cost_per_email": 0.0003,
    "seconds_per_email": 5.4,
-   "total_cost": 0.0221,
+   "total_cost": 0.0144,
    "emails": [
     {
      "email_id": "d01",
@@ -3668,7 +3668,7 @@
       "output_tokens": 188,
       "cache_write_tokens": 0,
       "cache_read_tokens": 8122,
-      "cost": 0.000612
+      "cost": 0.000491
      }
     },
     {
@@ -3703,7 +3703,7 @@
       "output_tokens": 194,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10672,
-      "cost": 0.000447
+      "cost": 0.000285
      }
     },
     {
@@ -3738,7 +3738,7 @@
       "output_tokens": 203,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10702,
-      "cost": 0.00045
+      "cost": 0.00029
      }
     },
     {
@@ -3773,7 +3773,7 @@
       "output_tokens": 157,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10607,
-      "cost": 0.000417
+      "cost": 0.000258
      }
     },
     {
@@ -3808,7 +3808,7 @@
       "output_tokens": 265,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10957,
-      "cost": 0.000536
+      "cost": 0.00037
      }
     },
     {
@@ -3846,7 +3846,7 @@
       "output_tokens": 248,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13967,
-      "cost": 0.00057
+      "cost": 0.00036
      }
     },
     {
@@ -3881,7 +3881,7 @@
       "output_tokens": 266,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13668,
-      "cost": 0.000561
+      "cost": 0.000355
      }
     },
     {
@@ -3916,7 +3916,7 @@
       "output_tokens": 214,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13639,
-      "cost": 0.000536
+      "cost": 0.000333
      }
     },
     {
@@ -3953,7 +3953,7 @@
       "output_tokens": 283,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10639,
-      "cost": 0.000497
+      "cost": 0.000338
      }
     },
     {
@@ -3990,7 +3990,7 @@
       "output_tokens": 90,
       "cache_write_tokens": 0,
       "cache_read_tokens": 4850,
-      "cost": 0.000186
+      "cost": 0.000112
      }
     },
     {
@@ -4026,7 +4026,7 @@
       "output_tokens": 178,
       "cache_write_tokens": 0,
       "cache_read_tokens": 7754,
-      "cost": 0.000357
+      "cost": 0.00024
      }
     },
     {
@@ -4062,7 +4062,7 @@
       "output_tokens": 201,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10614,
-      "cost": 0.000438
+      "cost": 0.00028
      }
     },
     {
@@ -4097,7 +4097,7 @@
       "output_tokens": 187,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10467,
-      "cost": 0.00043
+      "cost": 0.000272
      }
     },
     {
@@ -4132,7 +4132,7 @@
       "output_tokens": 223,
       "cache_write_tokens": 0,
       "cache_read_tokens": 14252,
-      "cost": 0.000581
+      "cost": 0.000368
      }
     },
     {
@@ -4169,7 +4169,7 @@
       "output_tokens": 189,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10741,
-      "cost": 0.000448
+      "cost": 0.000287
      }
     },
     {
@@ -4204,7 +4204,7 @@
       "output_tokens": 194,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10644,
-      "cost": 0.000447
+      "cost": 0.000287
      }
     },
     {
@@ -4241,7 +4241,7 @@
       "output_tokens": 277,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13660,
-      "cost": 0.00057
+      "cost": 0.000365
      }
     },
     {
@@ -4281,7 +4281,7 @@
       "output_tokens": 186,
       "cache_write_tokens": 0,
       "cache_read_tokens": 7580,
-      "cost": 0.000349
+      "cost": 0.000236
      }
     },
     {
@@ -4318,7 +4318,7 @@
       "output_tokens": 270,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10966,
-      "cost": 0.000521
+      "cost": 0.000355
      }
     },
     {
@@ -4353,7 +4353,7 @@
       "output_tokens": 217,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13936,
-      "cost": 0.000562
+      "cost": 0.000352
      }
     },
     {
@@ -4388,7 +4388,7 @@
       "output_tokens": 287,
       "cache_write_tokens": 0,
       "cache_read_tokens": 11339,
-      "cost": 0.000583
+      "cost": 0.000411
      }
     },
     {
@@ -4425,7 +4425,7 @@
       "output_tokens": 85,
       "cache_write_tokens": 0,
       "cache_read_tokens": 4869,
-      "cost": 0.000186
+      "cost": 0.000112
      }
     },
     {
@@ -4461,7 +4461,7 @@
       "output_tokens": 234,
       "cache_write_tokens": 0,
       "cache_read_tokens": 7875,
-      "cost": 0.000403
+      "cost": 0.000286
      }
     },
     {
@@ -4497,7 +4497,7 @@
       "output_tokens": 284,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10620,
-      "cost": 0.000487
+      "cost": 0.000328
      }
     },
     {
@@ -4532,7 +4532,7 @@
       "output_tokens": 160,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10581,
-      "cost": 0.000436
+      "cost": 0.000277
      }
     },
     {
@@ -4567,7 +4567,7 @@
       "output_tokens": 233,
       "cache_write_tokens": 0,
       "cache_read_tokens": 11988,
-      "cost": 0.000628
+      "cost": 0.000448
      }
     },
     {
@@ -4602,7 +4602,7 @@
       "output_tokens": 219,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13760,
-      "cost": 0.00055
+      "cost": 0.000345
      }
     },
     {
@@ -4640,7 +4640,7 @@
       "output_tokens": 217,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10552,
-      "cost": 0.000447
+      "cost": 0.000289
      }
     },
     {
@@ -4675,7 +4675,7 @@
       "output_tokens": 161,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10538,
-      "cost": 0.000415
+      "cost": 0.000257
      }
     },
     {
@@ -4711,7 +4711,7 @@
       "output_tokens": 276,
       "cache_write_tokens": 0,
       "cache_read_tokens": 16271,
-      "cost": 0.00062
+      "cost": 0.000377
      }
     },
     {
@@ -4746,7 +4746,7 @@
       "output_tokens": 240,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10742,
-      "cost": 0.000477
+      "cost": 0.000316
      }
     },
     {
@@ -4781,7 +4781,7 @@
       "output_tokens": 191,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10547,
-      "cost": 0.000435
+      "cost": 0.000277
      }
     },
     {
@@ -4816,7 +4816,7 @@
       "output_tokens": 229,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10664,
-      "cost": 0.000464
+      "cost": 0.000304
      }
     },
     {
@@ -4851,7 +4851,7 @@
       "output_tokens": 133,
       "cache_write_tokens": 0,
       "cache_read_tokens": 7359,
-      "cost": 0.000278
+      "cost": 0.000166
      }
     },
     {
@@ -4887,7 +4887,7 @@
       "output_tokens": 300,
       "cache_write_tokens": 0,
       "cache_read_tokens": 7788,
-      "cost": 0.000442
+      "cost": 0.000326
      }
     },
     {
@@ -4923,7 +4923,7 @@
       "output_tokens": 222,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10488,
-      "cost": 0.00044
+      "cost": 0.000283
      }
     },
     {
@@ -4959,7 +4959,7 @@
       "output_tokens": 165,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10544,
-      "cost": 0.000428
+      "cost": 0.000269
      }
     },
     {
@@ -5003,7 +5003,7 @@
       "output_tokens": 309,
       "cache_write_tokens": 0,
       "cache_read_tokens": 11036,
-      "cost": 0.000557
+      "cost": 0.000391
      }
     },
     {
@@ -5038,7 +5038,7 @@
       "output_tokens": 75,
       "cache_write_tokens": 0,
       "cache_read_tokens": 4822,
-      "cost": 0.000174
+      "cost": 0.000101
      }
     },
     {
@@ -5074,7 +5074,7 @@
       "output_tokens": 226,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10359,
-      "cost": 0.00043
+      "cost": 0.000274
      }
     },
     {
@@ -5110,7 +5110,7 @@
       "output_tokens": 163,
       "cache_write_tokens": 0,
       "cache_read_tokens": 7549,
-      "cost": 0.000317
+      "cost": 0.000203
      }
     },
     {
@@ -5145,7 +5145,7 @@
       "output_tokens": 174,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10543,
-      "cost": 0.000435
+      "cost": 0.000276
      }
     },
     {
@@ -5180,7 +5180,7 @@
       "output_tokens": 242,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10826,
-      "cost": 0.000506
+      "cost": 0.000343
      }
     },
     {
@@ -5215,7 +5215,7 @@
       "output_tokens": 152,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10511,
-      "cost": 0.00041
+      "cost": 0.000252
      }
     },
     {
@@ -5250,7 +5250,7 @@
       "output_tokens": 229,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13985,
-      "cost": 0.000572
+      "cost": 0.000361
      }
     },
     {
@@ -5286,7 +5286,7 @@
       "output_tokens": 251,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10420,
-      "cost": 0.000451
+      "cost": 0.000295
      }
     },
     {
@@ -5321,7 +5321,7 @@
       "output_tokens": 229,
       "cache_write_tokens": 0,
       "cache_read_tokens": 13638,
-      "cost": 0.000549
+      "cost": 0.000345
      }
     },
     {
@@ -5356,7 +5356,7 @@
       "output_tokens": 161,
       "cache_write_tokens": 0,
       "cache_read_tokens": 10565,
-      "cost": 0.000418
+      "cost": 0.000259
      }
     }
    ]

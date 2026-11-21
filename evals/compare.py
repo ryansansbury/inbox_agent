@@ -17,7 +17,7 @@ HERE = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(HERE))
 
 from agents import inputs, replay  # noqa: E402
-from evals import score  # noqa: E402
+from evals import costs as pricing, score  # noqa: E402
 from generate import validate  # noqa: E402
 
 RUNS = HERE.joinpath("data", "ai_runs")
@@ -32,7 +32,9 @@ def models():
 
 def score_model(model_id, specs, seqs):
     folder = RUNS.joinpath(model_id)
-    runs = [json.loads(p.read_text(encoding="utf-8")) for p in sorted(folder.glob("*.json"))] if folder.exists() else []
+    entry = next(m for m in models()["models"] if m["id"] == model_id)
+    runs = [pricing.repriced(json.loads(p.read_text(encoding="utf-8")), entry)
+            for p in sorted(folder.glob("*.json"))] if folder.exists() else []
     broken = {r["email_id"]: replay.problems(r, specs[r["email_id"]], seqs) for r in runs}
     broken = {k: v for k, v in broken.items() if v}
     key = json.loads(HERE.joinpath("data", "key", "key.json").read_text(encoding="utf-8"))

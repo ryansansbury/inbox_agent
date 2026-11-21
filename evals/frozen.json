@@ -1,7 +1,7 @@
 {
  "at": {
   "key": "2026-11-09T20:24:27-08:00",
-  "prompt": "2026-11-09T20:47:51-08:00"
+  "prompt": "2026-11-20T11:14:38-08:00"
  },
  "history": [
   {
@@ -114,6 +114,28 @@
    },
    "replaced": "2026-11-09T20:47:51-08:00",
    "stage": "prompt"
+  },
+  {
+   "at": "2026-11-09T20:47:51-08:00",
+   "hashes": {
+    "agents/__init__.py": "e3b0c44298fc1c14",
+    "agents/inputs.py": "205b1c1b977457b5",
+    "agents/llm.py": "8f912d5bb8ed9ac4",
+    "agents/loop.py": "bc0d4884df5a8d00",
+    "agents/replay.py": "d1b62e2ddd826a72",
+    "agents/validate.py": "735deb17f31172e8",
+    "config/tools.json#descriptions": "e4bc27b255236c23",
+    "engine/db.py": "22f99780b6d40829",
+    "engine/facts.py": "6df10374056615e4",
+    "engine/injection.py": "10ea076c3188925d",
+    "engine/policy.py": "5132013bbd76e4d8",
+    "engine/replies.py": "70e2135882e9f53b",
+    "engine/tools.py": "af78de6bb42fc82a",
+    "evals/score.py": "eb138b1d49cdb794",
+    "prompts/agent.md": "eb6641d5994f8bfe"
+   },
+   "replaced": "2026-11-20T11:14:38-08:00",
+   "stage": "prompt"
   }
  ],
  "key": {
@@ -181,7 +203,7 @@
  "prompt": {
   "agents/__init__.py": "e3b0c44298fc1c14",
   "agents/inputs.py": "205b1c1b977457b5",
-  "agents/llm.py": "8f912d5bb8ed9ac4",
+  "agents/llm.py": "aeea73adee6ea557",
   "agents/loop.py": "bc0d4884df5a8d00",
   "agents/replay.py": "d1b62e2ddd826a72",
   "agents/validate.py": "735deb17f31172e8",
@@ -190,7 +212,7 @@
   "engine/facts.py": "6df10374056615e4",
   "engine/injection.py": "10ea076c3188925d",
   "engine/policy.py": "5132013bbd76e4d8",
-  "engine/replies.py": "70e2135882e9f53b",
+  "engine/replies.py": "051dcf10e44a26d0",
   "engine/tools.py": "af78de6bb42fc82a",
   "evals/score.py": "eb138b1d49cdb794",
   "prompts/agent.md": "eb6641d5994f8bfe"

@@ -1,6 +1,5 @@
 """Check a reply against what the agent saw: every number, date, time, ID and item in it has to come from a tool result,
-the email or the limits, and every promise has to match an action the rules let through. Adapted from the Call
-Companion's claim checker.
+the email or the limits, and every promise has to match an action the rules let through.
 
     t = table(results, spec, limits, today)  everything the agent saw, as plain lists (the build writes it to the page)
     check(reply, t)                          [{"kind", "text", "start", "end", "status", "reason"}]

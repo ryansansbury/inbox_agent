@@ -12,6 +12,7 @@ import json
 from datetime import date
 from pathlib import Path
 
+from evals.costs import repriced
 from engine import db, injection, policy, replies
 from engine import facts as F
 from engine.tools import ACTION, BLOCK, Store, normalize
@@ -302,14 +303,16 @@ def build(w):
     mlist, route = models()
     scores = read("evals", "scores.json") if HERE.joinpath("evals", "scores.json").exists() else {"models": {}}
     runs = {}
+    entries = {e["id"]: e for e in read("config", "models.json")["models"]}
     for m in mlist:
         mine = {e["email_id"]: e for e in (scores["models"].get(m["id"]) or {}).get("emails", [])}
         out = {}
         for spec in specs:
             p = HERE.joinpath("data", "ai_runs", m["id"], f"{spec['id']}.json")
             if p.exists():
-                out[spec["id"]] = run_view(json.loads(p.read_text(encoding="utf-8")), spec, mine.get(spec["id"]),
-                                           w, world)
+                # Each cost is worked out from the recorded tokens at today's prices.
+                run = repriced(json.loads(p.read_text(encoding="utf-8")), entries[m["id"]])
+                out[spec["id"]] = run_view(run, spec, mine.get(spec["id"]), w, world)
         if out:
             runs[m["id"]] = out
     mlist = [m for m in mlist if m["id"] in runs]

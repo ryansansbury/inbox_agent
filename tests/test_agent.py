@@ -227,3 +227,45 @@ class EmptyTurns(unittest.TestCase):
         run["finish"] = {"reply": None, "note": "x", "intents": [], "ignored_instructions": "5"}
         r = score.score_run(run, s, KEY["m11"])
         self.assertFalse(r["checks"]["refused the instruction"])
+
+
+class Repricing(unittest.TestCase):
+    """Costs come from the recorded tokens at today's prices (11/20), so a price change never needs a re-recording."""
+
+    def test_a_run_is_priced_again_from_its_tokens(self):
+        from agents.llm import cost
+        from evals.costs import repriced
+        entry = {"price_in": 2.0, "price_out": 10.0, "cache_write_mult": 1.25, "cache_read_mult": 0.05}
+        tokens = {"input": 1000, "output": 200, "cache_write": 3000, "cache_read": 10000}
+        run = {"transcript": [{"meta": {"tokens": tokens, "cost": 99.0}}, {"meta": {"tokens": tokens, "cost": 99.0}}],
+               "usage": {"cost": 198.0, "seconds": 3}}
+        again = repriced(run, entry)
+        one = cost(tokens, entry)
+        self.assertAlmostEqual(again["transcript"][0]["meta"]["cost"], one)
+        self.assertAlmostEqual(again["usage"]["cost"], round(2 * one, 6))
+        self.assertEqual(run["usage"]["cost"], 198.0, "the recorded run itself stays as it was")
+        self.assertEqual(again["usage"]["seconds"], 3)
+
+    def test_every_recorded_cost_on_the_page_matches_todays_prices(self):
+        import json
+        from pathlib import Path
+        from evals.costs import repriced
+        root = Path(__file__).resolve().parent.parent
+        entries = {m["id"]: m for m in json.loads(root.joinpath("config", "models.json").read_text())["models"]}
+        comparison = json.loads(root.joinpath("evals", "model_comparison.json").read_text())
+        for model, entry in entries.items():
+            runs = sorted(root.joinpath("data", "ai_runs", model).glob("*.json"))
+            if not runs:
+                continue
+            costs = [repriced(json.loads(p.read_text()), entry)["usage"]["cost"] for p in runs]
+            self.assertAlmostEqual(comparison["models"][model]["total_cost"], round(sum(costs), 4), places=4)
+
+
+class Frozen(unittest.TestCase):
+    """Nothing the freezes cover has changed since they were taken (11/20). A change there means the recorded runs no
+    longer match the code that would make them, so it needs a new freeze and a new recording, never a quiet edit."""
+
+    def test_both_stages_are_unchanged(self):
+        from evals import freeze
+        for stage in ("key", "prompt"):
+            self.assertEqual(freeze.changed(stage), [], f"the {stage} stage changed since it was frozen")
